@@ -303,6 +303,7 @@ const Sidebar = (props) => {
         </nav>
         <main className={classes.content}>
           <div className={classes.toolbar} />
+          {/* Main Content of the site */}
           <Router/>
         </main>
       </div>
