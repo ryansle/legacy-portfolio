@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 import { 
   Box,
   Grid,
@@ -10,11 +10,10 @@ import {
   ListItemText,
   Typography,
   IconButton,
-
   AppBar,
   Toolbar,
   Hidden,
-} from '@material-ui/core';
+} from "@material-ui/core";
 import { 
   Home, 
   Person, 
@@ -28,26 +27,26 @@ import {
   GitHub,
   Description, 
   Menu
-} from '@material-ui/icons';
-import { Link } from 'react-router-dom';
-import { makeStyles, useTheme } from '@material-ui/core/styles';
-import { useMediaQuery } from "@material-ui/core";
-
+} from "@material-ui/icons";
+import { Link, BrowserRouter } from "react-router-dom";
+import Router from "../Router";
+import { makeStyles, useTheme } from "@material-ui/core/styles";
+// Assets
 import headshot from "../resources/RyanLe.png"
 
-const fullSidebarWidth = 325;
+const fullSidebarWidth = 290;
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    display: 'flex',
+    display: "flex",
   },
   fullSidebar: {
     width: fullSidebarWidth,
     flexShrink: 0,
   },
   fullSidebarLinks: {
-    background: '#363740',
-    [theme.breakpoints.up('sm')]: {
+    background: "#363740",
+    [theme.breakpoints.up("sm")]: {
       width: fullSidebarWidth,
       flexShrink: 0,
     },
@@ -60,67 +59,57 @@ const useStyles = makeStyles((theme) => ({
     paddingBottom: 20,
   },
   whiteText: {
-    color: 'white',
+    color: "white",
   },
   navIcon: {
-    color: 'white',
+    color: "white",
     height: 34,
-    width: 'auto',
+    width: "auto",
   },
   otherPlatforms: {
-    color: 'white',
-    display: 'flex',
-    flexDirection: 'row',
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-  linkIconGroup: {
-    marginTop: 20,
-    marginLeft: 2,
-    marginRight: 2,
+    color: "white",
+    display: "flex",
+    flexDirection: "row",
+    justifyContent: "center",
+    alignItems: "center",
   },
   linkIcon: {
-    color: 'white',
+    color: "white",
     height: 34,
-    width: 'auto',
+    width: "auto",
   },
   iconCol: {
-    display: 'flex',
-    flexDirection: 'column',
+    display: "flex",
+    flexDirection: "column",
     fontSize: 11,
   },
   active: {
-    backgroundColor: '#3e4049 !important',
-    color: 'white',
-    borderLeft: '4px solid white',
+    backgroundColor: "#3e4049 !important",
+    color: "white",
+    borderLeft: "4px solid white",
   },
-
-  
   drawer: {
-    [theme.breakpoints.up('sm')]: {
+    [theme.breakpoints.up("sm")]: {
       width: fullSidebarWidth,
       flexShrink: 0,
     },
   },
   appBar: {
-    [theme.breakpoints.up('sm')]: {
+    [theme.breakpoints.up("sm")]: {
       width: `calc(100% - ${fullSidebarWidth}px)`,
       marginLeft: fullSidebarWidth,
     },
   },
   menuButton: {
     marginRight: theme.spacing(2),
-    [theme.breakpoints.up('sm')]: {
-      display: 'none',
+    [theme.breakpoints.up("sm")]: {
+      display: "none",
     },
   },
   // necessary for content to be below app bar
   toolbar: theme.mixins.toolbar,
   content: {
     flexGrow: 1,
-    paddingLeft: theme.spacing(15),
-    paddingRight: theme.spacing(15),
-    paddingTop: theme.spacing(5)
   },
 }));
 
@@ -132,12 +121,12 @@ const Sidebar = (props) => {
   const container = window !== undefined ? () => window().document.body : undefined;
 
   const nav = {
-    HOME: 'Home',
-    ABOUT: 'About',
-    EXPERIENCE: 'Experience',
-    SKILLS: 'Skills',
-    PROJECTS: 'Projects',
-    CONTACT: 'Contact',
+    HOME: "Home",
+    ABOUT: "About",
+    EXPERIENCE: "Experience",
+    SKILLS: "Skills",
+    PROJECTS: "Projects",
+    CONTACT: "Contact",
   }
   const [selected, setSelected] = useState(nav.HOME);
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -162,18 +151,20 @@ const Sidebar = (props) => {
           style={{ borderRadius: "50%" }}
         />
       </Grid>
-
-      <Typography variant="h5" className={classes.whiteText}>Ryan Le</Typography>
-      <Typography variant="paragraph" className={classes.whiteText}>Software Engineering Student at the University of Nebraska-Lincoln</Typography>
+      <div style={{ textAlign: "center" }}>
+        <Typography variant="h5" className={classes.whiteText}>Ryan Le</Typography>
+        <Typography variant="paragraph" className={classes.whiteText}>Software Engineering Student at the University of Nebraska-Lincoln</Typography>
+      </div>
       <p/>
 
       <Divider className={classes.divider}/>
 
+      {/* Navigation */}
       <List component="nav" className={classes.whiteText}>
         <ListItem button
           classes={{ selected: classes.active }}
-          // component={Link}
-          // to="/"
+          component={Link}
+          to="/"
           onClick={() => {setSelected(nav.HOME)}}
           selected={selected === nav.HOME}
         >
@@ -183,8 +174,8 @@ const Sidebar = (props) => {
 
         <ListItem button
           classes={{ selected: classes.active }}
-          // component={Link}
-          // to="/about-me"
+          component={Link}
+          to="/about-me"
           onClick={() => {setSelected(nav.ABOUT)}}
           selected={selected === nav.ABOUT}
         >
@@ -194,8 +185,8 @@ const Sidebar = (props) => {
 
         <ListItem button
           classes={{ selected: classes.active }}
-          // component={Link}
-          // to="/experience"
+          component={Link}
+          to="/experience"
           onClick={() => {setSelected(nav.EXPERIENCE)}}
           selected={selected === nav.EXPERIENCE}
         >
@@ -205,8 +196,8 @@ const Sidebar = (props) => {
 
         <ListItem button
           classes={{ selected: classes.active }}
-          // component={Link}
-          // to="/skills"
+          component={Link}
+          to="/skills"
           onClick={() => {setSelected(nav.SKILLS)}}
           selected={selected === nav.SKILLS}
         >
@@ -216,8 +207,8 @@ const Sidebar = (props) => {
 
         <ListItem button
           classes={{ selected: classes.active }}
-          // component={Link}
-          // to="/projects"
+          component={Link}
+          to="/projects"
           onClick={() => {setSelected(nav.PROJECTS)}}
           selected={selected === nav.PROJECTS}
         >
@@ -227,8 +218,8 @@ const Sidebar = (props) => {
 
         <ListItem button
           classes={{ selected: classes.active }}
-          // component={Link}
-          // to="/contact-me"
+          component={Link}
+          to="/contact-me"
           onClick={() => {setSelected(nav.CONTACT)}}
           selected={selected === nav.CONTACT}
         >
@@ -240,124 +231,104 @@ const Sidebar = (props) => {
 
       <Divider className={classes.divider}/>
 
-      <Box className={classes.otherPlatforms}>
-        <Box className={classes.iconCol}>
-          <IconButton aria-label="Facebook" className={classes.linkIconGroup}>
-            <a href="https://www.facebook.com/ryansple"><Facebook className={classes.linkIcon}/></a>
-          </IconButton>
-          Facebook
-        </Box>
+      {/* Social Media */}
+      <Grid container direction="row" justify="center" alignItems="center">
+        <Grid item>
+          <Grid container direction="column" justify="center" alignItems="center">
+            <IconButton aria-label="GitHub">
+              <a href="https://instagram.com/ryansle"><Instagram className={classes.linkIcon}/></a>
+            </IconButton>
+            <Typography variant="caption" className={classes.whiteText}>Instagram</Typography>
+          </Grid>
+        </Grid>
 
-        <Box className={classes.iconCol}>
-          <IconButton aria-label="Instagram" className={classes.linkIconGroup}>
-            <a href="https://www.instagram.com/ryansle/"><Instagram className={classes.linkIcon}/></a>
-          </IconButton>
-          Instagram
-        </Box>
+        <Grid item>
+          <Grid container direction="column" justify="center" alignItems="center">
+            <IconButton aria-label="GitHub">
+              <a href="https://github.com/ryansle"><GitHub className={classes.linkIcon}/></a>
+            </IconButton>
+            <Typography variant="caption" className={classes.whiteText}>GitHub</Typography>
+          </Grid>
+        </Grid>
 
-        <Box className={classes.iconCol}>
-          <IconButton aria-label="GitHub" className={classes.linkIconGroup}>
-            <a href="https://github.com/ryansle"><GitHub className={classes.linkIcon}/></a>
-          </IconButton>
-          GitHub
-        </Box>
+        <Grid item>
+          <Grid container direction="column" justify="center" alignItems="center">
+            <IconButton aria-label="GitHub">
+              <a href="https://www.linkedin.com/in/ryansle/"><LinkedIn className={classes.linkIcon}/></a>
+            </IconButton>
+            <Typography variant="caption" className={classes.whiteText}>LinkedIn</Typography>
+          </Grid>
+        </Grid>
 
-        <Box className={classes.iconCol}>
-          <IconButton aria-label="LinkedIn" className={classes.linkIconGroup}>
-            <a href="https://www.linkedin.com/in/ryansle/"><LinkedIn className={classes.linkIcon}/></a>
-          </IconButton>
-          LinkedIn
-        </Box>
-
-        {/* TODO: Upload updated resume to my website and route this button to it */}
-        <Box className={classes.iconCol}>
-          <IconButton aria-label="LinkedIn" className={classes.linkIconGroup}>
-            <a href="https://www.linkedin.com/in/ryansle/"><Description className={classes.linkIcon}/></a>
-          </IconButton>
-          Résumé
-        </Box>
-
-      </Box>
+        <Grid item>
+          <Grid container direction="column" justify="center" alignItems="center">
+            <IconButton aria-label="GitHub">
+              <a href=""><Description className={classes.linkIcon}/></a>
+            </IconButton>
+            <Typography variant="caption" className={classes.whiteText}>Résumé</Typography>
+          </Grid>
+        </Grid>
+      </Grid>
     </div>
   );
 
   return (
-    <div className={classes.root}>
-      <AppBar position="fixed" className={classes.appBar}>
-        <Toolbar>
-          <IconButton
-            color="inherit"
-            aria-label="open sidebar"
-            edge="start"
-            onClick={handleDrawerToggle}
-            className={classes.menuButton}
-          >
-            <Menu />
-          </IconButton>
-          <Typography variant="h6" noWrap>
-            Responsive Sidebar
-          </Typography>
-        </Toolbar>
-      </AppBar>
-      <nav className={classes.drawer} aria-label="navigation menu">
-        <Hidden smUp implementation="css">
-          <Drawer
-            className={classes.fullSidebar}
-            container={container}
-            variant="temporary"
-            anchor={theme.direction === 'rtl' ? 'right' : 'left'}
-            open={mobileOpen}
-            onClose={handleDrawerToggle}
-            classes={{
-              paper: classes.fullSidebarLinks,
-            }}
-            ModalProps={{
-              keepMounted: true, // Better open performance on mobile.
-            }}
-          >
-            {sidebar}
-          </Drawer>
-        </Hidden>
-        <Hidden xsDown implementation="css">
-          <Drawer
-            className={classes.fullSidebar}
-            classes={{
-              paper: classes.fullSidebarLinks,
-            }}
-            variant="permanent"
-            open
-          >
-            {sidebar}
-          </Drawer>
-        </Hidden>
-      </nav>
-      <main className={classes.content}>
-        <div className={classes.toolbar} />
-        <Typography paragraph>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-          ut labore et dolore magna aliqua. Rhoncus dolor purus non enim praesent elementum
-          facilisis leo vel. Risus at ultrices mi tempus imperdiet. Semper risus in hendrerit
-          gravida rutrum quisque non tellus. Convallis convallis tellus id interdum velit laoreet id
-          donec ultrices. Odio morbi quis commodo odio aenean sed adipiscing. Amet nisl suscipit
-          adipiscing bibendum est ultricies integer quis. Cursus euismod quis viverra nibh cras.
-          Metus vulputate eu scelerisque felis imperdiet proin fermentum leo. Mauris commodo quis
-          imperdiet massa tincidunt. Cras tincidunt lobortis feugiat vivamus at augue. At augue eget
-          arcu dictum varius duis at consectetur lorem. Velit sed ullamcorper morbi tincidunt. Lorem
-          donec massa sapien faucibus et molestie ac.
-        </Typography>
-        <Typography paragraph>
-          Consequat mauris nunc congue nisi vitae suscipit. Fringilla est ullamcorper eget nulla
-          facilisi etiam dignissim diam. Pulvinar elementum integer enim neque volutpat ac
-          tincidunt. Ornare suspendisse sed nisi lacus sed viverra tellus. Purus sit amet volutpat
-          consequat mauris. Elementum eu facilisis sed odio morbi. Euismod lacinia at quis risus sed
-          vulputate odio. Morbi tincidunt ornare massa eget egestas purus viverra accumsan in. In
-          hendrerit gravida rutrum quisque non tellus orci ac. Pellentesque nec nam aliquam sem et
-          tortor. Habitant morbi tristique senectus et. Adipiscing elit duis tristique sollicitudin
-          nibh sit. Ornare aenean euismod elementum nisi quis eleifend. Commodo viverra maecenas
-          accumsan lacus vel facilisis. Nulla posuere sollicitudin aliquam ultrices sagittis orci a.
-        </Typography>
-      </main>
-    </div>
+    <BrowserRouter>
+      <div className={classes.root}>
+        <AppBar position="fixed" className={classes.appBar}>
+          <Toolbar>
+            <IconButton
+              color="inherit"
+              aria-label="open sidebar"
+              edge="start"
+              onClick={handleDrawerToggle}
+              className={classes.menuButton}
+            >
+              <Menu />
+            </IconButton>
+            <Typography variant="h6" noWrap>
+              Responsive Sidebar
+            </Typography>
+          </Toolbar>
+        </AppBar>
+        <nav className={classes.drawer} aria-label="navigation menu">
+          <Hidden smUp implementation="css">
+            <Drawer
+              className={classes.fullSidebar}
+              container={container}
+              variant="temporary"
+              anchor={theme.direction === "rtl" ? "right" : "left"}
+              open={mobileOpen}
+              onClose={handleDrawerToggle}
+              classes={{
+                paper: classes.fullSidebarLinks,
+              }}
+              ModalProps={{
+                keepMounted: true, // Better open performance on mobile.
+              }}
+            >
+              {sidebar}
+            </Drawer>
+          </Hidden>
+          <Hidden xsDown implementation="css">
+            <Drawer
+              className={classes.fullSidebar}
+              classes={{
+                paper: classes.fullSidebarLinks,
+              }}
+              variant="permanent"
+              open
+            >
+              {sidebar}
+            </Drawer>
+          </Hidden>
+        </nav>
+        <main className={classes.content}>
+          <div className={classes.toolbar} />
+          <Router/>
+        </main>
+      </div>
+    </BrowserRouter>
   );
 }
 
