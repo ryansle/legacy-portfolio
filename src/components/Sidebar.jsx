@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { 
-  Box,
   Grid,
   Drawer, 
   Divider,
@@ -21,8 +20,6 @@ import {
   Code, 
   Computer,
   Email, 
-  Instagram, 
-  Facebook, 
   LinkedIn, 
   GitHub,
   Description, 
@@ -34,20 +31,20 @@ import { makeStyles, useTheme } from "@material-ui/core/styles";
 // Assets
 import headshot from "../resources/RyanLe.png"
 
-const fullSidebarWidth = 290;
+const sidebarWidth = 225;
 
 const useStyles = makeStyles((theme) => ({
   root: {
     display: "flex",
   },
-  fullSidebar: {
-    width: fullSidebarWidth,
+  sidebar: {
+    width: sidebarWidth,
     flexShrink: 0,
   },
-  fullSidebarLinks: {
+  sidebarLinks: {
     background: "#363740",
     [theme.breakpoints.up("sm")]: {
-      width: fullSidebarWidth,
+      width: sidebarWidth,
       flexShrink: 0,
     },
   },
@@ -66,22 +63,10 @@ const useStyles = makeStyles((theme) => ({
     height: 34,
     width: "auto",
   },
-  otherPlatforms: {
-    color: "white",
-    display: "flex",
-    flexDirection: "row",
-    justifyContent: "center",
-    alignItems: "center",
-  },
   linkIcon: {
     color: "white",
     height: 34,
     width: "auto",
-  },
-  iconCol: {
-    display: "flex",
-    flexDirection: "column",
-    fontSize: 11,
   },
   active: {
     backgroundColor: "#3e4049 !important",
@@ -90,14 +75,14 @@ const useStyles = makeStyles((theme) => ({
   },
   drawer: {
     [theme.breakpoints.up("sm")]: {
-      width: fullSidebarWidth,
+      width: sidebarWidth,
       flexShrink: 0,
     },
   },
   appBar: {
     [theme.breakpoints.up("sm")]: {
-      width: `calc(100% - ${fullSidebarWidth}px)`,
-      marginLeft: fullSidebarWidth,
+      width: `calc(100% - ${sidebarWidth}px)`,
+      marginLeft: sidebarWidth,
     },
   },
   menuButton: {
@@ -119,6 +104,7 @@ const Sidebar = (props) => {
   const { window } = props;
 
   const container = window !== undefined ? () => window().document.body : undefined;
+  console.log(container);
 
   const nav = {
     HOME: "Home",
@@ -145,7 +131,7 @@ const Sidebar = (props) => {
       >
         <img
           src={headshot}
-          width="60%"
+          width="70%"
           height="auto"
           alt="Ryan Le Headshot - Spring 2020"
           style={{ borderRadius: "50%" }}
@@ -153,7 +139,8 @@ const Sidebar = (props) => {
       </Grid>
       <div style={{ textAlign: "center" }}>
         <Typography variant="h5" className={classes.whiteText}>Ryan Le</Typography>
-        <Typography variant="paragraph" className={classes.whiteText}>Software Engineering Student at the University of Nebraska-Lincoln</Typography>
+        <Typography variant="body2" className={classes.whiteText}>Software Engineer</Typography>
+        <Typography variant="body2" className={classes.whiteText}>University of Nebraska-Lincoln</Typography>
       </div>
       <p/>
 
@@ -236,15 +223,6 @@ const Sidebar = (props) => {
         <Grid item>
           <Grid container direction="column" justify="center" alignItems="center">
             <IconButton aria-label="GitHub">
-              <a href="https://instagram.com/ryansle"><Instagram className={classes.linkIcon}/></a>
-            </IconButton>
-            <Typography variant="caption" className={classes.whiteText}>Instagram</Typography>
-          </Grid>
-        </Grid>
-
-        <Grid item>
-          <Grid container direction="column" justify="center" alignItems="center">
-            <IconButton aria-label="GitHub">
               <a href="https://github.com/ryansle"><GitHub className={classes.linkIcon}/></a>
             </IconButton>
             <Typography variant="caption" className={classes.whiteText}>GitHub</Typography>
@@ -294,14 +272,14 @@ const Sidebar = (props) => {
         <nav className={classes.drawer} aria-label="navigation menu">
           <Hidden smUp implementation="css">
             <Drawer
-              className={classes.fullSidebar}
+              className={classes.sidebar}
               container={container}
               variant="temporary"
               anchor={theme.direction === "rtl" ? "right" : "left"}
               open={mobileOpen}
               onClose={handleDrawerToggle}
               classes={{
-                paper: classes.fullSidebarLinks,
+                paper: classes.sidebarLinks,
               }}
               ModalProps={{
                 keepMounted: true, // Better open performance on mobile.
@@ -312,9 +290,9 @@ const Sidebar = (props) => {
           </Hidden>
           <Hidden xsDown implementation="css">
             <Drawer
-              className={classes.fullSidebar}
+              className={classes.sidebar}
               classes={{
-                paper: classes.fullSidebarLinks,
+                paper: classes.sidebarLinks,
               }}
               variant="permanent"
               open
