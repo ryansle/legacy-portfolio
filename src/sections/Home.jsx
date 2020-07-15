@@ -41,7 +41,7 @@ const Home = () => {
         alt="Ryan Le - Dynamic Banner"
         screenHeight={50}
       />
-      <div className={classes.container}>
+      <section className={classes.container}>
         <Typography className={classes.title} variant="h3">Welcome to my web page.</Typography>
         <Typography variant="body1">
           I created this online portfolio from the ground up in order to showcase my skills, 
@@ -96,7 +96,7 @@ const Home = () => {
 
         </Grid>
         <br/>
-      </div>
+      </section>
     </div>
   );
 }
