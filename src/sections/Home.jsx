@@ -4,7 +4,6 @@ import {
   Grid,
   Card,
   CardContent,
-  CardMedia,
 } from "@material-ui/core"
 import Banner from "../components/Banner";
 import { makeStyles } from "@material-ui/core/styles";

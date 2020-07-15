@@ -25,7 +25,7 @@ import {
   Description, 
   Menu
 } from "@material-ui/icons";
-import { Link, BrowserRouter } from "react-router-dom";
+import { Link } from "react-router-dom";
 import Router from "../Router";
 import { makeStyles, useTheme } from "@material-ui/core/styles";
 // Assets
@@ -104,8 +104,7 @@ const Sidebar = (props) => {
   const { window } = props;
 
   const container = window !== undefined ? () => window().document.body : undefined;
-  console.log(container);
-
+  
   const nav = {
     HOME: "Home",
     ABOUT: "About",
@@ -251,63 +250,61 @@ const Sidebar = (props) => {
   );
 
   return (
-    <BrowserRouter>
-      <div className={classes.root}>
-        <AppBar position="fixed" className={classes.appBar}>
-          <Toolbar>
-            <IconButton
-              color="inherit"
-              aria-label="open sidebar"
-              edge="start"
-              onClick={handleDrawerToggle}
-              className={classes.menuButton}
-            >
-              <Menu />
-            </IconButton>
-            <Typography variant="h6" noWrap>
-              Responsive Sidebar
-            </Typography>
-          </Toolbar>
-        </AppBar>
-        <nav className={classes.drawer} aria-label="navigation menu">
-          <Hidden smUp implementation="css">
-            <Drawer
-              className={classes.sidebar}
-              container={container}
-              variant="temporary"
-              anchor={theme.direction === "rtl" ? "right" : "left"}
-              open={mobileOpen}
-              onClose={handleDrawerToggle}
-              classes={{
-                paper: classes.sidebarLinks,
-              }}
-              ModalProps={{
-                keepMounted: true, // Better open performance on mobile.
-              }}
-            >
-              {sidebar}
-            </Drawer>
-          </Hidden>
-          <Hidden xsDown implementation="css">
-            <Drawer
-              className={classes.sidebar}
-              classes={{
-                paper: classes.sidebarLinks,
-              }}
-              variant="permanent"
-              open
-            >
-              {sidebar}
-            </Drawer>
-          </Hidden>
-        </nav>
-        <main className={classes.content}>
-          <div className={classes.toolbar} />
-          {/* Main Content of the site */}
-          <Router/>
-        </main>
-      </div>
-    </BrowserRouter>
+    <div className={classes.root}>
+      <AppBar position="fixed" className={classes.appBar}>
+        <Toolbar>
+          <IconButton
+            color="inherit"
+            aria-label="open sidebar"
+            edge="start"
+            onClick={handleDrawerToggle}
+            className={classes.menuButton}
+          >
+            <Menu />
+          </IconButton>
+          <Typography variant="h6" noWrap>
+            Responsive Sidebar
+          </Typography>
+        </Toolbar>
+      </AppBar>
+      <nav className={classes.drawer} aria-label="navigation menu">
+        <Hidden smUp implementation="css">
+          <Drawer
+            className={classes.sidebar}
+            container={container}
+            variant="temporary"
+            anchor={theme.direction === "rtl" ? "right" : "left"}
+            open={mobileOpen}
+            onClose={handleDrawerToggle}
+            classes={{
+              paper: classes.sidebarLinks,
+            }}
+            ModalProps={{
+              keepMounted: true, // Better open performance on mobile.
+            }}
+          >
+            {sidebar}
+          </Drawer>
+        </Hidden>
+        <Hidden xsDown implementation="css">
+          <Drawer
+            className={classes.sidebar}
+            classes={{
+              paper: classes.sidebarLinks,
+            }}
+            variant="permanent"
+            open
+          >
+            {sidebar}
+          </Drawer>
+        </Hidden>
+      </nav>
+      <main className={classes.content}>
+        <div className={classes.toolbar} />
+        {/* Main Content of the site */}
+        <Router/>
+      </main>
+    </div>
   );
 }
 
