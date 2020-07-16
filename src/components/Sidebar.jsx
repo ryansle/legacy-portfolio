@@ -111,12 +111,12 @@ const Sidebar = (props) => {
   const container = window !== undefined ? () => window().document.body : undefined;
   
   const nav = {
-    HOME: "Home",
-    ABOUT: "About",
-    EXPERIENCE: "Experience",
-    SKILLS: "Skills",
-    PROJECTS: "Projects",
-    CONTACT: "Contact",
+    HOME: "Homebase - Welcome.",
+    ABOUT: "About Me",
+    EXPERIENCE: "Work Experience",
+    SKILLS: "My Skillsets",
+    PROJECTS: "Projects I've Worked On",
+    CONTACT: "Contact Me!",
   }
   const [selected, setSelected] = useState(nav.HOME);
   const [mobileOpen, setMobileOpen] = useState(false);
