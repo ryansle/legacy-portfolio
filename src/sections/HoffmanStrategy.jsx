@@ -138,11 +138,13 @@ const HoffmanStrategy = () => {
     <div>
       <section className={classes.container}>
         <p align="middle">
-          <img 
-            className={classes.media}
-            src={hsg}
-            alt="Hoffman Strategy Group"
-          />
+          <a href="https://hoffmanstrategygroup.com/">
+            <img 
+              className={classes.media}
+              src={hsg}
+              alt="Hoffman Strategy Group"
+            />
+          </a>
         </p>
         <Grid container justify="space-between">
           <Grid item>
@@ -180,7 +182,12 @@ const HoffmanStrategy = () => {
             />
           </Grid>
         </Grid>
-        <br/> <br/>
+        <br/> 
+
+        <Typography variant="body1">
+          <a href="https://hoffmanstrategygroup.com/">Company Website</a>
+        </Typography>
+        <br/>
         
         <Typography variant="body1">
           Hoffman Strategy Group is a boutique, national real estate 

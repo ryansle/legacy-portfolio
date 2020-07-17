@@ -43,11 +43,13 @@ const Raven = () => {
     <div>
       <section className={classes.container}>
         <p align="middle">
-          <img 
-            className={classes.media}
-            src={raven}
-            alt="Raven Industries"
-          />
+          <a href="https://ravenind.com/">
+            <img 
+              className={classes.media}
+              src={raven}
+              alt="Raven Industries"
+            />
+          </a>
         </p>
         <Grid container justify="space-between">
           <Grid item>
@@ -97,7 +99,12 @@ const Raven = () => {
             />
           </Grid>
         </Grid>
+
+        <Typography variant="body1">
+          <a href="https://ravenind.com/">Company Website</a>
+        </Typography>
         <br/>
+
         <Typography variant="body1">
           Raven is a technology company that creates innovative solutions to great challenges. 
           Utilizing their strength in engineering, manufacturing, and technological innovation, Raven is a leader in 

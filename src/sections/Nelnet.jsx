@@ -45,13 +45,15 @@ const Nelnet = () => {
   return (
     <div>
       <section className={classes.container}>
-        <Grid container justify="center">
-          <img 
-            className={classes.media}
-            src={nelnet}
-            alt="Nelnet"
-          />
-        </Grid>
+        <a href="https://nelnetinc.com/">
+          <Grid container justify="center">
+            <img 
+              className={classes.media}
+              src={nelnet}
+              alt="Nelnet"
+            />
+          </Grid>
+        </a>
         <Grid container justify="space-between">
           <Grid item>
             <Typography variant="h5" className={classes.position}>IT Software Engineer Intern</Typography>
@@ -84,6 +86,10 @@ const Nelnet = () => {
             />
           </Grid>
         </Grid>
+
+        <Typography variant="body1">
+          <a href="https://nelnetinc.com/">Company Website</a>
+        </Typography>
         <br/>
     
         <Typography variant="body1">

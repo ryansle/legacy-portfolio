@@ -47,11 +47,13 @@ const ReLogic = () => {
     <div>
       <section className={classes.container}>
         <p align="middle">
-          <img 
-            className={classes.media}
-            src={relogic}
-            alt="Re-Logic Games"
-          />
+          <a href="https://re-logic.com/">
+            <img 
+              className={classes.media}
+              src={relogic}
+              alt="Re-Logic Games"
+            />
+          </a>
         </p>
         <Grid container justify="space-between">
           <Grid item>
@@ -81,7 +83,11 @@ const ReLogic = () => {
             />
           </Grid>
         </Grid>
-        <br />
+
+        <Typography variant="body1">
+          <a href="https://re-logic.com/">Company Website</a>
+        </Typography>
+        <br/>
 
         <Typography variant="body1">
           Re-Logic is an American independent game developer and publisher based in Indiana. 

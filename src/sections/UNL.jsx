@@ -42,11 +42,13 @@ const UNL = () => {
     <div>
       <section className={classes.container}>
         <p align="middle">
-          <img
-            className={classes.media}
-            src={unl}
-            alt="University of Nebraska-Lincoln: College of Engineering, Department of Computer Science &amp; Engineering"
-          />
+          <a href="https://cse.unl.edu/home">
+            <img
+              className={classes.media}
+              src={unl}
+              alt="University of Nebraska-Lincoln: College of Engineering, Department of Computer Science &amp; Engineering"
+            />
+          </a>
         </p>
         <Grid container justify="space-between">
           <Grid item>
@@ -76,6 +78,10 @@ const UNL = () => {
             />
           </Grid>
         </Grid>
+
+        <Typography variant="body1">
+          <a href="https://cse.unl.edu/home">Department Website</a>
+        </Typography>
         <br/>
 
         <Typography variant="body1">
