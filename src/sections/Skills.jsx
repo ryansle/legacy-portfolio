@@ -304,7 +304,7 @@ const Skills = () => {
           order to improve a software's capabilities.
         </Typography>
         <br/> <br/> <br/>
-x
+
         <Grid container>
           <AccountTree className={classes.icon}/>
           <Typography variant="h4" className={classes.title}>Project Management</Typography>
