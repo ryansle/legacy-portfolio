@@ -141,11 +141,25 @@ const Raven = () => {
           document this large) PDF reports in a matter of minutes, compared to the previous
           hours it would take to hunt down all the necessary information and format it accordingly. The system allowed for report consistency across the board, 
           abstraction of data, filtering of components based on their relationships to previously selected components, and much more. Being that this was my first
-          ever experience working in industry, I was quite proud of the work I had performed over the course of the summer. Perhaps the most important lesson I
-          learned at Raven, in the words of my mentor, "was learning how to learn on my own." Since this was my first ever internship, I came from a previous background
-          of consistently being able to ask others for support when I didn't understand concepts or know how to do things. By the end of the summer, I was able to learn
-          how to be much more self-sufficient in picking up new tasks and learning new things.
+          ever experience working in industry, I was quite proud of the work I had performed over the course of the summer.
         </Typography>
+        <br/>
+        <Typography variant="h5" className={classes.title}>What did I learn?</Typography>
+        <Typography variant="body1">
+            By far the most important lesson I learned during my time at Raven Industries was, in the words of my mentor, "learning how to learn on my own."
+            Since this was my first industry experience, I came from a background of consistently being able to ask others for support when things did not make sense
+            or if I did not know how to do things. Due to this, when I first started at Raven, I spent far too much time asking my mentor for help on things that were
+            simply a Google search away. By establishing some borders between when I would ask for help, I was forced to do more digging into my problems before
+            confronting anyone, effectively teaching me core problem solving capabilities. On top of coming out of my internship as both a better software engineer
+            and a better problem solver, Raven taught me:
+            <ul>
+              <li>the bare basics of web development in conjunction with Kendo UI and the .NET framework.</li>
+              <li>effective communication skills through frequent stakeholder meetings to showcase my application.</li>
+              <li>how to begin gathering requirements for brand new software projects.</li>
+              <li>how to effectively utilize a debugger instead of writing a million print statements!</li>
+            </ul>
+        </Typography>
+        <br/> <br/> <br/>
       </section>
     </div>
   );

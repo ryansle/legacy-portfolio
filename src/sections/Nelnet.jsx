@@ -122,6 +122,13 @@ const Nelnet = () => {
           .NET MVC codebase, and collaborating with my intern team to deliver further business opporunity proposals to Nelnet's
           executive team.
         </Typography>
+        <br/>
+        {/* <Typography variant="h5" className={classes.title}>What did I learn?</Typography>
+        <Typography variant="body1">
+          My manager, Billy Allen, has been doing an excellent job of incorporating an Agile mindset to our daily workflows. Thanks to that, and to his career
+          coaching as I ready myself for full-time opportunities, I have learned how to 
+        </Typography>
+        <br/> <br/> <br/> */}
       </section>
     </div>
   );

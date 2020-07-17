@@ -250,6 +250,21 @@ const HoffmanStrategy = () => {
           Hoffman Strategy Group for the opportunity.
         </Typography>
         <br/>
+        <Typography variant="h5" className={classes.title}>What did I learn?</Typography>
+        <Typography variant="body1">
+          Working with Hoffman Strategy Group was an excellent way to break into the web development domain of software engineering. It also helped that my partner Matt has
+          been sharpening his web development skills over the course of the last year, and was always point me in the right direction for growth. Thanks to my summer with
+          Hoffman Strategy Group, I learned how to:
+          <ul>
+            <li>Develop beautifully responsive React front-ends from the ground up.</li>
+            <li>Manage diverse client expectations from non-technical stakeholders.</li>
+            <li>Continue to practice leading the development of large-scale software applications</li>
+            <li>Work with up-and-coming web development frameworks and technologies like React, Redux, Node.js, and Amazon Web Services.</li>
+            <li>Pace my time accordingly between two concurrent software development positions.</li>
+          </ul>
+        </Typography>
+        <br/>
+        <Typography variant="h5" className={classes.title}>Gallery</Typography>
         <Typography variant="body1">
           You may notice in the screenshots below that many aspects of the Hoffman Analytics platform look strikingly similar to
           the contents of my personal website. This is due to the fact that I was developing both of these projects concurrently, using nearly identical
@@ -258,8 +273,6 @@ const HoffmanStrategy = () => {
           these two projects intertwined greatly and have ended up sharing many different front-end assets.
         </Typography>
         <br/>
-
-        <Typography variant="h5" className={classes.title}>Gallery</Typography>
         <Grid container justify="space-between">
           <img
             src={fileManagerPNG}
