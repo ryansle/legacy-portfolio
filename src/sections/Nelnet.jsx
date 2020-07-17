@@ -77,6 +77,14 @@ const Nelnet = () => {
               className={classes.tech}
               label=".NET MVC"
             />
+            <Chip
+              className={classes.tech}
+              label="Visual Studio"
+            />
+            <Chip
+              className={classes.tech}
+              label="Microsoft TFS"
+            />
           </Grid>
         </Grid>
         <br/>

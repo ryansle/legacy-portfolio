@@ -94,9 +94,13 @@ const Raven = () => {
               className={classes.tech}
               label="GitLab"
             />
+            <Chip
+              className={classes.tech}
+              label="Visual Studio Code"
+            />
           </Grid>
         </Grid>
-        <br/> <br/>
+        <br/>
         <Typography variant="body1">
           Raven is a technology company that creates innovative solutions to great challenges. 
           Utilizing their strength in engineering, manufacturing, and technological innovation, Raven is a leader in 
