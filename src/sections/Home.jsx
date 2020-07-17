@@ -4,30 +4,47 @@ import {
   Grid,
   Card,
   CardContent,
-} from "@material-ui/core"
+} from "@material-ui/core";
+import {
+  Home as House,
+  Person,
+  Work,
+  Code,
+  Computer,
+  Email
+} from "@material-ui/icons";
 import Banner from "../components/Banner";
 import { makeStyles } from "@material-ui/core/styles";
+import { Link } from "react-router-dom";
 // Assets
 import mountains from "../resources/MountainBanner.png";
 
 const useStyles = makeStyles(() => ({
   container: {
     paddingTop: 40,
-    paddingLeft: '8vw',
-    paddingRight: '8vw',
+    paddingLeft: "12vw",
+    paddingRight: "12vw",
   },
   title: {
-    fontWeight: 'bold',
+    fontWeight: "bold",
     marginBottom: 20,
   },
   nav: {
     width: 400,
-    marginBottom: 10,
+    height: 135,
+    marginBottom: 20,
     boxShadow: "0px 3px 4px 0px #555",
     border: "1px solid #9fa2b4",
+    textDecoration: "none",
   },
   subtitle: {
-    fontWeight: 'bold',
+    fontWeight: "bold",
+    marginBottom: 4,
+  },
+  icon: {
+    height: 30,
+    width: "auto",
+    paddingRight: 7,
   },
 }));
 
@@ -50,47 +67,66 @@ const Home = () => {
           at your company. You can learn a lot more by navigating between the links to the side or below!
         </Typography>
         <br/>
-        <Grid container justify="space-evenly">
+        <Typography variant="h5" className={classes.title}>Links</Typography>
+        <Grid container justify="space-between">
 
-          <Card className={classes.nav}>
+          <Card className={classes.nav} component={Link} to="/">
             <CardContent>
-              <Typography variant="h5" className={classes.subtitle}>Home</Typography>
+              <Grid container>
+                <House className={classes.icon}/>
+                <Typography variant="h5" className={classes.subtitle}>Home</Typography>
+              </Grid>
               <Typography variant="body1">You are here!</Typography>
             </CardContent>
           </Card>
 
-          <Card className={classes.nav}>
+          <Card className={classes.nav} component={Link} to="/about">
             <CardContent>
-              <Typography variant="h5" className={classes.subtitle}>About</Typography>
-              <Typography variant="body1">Learn more about who I am.</Typography>
+              <Grid container>
+                <Person className={classes.icon}/>
+                <Typography variant="h5" className={classes.subtitle}>About</Typography>
+              </Grid>
+              <Typography variant="body1">Learn more about who I am as a person and what I am looking for in a full-time role.</Typography>
             </CardContent>
           </Card>
 
-          <Card className={classes.nav}>
+          <Card className={classes.nav} component={Link} to="/experience">
             <CardContent>
-              <Typography variant="h5" className={classes.subtitle}>Experience</Typography>
-              <Typography variant="body1">Check out where I've been working over the last few years.</Typography>
+              <Grid container>
+                <Work className={classes.icon}/>
+                <Typography variant="h5" className={classes.subtitle}>Experience</Typography>
+              </Grid>
+              <Typography variant="body1">Check out where I have been working over the last few years (and contact me to add your company to the list!).</Typography>
             </CardContent>
           </Card>
 
-          <Card className={classes.nav}>
+          <Card className={classes.nav} component={Link} to="/skills">
             <CardContent>
-              <Typography variant="h5" className={classes.subtitle}>Skills</Typography>
-              <Typography variant="body1">Find out what my expertise is in.</Typography>
+              <Grid container>
+                <Code className={classes.icon}/>
+                <Typography variant="h5" className={classes.subtitle}>Skills</Typography>
+              </Grid>
+              <Typography variant="body1">Find out what my expertise is in, and learn how I can leverage those skills in a position at your company.</Typography>
             </CardContent>
           </Card>
 
-          <Card className={classes.nav}>
+          <Card className={classes.nav} component={Link} to="/projects">
             <CardContent>
-              <Typography variant="h5" className={classes.subtitle}>Projects</Typography>
-              <Typography variant="body1">See what I've worked on in the past!</Typography>
+              <Grid container>
+                <Computer className={classes.icon}/>
+                <Typography variant="h5" className={classes.subtitle}>Projects</Typography>
+              </Grid>
+              <Typography variant="body1">See all the cool projects I have worked on through university and in my own free time in the past.</Typography>
             </CardContent>
           </Card>
 
-          <Card className={classes.nav}>
+          <Card className={classes.nav} component={Link} to="/contact">
             <CardContent>
-              <Typography variant="h5" className={classes.subtitle}>Contact Me</Typography>
-              <Typography variant="body1">Get in contact with me about anything!</Typography>
+              <Grid container>
+                <Email className={classes.icon}/>
+                <Typography variant="h5" className={classes.subtitle}>Contact Me</Typography>
+              </Grid>
+              <Typography variant="body1">Have a question about something? Want to offer me a job? Just want someone to talk to? Get in contact with me about anything!</Typography>
             </CardContent>
           </Card>
 

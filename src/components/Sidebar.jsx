@@ -166,7 +166,7 @@ const Sidebar = (props) => {
         <ListItem button
           classes={{ selected: classes.active }}
           component={Link}
-          to="/about-me"
+          to="/about"
           onClick={() => {setSelected(nav.ABOUT)}}
           selected={selected === nav.ABOUT}
         >
@@ -210,7 +210,7 @@ const Sidebar = (props) => {
         <ListItem button
           classes={{ selected: classes.active }}
           component={Link}
-          to="/contact-me"
+          to="/contact"
           onClick={() => {setSelected(nav.CONTACT)}}
           selected={selected === nav.CONTACT}
         >
@@ -282,7 +282,7 @@ const Sidebar = (props) => {
         <ListItem button
           classes={{ selected: classes.active }}
           component={Link}
-          to="/about-me"
+          to="/about"
           onClick={() => {setSelected(nav.ABOUT)}}
           selected={selected === nav.ABOUT}
         >
@@ -326,7 +326,7 @@ const Sidebar = (props) => {
         <ListItem button
           classes={{ selected: classes.active }}
           component={Link}
-          to="/contact-me"
+          to="/contact"
           onClick={() => {setSelected(nav.CONTACT)}}
           selected={selected === nav.CONTACT}
         >

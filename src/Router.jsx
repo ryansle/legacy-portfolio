@@ -23,7 +23,7 @@ const Router = () => {
         component={Home}
       />
       <Route
-        path="/about-me"
+        path="/about"
         exact
         component={About}
       />
@@ -43,7 +43,7 @@ const Router = () => {
         component={Projects}
       />
       <Route
-        path="/contact-me"
+        path="/contact"
         exact
         component={Contact}
       />
