@@ -81,9 +81,8 @@ const UNL = () => {
         </Grid>
         <br/>
 
-        <Typography variant="h5">CSCE 361 ("Software Engineering") Course Description</Typography>
         <Typography variant="body1">
-          Techniques used in the disciplined
+          <i>COURSE DESCRIPTION</i> - Techniques used in the disciplined
           development of large software projects. Software requirements analysis and
           specifications, program design, coding and integration testing, and software
           maintenance. Software estimation techniques, design tools, and complexity
