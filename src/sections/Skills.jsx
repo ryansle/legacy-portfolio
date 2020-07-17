@@ -363,12 +363,12 @@ const Skills = () => {
 
           <Grid item className={classes.skill}>
             <img src={photoshop} alt="Adobe PhotoShop" className={classes.media}/>
-            <Typography variant="h6">Adobe PhotoShop</Typography>
+            <Typography variant="h6">PhotoShop</Typography>
           </Grid>
 
           <Grid item className={classes.skill}>
             <img src={premier} alt="Adobe Premier Pro" className={classes.media}/>
-            <Typography variant="h6">Adobe Premier Pro</Typography>
+            <Typography variant="h6">Premier Pro</Typography>
           </Grid>
 
         </Grid>

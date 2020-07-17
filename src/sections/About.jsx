@@ -157,7 +157,7 @@ const About = () => {
 
         <div className={classes.whitespace}/>
 
-        <Typography variant="h4" className={classes.title}>Don't Believe Me? Ask Any of my References!</Typography>
+        <Typography variant="h4" className={classes.title}>Don't believe me? Ask any of my references!</Typography>
         <Grid container style={{ justifyContent: "space-around" }}>
 
           <Card className={classes.reference}>
