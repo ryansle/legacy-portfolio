@@ -38,8 +38,7 @@ const useStyles = makeStyles(() => ({
     marginBottom: 20,
   },
   tech: {
-    marginLeft: 2,
-    marginRight: 2,
+    margin: 5,
   },
   learnMore: {
     float: "right",
