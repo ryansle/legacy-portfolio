@@ -157,11 +157,15 @@ const Experience = () => {
                 />
                 <Chip
                   className={classes.tech}
-                  label=".NET MVC"
+                  label="XSLT"
                 />
                 <Chip
                   className={classes.tech}
-                  label="XSLT"
+                  label="Oxygen XML Editor"
+                />
+                <Chip
+                  className={classes.tech}
+                  label=".NET MVC"
                 />
                 <Button 
                   className={classes.learnMore}
