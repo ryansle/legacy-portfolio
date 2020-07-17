@@ -225,7 +225,7 @@ const Experience = () => {
                 />
                 <Chip
                   className={classes.tech}
-                  label="Dapper"
+                  label="SQL"
                 />
                 <Button 
                   className={classes.learnMore}

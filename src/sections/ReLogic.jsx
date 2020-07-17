@@ -91,6 +91,15 @@ const ReLogic = () => {
           (which was unofficial at the time) was known for developing popular fangame Super Mario Brothers X.
         </Typography>
         <br/>
+        <Typography variant="h5" className={classes.subtitle}>Responsibilities</Typography>
+        <Typography variant="body1">
+          <ul>
+            <li>Evaluated beta versions of Terraria in order to catch bugs before shipping out major community updates.</li>
+            <li>Brainstormed ideas for new additions to Terraria and gameplay improvements.</li>
+            <li>Reported directly to developers regarding gameplay, mechanics, bugs, etc.</li>
+            <li>Participated in remote meetings with the development team to address the current state of progress.</li>
+          </ul>
+        </Typography>
         <Typography variant="body1">
           Okay, I recognize that if you are actually reading through this page, you probably have a lot of questions.
           Let's address the frequently asked questions, and if you have any more, feel free to <Link to="/contact-me">contact me!</Link>

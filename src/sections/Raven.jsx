@@ -19,9 +19,6 @@ const useStyles = makeStyles(() => ({
     fontWeight: "bold",
     marginBottom: 20,
   },
-  subtitle: {
-    fontWeight: "bold",
-  },
   position: {
     color: "#757575",
   },
@@ -107,6 +104,21 @@ const Raven = () => {
           precision agriculture, high performance specialty films, and situational awareness markets.
         </Typography>
         <br/>
+        <Typography variant="h5" className={classes.title}>Responsibilities</Typography>
+        <Typography variant="body1">
+          <ul>
+            <li>Research and create development requirements.</li>
+            <li>Document test plans and perform necessary testing on development code.</li>
+            <li>Coordinate with my supervisor, mentor, and project management on development tasks.</li>
+            <li>Learn best practices in a team development environment.</li>
+            <li>Develop software (work closely with mentor and development team to meet objectives).</li>
+            <li>Developed a Report Generator to easily export database information onto a formatted PDF.</li>
+            <li>Utilized Chrome DevTools and Visual Studio Professional to trace through non-functional code.</li>
+            <li>Learned best practices with version control by rebasing, squashing, and branching with Git.</li>
+            <li>Familiarized myself with Kendo UI in order to simplify the web development process.</li>
+          </ul>
+        </Typography>
+        <Typography variant="h5" className={classes.title}>About This Position</Typography>
         <Typography variant="body1">
           During my time at Raven, I worked on their Slingshot team, one of their few web-based software teams. I was primarily responsible
           for developing a report generation system that streamlined internal processes. Prior to my development of the DTC Report Generator, individuals

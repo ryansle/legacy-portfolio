@@ -18,9 +18,6 @@ const useStyles = makeStyles(() => ({
     fontWeight: "bold",
     marginBottom: 20,
   },
-  subtitle: {
-    fontWeight: "bold",
-  },
   position: {
     color: "#757575",
   },
@@ -90,6 +87,15 @@ const UNL = () => {
           software project.
         </Typography>
         <br/>
+        <Typography variant="h5" className={classes.title}>Responsibilities</Typography>
+        <Typography variant="body1">
+          <ul>
+            <li>Advised three student teams through their software engineering capstone project throughout the semester.</li>
+            <li>Drove several changes to the contents of the midterm exam after peer review.</li>
+            <li>Authored concise tutorials for the use of the JavaFX SceneBuilder in conjunction with IntelliJ IDEA.</li>
+          </ul>
+        </Typography>
+        <Typography variant="h5" className={classes.title}>About This Position</Typography>
         <Typography variant="body1">
           While pursuing my Bachelor of Science Degree in Software Engineering at the university, I also took on 
           a position as a teaching assistant for Dr. Chris Bohn's CSCE 361 course - Software Engineering.

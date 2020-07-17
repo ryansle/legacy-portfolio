@@ -19,9 +19,6 @@ const useStyles = makeStyles(() => ({
     fontWeight: "bold",
     marginBottom: 20,
   },
-  subtitle: {
-    fontWeight: "bold",
-  },
   position: {
     color: "#757575",
   },
@@ -94,6 +91,16 @@ const Nelnet = () => {
           the administration and repayment of student loans and education financial services.
         </Typography>
         <br/>
+        <Typography variant="h5" className={classes.title}>Responsibilities</Typography>
+        <Typography variant="body1">
+          <ul>
+            <li>Developed XSLT transformations for the Workday team.</li>
+            <li>Redeveloped an existing .NET web application into a functional component of daily workflow.</li>
+            <li>Participated in an intern pod team that delivered a business proposal to senior members of the Nelnet organization.</li>
+            <li>Actively practiced navigating an Agile workflow environment throughout the course of my remote internship.</li>
+          </ul>
+        </Typography>
+        <Typography variant="h5" className={classes.title}>About This Position</Typography>
         <Typography variant="body1">
           When COVID-19 ravaged the United States and forced companies across the nation to cancel 
           their internship programs, Nelnet decided they might as well open their own intern programs back up.

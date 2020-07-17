@@ -192,6 +192,17 @@ const HoffmanStrategy = () => {
           to successful real estate projects. 
         </Typography>
         <br/>
+        <Typography variant="h5" className={classes.title}>Responsibilities</Typography>
+        <Typography variant="body1">
+          <ul>
+            <li>Refactored a pre-existing JavaScript codebase to improve maintainability and scalability.</li>
+            <li>Leveraged React and Material UI to redevelop the front-end for a real-estate data analytics system.</li>
+            <li>Led the product vision for the new Hoffman Analytics software subsidiary.</li>
+            <li>Utilized Python and Selenium to scrape business data (2000 entries) from the web in an a fast, organizedmanner onto an Excel sheet.</li>
+            <li>Served as a technology advisor for the group in calls with potential clients.</li>
+          </ul>
+        </Typography>
+        <Typography variant="h5" className={classes.title}>About This Position</Typography>
         <Typography variant="body1">
           I was initially hired by the Hoffman Strategy Group in November 2019
           to take over their social media presence on LinkedIn, help
