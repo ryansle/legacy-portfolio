@@ -70,7 +70,6 @@ const useStyles = makeStyles(() => ({
     transform: "translate(-50%, -50%) !important",
     background: "white",
     width: "70%",
-    display: "inline-block",
   },
   responsiveOverlay: {
     position: "fixed",
@@ -79,7 +78,6 @@ const useStyles = makeStyles(() => ({
     transform: "translate(-50%, -50%) !important",
     background: "white",
     width: "90%",
-    display: "inline-block",
   },
   description: {
     paddingLeft: 70,
