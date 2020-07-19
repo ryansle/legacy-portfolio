@@ -7,7 +7,6 @@ import {
 import {
   Devices,
   AccountTree,
-  LastPage,
   AssignmentInd
 } from "@material-ui/icons";
 import { Link } from "react-router-dom";

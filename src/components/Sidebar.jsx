@@ -245,9 +245,11 @@ const Sidebar = (props) => {
         <Grid item>
           <Grid container direction="column" justify="center" alignItems="center">
             <IconButton aria-label="GitHub">
-              <a href=""><Description className={classes.linkIcon}/></a>
+              <Link to="/resume">
+                <Description className={classes.linkIcon}/>
+              </Link>
             </IconButton>
-            <Typography variant="caption" className={classes.whiteText}>Résumé</Typography>
+            <Typography variant="caption" className={classes.whiteText}>Resume</Typography>
           </Grid>
         </Grid>
       </Grid>

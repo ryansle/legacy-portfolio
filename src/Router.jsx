@@ -7,6 +7,7 @@ import Experience from "./sections/Experience";
 import Skills from "./sections/Skills";
 import Projects from "./sections/Projects";
 import Contact from "./sections/Contact";
+import Resume from "./sections/Resume";
 // Subsections
 import HoffmanStrategy from './sections/HoffmanStrategy';
 import Nelnet from './sections/Nelnet';
@@ -46,6 +47,11 @@ const Router = () => {
         path="/contact"
         exact
         component={Contact}
+      />
+      <Route
+        path="/resume"
+        exact
+        component={Resume}
       />
       {/* Subsections */}
       <Route

@@ -144,12 +144,12 @@ const About = () => {
         <Typography variant="body1">
           But as busy as my life can be with school, work, and extracurriculars, I can still find time to set aside to do things I love including...
           <ul>
-            <li>Going for long jogs around Lincoln, NE to rest my mind 🏃‍♂️</li>
-            <li>Practicing (amateur) photograpy of people and places 📸</li>
-            <li>Traveling within the country to brand new places with my amazing group of friends ⛰️</li>
-            <li>Spending quality time with friends and family 👨‍👩‍👧‍👦</li>
-            <li>Learning how to improve my skills as a software engineer 💻</li>
-            <li>Playing video games 🎮</li>
+            <li>Going for long jogs around Lincoln, NE to rest my mind <span role="img" aria-label="(Running Man)">🏃‍♂️</span></li>
+            <li>Practicing (amateur) photograpy of people and places <span role="img" aria-label="(Camera)">📸</span></li>
+            <li>Traveling within the country to brand new places with my amazing group of friends <span role="img" aria-label="(Mountain)">⛰️</span></li>
+            <li>Spending quality time with friends and family <span role="img" aria-label="(Family)">👨‍👩‍👧‍👦</span></li>
+            <li>Learning how to improve my skills as a software engineer <span role="img" aria-label="(Laptop)">💻</span></li>
+            <li>Playing video games <span role="img" aria-label="(Video Game Controller)">🎮</span></li>
           </ul>
           I consider myself very much a people person; I love meeting new people and am always willing to put myself out there 
           into social situations where I can talk to new people.
