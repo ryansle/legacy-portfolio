@@ -3,7 +3,8 @@ import {
   Typography,
   Grid,
   Card,
-  CardMedia
+  CardMedia,
+  useMediaQuery
 } from "@material-ui/core"
 import { Phone, Mail } from '@material-ui/icons';
 import { makeStyles } from "@material-ui/core/styles";
@@ -24,6 +25,11 @@ const useStyles = makeStyles(() => ({
     paddingLeft: '12vw',
     paddingRight: '12vw',
   },
+  responsiveContainer: {
+    paddingTop: 40,
+    paddingLeft: '4vw',
+    paddingRight: '4vw',
+  },
   title: {
     fontWeight: 'bold',
     marginBottom: 20,
@@ -37,10 +43,17 @@ const useStyles = makeStyles(() => ({
   reference: {
     display: 'flex',
     boxShadow: '1px 3px 6px 1px #555',
-    width: "28vw",
-    minWidth: 400,
-    height: "23vh",
-    margin: 10,
+    width: "29vw",
+    height: "25vh",
+    margin: 7,
+  },
+  responsiveReference: {
+    display: 'flex',
+    boxShadow: '1px 3px 6px 1px #555',
+    width: "100%",
+    height: "auto",
+    marginTop: 10,
+    marginBottom: 10,
   },
   details: {
     display: 'flex',
@@ -51,19 +64,27 @@ const useStyles = makeStyles(() => ({
   },
   cover: {
     width: '40%',
-    minWidth: 145,
   },
   referenceIcon: {
     marginRight: 10,
+  },
+  image: {
+    width: "50%",
+    height: "auto",
+  },
+  responsiveImage: {
+    width: "80%",
+    height: "auto",
   },
 }));
 
 const About = () => {
   const classes = useStyles();
+  const isSmallScreen = useMediaQuery("(max-width: 1100px)");
 
   return (
     <div>
-      <section className={classes.container}>
+      <section className={isSmallScreen ? classes.responsiveContainer : classes.container}>
         <Typography variant="h4" className={classes.title}>Who Am I?</Typography>
         <Typography variant="body1">
           My name is Ryan Le. I am an incoming senior at the University 
@@ -90,11 +111,11 @@ const About = () => {
         <Typography variant="body1" style={{ fontWeight: 'bolder' }}>University of Nebraska-Lincoln</Typography>
         <Typography variant="body1">
           Bachelor of Science in 
-          <span style={{ fontWeight: 'bolder' }}> Software Engineering</span>, 
-          Minor in <span style={{ fontWeight: 'bolder' }}>Mathematics</span>
+          <b> Software Engineering</b>, 
+          Minor in <b>Mathematics</b>
         </Typography>
         <Typography variant="body1">
-          <span style={{ fontWeight: 'bolder' }}>Cumulative GPA:</span> 3.567/4.000
+          <b>Cumulative GPA:</b> 3.567/4.000
         </Typography>
         <br />
         <Typography variant="body1">
@@ -122,9 +143,8 @@ const About = () => {
         <p align="center">
           <img 
             src={nebraska} 
+            className={isSmallScreen ? classes.responsiveImage : classes.image}
             alt="Go Big Red!"
-            height={150}
-            width="auto"
           />
         </p>
 
@@ -158,9 +178,9 @@ const About = () => {
         <div className={classes.whitespace}/>
 
         <Typography variant="h4" className={classes.title}>Don't believe me? Ask any of my references!</Typography>
-        <Grid container style={{ justifyContent: "space-around" }}>
+        <Grid container justify="space-between">
 
-          <Card className={classes.reference}>
+          <Card className={isSmallScreen ? classes.responsiveReference : classes.reference}>
               <div className={classes.details}>
                 <Typography variant="h6">Dr. Chris Bohn, PhD</Typography>
                 <Typography variant="subtitle2">Assistant Professor of Practice</Typography>
@@ -180,7 +200,7 @@ const About = () => {
               />
             </Card>
 
-          <Card className={classes.reference}>
+          <Card className={isSmallScreen ? classes.responsiveReference : classes.reference}>
             <div className={classes.details}>
               <Typography variant="h6">Dr. Brady Garvin, PhD</Typography>
               <Typography variant="subtitle2">Assistant Professor of Practice</Typography>
@@ -206,7 +226,7 @@ const About = () => {
             />
           </Card>
         
-          <Card className={classes.reference}>
+          <Card className={isSmallScreen ? classes.responsiveReference : classes.reference}>
             <div className={classes.details}>
               <Typography variant="h6">Dr. Suzette Person, PhD</Typography>
               <Typography variant="subtitle2">Associate Professor of Practice</Typography>
@@ -226,7 +246,7 @@ const About = () => {
             />
           </Card>
 
-          <Card className={classes.reference}>
+          <Card className={isSmallScreen ? classes.responsiveReference : classes.reference}>
             <div className={classes.details}>
               <Typography variant="h6">Jerry L. Hoffman</Typography>
               <Typography variant="subtitle2">Founder &amp; Partner</Typography>
@@ -252,7 +272,7 @@ const About = () => {
             />
           </Card>
     
-          <Card className={classes.reference}>
+          <Card className={isSmallScreen ? classes.responsiveReference : classes.reference}>
             <div className={classes.details}>
               <Typography variant="h6">Kevan Gray</Typography>
               <Typography variant="subtitle2">Lead Technical Project Manager</Typography>
@@ -279,7 +299,7 @@ const About = () => {
             />
           </Card>
 
-          <Card className={classes.reference}>
+          <Card className={isSmallScreen ? classes.responsiveReference : classes.reference}>
             <div className={classes.details}>
               <Typography variant="h6">Christian Berck</Typography>
               <Typography variant="subtitle2">Software Engineer</Typography>
@@ -305,7 +325,7 @@ const About = () => {
             />
           </Card>
 
-          <Card className={classes.reference}>
+          <Card className={isSmallScreen ? classes.responsiveReference : classes.reference}>
             <div className={classes.details}>
               <Typography variant="h6">Marc Johnson</Typography>
               <Typography variant="subtitle2">IT Infrastructure Engineer</Typography>
@@ -325,25 +345,25 @@ const About = () => {
             />
           </Card>
 
-          <Card className={classes.reference}>
-          <div className={classes.details}>
-            <Typography variant="h6">Billy Allen</Typography>
-            <Typography variant="subtitle2">IT Manager</Typography>
-            <Typography variant="subtitle2">Nelnet</Typography>
-            <br/>
-            <a href="mailto:Billy.Allen@nelnet.net">
-              <Grid container>
-                <Mail className={classes.referenceIcon}/>
-                <Typography variant="subtitle2">Billy.Allen@nelnet.net</Typography>
-              </Grid>
-            </a>
-          </div>
-          <CardMedia
-            className={classes.cover}
-            image={billy}
-            title="Billy Allen"
-          />
-        </Card>
+          <Card className={isSmallScreen ? classes.responsiveReference : classes.reference}>
+            <div className={classes.details}>
+              <Typography variant="h6">Billy Allen</Typography>
+              <Typography variant="subtitle2">IT Manager</Typography>
+              <Typography variant="subtitle2">Nelnet</Typography>
+              <br/>
+              <a href="mailto:Billy.Allen@nelnet.net">
+                <Grid container>
+                  <Mail className={classes.referenceIcon}/>
+                  <Typography variant="subtitle2">Billy.Allen@nelnet.net</Typography>
+                </Grid>
+              </a>
+            </div>
+            <CardMedia
+              className={classes.cover}
+              image={billy}
+              title="Billy Allen"
+            />
+          </Card>
 
         </Grid>
       </section>

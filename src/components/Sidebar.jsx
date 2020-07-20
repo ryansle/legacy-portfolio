@@ -355,12 +355,12 @@ const Sidebar = (props) => {
             <ListItemText primary="LinkedIn"/>
           </ListItem>
         </a>
-        <a href="/" className={classes.link}>
+        <Link className={classes.link} to="/resume">
           <ListItem button>
           <ListItemIcon><Description className={classes.navIcon}/></ListItemIcon>
-            <ListItemText primary="Résumé"/>
+            <ListItemText primary="Resume"/>
           </ListItem>
-        </a>
+        </Link>
       </List>
 
       <Divider className={classes.divider}/>

@@ -3,12 +3,14 @@ import {
   Typography,
   TextField,
   Button,
+  useMediaQuery
 } from "@material-ui/core";
 import {
   Send,
 } from "@material-ui/icons";
 import { makeStyles } from "@material-ui/core/styles";
 // Assets
+import contact from "../resources/contact.svg";
 
 const useStyles = makeStyles(() => ({
   container: {
@@ -26,11 +28,20 @@ const useStyles = makeStyles(() => ({
   },
   field: {
     marginBottom: "3vh",
+  },
+  responsiveImage: {
+    width: "80%",
+    height: "auto",
+  },
+  image: {
+    width: "30%",
+    height: "auto",
   }
 }));
 
 const Contact = () => {
   const classes = useStyles();
+  const isSmallScreen = useMediaQuery("(max-width: 1100px)");
 
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -65,6 +76,19 @@ const Contact = () => {
         <Typography variant="body1">
           You can contact me on <a href="https://www.linkedin.com/in/ryansle/">LinkedIn</a> or use the form below to get in touch, because I am always open to exciting new opportunities!
         </Typography>
+        <br/>
+        <Typography variant="body1">
+          Note: this contact form is currently a work in progress. <b>It is not functional yet</b>, so in the mean time, please reach out to me on LinkedIn or
+          at <a href="mailto:ryanle@live.com">ryanle@live.com</a>. I aim to have to this functionality finished within the week! (7/26/20)
+        </Typography>
+        <br/>
+        <p align="middle">
+          <img 
+            src={contact} 
+            className={isSmallScreen ? classes.responsiveImage : classes.image}
+            alt="Get in contact!"
+          />
+        </p>
         <br/> <br/>
 
         <form className={classes.formContainer}>
