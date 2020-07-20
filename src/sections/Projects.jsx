@@ -257,6 +257,14 @@ const Projects = () => {
                 />
                 <Chip
                   className={classes.tech}
+                  label="Alamofire"
+                />
+                <Chip
+                  className={classes.tech}
+                  label="Kingfisher"
+                />
+                <Chip
+                  className={classes.tech}
                   label="Drupal"
                 />
                 <Chip
@@ -266,10 +274,6 @@ const Projects = () => {
                 <Chip
                   className={classes.tech}
                   label="GitHub"
-                />
-                <Chip
-                  className={classes.tech}
-                  label="ZenHub"
                 />
               </Grid>
             </Grid>

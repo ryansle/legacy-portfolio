@@ -117,6 +117,8 @@ const Sidebar = (props) => {
     SKILLS: "My Skillsets",
     PROJECTS: "Projects I've Worked On",
     CONTACT: "Contact Me!",
+    RESUME: "My Resume",
+    NOTFOUND: "404 - Page Not Found",
   }
   const [selected, setSelected] = useState(nav.HOME);
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -356,9 +358,13 @@ const Sidebar = (props) => {
           </ListItem>
         </a>
         <Link className={classes.link} to="/resume">
-          <ListItem button>
+          <ListItem button 
+            classes={{ selected: classes.active }}
+            onClick={() => {setSelected(nav.RESUME)}}
+            selected={selected === nav.RESUME}
+          >
           <ListItemIcon><Description className={classes.navIcon}/></ListItemIcon>
-            <ListItemText primary="Resume"/>
+            <ListItemText primary="Resume" />
           </ListItem>
         </Link>
       </List>

@@ -8,6 +8,7 @@ import Skills from "./sections/Skills";
 import Projects from "./sections/Projects";
 import Contact from "./sections/Contact";
 import Resume from "./sections/Resume";
+import NotFound from "./sections/NotFound";
 // Subsections
 import HoffmanStrategy from './sections/HoffmanStrategy';
 import Nelnet from './sections/Nelnet';
@@ -79,6 +80,8 @@ const Router = () => {
         exact
         component={ReLogic}
       />
+      {/* Catch all unmatched routes */}
+      <Route component={NotFound}/>
     </Switch>
   );
 }

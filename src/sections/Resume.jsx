@@ -16,6 +16,10 @@ const useStyles = makeStyles(() => ({
     fontWeight: "bold",
     marginBottom: 20,
   },
+  pdf: {
+    width: "100%",
+    height: 1200,
+  },
 }));
 
 const Resume = () => {
@@ -28,7 +32,13 @@ const Resume = () => {
         <Typography variant="body1">Resume last updated on July 19th, 2020. Created with LaTeX.</Typography>
 
         <br/>
-        <iframe src={resume} title="My Resume" width="100%" height="1200"/>
+        <iframe 
+          src={resume} 
+          className={classes.pdf}
+          title="My Resume"
+          allowfullscreen="" 
+          frameborder="0"
+        />
         <br/> <br/>
       </section>
     </div>

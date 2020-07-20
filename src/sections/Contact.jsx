@@ -64,6 +64,10 @@ const Contact = () => {
     setMessage(e.target.value);
   };
 
+  // const handleSubmission = (e) => {
+  //   e.preventDefault();
+  // };
+
   return (
     <div>
       <section className={classes.container}>
@@ -91,7 +95,12 @@ const Contact = () => {
         </p>
         <br/> <br/>
 
-        <form className={classes.formContainer}>
+        <form 
+          className={classes.formContainer}
+          name="contact"
+          method="POST"
+          data-netlify="true"
+        >
           <TextField
             id="name"
             className={classes.field}
@@ -100,6 +109,7 @@ const Contact = () => {
             fullWidth
             onChange={handleNameChange}
             value={name}
+            required
           />
           <TextField
             id="email"
@@ -109,6 +119,7 @@ const Contact = () => {
             fullWidth
             onChange={handleEmailChange}
             value={email}
+            required
           />
           <TextField
             id="subject"
@@ -118,6 +129,7 @@ const Contact = () => {
             fullWidth
             onChange={handleSubjectChange}
             value={subject}
+            required
           />
           <TextField
             id="message"
@@ -130,11 +142,14 @@ const Contact = () => {
             fullWidth
             onChange={handleMessageChange}
             value={message}
+            required
           />
           <Button
             variant="contained"
             color="primary"
             endIcon={<Send/>}
+            type="submit"
+            onClick={(e) => { e.preventDefault(); }}
           >
             Send
           </Button>

@@ -37,6 +37,8 @@ import unity from "../resources/skills/unity.svg";
 import steamVR from "../resources/skills/steam.svg";
 import kivy from "../resources/skills/kivy.svg";
 import postman from "../resources/skills/postman.svg";
+import alamofire from "../resources/skills/alamofire.png";
+import kingfisher from "../resources/skills/kingfisher.png";
 // Version Control
 import github from "../resources/skills/github.svg";
 import gitlab from "../resources/skills/gitlab.svg";
@@ -191,11 +193,6 @@ const Skills = () => {
           </Grid>
 
           <Grid item className={classes.skill}>
-            <img src={swiftui} alt="SwiftUI" className={classes.media}/>
-            <Typography variant="h6">SwiftUI</Typography>
-          </Grid>
-
-          <Grid item className={classes.skill}>
             <img src={react} alt="React.js" className={classes.media}/>
             <Typography variant="h6">React.js</Typography>
           </Grid>
@@ -208,6 +205,21 @@ const Skills = () => {
           <Grid item className={classes.skill}>
             <img src={material} alt="Material UI" className={classes.media}/>
             <Typography variant="h6">Material UI</Typography>
+          </Grid>
+
+          <Grid item className={classes.skill}>
+            <img src={swiftui} alt="SwiftUI" className={classes.media}/>
+            <Typography variant="h6">SwiftUI</Typography>
+          </Grid>
+
+          <Grid item className={classes.skill}>
+            <img src={alamofire} alt="Alamofire" className={classes.media}/>
+            <Typography variant="h6">Alamofire</Typography>
+          </Grid>
+
+          <Grid item className={classes.skill}>
+            <img src={kingfisher} alt="Kingfisher" className={classes.media}/>
+            <Typography variant="h6">Kingfisher</Typography>
           </Grid>
 
           <Grid item className={classes.skill}>

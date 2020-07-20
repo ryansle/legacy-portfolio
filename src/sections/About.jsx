@@ -255,7 +255,7 @@ const About = () => {
               <a href="mailto:jerry@hoffmanstrategy.com">
                 <Grid container>
                   <Mail className={classes.referenceIcon}/>
-                  <Typography variant="subtitle2">Jerry@HoffmanStrategy.com</Typography>
+                  <Typography variant="subtitle2">jerry@hoffmanstrategy.com</Typography>
                 </Grid>
               </a>
               <a href="tel:1-402-560-0722">
