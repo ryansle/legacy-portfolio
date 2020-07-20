@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   Typography,
   TextField,
@@ -32,6 +32,27 @@ const useStyles = makeStyles(() => ({
 const Contact = () => {
   const classes = useStyles();
 
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [subject, setSubject] = useState("");
+  const [message, setMessage] = useState("");
+
+  const handleNameChange = (e) => {
+    setName(e.target.value);
+  };
+
+  const handleEmailChange = (e) => {
+    setEmail(e.target.value);
+  };
+
+  const handleSubjectChange = (e) => {
+    setSubject(e.target.value);
+  };
+
+  const handleMessageChange = (e) => {
+    setMessage(e.target.value);
+  };
+
   return (
     <div>
       <section className={classes.container}>
@@ -53,6 +74,8 @@ const Contact = () => {
             label="Name"
             variant="outlined"
             fullWidth
+            onChange={handleNameChange}
+            value={name}
           />
           <TextField
             id="email"
@@ -60,6 +83,8 @@ const Contact = () => {
             label="Email Address"
             variant="outlined"
             fullWidth
+            onChange={handleEmailChange}
+            value={email}
           />
           <TextField
             id="subject"
@@ -67,6 +92,8 @@ const Contact = () => {
             label="Subject"
             variant="outlined"
             fullWidth
+            onChange={handleSubjectChange}
+            value={subject}
           />
           <TextField
             id="message"
@@ -77,6 +104,8 @@ const Contact = () => {
             rows={6}
             rowsMax={15}
             fullWidth
+            onChange={handleMessageChange}
+            value={message}
           />
           <Button
             variant="contained"
