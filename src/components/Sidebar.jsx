@@ -13,6 +13,7 @@ import {
   AppBar,
   Toolbar,
   Hidden,
+  CssBaseline
 } from "@material-ui/core";
 import { 
   Home, 
@@ -28,9 +29,11 @@ import {
 } from "@material-ui/icons";
 import { Link } from "react-router-dom";
 import Router from "../Router";
+import Footer from "./Footer";
 import { makeStyles, useTheme } from "@material-ui/core/styles";
 // Assets
 import headshot from "../resources/RyanLe.png"
+import rle from "../resources/logo.png";
 
 const sidebarWidth = 225;
 
@@ -100,6 +103,10 @@ const useStyles = makeStyles((theme) => ({
   link: {
     color: "white",
     textDecoration: "none",
+  },
+  logo: {
+    height: 30,
+    width: "auto",
   }
 }));
 
@@ -376,6 +383,7 @@ const Sidebar = (props) => {
 
   return (
     <div className={classes.root}>
+      <CssBaseline />
       <AppBar position="fixed" className={classes.appBar}>
         <Toolbar>
           <IconButton
@@ -388,6 +396,11 @@ const Sidebar = (props) => {
             <Menu />
           </IconButton>
           <Typography variant="h5" noWrap>{selected}</Typography>
+          {/* <img 
+            src={rle} 
+            className={classes.logo}
+            alt="Personal Logo"
+          /> */}
         </Toolbar>
       </AppBar>
       <nav className={classes.drawer} aria-label="navigation menu">
@@ -403,7 +416,7 @@ const Sidebar = (props) => {
               paper: classes.sidebarLinks,
             }}
             ModalProps={{
-              keepMounted: true, // Better open performance on mobile.
+              keepMounted: true // Better open performance on mobile.
             }}
           >
             {mobileSidebar}
@@ -413,7 +426,7 @@ const Sidebar = (props) => {
           <Drawer
             className={classes.sidebar}
             classes={{
-              paper: classes.sidebarLinks,
+              paper: classes.sidebarLinks
             }}
             variant="permanent"
             open
@@ -426,6 +439,7 @@ const Sidebar = (props) => {
         <div className={classes.toolbar} />
         {/* Main Content of the site */}
         <Router/>
+        <Footer/>
       </main>
     </div>
   );

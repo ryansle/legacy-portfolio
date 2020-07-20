@@ -3,6 +3,7 @@ import {
   Typography,
   Grid,
   Chip,
+  useMediaQuery
 } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 // Assets
@@ -14,6 +15,11 @@ const useStyles = makeStyles(() => ({
     paddingTop: 40,
     paddingLeft: "12vw",
     paddingRight: "12vw",
+  },
+  responsiveContainer: {
+    paddingTop: 40,
+    paddingLeft: "8vw",
+    paddingRight: "8vw",
   },
   title: {
     fontWeight: "bold",
@@ -38,10 +44,11 @@ const useStyles = makeStyles(() => ({
 
 const Raven = () => {
   const classes = useStyles();
+  const isSmallScreen = useMediaQuery("(max-width: 1100px)");
 
   return (
     <div>
-      <section className={classes.container}>
+      <section className={isSmallScreen ? classes.responsiveContainer : classes.container}>
         <p align="middle">
           <a href="https://ravenind.com/">
             <img 

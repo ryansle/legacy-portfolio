@@ -22,6 +22,11 @@ const useStyles = makeStyles(() => ({
     paddingLeft: "12vw",
     paddingRight: "12vw",
   },
+  responsiveContainer: {
+    paddingTop: 40,
+    paddingLeft: '8vw',
+    paddingRight: '8vw',
+  },
   title: {
     fontWeight: "bold",
     marginBottom: 20,
@@ -63,11 +68,12 @@ const useStyles = makeStyles(() => ({
 
 const Experience = () => {
   const classes = useStyles();
-  const isSmallScreen = useMediaQuery("(max-width:1440px)");
+  const isSmallScreen = useMediaQuery("(max-width: 1440px)");
+  const isMobileScreen = useMediaQuery("(max-width: 1100px)");
 
   return (
     <div>
-      <section className={classes.container}>
+      <section className={isMobileScreen ? classes.responsiveContainer : classes.container}>
         <Grid container direction="column">
 
           <Grid container direction="column">

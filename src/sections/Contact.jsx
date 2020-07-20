@@ -18,6 +18,11 @@ const useStyles = makeStyles(() => ({
     paddingLeft: "12vw",
     paddingRight: "12vw",
   },
+  responsiveContainer: {
+    paddingTop: 40,
+    paddingLeft: '5vw',
+    paddingRight: '5vw',
+  },
   title: {
     fontWeight: "bold",
     marginBottom: 20,
@@ -70,7 +75,7 @@ const Contact = () => {
 
   return (
     <div>
-      <section className={classes.container}>
+      <section className={isSmallScreen ? classes.responsiveContainer : classes.container}>
         <Typography className={classes.title} variant="h4">Let's Talk!</Typography>
         <Typography variant="body1">
           Liking what you see? Need to staff someone to work on your projects, or have an opportunity you think I would be interested in?

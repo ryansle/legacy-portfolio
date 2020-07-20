@@ -21,6 +21,11 @@ const useStyles = makeStyles(() => ({
     paddingLeft: "12vw",
     paddingRight: "12vw",
   },
+  responsiveContainer: {
+    paddingTop: 40,
+    paddingLeft: '8vw',
+    paddingRight: '8vw',
+  },
   title: {
     fontWeight: "bold",
     marginBottom: 20,
@@ -143,7 +148,7 @@ const HoffmanStrategy = () => {
 
   return (
     <div>
-      <section className={classes.container}>
+      <section className={isSmallScreen ? classes.responsiveContainer : classes.container}>
         <p align="middle">
           <a href="https://hoffmanstrategygroup.com/">
             <img 
