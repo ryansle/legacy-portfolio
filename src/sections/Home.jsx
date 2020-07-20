@@ -4,6 +4,7 @@ import {
   Grid,
   Card,
   CardContent,
+  useMediaQuery,
 } from "@material-ui/core";
 import {
   Home as House,
@@ -30,8 +31,16 @@ const useStyles = makeStyles(() => ({
     marginBottom: 20,
   },
   nav: {
-    width: 400,
-    height: 135,
+    width: "32%",
+    height: "auto",
+    marginBottom: 20,
+    boxShadow: "0px 3px 4px 0px #555",
+    border: "1px solid #9fa2b4",
+    textDecoration: "none",
+  },
+  responsiveNav: {
+    width: "100%",
+    height: "auto",
     marginBottom: 20,
     boxShadow: "0px 3px 4px 0px #555",
     border: "1px solid #9fa2b4",
@@ -50,6 +59,7 @@ const useStyles = makeStyles(() => ({
 
 const Home = () => {
   const classes = useStyles();
+  const isSmallScreen = useMediaQuery("(max-width: 1100px)");
 
   return (
     <div>
@@ -70,7 +80,7 @@ const Home = () => {
         <Typography variant="h5" className={classes.title}>Links</Typography>
         <Grid container justify="space-between">
 
-          <Card className={classes.nav} component={Link} to="/">
+          <Card className={isSmallScreen ? classes.responsiveNav : classes.nav} component={Link} to="/">
             <CardContent>
               <Grid container>
                 <House className={classes.icon}/>
@@ -80,7 +90,7 @@ const Home = () => {
             </CardContent>
           </Card>
 
-          <Card className={classes.nav} component={Link} to="/about">
+          <Card className={isSmallScreen ? classes.responsiveNav : classes.nav} component={Link} to="/about">
             <CardContent>
               <Grid container>
                 <Person className={classes.icon}/>
@@ -90,7 +100,7 @@ const Home = () => {
             </CardContent>
           </Card>
 
-          <Card className={classes.nav} component={Link} to="/experience">
+          <Card className={isSmallScreen ? classes.responsiveNav : classes.nav} component={Link} to="/experience">
             <CardContent>
               <Grid container>
                 <Work className={classes.icon}/>
@@ -100,7 +110,7 @@ const Home = () => {
             </CardContent>
           </Card>
 
-          <Card className={classes.nav} component={Link} to="/skills">
+          <Card className={isSmallScreen ? classes.responsiveNav : classes.nav} component={Link} to="/skills">
             <CardContent>
               <Grid container>
                 <Code className={classes.icon}/>
@@ -110,7 +120,7 @@ const Home = () => {
             </CardContent>
           </Card>
 
-          <Card className={classes.nav} component={Link} to="/projects">
+          <Card className={isSmallScreen ? classes.responsiveNav : classes.nav} component={Link} to="/projects">
             <CardContent>
               <Grid container>
                 <Computer className={classes.icon}/>
@@ -120,7 +130,7 @@ const Home = () => {
             </CardContent>
           </Card>
 
-          <Card className={classes.nav} component={Link} to="/contact">
+          <Card className={isSmallScreen ? classes.responsiveNav : classes.nav} component={Link} to="/contact">
             <CardContent>
               <Grid container>
                 <Email className={classes.icon}/>

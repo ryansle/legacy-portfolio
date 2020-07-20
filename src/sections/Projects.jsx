@@ -29,6 +29,9 @@ const useStyles = makeStyles(() => ({
     paddingLeft: "12vw",
     paddingRight: "12vw",
   },
+  responsiveContainer: {
+    paddingTop: 40,
+  },
   title: {
     fontWeight: "bold",
     marginBottom: 20,
@@ -45,10 +48,8 @@ const useStyles = makeStyles(() => ({
     margin: 10,
   },
   responsiveProject: {
-    minHeight: "65vh",
-    minWidth: "90%",
-    maxHeight: "30vw",
-    maxWidth: "25vw",
+    width: "100%",
+    height: "auto",
     boxShadow: "0px 3px 6px 0px #555",
     margin: 10,
   },
@@ -109,7 +110,7 @@ const useStyles = makeStyles(() => ({
 
 const Projects = () => {
   const classes = useStyles();
-  const isMobileScreen = useMediaQuery("(max-width:1100px)");
+  const isSmallScreen = useMediaQuery("(max-width:1100px)");
 
   const [openSite, setOpenSite] = useState(false);
   const [openBuckle, setOpenBuckle] = useState(false);
@@ -127,7 +128,7 @@ const Projects = () => {
 
   // individual projects, probably break them into their own jsx later
   const personalWebsite = (
-    <div className={isMobileScreen ? classes.responsiveOverlay : classes.overlay}>
+    <div className={isSmallScreen ? classes.responsiveOverlay : classes.overlay}>
         <Button
           className={classes.exitButton}
           size="small"
@@ -143,7 +144,7 @@ const Projects = () => {
           screenHeight="30"
         />
         <div className={classes.scrollable}>
-          <section className={isMobileScreen ? classes.responsiveDescription : classes.description}>
+          <section className={isSmallScreen ? classes.responsiveDescription : classes.description}>
             <br/>
             <Grid container justify="space-between" style={{ flexWrap: "wrap" }}>
               <Grid item>
@@ -223,7 +224,7 @@ const Projects = () => {
   );
 
   const socialMediaMarketing = (
-    <div className={isMobileScreen ? classes.responsiveOverlay : classes.overlay}>
+    <div className={isSmallScreen ? classes.responsiveOverlay : classes.overlay}>
         <Button
           className={classes.exitButton}
           size="small"
@@ -239,7 +240,7 @@ const Projects = () => {
           screenHeight="23"
         />
         <div className={classes.scrollable}>
-          <section className={isMobileScreen ? classes.responsiveDescription : classes.description}>
+          <section className={isSmallScreen ? classes.responsiveDescription : classes.description}>
             <br/>
             <Grid container justify="space-between">
               <Grid item>
@@ -323,7 +324,7 @@ const Projects = () => {
   );
 
   const vrGame = (
-    <div className={isMobileScreen ? classes.responsiveOverlay : classes.overlay}>
+    <div className={isSmallScreen ? classes.responsiveOverlay : classes.overlay}>
         <Button
           className={classes.exitButton}
           size="small"
@@ -339,7 +340,7 @@ const Projects = () => {
           screenHeight="30"
         />
         <div className={classes.scrollable}>
-          <section className={isMobileScreen ? classes.responsiveDescription : classes.description}>
+          <section className={isSmallScreen ? classes.responsiveDescription : classes.description}>
             <br/>
             <Grid container justify="space-between">
               <Grid item>
@@ -406,7 +407,7 @@ const Projects = () => {
   );
 
   const careTracking = (
-    <div className={isMobileScreen ? classes.responsiveOverlay : classes.overlay}>
+    <div className={isSmallScreen ? classes.responsiveOverlay : classes.overlay}>
         <Button
           className={classes.exitButton}
           size="small"
@@ -422,7 +423,7 @@ const Projects = () => {
           screenHeight="30"
         />
         <div className={classes.scrollable}>
-          <section className={isMobileScreen ? classes.responsiveDescription : classes.description}>
+          <section className={isSmallScreen ? classes.responsiveDescription : classes.description}>
             <br/>
             <Grid container justify="space-between">
               <Grid item>
@@ -485,10 +486,10 @@ const Projects = () => {
 
   return (
     <div>
-      <section className={classes.container}>
+      <section className={isSmallScreen ? classes.responsiveContainer : classes.container}>
         <Grid container justify="space-evenly">
 
-          <Card className={isMobileScreen ? classes.responsiveProject : classes.project}>
+          <Card className={isSmallScreen ? classes.responsiveProject : classes.project}>
             <img 
               className={classes.media}
               src={banner}
@@ -528,7 +529,7 @@ const Projects = () => {
             </div>
           </Card>
 
-          <Card className={isMobileScreen ? classes.responsiveProject : classes.project}>
+          <Card className={isSmallScreen ? classes.responsiveProject : classes.project}>
             <img 
               className={classes.media}
               src={buckle}
@@ -572,7 +573,7 @@ const Projects = () => {
             </div>
           </Card>
 
-          <Card className={isMobileScreen ? classes.responsiveProject : classes.project}>
+          <Card className={isSmallScreen ? classes.responsiveProject : classes.project}>
             <img 
               className={classes.media}
               src={spaceExplorer} 
@@ -614,7 +615,7 @@ const Projects = () => {
             </div>
           </Card>
 
-          <Card className={isMobileScreen ? classes.responsiveProject : classes.project}>
+          <Card className={isSmallScreen ? classes.responsiveProject : classes.project}>
             <img 
               className={classes.media}
               src={care}

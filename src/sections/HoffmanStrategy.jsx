@@ -5,6 +5,7 @@ import {
   Chip,
   Modal,
   Button,
+  useMediaQuery,
 } from "@material-ui/core";
 import { Clear } from "@material-ui/icons";
 import { makeStyles } from "@material-ui/core/styles";
@@ -40,8 +41,13 @@ const useStyles = makeStyles(() => ({
   },
   galleryItem: {
     margin: 5,
-    maxWidth: 384,
-    maxHeight: 184, 
+    maxWidth: "30%",
+    maxHeight: "auto", 
+  },
+  responsiveGalleryItem: {
+    margin: 5,
+    maxWidth: "100%",
+    maxHeight: "auto",
   },
   overlay: {
     position: "fixed",
@@ -65,6 +71,7 @@ const useStyles = makeStyles(() => ({
 
 const HoffmanStrategy = () => {
   const classes = useStyles();
+  const isSmallScreen = useMediaQuery("(max-width: 1100px)");
 
   const [openFileManager, setOpenFileManager] = useState(false);
   const [openProjectHub, setOpenProjectHub] = useState(false);
@@ -277,19 +284,19 @@ const HoffmanStrategy = () => {
           <img
             src={fileManagerPNG}
             alt="Hoffman Analytics File Manager"
-            className={classes.galleryItem}
+            className={isSmallScreen ? classes.responsiveGalleryItem : classes.galleryItem}
             onClick={openFileModal}
           />
           <img
             src={projectHubPNG}
             alt="Hoffman Analytics Project Hub - Generalized"
-            className={classes.galleryItem}
+            className={isSmallScreen ? classes.responsiveGalleryItem : classes.galleryItem}
             onClick={openProjectHubModal}
           />
           <img
             src={projectPNG}
             alt="Hoffman Analytics Project - Generalized"
-            className={classes.galleryItem}
+            className={isSmallScreen ? classes.responsiveGalleryItem : classes.galleryItem}
             onClick={openProjectModal}
           />
         </Grid>

@@ -3,6 +3,7 @@ import {
   Typography,
   Grid,
   Divider,
+  useMediaQuery
 } from "@material-ui/core";
 import {
   Devices,
@@ -51,6 +52,11 @@ const useStyles = makeStyles(() => ({
     paddingLeft: "12vw",
     paddingRight: "12vw",
   },
+  responsiveContainer: {
+    paddingTop: 40,
+    paddingLeft: "5vw",
+    paddingRight: "5vw",
+  },
   title: {
     fontWeight: "bold",
     marginBottom: 20,
@@ -87,14 +93,23 @@ const useStyles = makeStyles(() => ({
     marginRight: "3%",
     marginBottom: 20,
   },
+  graphic: {
+    width: "40%",
+    height: "auto",
+  },
+  responsiveGraphic: {
+    width: "80%",
+    height: "auto",
+  }
 }));
 
 const Skills = () => {
   const classes = useStyles();
+  const isSmallScreen = useMediaQuery("(max-width: 1100px)");
 
   return (
     <div>
-      <section className={classes.container}>
+      <section className={isSmallScreen ? classes.responsiveContainer : classes.container}>
         <Grid container>
           <Devices className={classes.icon}/>
           <Typography variant="h4" className={classes.title}>Software Engineering</Typography>
@@ -338,7 +353,11 @@ const Skills = () => {
           to manageble pieces of development work.
         </Typography>
         <p align="middle">
-          <img src={tasks} height="280" width="auto" alt="Task Graphic"/>
+          <img 
+            src={tasks}
+            className={isSmallScreen ? classes.responsiveGraphic : classes.graphic}
+            alt="Task Graphic"
+          />
         </p>
         <br/>
         <Typography variant="h5" className={classes.subtitle}>Risk Management</Typography>
