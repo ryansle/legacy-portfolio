@@ -97,14 +97,16 @@ const Contact = () => {
 
         <form 
           className={classes.formContainer}
-          name="contact"
+          name="contact-me"
           method="POST"
-          data-netlify="true"
+          netlify
         >
           <TextField
             id="name"
+            name="name"
             className={classes.field}
             label="Name"
+            type="text"
             variant="outlined"
             fullWidth
             onChange={handleNameChange}
@@ -113,8 +115,10 @@ const Contact = () => {
           />
           <TextField
             id="email"
+            name="email"
             className={classes.field}
             label="Email Address"
+            type="email"
             variant="outlined"
             fullWidth
             onChange={handleEmailChange}
@@ -123,8 +127,10 @@ const Contact = () => {
           />
           <TextField
             id="subject"
+            name="subject"
             className={classes.field}
             label="Subject"
+            type="text"
             variant="outlined"
             fullWidth
             onChange={handleSubjectChange}
@@ -133,8 +139,10 @@ const Contact = () => {
           />
           <TextField
             id="message"
+            name="message"
             className={classes.field}
             label="Message"
+            type="text"
             variant="outlined"
             multiline
             rows={6}
@@ -149,7 +157,7 @@ const Contact = () => {
             color="primary"
             endIcon={<Send/>}
             type="submit"
-            onClick={(e) => { e.preventDefault(); }}
+            // onClick={(e) => { e.preventDefault(); }}
           >
             Send
           </Button>
