@@ -46,13 +46,13 @@ const useStyles = makeStyles(() => ({
   },
   galleryItem: {
     margin: 5,
-    maxWidth: "30%",
-    maxHeight: "auto", 
+    width: "30%",
+    lineHeight: "auto", 
   },
   responsiveGalleryItem: {
     margin: 5,
-    maxWidth: "80vw",
-    maxHeight: "auto",
+    width: "80vw",
+    height: "auto",
   },
   overlay: {
     position: "fixed",
