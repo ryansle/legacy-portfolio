@@ -18,6 +18,7 @@ const useStyles = makeStyles((theme) => ({
     color: "white",
     marginTop: 100,
     padding: 10,
+    height: 70,
   }
 }));
 
@@ -30,7 +31,7 @@ const Footer = () => {
   return (
     <BottomNavigation className={isSmallScreen ? classes.responsiveBottom : classes.bottom}>
       <Typography variant={isSmallScreen ? "caption" : "h6"}>
-        Copyright &copy; {currentYear} Ryan Le. Website made with React and Material UI Components.
+        Copyright &copy; {currentYear} Ryan Le. Website made with React.js and Material UI Components.
       </Typography>
     </BottomNavigation>
   );

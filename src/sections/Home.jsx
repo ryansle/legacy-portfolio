@@ -19,6 +19,7 @@ import { makeStyles } from "@material-ui/core/styles";
 import { Link } from "react-router-dom";
 // Assets
 import mountains from "../resources/MountainBanner.png";
+import cropped from "../resources/CroppedBanner.png";
 
 const useStyles = makeStyles(() => ({
   container: {
@@ -69,7 +70,7 @@ const Home = () => {
   return (
     <div>
       <Banner
-        image={mountains}
+        image={isSmallScreen ? cropped : mountains}
         alt="Ryan Le - Dynamic Banner"
         screenHeight={50}
       />
