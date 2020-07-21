@@ -93,10 +93,10 @@ const useStyles = makeStyles(() => ({
     paddingBottom: 15,
     scrollPadding: -15,
   },
-  // scrollable: {
-  //   overflow: "scroll",
-  //   maxHeight: "55vh",
-  // },
+  scrollable: {
+    overflow: "scroll",
+    maxHeight: "55vh",
+  },
   exitButton: {
     margin: 5,
     position: "absolute",
@@ -666,7 +666,6 @@ const Projects = () => {
         <Modal
           open={openSite}
           onClose={closeSiteModal}
-          className={classes.scrollable}
         >
           {personalWebsite}
         </Modal>
@@ -674,7 +673,6 @@ const Projects = () => {
         <Modal
           open={openBuckle}
           onClose={closeBuckleModal}
-          className={classes.scrollable}
         >
           {socialMediaMarketing}
         </Modal>
@@ -682,7 +680,6 @@ const Projects = () => {
         <Modal
           open={openVR}
           onClose={closeVRModal}
-          className={classes.scrollable}
         >
           {vrGame}
         </Modal>
