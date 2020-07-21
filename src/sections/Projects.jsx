@@ -22,6 +22,7 @@ import spaceExplorer2 from "../resources/projects/space-explorer2.png";
 import care from "../resources/projects/care-tracking.png";
 import software from "../resources/projects/software.jpg";
 import fullBanner from "../resources/MountainBanner.png";
+import croppedBanner from "../resources/CroppedBanner.png";
 
 const useStyles = makeStyles(() => ({
   container: {
@@ -76,7 +77,7 @@ const useStyles = makeStyles(() => ({
     position: "fixed",
     top: "50%",
     left: "50%",
-    transform: "translate(-50%, -50%) !important",
+    transform: "translate(-50%, -50%)",
     background: "white",
     width: "90%",
   },
@@ -92,10 +93,10 @@ const useStyles = makeStyles(() => ({
     paddingBottom: 15,
     scrollPadding: -15,
   },
-  scrollable: {
-    overflow: "scroll",
-    maxHeight: "55vh",
-  },
+  // scrollable: {
+  //   overflow: "scroll",
+  //   maxHeight: "55vh",
+  // },
   exitButton: {
     margin: 5,
     position: "absolute",
@@ -139,7 +140,7 @@ const Projects = () => {
           <Clear/>
         </Button>
         <Banner
-          image={fullBanner}
+          image={isSmallScreen ? croppedBanner : fullBanner}
           alt="Ryan Le Banner"
           screenHeight="30"
         />

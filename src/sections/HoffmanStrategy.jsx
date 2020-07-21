@@ -51,7 +51,7 @@ const useStyles = makeStyles(() => ({
   },
   responsiveGalleryItem: {
     margin: 5,
-    maxWidth: "100%",
+    maxWidth: "80vw",
     maxHeight: "auto",
   },
   overlay: {

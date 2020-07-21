@@ -47,6 +47,7 @@ import visualStudio from "../resources/skills/visualstudio.svg";
 import latex from "../resources/skills/latex.png";
 import photoshop from "../resources/skills/photoshop.svg";
 import premier from "../resources/skills/premier.svg";
+import figma from "../resources/skills/figma.svg";
 
 const useStyles = makeStyles(() => ({
   container: {
@@ -399,6 +400,11 @@ const Skills = () => {
           <Grid item className={classes.skill}>
             <img src={premier} alt="Adobe Premier Pro" className={classes.media}/>
             <Typography variant="h6">Premier Pro</Typography>
+          </Grid>
+
+          <Grid item className={classes.skill}>
+            <img src={figma} alt="Figma" className={classes.media}/>
+            <Typography variant="h6">Figma</Typography>
           </Grid>
 
         </Grid>
