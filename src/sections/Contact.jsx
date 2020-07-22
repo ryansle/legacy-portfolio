@@ -3,6 +3,7 @@ import {
   Typography,
   TextField,
   Button,
+  Grid,
   useMediaQuery
 } from "@material-ui/core";
 import {
@@ -39,7 +40,7 @@ const useStyles = makeStyles(() => ({
     height: "auto",
   },
   image: {
-    width: "30%",
+    width: "100%",
     height: "auto",
   }
 }));
@@ -77,38 +78,49 @@ const Contact = () => {
     <div>
       <section className={isSmallScreen ? classes.responsiveContainer : classes.container}>
         <Typography className={classes.title} variant="h4">Let's Talk!</Typography>
-        <Typography variant="body1">
-          Liking what you see? Need to staff someone to work on your projects, or have an opportunity you think I would be interested in?
-          Let's talk about any of these things and more! I am always open for a good conversation and expanding my network.
-        </Typography>
-        <br/>
-        <Typography variant="body1">
-          You can contact me on <a href="https://www.linkedin.com/in/ryansle/">LinkedIn</a> or use the form below to get in touch, because I am always open to exciting new opportunities!
-        </Typography>
-        <br/>
-        <Typography variant="body1">
-          Note: this contact form is currently a work in progress. <b>It is not functional yet</b>, so in the mean time, please reach out to me on LinkedIn or
-          at <a href="mailto:ryanle@live.com">ryanle@live.com</a>. I aim to have to this functionality finished within the week! (7/26/20)
-        </Typography>
-        <br/>
-        <p align="middle">
-          <img 
-            src={contact} 
-            className={isSmallScreen ? classes.responsiveImage : classes.image}
-            alt="Get in contact!"
-          />
-        </p>
+        <Grid container>
+
+          <Grid item xs={isSmallScreen ? 12 : 7}>
+            <Typography variant="body1">
+              Liking what you see? Need to staff someone to work on your projects, or have an opportunity you think I would be interested in?
+              Let's talk about any of these things and more! I am always open for a good conversation and expanding my network.
+            </Typography>
+            <br/>
+            <Typography variant="body1">
+              You can contact me on <a href="https://www.linkedin.com/in/ryansle/">LinkedIn</a> or use the form below to get in touch, because I am always open to exciting new opportunities!
+            </Typography>
+            <br/>
+            <Typography variant="body1">
+              Note: this contact form is currently a work in progress. <b>It is not functional yet</b>, so in the mean time, please reach out to me on LinkedIn or
+              at <a href="mailto:ryanle@live.com">ryanle@live.com</a>. I aim to have to this functionality finished within the week! (7/26/20)
+            </Typography>
+            <br/>
+          </Grid>
+
+          {!isSmallScreen && <Grid item xs={1}/>}
+          
+          <Grid item xs={isSmallScreen ? 12 : 4}>
+            <p align="middle">
+              <img 
+                src={contact} 
+                className={isSmallScreen ? classes.responsiveImage : classes.image}
+                alt="Get in contact!"
+              />
+            </p>
+          </Grid>
+
+        </Grid>
         <br/> <br/>
 
         <form 
           className={classes.formContainer}
           name="contact-me"
-          method="POST"
-          netlify
+          action="POST"
+          data-netlify="true"
         >
           <TextField
-            id="name"
             name="name"
+            id="name"
             className={classes.field}
             label="Name"
             type="text"
@@ -119,8 +131,8 @@ const Contact = () => {
             required
           />
           <TextField
-            id="email"
             name="email"
+            id="email"
             className={classes.field}
             label="Email Address"
             type="email"
@@ -131,8 +143,8 @@ const Contact = () => {
             required
           />
           <TextField
-            id="subject"
             name="subject"
+            id="subject"
             className={classes.field}
             label="Subject"
             type="text"
@@ -143,8 +155,8 @@ const Contact = () => {
             required
           />
           <TextField
-            id="message"
             name="message"
+            id="message"
             className={classes.field}
             label="Message"
             type="text"
