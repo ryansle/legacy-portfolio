@@ -154,7 +154,7 @@ const Projects = () => {
               <Grid item>
                 <Chip
                   className={classes.tech}
-                  label="React"
+                  label="React.js"
                 />
                 <Chip
                   className={classes.tech}
@@ -516,7 +516,7 @@ const Projects = () => {
               </CardContent>
               <Chip
                 className={classes.tech}
-                label="React"
+                label="React.js"
               />
               <Chip
                 className={classes.tech}

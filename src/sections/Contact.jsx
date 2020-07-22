@@ -118,12 +118,13 @@ const Contact = () => {
 
           <Grid item xs={isSmallScreen ? 12 : 7}>
             <Typography variant="body1">
-              Liking what you see? Need to staff someone to work on your projects, or have an opportunity you think I would be interested in?
-              Let's talk about any of these things and more! I am always open for a good conversation and expanding my network.
+              Liking what you see here? Need a dedicated new team member to collaborate with, or have a million dollar idea to discuss? 
+              Send me a message and let's get in touch.
             </Typography>
             <br/>
             <Typography variant="body1">
-              You can contact me on <a href="https://www.linkedin.com/in/ryansle/">LinkedIn</a> or use the form below to get in touch, because I am always open to exciting new opportunities!
+              You can contact me on <a href="https://www.linkedin.com/in/ryansle/">LinkedIn</a> or use the form below to get in touch. 
+              I am always on the lookout for exciting new opportunities, as well as the chance to expand my network!
             </Typography>
             <br/>
           </Grid>
@@ -141,7 +142,7 @@ const Contact = () => {
           </Grid>
 
         </Grid>
-        <br/> <br/>
+        <br/>
 
         <form name="contact">
           <input type="hidden" name="form-name" value="contact" />
