@@ -115,8 +115,10 @@ const Contact = () => {
         <form 
           className={classes.formContainer}
           name="contact-me"
-          action="POST"
+          action="/thanks"
+          method="POST"
           data-netlify="true"
+          data-netlify-honeypot="bot-field"
         >
           <TextField
             name="name"
