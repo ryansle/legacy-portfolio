@@ -187,10 +187,9 @@ const Projects = () => {
             </Grid>
             <p>
               So, like I said: this is my first true web development experience. That means there might be more than a few problems here and there while you
-              poke around on my website, and certainly if you poke around in the code. Which, by the way, you should have access to, as I've decided to publicize 
-              the repository on GitHub for your viewing. From building this website, I learned <span style={{ fontWeight: "bold" }}>a lot.</span> That's exactly what
-              my accomplishment was with building this website - learn as much as I could about web development while also showcasing my skillsets in order to find a 
-              new opportunity.
+              poke around on my website, and certainly if you poke around in the code. Which, by the way, I have provided public access to on GitHub by clicking the icon at the top right.
+              From building this website, I learned <b>a lot.</b> That's exactly what my intention was with building this website - learn as much as I could about web development while 
+              also showcasing my skills in order to find a new opportunity.
             </p>
             <p>
               I received lots of inspiration and help for this page from my 
@@ -198,24 +197,23 @@ const Projects = () => {
             </p>
             <Typography variant="h5" className={classes.subtitle}>Why did I make this?</Typography>
             <p>
-              There were a couple key motivators that encouraged me to build my own personal site. <span style={{ fontWeight: "bold"}}>One</span>, I was getting ready for a 
+              There were a couple key motivators that encouraged me to build my own personal site. <b>One</b>, I was getting ready for a 
               new web development position with Hoffman Strategy Group and did not want to scramble to learn the basics at the start of the job. So, I started reading through 
-              some <a href="https://www.freecodecamp.org/learn/">free, online tutorials</a> to teach myself the basics, and figured building a personal website might make good practice 
-              aside from just reading. <span style={{ fontWeight: "bold"}}>Two,</span> I love teaching myself new skills. Web development seemed like the next logical step in my software 
-              engineering career after spending the last year working in iOS development. <span style={{ fontWeight: "bold" }}>Three,</span> with how crazy things have been recently, I 
-              wanted to make sure I was more than ready for the upcoming recruiting season. What better way to stand our as a candidate and showcase your skills than to catch your attention
-              with a beautifully created personal webpage?
+              some <a href="https://www.freecodecamp.org/learn/">free, online tutorials</a> to teach myself the basics, and decided that building a personal website would make better practice 
+              than just reading about web development. <b>Two,</b> I love teaching myself new skills. Web development seemed like the next logical step in my software 
+              engineering career after spending the last year working in iOS development. <b>Three,</b> I 
+              wanted to make sure I was more than ready for the upcoming recruiting season. What better way to stand out as a candidate and showcase my skills than to catch your attention
+              with a beautifully crafted personal webpage?
             </p>
             <Typography variant="h5" className={classes.subtitle}>What did I learn?</Typography>
             <p>
-              I learned how to leverage React and Material UI to create static web pages, primarily, as well as the basics of web development. On top of this, I learned how to create
-              sensible user interfaces in order to showcase my abilities as well as display information in a meaningful way.
+              I learned how to leverage React.js and Material UI to create static web pages, primarily, as well as the basics of web development. On top of this, I learned how to create
+              sensible user interfaces in order to showcase my abilities and display information in a meaningful way.
             </p>
             <Typography variant="h5" className={classes.subtitle}>What would I change next time?</Typography>
             <p>
-              In the future, whenever I decide that this current webpage has been rendered obsolete, I would like to look into hosting my website on top of some sort of 
-              content management system such as <a href="https://www.netlifycms.org/">Netlify CMS.</a> I'd also probably look into <a href="https://www.gatsbyjs.org/">Gatsby.js</a> so
-              that my next website isn't just a bunch of static pages like you see currently. However, I am still more than happy to have started off with these static pages, as it 
+              In the future, whenever I decide that this current webpage has been rendered obsolete, I would probably look into using a static site generator like <a href="https://www.gatsbyjs.org/">Gatsby.js</a> so
+              that my next website can be built more similar to a content managemetn system. However, I am still more than happy to have started off how I did, as it 
               has proven to be an excellent foundation to build upon in the future. I'd definitely also build my pages with responsitivity in mind at the beginning so that I don't
               have to deal with the nightmare that has been refactoring my website thus far.
             </p>
@@ -292,18 +290,18 @@ const Projects = () => {
             </p>
             <Typography variant="h5" className={classes.subtitle}>What problem did the app solve?</Typography>
             <p>
-              Buckle needed a way to provide a unified and appropriate social brand that protected the brands image. Because they have so many stores across the US (449 to be exact),
-              it prove to be impractical to field and service each stores' one-off requests for approving social media content. In order to solve this, Buckle wanted a mobile app that
+              Buckle needed a way to provide a unified and appropriate social brand that protected the brand's image. Because they have so many stores across the US (449 to be exact),
+              it proved to be impractical to field and service each stores' one-off requests for approving social media content. In order to solve this, Buckle wanted a mobile app that
               allowed their marketing department to provide approved social media content for their teammates to use nationwide.
             </p>
             <p>
-              Our teams' solution enlisted a content management system, Drupal, to house the marketing department's approved content. From there, individual pieces of content were assigned 
-              start and end dates for the content to run through, and valid posts were pulled down to our iOS application and shown to a user in a feed similar to Instagram. Users could then
+              Our team's solution enlisted a content management system, Drupal, to house the marketing department's approved content. From there, individual pieces of content were assigned 
+              start and end dates for the content to run through, and valid posts were pulled down to our iOS application and shown to a user in a feed visually similar to Instagram. Users could then
               share these approved social media posts to a variety of different social media channels, including Facebook, Instagram, Twitter, and LinkedIn with ease.
             </p>
             <p>
               This allowed their marketing department to create approved content complete with images, preloaded captions, and hashtags for their employees to share. It allowed each store to
-              showcase uniform content across the board and not individual store managers worry about what content they were going to have to come up with on their own. It also created a 
+              showcase uniform content across the board and remediate individual store managers' worries about what content they were going to have to come up with on their own. It also created a 
               universal system for running discounts, promotions, and special events.
             </p>
             <Typography variant="h5" className={classes.subtitle}>What did I learn?</Typography>
@@ -315,11 +313,11 @@ const Projects = () => {
             </p>
             <p>
               On the development aspect of things, I learned how to develop iOS applications and the steps it takes to deploy on a live device - it's more complicated than you think! I learned
-              how to leverage a brand new technology, SwiftUI, and took on learning the Swift programming language, Apple's new flagship development tool.
+              how to leverage a brand new technology, SwiftUI, and took on learning the Swift programming language, Apple's new flagship development language.
             </p>
             <Typography variant="h5" className={classes.subtitle}>What would I change next time?</Typography>
             <p>
-              Reflecting back on this experience, there is plenty of room for me to improve in my abilities as both a software engineer and a product manager. If I start this project over
+              Reflecting back on this experience, there is plenty of room for me to improve in my abilities as both a software engineer and a product manager. If I started this project over
               from scratch, I definitely would not have utilized Drupal as our content management system due to how outdated the technology felt while in use. On the flip side of that, I 
               also would have allowed SwiftUI to mature more as a framework before committing to working on a project as large-scale as this in such a current technology.
             </p>
@@ -378,13 +376,13 @@ const Projects = () => {
               </Grid>
             </Grid>
             <p>
-              The University of Nebraska-Lincoln offers a technical elective every spring entitled "Exploring Virtual Reality" that pairs computer science/software engineering students
+              The University of Nebraska-Lincoln offers a technical elective every spring entitled "Exploring Virtual Reality" that pairs computer science and software engineering students
               with emerging arts students to create virtual reality games. The course follows a sandbox format where they basically give you a quick introduction to developing games with
               C#, Unity, and SteamVR, and then they set you loose to break into teams and spend the semester developing your own virtual reality game. Our team decided to spend the semester
               creating a VR Space Explorer game in which you explore alien worlds to play different minigames.
             </p>
             <p>
-              Unfortunately, due to the start of the COVID-19 pandemic, our VR laboratory access was understandly revoked in order to slow the spread of coronavirus. As our university shifted
+              Unfortunately, due to the start of the COVID-19 pandemic, our VR laboratory access was understandably revoked in order to slow the spread of coronavirus. As our university shifted
               to remote learning, our team was unable to effectively test our code and develop the product we originally envisioned, despite our increased efforts to collaborate productively 
               due to remote circumstances. As no one on our team owned their own VR headset, development was hindered substantially as testing became increasingly harder.
             </p>
@@ -395,7 +393,7 @@ const Projects = () => {
             <Typography variant="h5" className={classes.subtitle}>What did I learn?</Typography>
             <p>
               Through this course I learned the basics of modern game development, specifically with regards to virtual reality. It turns out that developing virtual reality games is not nearly as 
-              complicated as it makes out to be, thanks to existing technologies and frameworks such as Unity and SteamVR. I also got to work side-by-side with an emerging arts student to 
+              complicated as it seems out to be, thanks to existing technologies and frameworks such as Unity and SteamVR. I also got to work side-by-side with emerging arts students to 
               understand the underlying effort that goes into rendering digital assets, and again sharpen my skills working in a collaborative environment.
             </p>
             <Typography variant="h5" className={classes.subtitle}>Features</Typography>
@@ -462,7 +460,7 @@ const Projects = () => {
               </Grid>
             </Grid>
             <p>
-              My Care Tracking Application was a class project for SOFT 161 (Software Engineering II) at the end of my freshman year at UNL. Over a five week period, I worked on 
+              My Care Tracking Application was a class project for SOFT 161 (Software Engineering II) at the end of my freshman year at the University of Nebraska-Lincoln. Over a five week period, I worked on 
               an application that allowed a user to input patient data through a graphical user interface, parse that data into a MySQL database, and then read it back out. The
               care tracking application was a basic CRUD (create, read, update, destroy) application at its core, and proved to be my first substantial software development project
               that I had ever taken on.
@@ -477,7 +475,7 @@ const Projects = () => {
             <Typography variant="h5" className={classes.subtitle}>Features</Typography>
             <p>
               <ul>
-                <li>Login in an existing patient, or create a new one</li>
+                <li>Login as an existing patient, or create a new one</li>
                 <li>Persistent previous patient based on a JSON store</li>
                 <li>Update a patient's medical fields, drug intake, and other data</li>
                 <li>View all of a patient's previous visit data</li>
@@ -506,7 +504,7 @@ const Projects = () => {
                   Personal Website
                 </Typography>
                 <Typography variant="body2">
-                  Since I never had the chance to learn React prior to 
+                  Since I never had the chance to learn React.js prior to 
                   working with the Hoffman Strategy Group, I wanted to 
                   give myself some practice beforehand. Building this 
                   website was a good way to teach myself the basics 
@@ -547,10 +545,10 @@ const Projects = () => {
                 </Typography>
                 <Typography variant="body2">
                   I worked as the Squad Lead & Product Manager on 
-                  my senior design as we tackled a year-long project to 
+                  my senior design project as we tackled a year-long project to 
                   create a social media marketing application for the 
                   Buckle. The app consolidated all of their marketing 
-                  department"s potential social media posts into one 
+                  department's potential social media posts into one 
                   place for easier sharing of corporate promotions.
                 </Typography>
               </CardContent>
@@ -590,10 +588,10 @@ const Projects = () => {
                   Virtual Reality Space Explorer
                 </Typography>
                 <Typography variant="body2">
-                  UNL offered an amazing special topics course last spring entitled 
+                  The university offered an amazing special topics course last spring entitled 
                   "Exploring Virtual Reality." We learned how to use tools like C#, 
                   Unity, and SteamVR to develop interactive virtual reality games 
-                  while partnered up with Emerging Arts students within the college.
+                  while partnering up with Emerging Arts students at the university.
                 </Typography>
               </CardContent>
               <Chip
@@ -632,7 +630,8 @@ const Projects = () => {
                   Care Tracking Application
                 </Typography>
                 <Typography variant="body2">
-                  This was the first CRUD application I ever developed. This system allowed a user to input patient data to be parsed down, organized into different
+                  This was the first CRUD application I ever developed, through one of my Software Engineering courses at the end of my freshman year of college.
+                  This system allowed a user to input patient data to be parsed down, organized into different
                   data tables, and then pulled back out for observation and modified accordingly.
                 </Typography>
               </CardContent>

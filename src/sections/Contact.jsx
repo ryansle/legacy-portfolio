@@ -118,13 +118,13 @@ const Contact = () => {
 
           <Grid item xs={isSmallScreen ? 12 : 7}>
             <Typography variant="body1">
-              Liking what you see here? Need a dedicated new team member to collaborate with, or have a million dollar idea to discuss? 
+              Like what you see here? Need a dedicated new team member to collaborate with, or have a million dollar idea to discuss? 
               Send me a message and let's get in touch.
             </Typography>
             <br/>
             <Typography variant="body1">
-              You can contact me on <a href="https://www.linkedin.com/in/ryansle/">LinkedIn</a> or use the form below to get in touch. 
-              I am always on the lookout for exciting new opportunities, as well as the chance to expand my network!
+              You can contact me on <a href="https://www.linkedin.com/in/ryansle/">LinkedIn</a> or use the form below.
+              I am always on the lookout for exciting new opportunities, as well as the chance to expand my network and meet new people.
             </Typography>
             <br/>
           </Grid>

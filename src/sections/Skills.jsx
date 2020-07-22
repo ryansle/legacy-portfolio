@@ -119,8 +119,7 @@ const Skills = () => {
         </Grid>
         <Typography variant="body1">
           I have been lucky enough to be directly exposed to a variety of different development technologies throughout my time at university and in industry.
-          As of right now, I am searching for a position that can aid me in furthering my skills in any of the following (but that does not mean I am not open
-          to something brand new as well!):
+          As of right now, I am searching for a position that can aid me in furthering my skills in any of the following development languages:
         </Typography>
         <br />
 
@@ -285,101 +284,6 @@ const Skills = () => {
 
         </Grid>
 
-        <Typography variant="body1">
-          Interested in my development experience, or just want to hear why on Earth I am skilled with ANTLR? <Link to="/contact-me">Contact me</Link> and let's talk about it!
-        </Typography>
-        <br /> <br />
-
-        <Grid container>
-          <AssignmentInd className={classes.icon}/>
-          <Typography variant="h4" className={classes.title}>Product Management</Typography>
-        </Grid>
-        <Typography variant="h5" className={classes.subtitle}>Time Management</Typography>
-        <Typography variant="body1">
-          Balancing two part-time jobs, a busy 15 credit semester, and a social life all while majoring in software engineering can be tricky,
-          but throughout my time at university I have managed to pull it off. On top of this, I have been able to maintain a steady GPA and continuously
-          make the Dean's List while balancing out all of my responsibilities. My ability to manage time throughout the years has served me greatly through college - and
-          can only continue serve me at your company.
-        </Typography>
-        <br/>
-        <Typography variant="h5" className={classes.subtitle}>Prioritization</Typography>
-        <Typography variant="body1">
-          It can be difficult to juggle changing requirements and see the big picture when developing new software projects.
-          That is why you need someone like me to see through all the fine details and know what to prioritize, as I 
-          have done in the past while working for Buckle and Hoffman Strategy Group. With my experience, I can prioritize tasks accordingly
-          in order for your team to iterate quickly in a way that makes sense.
-        </Typography>
-        <br/>
-        <Typography variant="h5" className={classes.subtitle}>Organization</Typography>
-        <Typography variant="body1">
-          When working with large-scale projects, it can become easy to get lost in the grand scheme of things. Staying organized is another one of
-          my strengths while balancing crazy schedules and hectic software projects. You can trust me to aid in decluttering your software projects, your
-          changing requirements, your schedules, and your task partitioning.
-        </Typography>
-        <br/>
-        <Typography variant="h5" className={classes.subtitle}>Documentation</Typography>
-        <Typography variant="body1">
-          My old manager at Raven Industries once told me he had "never seen someone document their code as thoroughly
-          and sensibly as I did." I know a thing or two about writing good documentation because I have seen a thing or two
-          about what it takes to write stellar docs. I have witnessed the good and bad and continued to learn how to be better.
-        </Typography>
-        <br/>
-        <Typography variant="h5" className={classes.subtitle}>Customer Relationship Management</Typography>
-        <Typography variant="body1">
-          I really enjoy speaking to project stakeholders and understanding how the software can benefit them directly. I embrace client-facing engineering
-          positions and take pride in my ability to effectively communicate and form relationships with clients, all while listening to their feedback in
-          order to improve a software's capabilities.
-        </Typography>
-        <br/> <br/> <br/>
-
-        <Grid container>
-          <AccountTree className={classes.icon}/>
-          <Typography variant="h4" className={classes.title}>Project Management</Typography>
-        </Grid>
-        <Typography variant="h5" className={classes.subtitle}>Leadership</Typography>
-        <Typography variant="body1">
-          I stepped up during my junior year of college and offered to take on the role of Squad Lead and Product Manager for my senior design team, which gave me the 
-          opportunity to lead every aspect of development for my project over the course of a year. Since then, I have also taken over in a similar position with
-          Hoffman Strategy Group, where I have been tasked with leading as well as furthering the developments of their real estate analytics platform. 
-          Along with this, I was recently elected Vice President of Communication for the university's Engineering Student Advisory Board, where I represent UNL's
-          College of Engineering as a whole.
-        </Typography>
-        <Typography variant="body1">
-          I can also be credited for co-founding our new SOFTie Startup initiative at the university and helping to plan out how this brand new venture will look
-          for our incoming software engineering seniors. I take charge wherever I can and am always ready to give every new opportunity my all - because that is what
-          leaders do.
-        </Typography>
-        <br/>
-        <Typography variant="h5" className={classes.subtitle}>Communication</Typography>
-        <Typography variant="body1">
-          I have proven myself in the past to be an effective communicator while taking charge of software projects. I can elicit requirements effectively, decompose them
-          into managable pieces, take charge of creating presentation materials, and make sure that everyone on the team is on the same page when it comes time to develop.
-          I also know my way around presenting to stakeholders, and am able to maintain a direct line of communication with them when things go wary, keeping them 
-          happy and informed every step of the way. 
-        </Typography>
-        <br/>
-        <Typography variant="h5" className={classes.subtitle}>Task Management</Typography>
-        <Typography variant="body1">
-          Like I stated previously, I am skilled in effectively gathering software requirements and decomposing them into managable pieces to dish out to different team members.
-          Through my experiences, I am able to understand my projects at a high level and effectively partition the work in a way that makes sense in order to iterate quickly.
-          I have proven this with my work on the Buckle Advocacy project as well as with Hoffman Analytics, as I took charge in decomposing our requirements in both instances
-          to manageble pieces of development work.
-        </Typography>
-        <p align="middle">
-          <img 
-            src={tasks}
-            className={isSmallScreen ? classes.responsiveGraphic : classes.graphic}
-            alt="Task Graphic"
-          />
-        </p>
-        <br/>
-        <Typography variant="h5" className={classes.subtitle}>Risk Management</Typography>
-        <Typography variant="body1">
-          Lastly, I know how to assess risk and pivot projects accordingly when things are not shaping up as expected. I always come ready with backup plans in case things go wary,
-          or when requirements change unexpectedly, so that I can always be ready to move forward without additional hassle.
-        </Typography>
-        <br/> <br/>
-
         <Grid container className={classes.skillTable} justify="flex-start">
         
           <Grid container>
@@ -408,6 +312,99 @@ const Skills = () => {
           </Grid>
 
         </Grid>
+
+        <Typography variant="body1">
+          Interested in my development experience, or just want to hear why on Earth I am skilled with ANTLR? <Link to="/contact">Contact me</Link> and let's talk about it.
+        </Typography>
+        <br /> <br />
+
+        <Grid container>
+          <AssignmentInd className={classes.icon}/>
+          <Typography variant="h4" className={classes.title}>Product Management</Typography>
+        </Grid>
+        <Typography variant="h5" className={classes.subtitle}>Time Management</Typography>
+        <Typography variant="body1">
+          Balancing two part-time jobs, a busy 15 credit semester, and a social life all while majoring in software engineering can be tricky,
+          but throughout my time at university I have managed to pull it off. On top of this, I have been able to maintain a steady GPA and continuously
+          make the Dean's List while balancing out all of my responsibilities. My ability to manage time throughout the years has served me greatly through college - and
+          can only continue serve me at your company.
+        </Typography>
+        <br/>
+        <Typography variant="h5" className={classes.subtitle}>Prioritization</Typography>
+        <Typography variant="body1">
+          It can be difficult to juggle changing requirements and see the big picture when developing new software projects.
+          That is why you need someone like me to sift through all the fine details and know what to prioritize, as I 
+          have done in the past while working for Buckle and Hoffman Strategy Group. With my experience, I can prioritize tasks accordingly
+          in order for your team to iterate quickly in a way that makes sense.
+        </Typography>
+        <br/>
+        <Typography variant="h5" className={classes.subtitle}>Organization</Typography>
+        <Typography variant="body1">
+          When working with large-scale projects, it can become easy to get lost in the grand scheme of things. Staying organized is another one of
+          my strengths while balancing busy schedules and vibrant software projects. You can trust me to aid in decluttering your software projects, your
+          changing requirements, your schedules, and your task partitioning.
+        </Typography>
+        <br/>
+        <Typography variant="h5" className={classes.subtitle}>Documentation</Typography>
+        <Typography variant="body1">
+          My previous manager at Raven Industries once told me he had "never seen someone document their code as thoroughly
+          and sensibly as I did." I know a thing or two about writing good documentation because I have seen a thing or two
+          about what it takes to write stellar docs. I have witnessed the good and bad and continued to learn how to be better.
+        </Typography>
+        <br/>
+        <Typography variant="h5" className={classes.subtitle}>Customer Relationship Management</Typography>
+        <Typography variant="body1">
+          I really enjoy speaking to project stakeholders and understanding how the software can benefit them directly. I embrace client-facing engineering
+          positions and take pride in my ability to effectively communicate and form relationships with clients, all while listening to their feedback in
+          order to improve a software's capabilities.
+        </Typography>
+        <br/> <br/> <br/>
+
+        <Grid container>
+          <AccountTree className={classes.icon}/>
+          <Typography variant="h4" className={classes.title}>Project Management</Typography>
+        </Grid>
+        <Typography variant="h5" className={classes.subtitle}>Leadership</Typography>
+        <Typography variant="body1">
+          I stepped up during my junior year of college and offered to take on the role of Squad Lead and Product Manager for my senior design team, which gave me the 
+          opportunity to lead every aspect of development for my project over the course of a year. Since then, I have also taken over in a similar position with
+          Hoffman Strategy Group, where I have been tasked with leading as well as furthering the developments of their real estate analytics platform. 
+          Along with this, I was recently elected Vice President of Communication for the university's Engineering Student Advisory Board, where I represent the university's
+          College of Engineering as a whole.
+        </Typography>
+        <br/>
+        <Typography variant="body1">
+          I am also credited for co-founding our new SOFTie Startup initiative at the university and helped to plan out how this brand new venture will look
+          for our incoming software engineering seniors. I take charge wherever I can and am always ready to give every new opportunity my all - because that is what
+          leaders do.
+        </Typography>
+        <br/>
+        <Typography variant="h5" className={classes.subtitle}>Communication</Typography>
+        <Typography variant="body1">
+          I have proven myself in the past to be an effective communicator while taking charge of software projects. I can elicit requirements effectively, decompose them
+          into managable pieces, take charge of creating presentation materials, and make sure that everyone on the team is on the same page when it comes time to develop.
+        </Typography>
+        <br/>
+        <Typography variant="h5" className={classes.subtitle}>Task Management</Typography>
+        <Typography variant="body1">
+          Through my experiences, I am able to understand my projects at a high level and effectively partition the work in a way that makes sense in order to iterate quickly.
+          I have proven this with my work on the Buckle Advocacy project as well as with Hoffman Analytics, as I took charge in decomposing our requirements in both instances
+          to manageble pieces of development work.
+        </Typography>
+        <br/>
+        <Typography variant="h5" className={classes.subtitle}>Risk Management</Typography>
+        <Typography variant="body1">
+          Lastly, I know how to assess risk and pivot projects accordingly when things are not shaping up as expected. I always come ready with backup plans in case things go awry,
+          or when requirements change unexpectedly, so that I can always be ready to move forward without additional hassle.
+        </Typography>
+        <br/>
+        <p align="middle">
+          <img 
+            src={tasks}
+            className={isSmallScreen ? classes.responsiveGraphic : classes.graphic}
+            alt="Task Graphic"
+          />
+        </p>
       </section>
     </div>
   );

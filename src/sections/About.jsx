@@ -6,7 +6,8 @@ import {
   CardMedia,
   useMediaQuery
 } from "@material-ui/core"
-import { Phone, Mail } from '@material-ui/icons';
+import { Phone, Mail } from "@material-ui/icons";
+import { Link } from "react-router-dom";
 import { makeStyles } from "@material-ui/core/styles";
 // Assets
 import nebraska from "../resources/nebraska.svg";
@@ -22,48 +23,48 @@ import marc from "../resources/references/MarcJohnson.jpeg";
 const useStyles = makeStyles(() => ({
   container: {
     paddingTop: 40,
-    paddingLeft: '12vw',
-    paddingRight: '12vw',
+    paddingLeft: "12vw",
+    paddingRight: "12vw",
   },
   responsiveContainer: {
     paddingTop: 40,
-    paddingLeft: '4vw',
-    paddingRight: '4vw',
+    paddingLeft: "4vw",
+    paddingRight: "4vw",
   },
   title: {
-    fontWeight: 'bold',
+    fontWeight: "bold",
     marginBottom: 20,
   },
   subtitle: {
-    fontWeight: 'bold',
+    fontWeight: "bold",
   },
   whitespace: {
     margin: 60,
   },
   reference: {
-    display: 'flex',
-    boxShadow: '1px 3px 6px 1px #555',
+    display: "flex",
+    boxShadow: "1px 3px 6px 1px #555",
     width: "29vw",
     height: "25vh",
     margin: 7,
   },
   responsiveReference: {
-    display: 'flex',
-    boxShadow: '1px 3px 6px 1px #555',
+    display: "flex",
+    boxShadow: "1px 3px 6px 1px #555",
     width: "100%",
     height: "auto",
     marginTop: 10,
     marginBottom: 10,
   },
   details: {
-    display: 'flex',
-    flexDirection: 'column',
-    width: '60%',
+    display: "flex",
+    flexDirection: "column",
+    width: "60%",
     padding: 15,
     midWidth: 215,
   },
   cover: {
-    width: '40%',
+    width: "40%",
   },
   referenceIcon: {
     marginRight: 10,
@@ -87,28 +88,26 @@ const About = () => {
       <section className={isSmallScreen ? classes.responsiveContainer : classes.container}>
         <Typography variant="h4" className={classes.title}>Who Am I?</Typography>
         <Typography variant="body1">
-          My name is Ryan Le. I am an incoming senior at the University 
-          of Nebraska-Lincoln majoring in Software Engineering, with a minor in Mathematics. I moved here from Sioux Falls,
-          South Dakota back in August of 2017! Currently, I am working two different software development-based roles
-          over the summer as Software Engineer &amp; Product Manager with Hoffman Strategy Group, and also as an IT
-          Software Engineer Intern at Nelnet! After losing my initially planned internship to the ongoing pandemic,
+          I am an incoming senior at the University of Nebraska-Lincoln majoring in Software Engineering, with a minor in Mathematics. 
+          I moved here from Sioux Falls, South Dakota back in August of 2017. Currently, I am working two different software development-based 
+          roles over the summer as Software Engineer &amp; Product Manager with Hoffman Strategy Group, and also as an IT
+          Software Engineer Intern at Nelnet. After losing my initially planned internship to the ongoing pandemic,
           I shifted gears and decided to take advantage of the remote work opportunity by
-          signing on for two separate development opportunities. Things are going great so far!
+          signing on for two separate development opportunities. Things are going great!
         </Typography>
         <br />
         <Typography variant="body1">
-          Thus far, I have been enjoying front-end development the most as it allows me to utilize my creative side while
-          also leveraging my client-facing skillsets. Lately, I have been focusing in JavaScript in collaboration with technologies
-          such as React, Material UI, Node.js, Express, and Amazon Web Services to create my projects. In the past I've worked
-          extensively as well with things like Python, Swift, SwiftUI, and SQL databases. I like to consider myself a jack of all
-          trades in terms of software development at this point in my college career, but my real interest moving forward is in
-          web development. Given some time for the technologies to mature, I am also open to shifting over to mobile development!
+          So far, I have been enjoying front-end development the most as it allows me to utilize my creative side while
+          also leveraging my client-facing skills. Lately, I have been focusing in JavaScript in collaboration with technologies
+          such as React.js, Material UI, Node.js, Express, and Amazon Web Services to create my projects. In the past I've worked
+          extensively as well with things like Python, Java, Swift, SwiftUI, and SQL databases. I like to consider myself a jack of all
+          trades in terms of software development - but my real interest moving forward in my career is with web development.
         </Typography>
 
         <div className={classes.whitespace}/>
 
         <Typography variant="h4" className={classes.title}>Education</Typography>
-        <Typography variant="body1" style={{ fontWeight: 'bolder' }}>University of Nebraska-Lincoln</Typography>
+        <Typography variant="body1"><b>University of Nebraska-Lincoln</b></Typography>
         <Typography variant="body1">
           Bachelor of Science in 
           <b> Software Engineering</b>, 
@@ -120,25 +119,23 @@ const About = () => {
         <br />
         <Typography variant="body1">
           Throughout my college career, I have gained a variety of experiences in different aspects of leadership and software development.
-          This last year, I lead the development of a social media marketing application on iOS and gained valuable client-facing engineering
-          experience as both the Squad Lead and Product Manager for my senior design team. I reported directly to my corporate sponsors
-          at the Buckle on a weekly basis in this position, talking through current progress and pivoting the project as necessary.
+          You can learn more about these different experiences by visiting my <Link to="/projects">projects</Link> page here, or read about my
+          specific skillsets by reading through my <Link to="/skills">skills</Link> page.
         </Typography>
         <br />
         <Typography variant="body1">
           For the upcoming fall semester, I have been elected to the post of Vice President of Communications for the university's 
-          Engineering Student Advisory Board, the governing student body for UNL's College of Engineering. Along with that, my good
+          Engineering Student Advisory Board, the governing student body our College of Engineering. Along with that, my
           friends and I within the software engineering major have been working to get our senior year curriculum changed so that
-          we can pursue our idea of founding our SOFTie Startup through UNL's senior design program. And we have just reached our first
-          milestone: getting official faculty approval for the improved program pitch! 
+          we can pursue our idea of founding our SOFTie Startup through the university's senior design program. And we have just reached our first
+          milestone: getting official faculty approval for the improved program pitch.
         </Typography>
         <br />
         <Typography variant="body1">
           This means that, instead of signing on for another year of working for an industry-sponsored project, the university will be allowing our 
           assembled team of students to pursue our own startup project where we get to be our own primary stakeholders. A project in which we call the shots, 
           define our project vision, incubate our ideas from the ground up, and pursue technologies of interest in a startup environment all with the backing
-          of our own tuition dollars, mitigating any and all risk of forming a company from the ground up! If you can't tell, I am incredibly excited for this
-          new opportunity.
+          of our own tuition dollars, mitigating any and all risk of forming a company from the ground up.
         </Typography>
         <p align="center">
           <img 
@@ -151,16 +148,14 @@ const About = () => {
         <div className={classes.whitespace}/>
 
         <Typography variant="h4" className={classes.title}>More About Me</Typography>
-        <Typography variant="body1">
+        {/* <Typography variant="body1">
           I am an incredibly motivated and detail-oriented software engineer that is able to easily insert myself
           into any team dynamic. I thrive in collaborative environments and strive to always give every project my all,
           while also continuing to learn new things every day. I know when to ask questions, how to find the resources I need
           when tackling new technologies, and I put no task beneath me. I can be a valuable addition to any team thanks to my 
-          diverse experience in gathering requirements, juggling a variety of development tasks, testing, and planning. I have also
-          greatly strengthened my ability to manage my time, having proved myself this summer by working two software engineering positions
-          concurrently while helping to set the foundation for our new SOFTie Startup program. 
-        </Typography>
-        <br />
+          diverse experience in gathering requirements, juggling a variety of development tasks, testing, and planning.
+        </Typography> 
+        <br/> */}
         <Typography variant="body1">
           But as busy as my life can be with school, work, and extracurriculars, I can still find time to set aside to do things I love including...
           <ul>
@@ -177,7 +172,7 @@ const About = () => {
 
         <div className={classes.whitespace}/>
 
-        <Typography variant="h4" className={classes.title}>Don't believe me? Ask any of my references!</Typography>
+        <Typography variant="h4" className={classes.title}>Professional References</Typography>
         <Grid container justify="space-between">
 
           <Card className={isSmallScreen ? classes.responsiveReference : classes.reference}>

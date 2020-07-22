@@ -75,7 +75,7 @@ const Home = () => {
         screenHeight={50}
       />
       <section className={isSmallScreen ? classes.responsiveContainer : classes.container}>
-        <Typography className={classes.title} variant="h3">Welcome to my web page.</Typography>
+        <Typography className={classes.title} variant="h3">Welcome.</Typography>
         <Typography variant="body1">
           I created this online portfolio from the ground up in order to showcase my skills, 
           gain some web development experience, go into greater detail about who I am, 
@@ -83,7 +83,6 @@ const Home = () => {
           at your company. You can learn a lot more by navigating between the links to the side or below!
         </Typography>
         <br/>
-        <Typography variant="h5" className={classes.title}>Links</Typography>
         <Grid container justify="space-between">
 
           <Card className={isSmallScreen ? classes.responsiveNav : classes.nav} component={Link} to="/">

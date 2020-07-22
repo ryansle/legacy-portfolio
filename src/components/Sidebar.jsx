@@ -118,7 +118,7 @@ const Sidebar = (props) => {
   const container = window !== undefined ? () => window().document.body : undefined;
   
   const nav = {
-    HOME: "Homebase - Welcome.",
+    HOME: "Home",
     ABOUT: "About Me",
     EXPERIENCE: "Work Experience",
     SKILLS: "My Skillsets",
