@@ -33,7 +33,7 @@ import Footer from "./Footer";
 import { makeStyles, useTheme } from "@material-ui/core/styles";
 // Assets
 import headshot from "../resources/RyanLe.png"
-import rle from "../resources/logo.png";
+// import rle from "../resources/logo.png";
 
 const sidebarWidth = 225;
 

@@ -12,6 +12,7 @@ const useStyles = makeStyles((theme) => ({
     color: "white",
     marginTop: 100,
     paddingTop: 10,
+    bottom: 0,
   },
   responsiveBottom: {
     background: "#3f51b5",
@@ -19,6 +20,7 @@ const useStyles = makeStyles((theme) => ({
     marginTop: 100,
     padding: 10,
     height: 70,
+    bottom: 0,
   }
 }));
 
