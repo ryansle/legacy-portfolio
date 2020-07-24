@@ -99,7 +99,7 @@ const About = () => {
         <Typography variant="body1">
           So far, I have been enjoying front-end development the most as it allows me to utilize my creative side while
           also leveraging my client-facing skills. Lately, I have been focusing in JavaScript in collaboration with technologies
-          such as React.js, Material UI, Node.js, Express, and Amazon Web Services to create my projects. In the past I've worked
+          such as React.js, Material-UI, Node.js, Express, and Amazon Web Services to create my projects. In the past I've worked
           extensively as well with things like Python, Java, Swift, SwiftUI, and SQL databases. I like to consider myself a jack of all
           trades in terms of software development - but my real interest moving forward in my career is with web development.
         </Typography>

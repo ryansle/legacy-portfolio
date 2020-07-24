@@ -203,8 +203,8 @@ const Skills = () => {
           </Grid>
 
           <Grid item className={classes.skill}>
-            <img src={material} alt="Material UI" className={classes.media}/>
-            <Typography variant="h6">Material UI</Typography>
+            <img src={material} alt="Material-UI" className={classes.media}/>
+            <Typography variant="h6">Material-UI</Typography>
           </Grid>
 
           <Grid item className={classes.skill}>

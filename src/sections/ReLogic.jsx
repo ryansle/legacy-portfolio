@@ -115,7 +115,7 @@ const ReLogic = () => {
         </Typography>
         <Typography variant="body1">
           Okay, I recognize that if you are actually reading through this page, you probably have a lot of questions.
-          Let's address the frequently asked questions, and if you have any more, feel free to <Link to="/contact-me">contact me!</Link>
+          Let's address the frequently asked questions, and if you have any more, feel free to <Link to="/contact">contact me!</Link>
         </Typography>
         <br/>
         <Typography variant="h5" className={classes.subtitle}>What is Terraria?</Typography>
@@ -141,8 +141,7 @@ const ReLogic = () => {
         <Typography variant="body1">
           SMBX was an independent development project that had absolutely no ties
           to Nintendo, and it had a sole developer named Andrew Spinks - or 'Redigit', online. The game
-          managed to become popular enough to become the center of its own online community at 
-          <a href="supermariobrothers.org"> supermariobrothers.org</a>, which has now been repossessed by 
+          managed to become popular enough to become the center of its own online community at <a href="supermariobrothers.org"> supermariobrothers.org</a>, which has now been repossessed by 
           Nintendo. I was an active member in this community 
           since I enjoyed creating my own Mario levels, which eventually turned me into a prominent member
           of the small community. As I became better and better friends with those that shared this same interest 
@@ -152,7 +151,7 @@ const ReLogic = () => {
         <br/>
         <Typography variant="body1">
           But as time went on, Andrew Spinks began to lose interest in continued development of SMBX.
-          This, coupled with increasing pressure from Nintendo via contact from their lawyers, eventually 
+          This, coupled with increasing pressure from Nintendo via contact from their lawyers eventually 
           caused him to cease development of the game in late 2010, but the community lived on.
         </Typography>
         <br/>
@@ -164,6 +163,7 @@ const ReLogic = () => {
           game that he was entitling "Terraria", given a download link, and told to just start playing around with the game.
           For how little content there was at the time, it was incredible, and quickly became the main way I would spend my free time.
         </Typography>
+        <br/>
         <Typography variant="h5" className={classes.subtitle}>How did Terraria get so big?</Typography>
         <br/>
         <Typography variant="body1">
@@ -174,7 +174,7 @@ const ReLogic = () => {
           the initial game trailers, Terraria started to garner a lot more attention than we ever anticipated - we got the attention of 
           <b> Mojang Studios,</b> the creators of Minecraft (which was currently one of the most popular games in existence),
           and they gave us a shoutout on Twitter. I would go so far as to say this is the sole reason Terraria got as big as it did. With the entirety of the Minecraft
-          communities' eyes on us, we started recieving criticism after criticism about how similar the game was to Minecraft, how it was just a "2D clone," and how
+          communities' eyes on us, we started receiving criticism after criticism about how similar the game was to Minecraft, how it was just a "2D clone," and how
           our game was just completely uninspired. As much as this bothered our team, we pushed on with development and worked on
           setting ourselves apart from Minecraft.
         </Typography>
@@ -184,8 +184,8 @@ const ReLogic = () => {
         <Typography variant="body1">
           My role on the team was as a <b>Quality Assurance Game Tester.</b> This means most of my time was spent playtesting the game searching
           for bugs, glitches, and other unexpected behaviors. On top of this, I also had to continuously evaluate: was I having fun playing the game? Could certain aspects of the game
-          be better? Was there anything that could be added that could enhance the user experience? I like to think I was pretty good at my job, because a lot of things 
-          I petitioned for actually made it into the base game. When the team was developing the initial v1.1 Hardmode Update, I was perhaps the most vocal of new additions 
+          be better? Was there anything that could be added that could enhance the user experience? In this role, many of the things 
+          I petitioned for actually made it into the game. When the team was developing the initial v1.1 Hardmode Update, I was perhaps the most vocal of new additions 
           to the game such as swapping out pickaxes and drills for drills and chainsaws, specific new NPCs during the Blood Moon Event such as the Clown, NPC names, flamethrowers,
           and a variety of other small gameplay mechanics.
         </Typography>
@@ -206,14 +206,13 @@ const ReLogic = () => {
           of 1.3, the Endgame Update. As I was now only 16 years old, I wanted time to spend with my friends and family, and just time to spend being a kid. In those four years, I
           racked up around 1200 hours of game time, and that's only what's been tracked on Steam. I've had tens, if not hundreds, of beta versions of the game installed straight to my
           machine prior to launching on Steam and throughout the years. If I had to pinpoint a true estimate to how many hours I've spent on Terraria, I would estimate it's closer to 1800.
-          That's nearly 2.5 <span style={{ fontWeight: "bolder" }}>months</span> of game time - as you can see, I was quite dedicated to my position.
+          That's nearly 2.5 <b>months</b> of game time - as you can see, I was quite dedicated to my position.
         </Typography>
         <br/>
         <Typography>
           But I couldn't spend all of my time playing the game forever. So, I finally said goodbye to the Re-Logic team back in high school so I could focus on my friends and family.
           Sometimes, I still wonder what it would be like if I had stayed. Now that I'm majoring in Software Engineering, and have a basis in computer programming, could I have 
-          contributed to the Re-Logic team in a different medium? Could I have turned Re-Logic Games into a full-time opportunity? I suppose I will never know, now that I'm so far
-          removed from it all. All good things must come to an end.
+          contributed to the Re-Logic team in a different medium? Could I have turned Re-Logic Games into a full-time opportunity?
         </Typography>
         <br/>
         <Typography variant="h5" className={classes.subtitle}>Do you have any proof of your involvement?</Typography>

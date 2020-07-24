@@ -110,36 +110,17 @@ const UNL = () => {
         </Typography>
         <Typography variant="h5" className={classes.title}>About This Position</Typography>
         <Typography variant="body1">
-          While pursuing my Bachelor of Science Degree in Software Engineering at the university, I also took on 
-          a position as a teaching assistant for Dr. Chris Bohn's CSCE 361 course - Software Engineering.
-          The intent of taking this position was to make a little bit of money on the side of my academics,
-          as well as sharpen my own development skills by providing aid to other students when they came in
-          with questions on best practices, homework, or anything else.
-        </Typography>
-        <br/>
-        <Typography variant="body1">
-          Dr. Bohn reached out to me by email over Christmas Break in the middle of my sophomore year
-          to see if I was interested in taking on the position, despite having not taken this class previously.
-          CSCE 361 is a specialized course at the university that is geared entirely towards those majoring
-          in computer science or computer engineering - the software engineering major at the university
-          has its own set of core curriculum that students within that major (including myself) pursue
-          instead. So, despite never having been enrolled in this exact class, I had already picked up
-          all the necessary skills needed to TA the course effectively in my previous coursework.
-        </Typography>
-        <br/>
-        <Typography variant="body1">
-          As for my direct responsibilities as a TA for this course, I have filled many different shoes.
-          The course has seen many changes throughout my time working with Dr. Bohn; my first semester,
+          My direct responsibilities in this position have been incredibly fluid as time has passed.
+          The course has seen many changes throughout my time working with Dr. Chris Bohn; my first semester,
           not only did I hold basic TA responsibilities such as holding office hours, meeting with students,
           and grading assignments, but I acted as a sort of "stakeholder" for three student teams as they
           tackled a semester-long development project. The next year, I started peer-reviewing exams
           prior to students taking them to ensure that they accurately reflected what a student should know
           from being enrolled in the course up to that point. I started to become an advocate for further changes to the course
-          based on the conversations I often had with students about what they liked, disliked, and absolutely
-          could not stand. It got to a point where time was set aside during each of our TA meetings to talk
+          based on the conversations I often had with students about what they liked, and disliked. It got to a point where time 
+          was set aside during each of our TA meetings to talk
           about new student feedback for the course, and I am confident that we are continuing to steer the 
-          course in the right direction. At this point, I suppose we will just see how the shift to remote affects our progress
-          on the course.
+          course in the right direction.
         </Typography>
       </section>
     </div>

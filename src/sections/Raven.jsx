@@ -121,11 +121,11 @@ const Raven = () => {
         <Typography variant="h5" className={classes.title}>Responsibilities</Typography>
         <Typography variant="body1">
           <ul>
-            <li>Research and create development requirements.</li>
-            <li>Document test plans and perform necessary testing on development code.</li>
-            <li>Coordinate with my supervisor, mentor, and project management on development tasks.</li>
-            <li>Learn best practices in a team development environment.</li>
-            <li>Develop software (work closely with mentor and development team to meet objectives).</li>
+            <li>Researched and create development requirements.</li>
+            <li>Documented test plans and perform necessary testing on development code.</li>
+            <li>Coordinated with my supervisor, mentor, and project management on development tasks.</li>
+            <li>Learned best practices in a team development environment.</li>
+            <li>Developed software (work closely with mentor and development team to meet objectives).</li>
             <li>Developed a Report Generator to easily export database information onto a formatted PDF.</li>
             <li>Utilized Chrome DevTools and Visual Studio Professional to trace through non-functional code.</li>
             <li>Learned best practices with version control by rebasing, squashing, and branching with Git.</li>
@@ -136,7 +136,7 @@ const Raven = () => {
         <Typography variant="body1">
           During my time at Raven, I worked on their Slingshot team, one of their few web-based software teams. I was primarily responsible
           for developing a report generation system that streamlined internal processes. Prior to my development of the DTC Report Generator, individuals
-          within the company would have to manually filter through a 2000-item Excel spreadsheet to find pertinent data for upcoming meetings, format it 
+          within the company would have to manually filter through a 2000+ item Excel spreadsheet to find pertinent data for upcoming meetings, format it 
           into a readable report, and then take these reports into their meetings with them. Based on that description alone, it is easy to understand
           why that already was not a good system. The Slingshot team took it upon themselves to transfer all of the data into a SQL database prior to my 
           internship start date, and when I began, I simply had to create the report system that would query the database accordingly and allow a user a
@@ -156,8 +156,8 @@ const Raven = () => {
             By far the most important lesson I learned during my time at Raven Industries was, in the words of my mentor, "learning how to learn on my own."
             Since this was my first industry experience, I came from a background of consistently being able to ask others for support when things did not make sense
             or if I did not know how to do things. Due to this, when I first started at Raven, I spent far too much time asking my mentor for help on things that were
-            simply a Google search away. By establishing some borders between when I would ask for help, I was forced to do more digging into my problems before
-            confronting anyone, effectively teaching me core problem solving capabilities. On top of coming out of my internship as both a better software engineer
+            simply a Google search away. By establishing some guidelines of when I would ask for help, I was forced to do more digging into my problems before
+            approaching anyone, effectively teaching me core problem solving capabilities. On top of coming out of my internship as both a better software engineer
             and a better problem solver, Raven taught me:
             <ul>
               <li>the bare basics of web development in conjunction with Kendo UI and the .NET framework.</li>

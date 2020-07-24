@@ -2,7 +2,7 @@
 
 ## Ryan Le's Portfolio Website
 
-Welcome to the repository containing the code for my personal portfolio! I used Material UI on top of React.js to create the front-end for this responsive webpage.
+Welcome to the repository containing the code for my personal portfolio! I used Material-UI on top of React.js to create the front-end for this responsive webpage.
 
 ### Motivation
 
@@ -14,7 +14,7 @@ Welcome to the repository containing the code for my personal portfolio! I used 
 
 - JavaScript for random site scripting
 - React.js for the underlying user interface
-- Material UI for out-of-the-box React.js components
+- Material-UI for out-of-the-box React.js components
 - Redux for global state management
 - React-Router for declarative client-side page rendering
 - Visual Studio Code as in the integrated development environment

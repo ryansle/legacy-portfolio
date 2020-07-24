@@ -158,7 +158,7 @@ const Projects = () => {
                 />
                 <Chip
                   className={classes.tech}
-                  label="Material UI"
+                  label="Material-UI"
                 />
                 <Chip
                   className={classes.tech}
@@ -207,7 +207,7 @@ const Projects = () => {
             </p>
             <Typography variant="h5" className={classes.subtitle}>What did I learn?</Typography>
             <p>
-              I learned how to leverage React.js and Material UI to create static web pages, primarily, as well as the basics of web development. On top of this, I learned how to create
+              I learned how to leverage React.js and Material-UI to create static web pages, primarily, as well as the basics of web development. On top of this, I learned how to create
               sensible user interfaces in order to showcase my abilities and display information in a meaningful way.
             </p>
             <Typography variant="h5" className={classes.subtitle}>What would I change next time?</Typography>
@@ -518,7 +518,7 @@ const Projects = () => {
               />
               <Chip
                 className={classes.tech}
-                label="Material UI"
+                label="Material-UI"
               />
               <Button 
                 className={classes.learnMore}

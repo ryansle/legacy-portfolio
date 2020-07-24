@@ -101,7 +101,7 @@ const Experience = () => {
                 />
                 <Chip
                   className={classes.tech}
-                  label="Material UI"
+                  label="Material-UI"
                 />
                 <Chip
                   className={classes.tech}
@@ -147,8 +147,8 @@ const Experience = () => {
               <Grid item xs={isSmallScreen ? 12 : 6}>
                 <Typography variant="body1">
                   Participated in a fully remote internship that focused on developing backend services that integrated with Nelnet's leased Workday system.
-                  Also worked to further the developments of an existing software project known as the LenderBond System, a .NET codebase that worked as the 
-                  one-stop shop for the AGM teams' internal processes. In this position, I demonstrated the ability to:
+                  I also worked to further the developments of an existing software project known as the LenderBond System, a .NET codebase that worked as the 
+                  one-stop shop for the AGM team's internal processes. In this position, I demonstrated the ability to:
                   <ul>
                     <li>Document test plans and perform necessary testing on development code</li>
                     <li>Research and create software development requirements</li>
@@ -267,7 +267,7 @@ const Experience = () => {
 
               <Grid item xs={isSmallScreen ? 12 : 6}>
                 <Typography variant="body1">
-                  Aided Dr. Bohn in the planning and execution of his CSCE 361 Software Engineering course while also grading students assignments
+                  Aided Dr. Bohn in the planning and execution of his CSCE 361 (Software Engineering) course while also grading students assignments
                   and holding weekly office hours. In this position, I also:
                   <ul>
                     <li>Managed three student software teams as they tackled a semester-long development project</li>
@@ -328,9 +328,8 @@ const Experience = () => {
                     <ul>
                       <li>This easily makes it one of the best selling video games of <b>all time!</b></li>
                     </ul>
-                    <li>Being that I joined the team in early 2011, I was only 12 years old at the time!</li>
+                    <li>Being that I joined the team in early 2011, I was only 12 years old at the time.</li>
                     <li>We never expected Terraria to get as big as it did</li>
-                    <li>With how bold of claims these are, I have plenty of proof of my involvement</li>
                   </ul>
                 </Typography>
                 <Chip

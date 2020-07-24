@@ -106,19 +106,19 @@ const Nelnet = () => {
         <Typography variant="h5" className={classes.title}>Responsibilities</Typography>
         <Typography variant="body1">
           <ul>
-            <li>Developed XSLT transformations for the Workday team.</li>
-            <li>Redeveloped an existing .NET web application into a functional component of daily workflow.</li>
-            <li>Participated in an intern pod team that delivered a business proposal to senior members of the Nelnet organization.</li>
-            <li>Actively practiced navigating an Agile workflow environment throughout the course of my remote internship.</li>
+            <li>Develop XSLT transformations for the Workday team.</li>
+            <li>Redevelop an existing .NET web application into a functional component of daily workflow.</li>
+            <li>Participate in an intern pod team that delivered a business proposal to senior members of the Nelnet organization.</li>
+            <li>Actively practice navigating an Agile workflow environment throughout the course of my remote internship.</li>
           </ul>
         </Typography>
         <Typography variant="h5" className={classes.title}>About This Position</Typography>
         <Typography variant="body1">
           When COVID-19 ravaged the United States and forced companies across the nation to cancel 
-          their internship programs, Nelnet decided they might as well open their own intern programs back up.
+          their internship programs, Nelnet decided to use this opportunity to open their intern programs back up.
           Having originally finished out their recruiting season earlier in the year, Nelnet saw an opportunity
           to provide aid to the community and quickly took the chance to help students who had lost their original
-          internships to the pandemic. I was lucky enough to be one of thirty additional interns hired on during 
+          internships to the pandemic. I was lucky enough to be one of ~30 additional interns hired on during 
           this process after managing to get in contact with their recruiting team on LinkedIn.
         </Typography>
         <br/>

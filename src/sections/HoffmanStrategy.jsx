@@ -174,7 +174,7 @@ const HoffmanStrategy = () => {
             />
             <Chip
               className={classes.tech}
-              label="Material UI"
+              label="Material-UI"
             />
             <Chip
               className={classes.tech}
@@ -214,11 +214,11 @@ const HoffmanStrategy = () => {
         <Typography variant="h5" className={classes.title}>Responsibilities</Typography>
         <Typography variant="body1">
           <ul>
-            <li>Refactored a pre-existing JavaScript codebase to improve maintainability and scalability.</li>
-            <li>Leveraged React and Material UI to redevelop the front-end for a real-estate data analytics system.</li>
-            <li>Led the product vision for the new Hoffman Analytics software subsidiary.</li>
-            <li>Utilized Python and Selenium to scrape business data (2000 entries) from the web in an a fast, organizedmanner onto an Excel sheet.</li>
-            <li>Served as a technology advisor for the group in calls with potential clients.</li>
+            <li>Refactor a pre-existing JavaScript codebase to improve maintainability and scalability.</li>
+            <li>Leverage React and Material-UI to redevelop the front-end for a real-estate data analytics system.</li>
+            <li>Lead the product vision for the new Hoffman Analytics software subsidiary.</li>
+            <li>Utilize Python and Selenium to scrape business data (2000 entries) from the web in an a fast, organized manner onto an Excel sheet.</li>
+            <li>Serve as a technology advisor for the group in calls with potential clients.</li>
           </ul>
         </Typography>
         <Typography variant="h5" className={classes.title}>About This Position</Typography>
@@ -253,7 +253,7 @@ const HoffmanStrategy = () => {
         <br/>
         <Typography variant="body1">
           Through a summer of cooperation, Matt and I rebuilt the entire platform
-          from the ground up using new technologies such as Node.js, Material UI, and Express while leaning primarily on one another when we
+          from the ground up using new technologies such as Node.js, Material-UI, and Express while leaning primarily on one another when we
           occasionally faced problems. Working as a software engineer for the Hoffman Strategy Group
           has been a unique experience in itself as Matt and I make up 100% of their engineering department - 
           there are no senior developers, mentors, or external contractors within the company that we were able
@@ -265,12 +265,12 @@ const HoffmanStrategy = () => {
         <Typography variant="h5" className={classes.title}>What did I learn?</Typography>
         <Typography variant="body1">
           Working with Hoffman Strategy Group was an excellent way to break into the web development domain of software engineering. It also helped that my partner Matt has
-          been sharpening his web development skills over the course of the last year, and was always point me in the right direction for growth. Thanks to my summer with
+          been sharpening his web development skills over the course of the last year, and was always pointing me in the right direction for growth. Thanks to my summer with
           Hoffman Strategy Group, I learned how to:
           <ul>
             <li>Develop beautifully responsive React front-ends from the ground up.</li>
             <li>Manage diverse client expectations from non-technical stakeholders.</li>
-            <li>Continue to practice leading the development of large-scale software applications</li>
+            <li>Continue to practice leading the development of large-scale software applications.</li>
             <li>Work with up-and-coming web development frameworks and technologies like React, Redux, Node.js, and Amazon Web Services.</li>
             <li>Pace my time accordingly between two concurrent software development positions.</li>
           </ul>
@@ -280,7 +280,7 @@ const HoffmanStrategy = () => {
         <Typography variant="body1">
           You may notice in the screenshots below that many aspects of the Hoffman Analytics platform look strikingly similar to
           the contents of my personal website. This is due to the fact that I was developing both of these projects concurrently, using nearly identical
-          technology stacks. Both applications are heavily based upon Material UI's React component library. Originally, I initiated development
+          technology stacks. Both applications are heavily based upon Material-UI's React component library. Originally, I initiated development
           on this webpage in order to give myself some practice developing websites prior to my role with Hoffman Strategy Group, but as the summer went on,
           these two projects intertwined greatly and have ended up sharing many different front-end assets.
         </Typography>
