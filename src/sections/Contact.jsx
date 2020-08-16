@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+
+// Components
 import {
   Typography,
   TextField,
@@ -16,8 +18,11 @@ import {
 import {
   Send,
 } from "@material-ui/icons";
+
+// Utilities
 import { makeStyles } from "@material-ui/core/styles";
 import emailjs from "emailjs-com";
+
 // Assets
 import contact from "../resources/contact.svg";
 

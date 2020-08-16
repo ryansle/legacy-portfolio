@@ -1,4 +1,6 @@
 import React from "react";
+
+// Components
 import {
   Typography,
   Grid,
@@ -9,8 +11,10 @@ import {
   Home,
   BugReport
 } from "@material-ui/icons";
-import { makeStyles } from "@material-ui/core/styles";
 import { Link } from "react-router-dom";
+
+// Utilities
+import { makeStyles } from "@material-ui/core/styles";
 
 // Assets
 import missing from "../resources/404.svg";

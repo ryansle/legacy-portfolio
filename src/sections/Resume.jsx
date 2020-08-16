@@ -1,9 +1,14 @@
 import React from "react";
+
+// Components
 import {
   Typography,
   useMediaQuery
 } from "@material-ui/core";
+
+// Utilities
 import { makeStyles } from "@material-ui/core/styles";
+
 // Assets
 import resume from "../resources/resume.pdf";
 

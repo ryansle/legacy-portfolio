@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+
+// Components
 import { 
   Grid,
   Drawer,
@@ -30,7 +32,10 @@ import {
 import { Link } from "react-router-dom";
 import Router from "../Router";
 import Footer from "./Footer";
+
+// Utilities
 import { makeStyles, useTheme } from "@material-ui/core/styles";
+
 // Assets
 import headshot from "../resources/RyanLe.png"
 // import rle from "../resources/logo.png";

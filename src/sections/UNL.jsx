@@ -1,11 +1,16 @@
 import React from "react";
+
+// Components
 import {
   Typography,
   Grid,
   Chip,
   useMediaQuery
 } from "@material-ui/core";
+
+// Utilities
 import { makeStyles } from "@material-ui/core/styles";
+
 // Assets
 import unl from "../resources/experience/unl.png";
 

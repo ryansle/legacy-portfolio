@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+
+// Components
 import {
   Typography,
   Grid,
@@ -8,7 +10,10 @@ import {
   useMediaQuery,
 } from "@material-ui/core";
 import { Clear } from "@material-ui/icons";
+
+// Utilities
 import { makeStyles } from "@material-ui/core/styles";
+
 // Assets
 import hsg from "../resources/experience/hsg.png";
 import fileManagerPNG from "../resources/experience/file-manager.png";

@@ -1,4 +1,6 @@
 import React from "react";
+
+// Components
 import {
   Typography,
   Grid,
@@ -10,10 +12,14 @@ import {
   AccountTree,
   AssignmentInd
 } from "@material-ui/icons";
+
+// Utilities
 import { Link } from "react-router-dom";
 import { makeStyles } from "@material-ui/core/styles";
+
 // Assets
 import tasks from "../resources/tasks.svg";
+
 // Development Languages
 import python from "../resources/skills/python.svg";
 import javascript from "../resources/skills/javascript.svg";
@@ -25,6 +31,7 @@ import html from "../resources/skills/html.svg";
 import css from "../resources/skills/css.svg";
 import antlr from "../resources/skills/antlr.svg";
 import xslt from "../resources/skills/xslt.svg";
+
 // Frameworks & Technologies
 import react from "../resources/skills/react.svg";
 import swiftui from "../resources/skills/swiftui.png";
@@ -39,10 +46,12 @@ import kivy from "../resources/skills/kivy.svg";
 import postman from "../resources/skills/postman.svg";
 import alamofire from "../resources/skills/alamofire.png";
 import kingfisher from "../resources/skills/kingfisher.png";
+
 // Version Control
 import github from "../resources/skills/github.svg";
 import gitlab from "../resources/skills/gitlab.svg";
 import visualStudio from "../resources/skills/visualstudio.svg";
+
 // Other Skills
 import latex from "../resources/skills/latex.png";
 import photoshop from "../resources/skills/photoshop.svg";

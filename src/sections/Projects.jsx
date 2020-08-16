@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+
+// Components
 import {
   Typography,
   Grid,
@@ -12,7 +14,10 @@ import {
 } from "@material-ui/core";
 import { Clear, GitHub } from "@material-ui/icons";
 import Banner from "../components/Banner";
+
+// Utilities
 import { makeStyles } from "@material-ui/core/styles";
+
 // Assets
 import banner from "../resources/projects/banner-resized.png";
 import buckle from "../resources/projects/buckle.jpg";

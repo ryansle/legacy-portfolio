@@ -1,9 +1,13 @@
 import React from "react";
+
+// Components
 import {
   Typography,
   BottomNavigation,
   useMediaQuery
 } from "@material-ui/core"
+
+// Utilities
 import { makeStyles } from "@material-ui/core/styles";
 
 const useStyles = makeStyles((theme) => ({

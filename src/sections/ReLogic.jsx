@@ -1,4 +1,6 @@
 import React from "react";
+
+// Components
 import {
   Typography,
   Grid,
@@ -6,7 +8,10 @@ import {
   useMediaQuery
 } from "@material-ui/core";
 import { Link } from "react-router-dom";
+
+// Utilities
 import { makeStyles } from "@material-ui/core/styles";
+
 // Assets
 import relogic from "../resources/experience/re-logic.png";
 import credits from "../resources/experience/credits.png";

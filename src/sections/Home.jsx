@@ -1,4 +1,6 @@
 import React from "react";
+
+// Components
 import {
   Typography,
   Grid,
@@ -15,8 +17,11 @@ import {
   Email
 } from "@material-ui/icons";
 import Banner from "../components/Banner";
-import { makeStyles } from "@material-ui/core/styles";
 import { Link } from "react-router-dom";
+
+// Utilities
+import { makeStyles } from "@material-ui/core/styles";
+
 // Assets
 import mountains from "../resources/MountainBanner.png";
 import cropped from "../resources/CroppedBanner.png";

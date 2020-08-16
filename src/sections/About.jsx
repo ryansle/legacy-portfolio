@@ -1,4 +1,6 @@
 import React from "react";
+
+// Components
 import {
   Typography,
   Grid,
@@ -8,7 +10,10 @@ import {
 } from "@material-ui/core"
 import { Phone, Mail } from "@material-ui/icons";
 import { Link } from "react-router-dom";
+
+// Utilities
 import { makeStyles } from "@material-ui/core/styles";
+
 // Assets
 import nebraska from "../resources/nebraska.svg";
 import suzette from "../resources/references/SuzettePerson.jpg";
@@ -98,10 +103,10 @@ const About = () => {
         <br />
         <Typography variant="body1">
           So far, I have been enjoying front-end development the most as it allows me to utilize my creative side while
-          also leveraging my client-facing skills. Lately, I have been focusing in JavaScript in collaboration with technologies
-          such as React.js, Material-UI, Node.js, Express, and Amazon Web Services to create my projects. In the past I've worked
-          extensively as well with things like Python, Java, Swift, SwiftUI, and SQL databases. I like to consider myself a jack of all
-          trades in terms of software development - but my real interest moving forward in my career is with web development.
+          also leveraging my client-facing skills. Lately, I have been focusing on JavaScript in collaboration with technologies
+          like React.js, Material-UI, Node.js, and Express to create my projects. In the past I've worked
+          extensively as well with things like Python, Java, Swift, SwiftUI, and SQL databases. Moving forward, I am specifically interested
+          in full-stack development opportunities.
         </Typography>
 
         <div className={classes.whitespace}/>
@@ -127,7 +132,7 @@ const About = () => {
           For the upcoming fall semester, I have been elected to the post of Vice President of Communications for the university's 
           Engineering Student Advisory Board, the governing student body our College of Engineering. Along with that, my
           friends and I within the software engineering major have been working to get our senior year curriculum changed so that
-          we can pursue our idea of founding our SOFTie Startup through the university's senior design program. And we have just reached our first
+          we can pursue our idea of founding our "SOFTie Startup" through the university's senior design program. And we have just reached our first
           milestone: getting official faculty approval for the improved program pitch.
         </Typography>
         <br />

@@ -1,4 +1,6 @@
 import React from "react";
+
+// Components
 import {
   Typography,
   Grid,
@@ -8,7 +10,10 @@ import {
   useMediaQuery,
 } from "@material-ui/core"
 import { Link } from "react-router-dom";
+
+// Utilities
 import { makeStyles } from "@material-ui/core/styles";
+
 // Assets
 import hsg from "../resources/experience/hsg.png";
 import nelnet from "../resources/experience/nelnet.svg";
