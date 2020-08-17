@@ -4,20 +4,10 @@ import React from "react";
 import {
   Typography,
   Grid,
-  Card,
-  CardContent,
   useMediaQuery,
 } from "@material-ui/core";
-import {
-  Home as House,
-  Person,
-  Work,
-  Code,
-  Computer,
-  Email
-} from "@material-ui/icons";
 import Banner from "../components/Banner";
-import { Link } from "react-router-dom";
+import NavCard from "../components/NavCard";
 
 // Utilities
 import { makeStyles } from "@material-ui/core/styles";
@@ -40,31 +30,6 @@ const useStyles = makeStyles(() => ({
   title: {
     fontWeight: "bold",
     marginBottom: 20,
-  },
-  nav: {
-    width: "32%",
-    height: "auto",
-    marginBottom: 20,
-    boxShadow: "0px 3px 4px 0px #555",
-    border: "1px solid #9fa2b4",
-    textDecoration: "none",
-  },
-  responsiveNav: {
-    width: "100%",
-    height: "auto",
-    marginBottom: 20,
-    boxShadow: "0px 3px 4px 0px #555",
-    border: "1px solid #9fa2b4",
-    textDecoration: "none",
-  },
-  subtitle: {
-    fontWeight: "bold",
-    marginBottom: 4,
-  },
-  icon: {
-    height: 30,
-    width: "auto",
-    paddingRight: 7,
   },
 }));
 
@@ -89,69 +54,43 @@ const Home = () => {
         </Typography>
         <br/>
         <Grid container justify="space-between">
-
-          <Card className={isSmallScreen ? classes.responsiveNav : classes.nav} component={Link} to="/">
-            <CardContent>
-              <Grid container>
-                <House className={classes.icon}/>
-                <Typography variant="h5" className={classes.subtitle}>Home</Typography>
-              </Grid>
-              <Typography variant="body1">You are here!</Typography>
-            </CardContent>
-          </Card>
-
-          <Card className={isSmallScreen ? classes.responsiveNav : classes.nav} component={Link} to="/about">
-            <CardContent>
-              <Grid container>
-                <Person className={classes.icon}/>
-                <Typography variant="h5" className={classes.subtitle}>About</Typography>
-              </Grid>
-              <Typography variant="body1">Learn more about who I am as a person and what I am looking for in a full-time role.</Typography>
-            </CardContent>
-          </Card>
-
-          <Card className={isSmallScreen ? classes.responsiveNav : classes.nav} component={Link} to="/experience">
-            <CardContent>
-              <Grid container>
-                <Work className={classes.icon}/>
-                <Typography variant="h5" className={classes.subtitle}>Experience</Typography>
-              </Grid>
-              <Typography variant="body1">Check out where I have been working over the last few years (and contact me to add your company to the list!).</Typography>
-            </CardContent>
-          </Card>
-
-          <Card className={isSmallScreen ? classes.responsiveNav : classes.nav} component={Link} to="/skills">
-            <CardContent>
-              <Grid container>
-                <Code className={classes.icon}/>
-                <Typography variant="h5" className={classes.subtitle}>Skills</Typography>
-              </Grid>
-              <Typography variant="body1">Find out what my expertise is in, and learn how I can leverage those skills in a position at your company.</Typography>
-            </CardContent>
-          </Card>
-
-          <Card className={isSmallScreen ? classes.responsiveNav : classes.nav} component={Link} to="/projects">
-            <CardContent>
-              <Grid container>
-                <Computer className={classes.icon}/>
-                <Typography variant="h5" className={classes.subtitle}>Projects</Typography>
-              </Grid>
-              <Typography variant="body1">See all the cool projects I have worked on through university and in my own free time in the past.</Typography>
-            </CardContent>
-          </Card>
-
-          <Card className={isSmallScreen ? classes.responsiveNav : classes.nav} component={Link} to="/contact">
-            <CardContent>
-              <Grid container>
-                <Email className={classes.icon}/>
-                <Typography variant="h5" className={classes.subtitle}>Contact Me</Typography>
-              </Grid>
-              <Typography variant="body1">Have a question about something? Want to offer me a job? Just want someone to talk to? Get in contact with me about anything!</Typography>
-            </CardContent>
-          </Card>
-
+          <NavCard
+            link="/"
+            icon="home"
+            title="Home"
+            description="You are here!"
+          />
+          <NavCard
+            link="/about"
+            icon="about"
+            title="About"
+            description="Learn more about who I am as a person and what I am looking for in a full-time role."
+          />
+          <NavCard
+            link="/experience"
+            icon="experience"
+            title="Experience"
+            description="Check out where I have been working over the last few years (and contact me to add your company to the list!)."
+          />
+          <NavCard
+            link="/skills"
+            icon="skills"
+            title="Skills"
+            description="Find out what my expertise is in, and learn how I can leverage those skills in a position at your company."
+          />
+          <NavCard
+            link="/projects"
+            icon="projects"
+            title="Projects"
+            description="See all the cool projects I have worked on through university and in my own free time in the past."
+          />
+          <NavCard
+            link="/contact"
+            icon="contact"
+            title="Contact"
+            description="Have a question about something? Want to offer me a job? Just want someone to talk to? Get in contact with me about anything!"
+          />
         </Grid>
-        <br/>
       </section>
     </div>
   );
