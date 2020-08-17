@@ -4,17 +4,11 @@ import React, { useState } from "react";
 import {
   Typography,
   Grid,
-  Card,
-  CardContent,
-  Chip,
-  Button,
   Modal,
-  IconButton,
   useMediaQuery,
 } from "@material-ui/core";
-import { Clear, GitHub, SignalWifiOffTwoTone } from "@material-ui/icons";
-import Banner from "../components/Banner";
 import ProjectModal from "../components/ProjectModal";
+import ProjectPreview from "../components/ProjectPreview";
 
 // Utilities
 import { makeStyles } from "@material-ui/core/styles";
@@ -46,73 +40,6 @@ const useStyles = makeStyles(() => ({
   subtitle: {
     fontWeight: "bold",
   },
-  project: {
-    minHeight: 425,
-    minWidth: 355,
-    maxHeight: "30vw",
-    maxWidth: "25vw",
-    boxShadow: "0px 3px 6px 0px #555",
-    margin: 10,
-  },
-  responsiveProject: {
-    width: "100%",
-    height: "auto",
-    boxShadow: "0px 3px 6px 0px #555",
-    margin: 10,
-  },
-  media: {
-    height: "auto",
-    width: "100%",
-  },
-  tech: {
-    margin: 4,
-  },
-  learnMore: {
-    float: "right",
-    margin: 6,
-  },
-  overlay: {
-    position: "fixed",
-    top: "50%",
-    left: "50%",
-    transform: "translate(-50%, -50%) !important",
-    background: "white",
-    width: "70%",
-  },
-  responsiveOverlay: {
-    position: "fixed",
-    top: "50%",
-    left: "50%",
-    transform: "translate(-50%, -50%)",
-    background: "white",
-    width: "90%",
-  },
-  description: {
-    paddingLeft: 70,
-    paddingRight: 70,
-    paddingBottom: 15,
-    scrollPadding: -15,
-  },
-  responsiveDescription: {
-    paddingLeft: 30,
-    paddingRight: 30,
-    paddingBottom: 15,
-    scrollPadding: -15,
-  },
-  scrollable: {
-    overflow: "scroll",
-    maxHeight: "55vh",
-  },
-  exitButton: {
-    margin: 5,
-    position: "absolute",
-    zIndex: 1,
-    right: 0,
-  },
-  contents: {
-    padding: 10,
-  },
-
 }));
 
 const Projects = () => {
@@ -309,177 +236,70 @@ const Projects = () => {
     <div>
       <section className={isSmallScreen ? classes.responsiveContainer : classes.container}>
         <Grid container justify="space-evenly">
-
-          <Card className={isSmallScreen ? classes.responsiveProject : classes.project}>
-            <img 
-              className={classes.media}
-              src={banner}
-              alt="My Banner"
-            />
-            <div className={classes.contents}>
-              <CardContent>
-                <Typography className={classes.title} variant="h5">
-                  Personal Website
-                </Typography>
-                <Typography variant="body2">
-                  Since I never had the chance to learn React.js prior to 
-                  working with the Hoffman Strategy Group, I wanted to 
-                  give myself some practice beforehand. Building this 
-                  website was a good way to teach myself the basics 
-                  and gain a firm enough grasp on the underlying tech
-                  stack before diving headfirst into their project.
-                </Typography>
-              </CardContent>
-              <Chip
-                className={classes.tech}
-                label="React.js"
-              />
-              <Chip
-                className={classes.tech}
-                label="Material-UI"
-              />
-              <Button 
-                className={classes.learnMore}
-                size="small"
-                variant="contained"
-                color="primary"
-                onClick={toggleSiteModal}
-              >
-                Learn More
-              </Button>
-            </div>
-          </Card>
-
-          <Card className={isSmallScreen ? classes.responsiveProject : classes.project}>
-            <img 
-              className={classes.media}
-              src={buckle}
-              alt="The Buckle"
-            />
-            <div className={classes.contents}>
-              <CardContent>
-                <Typography className={classes.title} variant="h5">
-                  Social Media Marketing
-                </Typography>
-                <Typography variant="body2">
-                  I worked as the Squad Lead & Product Manager on 
-                  my senior design project as we tackled a year-long project to 
-                  create a social media marketing application for the 
-                  Buckle. The app consolidated all of their marketing 
-                  department's potential social media posts into one 
-                  place for easier sharing of corporate promotions.
-                </Typography>
-              </CardContent>
-              <Chip
-                className={classes.tech}
-                label="Swift"
-              />
-              <Chip
-                className={classes.tech}
-                label="SwiftUI"
-              />
-              <Chip
-                className={classes.tech}
-                label="Drupal"
-              />
-              <Button 
-                className={classes.learnMore}
-                size="small"
-                variant="contained"
-                color="primary"
-                onClick={toggleBuckleModal}
-              >
-                Learn More
-              </Button>
-            </div>
-          </Card>
-
-          <Card className={isSmallScreen ? classes.responsiveProject : classes.project}>
-            <img 
-              className={classes.media}
-              src={spaceExplorer} 
-              alt="My Banner"
-            />
-            <div className={classes.contents}>
-              <CardContent>
-                <Typography className={classes.title} variant="h5">
-                  Virtual Reality Space Explorer
-                </Typography>
-                <Typography variant="body2">
-                  The university offered an amazing special topics course last spring entitled 
-                  "Exploring Virtual Reality." We learned how to use tools like C#, 
-                  Unity, and SteamVR to develop interactive virtual reality games 
-                  while partnering up with Emerging Arts students at the university.
-                </Typography>
-              </CardContent>
-              <Chip
-                className={classes.tech}
-                label="C#"
-              />
-              <Chip
-                className={classes.tech}
-                label="Unity"
-              />
-              <Chip
-                className={classes.tech}
-                label="SteamVR"
-              />
-              <Button 
-                className={classes.learnMore}
-                size="small"
-                variant="contained"
-                color="primary"
-                onClick={toggleVRModal}
-              >
-                Learn More
-              </Button>
-            </div>
-          </Card>
-
-          <Card className={isSmallScreen ? classes.responsiveProject : classes.project}>
-            <img 
-              className={classes.media}
-              src={care}
-              alt="Care Tracking App"
-            />
-            <div className={classes.contents}>
-              <CardContent>
-                <Typography className={classes.title} variant="h5">
-                  Care Tracking Application
-                </Typography>
-                <Typography variant="body2">
-                  This was the first CRUD application I ever developed, through one of my Software Engineering courses at the end of my freshman year of college.
-                  This system allowed a user to input patient data to be parsed down, organized into different
-                  data tables, and then pulled back out for observation and modified accordingly.
-                </Typography>
-              </CardContent>
-              <Chip
-                className={classes.tech}
-                label="Python"
-              />
-              <Chip
-                className={classes.tech}
-                label="MySQL"
-              />
-              <Chip
-                className={classes.tech}
-                label="Kivy"
-              />
-              <Button 
-                className={classes.learnMore}
-                size="small"
-                variant="contained"
-                color="primary"
-                onClick={toggleCareModal}
-              >
-                Learn More
-              </Button>
-            </div>
-          </Card>
-
+          <ProjectPreview
+            title="Personal Website"
+            toggleModal={toggleSiteModal}
+            banner={banner}
+            bannerAlt="My Banner"
+            stack={["React.js", "Material-UI"]}
+          >
+            <Typography variant="body2">
+              Since I never had the chance to learn React.js prior 
+              to working with the Hoffman Strategy Group, I wanted to 
+              give myself some practice beforehand. Building this website 
+              was a good way to teach myself the basics and gain a firm enough 
+              grasp on the underlying tech stack before diving headfirst into 
+              their project.
+            </Typography>
+          </ProjectPreview>
+          <ProjectPreview
+            title="Social Media Marketing"
+            toggleModal={toggleBuckleModal}
+            banner={buckle}
+            bannerAlt="The Buckle"
+            stack={["Swift", "SwiftUI", "Drupal"]}
+          >
+            <Typography variant="body2">
+              I worked as the Squad Lead & Product Manager on 
+              my senior design project as we tackled a year-long project to 
+              create a social media marketing application for the 
+              Buckle. The app consolidated all of their marketing 
+              department's potential social media posts into one 
+              place for easier sharing of corporate promotions.
+            </Typography>
+          </ProjectPreview>
+          <ProjectPreview
+            title="Virtual Reality Space Explorer"
+            toggleModal={toggleVRModal}
+            banner={spaceExplorer}
+            bannerAlt="Virtual Reality Space Explorer"
+            stack={["C#", "Unity", "SteamVR"]}
+          >
+            <Typography variant="body2">
+              The university offered an amazing special topics course last spring entitled 
+              "Exploring Virtual Reality." We learned how to use tools like C#, 
+              Unity, and SteamVR to develop interactive virtual reality games 
+              while partnering up with Emerging Arts students at the university.
+            </Typography>
+          </ProjectPreview>
+          <ProjectPreview
+            title="Care Tracking Application"
+            toggleModal={toggleCareModal}
+            banner={care}
+            bannerAlt="Care Tracking Application - Freshman Year Capstone Project"
+            stack={["Python", "MySQL", "Kivy"]}
+          >
+            <Typography variant="body2">
+              This was the first CRUD application I ever developed, through one 
+              of my Software Engineering courses at the end of my freshman year 
+              of college. This system allowed a user to input patient data to be 
+              parsed down, organized into different data tables, and then pulled 
+              back out for observation and modified accordingly.
+            </Typography>
+          </ProjectPreview>
         </Grid>
 
-          {/* Invisible modal displays */}
+        {/* Invisible modal displays */}
         <Modal
           open={openSite}
           onClose={toggleSiteModal}
@@ -504,7 +324,6 @@ const Projects = () => {
         <Modal
           open={openCare}
           onClose={toggleCareModal}
-          className={classes.scrollable}
         >
           {careTracking}
         </Modal>
