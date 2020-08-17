@@ -4,12 +4,10 @@ import React from "react";
 import {
   Typography,
   Grid,
-  Card,
-  CardMedia,
   useMediaQuery
 } from "@material-ui/core"
-import { Phone, Mail } from "@material-ui/icons";
 import { Link } from "react-router-dom";
+import Reference from "../components/Reference";
 
 // Utilities
 import { makeStyles } from "@material-ui/core/styles";
@@ -45,34 +43,6 @@ const useStyles = makeStyles(() => ({
   },
   whitespace: {
     margin: 60,
-  },
-  reference: {
-    display: "flex",
-    boxShadow: "1px 3px 6px 1px #555",
-    width: "29vw",
-    height: "25vh",
-    margin: 7,
-  },
-  responsiveReference: {
-    display: "flex",
-    boxShadow: "1px 3px 6px 1px #555",
-    width: "100%",
-    height: "auto",
-    marginTop: 10,
-    marginBottom: 10,
-  },
-  details: {
-    display: "flex",
-    flexDirection: "column",
-    width: "60%",
-    padding: 15,
-    midWidth: 215,
-  },
-  cover: {
-    width: "40%",
-  },
-  referenceIcon: {
-    marginRight: 10,
   },
   image: {
     width: "50%",
@@ -179,192 +149,73 @@ const About = () => {
 
         <Typography variant="h4" className={classes.title}>Professional References</Typography>
         <Grid container justify="space-between">
-
-          <Card className={isSmallScreen ? classes.responsiveReference : classes.reference}>
-              <div className={classes.details}>
-                <Typography variant="h6">Dr. Chris Bohn, PhD</Typography>
-                <Typography variant="subtitle2">Assistant Professor of Practice</Typography>
-                <Typography variant="subtitle2">University of Nebraska-Lincoln</Typography>
-                <br/>
-                <a href="mailto:bohn@unl.edu">
-                  <Grid container>
-                    <Mail className={classes.referenceIcon}/>
-                    <Typography variant="subtitle2">bohn@unl.edu</Typography>
-                  </Grid>
-                </a>
-              </div>
-              <CardMedia
-                className={classes.cover}
-                image={chris}
-                title="Dr. Christopher Bohn, PhD"
-              />
-            </Card>
-
-          <Card className={isSmallScreen ? classes.responsiveReference : classes.reference}>
-            <div className={classes.details}>
-              <Typography variant="h6">Dr. Brady Garvin, PhD</Typography>
-              <Typography variant="subtitle2">Assistant Professor of Practice</Typography>
-              <Typography variant="subtitle2">University of Nebraska-Lincoln</Typography>
-              <br/>
-              <a href="mailto:bgarvin@cse.unl.edu">
-                <Grid container>
-                  <Mail className={classes.referenceIcon}/>
-                  <Typography variant="subtitle2">bgarvin@cse.unl.edu</Typography>
-                </Grid>
-              </a>
-              <a href="tel:1-402-472-5088">
-                <Grid container>
-                  <Phone className={classes.referenceIcon}/>
-                  <Typography variant="subtitle2">(402) 472-5088</Typography>
-                </Grid>
-              </a>
-            </div>
-            <CardMedia
-              className={classes.cover}
-              image={brady}
-              title="Dr. Brady James Garvin, PhD"
-            />
-          </Card>
-        
-          <Card className={isSmallScreen ? classes.responsiveReference : classes.reference}>
-            <div className={classes.details}>
-              <Typography variant="h6">Dr. Suzette Person, PhD</Typography>
-              <Typography variant="subtitle2">Associate Professor of Practice</Typography>
-              <Typography variant="subtitle2">University of Nebraska-Lincoln</Typography>
-              <br/>
-              <a href="mailto:suzette.person@unl.edu">
-              <Grid container>
-                  <Mail className={classes.referenceIcon}/>
-                  <Typography variant="subtitle2">suzette.person@unl.edu</Typography>
-                </Grid>
-              </a>
-            </div>
-            <CardMedia
-              className={classes.cover}
-              image={suzette}
-              title="Dr. Suzette Person, PhD"
-            />
-          </Card>
-
-          <Card className={isSmallScreen ? classes.responsiveReference : classes.reference}>
-            <div className={classes.details}>
-              <Typography variant="h6">Jerry L. Hoffman</Typography>
-              <Typography variant="subtitle2">Founder &amp; Partner</Typography>
-              <Typography variant="subtitle2">Hoffman Strategy Group</Typography>
-              <br/>
-              <a href="mailto:jerry@hoffmanstrategy.com">
-                <Grid container>
-                  <Mail className={classes.referenceIcon}/>
-                  <Typography variant="subtitle2">jerry@hoffmanstrategy.com</Typography>
-                </Grid>
-              </a>
-              <a href="tel:1-402-560-0722">
-                <Grid container>
-                  <Phone className={classes.referenceIcon}/>
-                  <Typography variant="subtitle2">(402) 560-0722</Typography>
-                </Grid>
-              </a>
-            </div>
-            <CardMedia
-              className={classes.cover}
-              image={jerry}
-              title="Jerry L. Hoffman"
-            />
-          </Card>
-    
-          <Card className={isSmallScreen ? classes.responsiveReference : classes.reference}>
-            <div className={classes.details}>
-              <Typography variant="h6">Kevan Gray</Typography>
-              <Typography variant="subtitle2">Lead Technical Project Manager</Typography>
-              <Typography variant="subtitle2">Buckle</Typography>
-              <br/>
-              <a href="mailto:kevan.gray@buckle.com">
-                <Grid container>
-                  <Mail className={classes.referenceIcon}/>
-                  <Typography variant="subtitle2">kevan.gray@buckle.com</Typography>
-                </Grid>
-              </a>
-              
-              <a href="tel:1-308-455-0711">
-                <Grid container>
-                  <Phone className={classes.referenceIcon}/>
-                  <Typography variant="subtitle2">(308) 455-0711</Typography>
-                </Grid>
-              </a>
-            </div>
-            <CardMedia
-              className={classes.cover}
-              image={kevan}
-              title="Kevan Gray"
-            />
-          </Card>
-
-          <Card className={isSmallScreen ? classes.responsiveReference : classes.reference}>
-            <div className={classes.details}>
-              <Typography variant="h6">Christian Berck</Typography>
-              <Typography variant="subtitle2">Software Engineer</Typography>
-              <Typography variant="subtitle2">Microsoft</Typography>
-              <br/>
-              <a href="mailto:christian@berck.com">
-                <Grid container>
-                  <Mail className={classes.referenceIcon}/>
-                  <Typography variant="subtitle2">christian@berck.org</Typography>
-                </Grid>
-              </a>
-              <a href="tel:1-402-270-0986">
-                <Grid container>
-                  <Phone className={classes.referenceIcon}/>
-                  <Typography variant="subtitle2">(402) 270-0986</Typography>
-                </Grid>
-              </a>
-            </div>
-            <CardMedia
-              className={classes.cover}
-              image={christian}
-              title="Christian Berck"
-            />
-          </Card>
-
-          <Card className={isSmallScreen ? classes.responsiveReference : classes.reference}>
-            <div className={classes.details}>
-              <Typography variant="h6">Marc Johnson</Typography>
-              <Typography variant="subtitle2">IT Infrastructure Engineer</Typography>
-              <Typography variant="subtitle2">Nelnet</Typography>
-              <br/>
-              <a href="mailto:Marc.Johnson@nelnet.net">
-                <Grid container>
-                  <Mail className={classes.referenceIcon}/>
-                  <Typography variant="subtitle2">Marc.Johnson@nelnet.net</Typography>
-                </Grid>
-              </a>
-            </div>
-            <CardMedia
-              className={classes.cover}
-              image={marc}
-              title="Marc Johnson"
-            />
-          </Card>
-
-          <Card className={isSmallScreen ? classes.responsiveReference : classes.reference}>
-            <div className={classes.details}>
-              <Typography variant="h6">Billy Allen</Typography>
-              <Typography variant="subtitle2">IT Manager</Typography>
-              <Typography variant="subtitle2">Nelnet</Typography>
-              <br/>
-              <a href="mailto:Billy.Allen@nelnet.net">
-                <Grid container>
-                  <Mail className={classes.referenceIcon}/>
-                  <Typography variant="subtitle2">Billy.Allen@nelnet.net</Typography>
-                </Grid>
-              </a>
-            </div>
-            <CardMedia
-              className={classes.cover}
-              image={billy}
-              title="Billy Allen"
-            />
-          </Card>
-
+          <Reference 
+            name="Dr. Chris Bohn, PhD"
+            title="Assistant Professor of Practice"
+            company="University of Nebraska-Lincoln"
+            email="bohn@unl.edu"
+            image={chris}
+            alt="Dr. Christopher Bohn, PhD"
+          />
+          <Reference
+            name="Dr. Brady Garvin, PhD"
+            title="Assistant Professor of Practice"
+            company="University of Nebraska-Lincoln"
+            email="bgarvin@cse.unl.edu"
+            phone="402-472-5088"
+            image={brady}
+            alt="Dr. Brady James Garvin, PhD"
+          />
+          <Reference
+            name="Dr. Suzette Person, PhD"
+            title="Associate Professor of Practice"
+            company="University of Nebraska-Lincoln"
+            email="suzette.person@unl.edu"
+            image={suzette}
+            alt="Dr. Suzette Jean Person, PhD"
+          />
+          <Reference
+            name="Jerry L. Hoffman"
+            title="Founder &amp; Partner"
+            company="Hoffman Strategy Group"
+            email="jerry@hoffmanstrategy.com"
+            image={jerry}
+            alt="Jerry L. Hoffman, Founder of the Hoffman Strategy Group"
+          />
+          <Reference
+            name="Kevan Gray"
+            title="Lead Technical Project Manager"
+            company="Buckle"
+            email="kevan.gray@buckle.com"
+            phone="308-455-0711"
+            image={kevan}
+            alt="Kevan Gray"
+          />
+          <Reference
+            name="Christian Berck"
+            title="Software Engineer"
+            company="Microsoft"
+            email="christian@berck.org"
+            phone="402-270-0986"
+            image={christian}
+            alt="Christian Berck"
+          />
+          <Reference
+            name="Marc Johnson"
+            title="IT Infrastructure Engineer"
+            company="Nelnet"
+            email="marc.johnson@nelnet.net"
+            image={marc}
+            alt="Marc Johnson"
+          />
+          <Reference
+            name="Billy Allen"
+            title="IT Manager"
+            company="Nelnet"
+            email="billy.allen@nelnet.net"
+            image={billy}
+            alt="Billy Allen"
+          />
         </Grid>
       </section>
     </div>
