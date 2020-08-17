@@ -12,6 +12,8 @@ import {
   AccountTree,
   AssignmentInd
 } from "@material-ui/icons";
+import SkillTable from "../components/SkillTable";
+import Skill from "../components/Skill";
 
 // Utilities
 import { Link } from "react-router-dom";
@@ -132,195 +134,171 @@ const Skills = () => {
         </Typography>
         <br />
 
-        {/* TODO: Improve the responsitivity of this skills section */}
-        {/* Development Languages */}
-        <Grid container className={classes.skillTable} justify="flex-start">
-          
-          <Grid container>
-            <Typography variant="h4">Development Languages</Typography>
-            <Divider className={classes.divider}/>
-          </Grid>
-
-          <Grid item className={classes.skill}>
-            <img src={python} alt="Python" className={classes.media}/>
-            <Typography variant="h6">Python</Typography>
-          </Grid>
-
-          <Grid item className={classes.skill}>
-            <img src={javascript} alt="JavaScript" className={classes.media}/>
-            <Typography variant="h6">JavaScript</Typography>
-          </Grid>
-
-          <Grid item className={classes.skill}>
-            <img src={swift} alt="Swift" className={classes.media}/>
-            <Typography variant="h6">Swift</Typography>
-          </Grid>
-
-          <Grid item className={classes.skill}>
-            <img src={csharp} alt="C#" className={classes.media}/>
-            <Typography variant="h6">C#</Typography>
-          </Grid>
-
-          <Grid item className={classes.skill}>
-            <img src={java} alt="Java" className={classes.media}/>
-            <Typography variant="h6">Java</Typography>
-          </Grid>
-
-          <Grid item className={classes.skill}>
-            <img src={mysql} alt="SQL" className={classes.media}/>
-            <Typography variant="h6">MySQL</Typography>
-          </Grid>
-
-          <Grid item className={classes.skill}>
-            <img src={html} alt="HTML" className={classes.media}/>
-            <Typography variant="h6">HTML</Typography>
-          </Grid>
-
-          <Grid item className={classes.skill}>
-            <img src={css} alt="Cascading Style Sheets" className={classes.media}/>
-            <Typography variant="h6">CSS</Typography>
-          </Grid>
-
-          <Grid item className={classes.skill}>
-            <img src={xslt} alt="XSLT" className={classes.media}/>
-            <Typography variant="h6">XSLT</Typography>
-          </Grid>
-
-          <Grid item className={classes.skill}>
-            <img src={antlr} alt="ANTLR" className={classes.media}/>
-            <Typography variant="h6">ANTLR</Typography>
-          </Grid>
-
-        </Grid>
+        {/* Development Langauges */}
+        <SkillTable title="Development Languages">
+          <Skill
+            name="Python"
+            image={python}
+            alt="Python"
+          />
+          <Skill
+            name="JavaScript"
+            image={javascript}
+            alt="JavaScript"
+          />
+          <Skill
+            name="Swift"
+            image={swift}
+            alt="Swift"
+          />
+          <Skill
+            name="C#"
+            image={csharp}
+            alt="C#"
+          />
+          <Skill
+            name="Java"
+            image={java}
+            alt="Java"
+          />
+          <Skill
+            name="MySQL"
+            image={mysql}
+            alt="MySQL"
+          />
+          <Skill
+            name="HTML"
+            image={html}
+            alt="HTML"
+          />
+          <Skill
+            name="CSS"
+            image={css}
+            alt="CSS"
+          />
+          <Skill
+            name="XSLT"
+            image={xslt}
+            alt="XSLT"
+          />
+          <Skill
+            name="ANTLR"
+            image={antlr}
+            alt="ANTLR"
+          />
+        </SkillTable>
 
         {/* Frameworks & Technologies */}
-        <Grid container className={classes.skillTable} justify="flex-start">
-        
-          <Grid container>
-            <Typography variant="h4">Frameworks &amp; Technologies</Typography>
-            <Divider className={classes.divider}/>
-          </Grid>
-
-          <Grid item className={classes.skill}>
-            <img src={react} alt="React.js" className={classes.media}/>
-            <Typography variant="h6">React.js</Typography>
-          </Grid>
-
-          <Grid item className={classes.skill}>
-            <img src={redux} alt="Redux" className={classes.media}/>
-            <Typography variant="h6">Redux</Typography>
-          </Grid>
-
-          <Grid item className={classes.skill}>
-            <img src={material} alt="Material-UI" className={classes.media}/>
-            <Typography variant="h6">Material-UI</Typography>
-          </Grid>
-
-          <Grid item className={classes.skill}>
-            <img src={swiftui} alt="SwiftUI" className={classes.media}/>
-            <Typography variant="h6">SwiftUI</Typography>
-          </Grid>
-
-          <Grid item className={classes.skill}>
-            <img src={alamofire} alt="Alamofire" className={classes.media}/>
-            <Typography variant="h6">Alamofire</Typography>
-          </Grid>
-
-          <Grid item className={classes.skill}>
-            <img src={kingfisher} alt="Kingfisher" className={classes.media}/>
-            <Typography variant="h6">Kingfisher</Typography>
-          </Grid>
-
-          <Grid item className={classes.skill}>
-            <img src={selenium} alt="Selenium" className={classes.media}/>
-            <Typography variant="h6">Selenium</Typography>
-          </Grid>
-
-          <Grid item className={classes.skill}>
-            <img src={kendo} alt="Kendo UI" className={classes.media}/>
-            <Typography variant="h6">Kendo UI</Typography>
-          </Grid>
-
-          <Grid item className={classes.skill}>
-            <img src={javafx} alt="JavaFX" className={classes.media}/>
-            <Typography variant="h6">JavaFX</Typography>
-          </Grid>
-
-          <Grid item className={classes.skill}>
-            <img src={unity} alt="Unity Game Engine" className={classes.media}/>
-            <Typography variant="h6">Unity</Typography>
-          </Grid>
-
-          <Grid item className={classes.skill}>
-            <img src={steamVR} alt="SteamVR" className={classes.media}/>
-            <Typography variant="h6">SteamVR</Typography>
-          </Grid>
-
-          <Grid item className={classes.skill}>
-            <img src={kivy} alt="Kivy" className={classes.media}/>
-            <Typography variant="h6">Kivy</Typography>
-          </Grid>
-
-          <Grid item className={classes.skill}>
-            <img src={postman} alt="Postman" className={classes.media}/>
-            <Typography variant="h6">Postman</Typography>
-          </Grid>
-
-        </Grid>
+        <SkillTable title="Frameworks &amp; Technologies">
+          <Skill
+            name="React.js"
+            image={react}
+            alt="React.js"
+          />
+          <Skill
+            name="Redux"
+            image={redux}
+            alt="Redux State Management"
+          />
+          <Skill
+            name="Material-UI"
+            image={material}
+            alt="Material-UI - A React component library"
+          />
+          <Skill
+            name="SwiftUI"
+            image={swiftui}
+            alt="SwiftUI"
+          />
+          <Skill
+            name="Alamofire"
+            image={alamofire}
+            alt="Alamofire"
+          />
+          <Skill
+            name="Kingfisher"
+            image={kingfisher}
+            alt="Kingfisher"
+          />
+          <Skill
+            name="Selenium"
+            image={selenium}
+            alt="Selenium"
+          />
+          <Skill
+            name="Kendo UI"
+            image={kendo}
+            alt="Kendo UI"
+          />
+          <Skill
+            name="JavaFX"
+            image={javafx}
+            alt="JavaFX"
+          />
+          <Skill
+            name="Unity"
+            image={unity}
+            alt="Unity Game Engine"
+          />
+          <Skill
+            name="SteamVR"
+            image={steamVR}
+            alt="SteamVR"
+          />
+          <Skill
+            name="Kivy"
+            image={kivy}
+            alt="Kivy"
+          />
+          <Skill
+            name="Postman"
+            image={postman}
+            alt="Postman"
+          />
+        </SkillTable>
 
         {/* Version Control */}
-        <Grid container className={classes.skillTable} justify="flex-start">
-        
-          <Grid container>
-            <Typography variant="h4">Version Control</Typography>
-            <Divider className={classes.divider}/>
-          </Grid>
+        <SkillTable title="Version Control">
+          <Skill
+            name="GitHub"
+            image={github}
+            alt="GitHub"
+          />
+          <Skill
+            name="GitLab"
+            image={gitlab}
+            alt="GitLab"
+          />
+          <Skill
+            name="Microsoft TFS"
+            image={visualStudio}
+            alt="Microsoft Team Foundation Server"
+          />
+        </SkillTable>
 
-          <Grid item className={classes.skill}>
-            <img src={github} alt="GitHub" className={classes.media}/>
-            <Typography variant="h6">GitHub</Typography>
-          </Grid>
-
-          <Grid item className={classes.skill}>
-            <img src={gitlab} alt="GitLab" className={classes.media}/>
-            <Typography variant="h6">GitLab</Typography>
-          </Grid>
-
-          <Grid item className={classes.skill}>
-            <img src={visualStudio} alt="Microsoft TFS" className={classes.media}/>
-            <Typography variant="h6">Microsoft TFS</Typography>
-          </Grid>
-
-        </Grid>
-
-        <Grid container className={classes.skillTable} justify="flex-start">
-        
-          <Grid container>
-            <Typography variant="h4">Other Skills</Typography>
-            <Divider className={classes.divider}/>
-          </Grid>
-
-          <Grid item className={classes.skill}>
-            <img src={latex} alt="LaTeX" className={classes.media}/>
-            <Typography variant="h6">LaTeX</Typography>
-          </Grid>
-
-          <Grid item className={classes.skill}>
-            <img src={photoshop} alt="Adobe PhotoShop" className={classes.media}/>
-            <Typography variant="h6">PhotoShop</Typography>
-          </Grid>
-
-          <Grid item className={classes.skill}>
-            <img src={premier} alt="Adobe Premier Pro" className={classes.media}/>
-            <Typography variant="h6">Premier Pro</Typography>
-          </Grid>
-
-          <Grid item className={classes.skill}>
-            <img src={figma} alt="Figma" className={classes.media}/>
-            <Typography variant="h6">Figma</Typography>
-          </Grid>
-
-        </Grid>
+        {/* Other Skills */}
+        <SkillTable title="Other Skills">
+          <Skill
+            name="LaTeX"
+            image={latex}
+            alt="LaTeX"
+          />
+          <Skill
+            name="Photoshop"
+            image={photoshop}
+            alt="Adobe Photoshop"
+          />
+          <Skill
+            name="Premier Pro"
+            image={premier}
+            alt="Adobe Premier Pro"
+          />
+          <Skill
+            name="Figma"
+            image={figma}
+            alt="Figma"
+          />
+        </SkillTable>
 
         <Typography variant="body1">
           Interested in my development experience, or just want to hear why on Earth I am skilled with ANTLR? <Link to="/contact">Contact me</Link> and let's talk about it.
