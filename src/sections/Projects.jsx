@@ -10,9 +10,6 @@ import {
 import ProjectModal from "../components/ProjectModal";
 import ProjectPreview from "../components/ProjectPreview";
 
-// Utilities
-import { makeStyles } from "@material-ui/core/styles";
-
 // Assets
 import banner from "../resources/projects/banner-resized.png";
 import buckle from "../resources/projects/buckle.jpg";
@@ -24,26 +21,7 @@ import software from "../resources/projects/software.jpg";
 import fullBanner from "../resources/MountainBanner.png";
 import croppedBanner from "../resources/CroppedBanner.png";
 
-const useStyles = makeStyles(() => ({
-  container: {
-    paddingTop: 40,
-    paddingLeft: "12vw",
-    paddingRight: "12vw",
-  },
-  responsiveContainer: {
-    paddingTop: 40,
-  },
-  title: {
-    fontWeight: "bold",
-    marginBottom: 20,
-  },
-  subtitle: {
-    fontWeight: "bold",
-  },
-}));
-
 const Projects = () => {
-  const classes = useStyles();
   const isSmallScreen = useMediaQuery("(max-width:1100px)");
 
   const [openSite, setOpenSite] = useState(false);
@@ -76,7 +54,7 @@ const Projects = () => {
         I received lots of inspiration and help for this page from my 
         friends <a href="https://msich.netlify.app/">Matt Sichterman</a> and <a href="https://peytontanzillo.com/default/home">Peyton Tanzillo</a>.
       </p>
-      <Typography variant="h5" className={classes.subtitle}>Why did I make this?</Typography>
+      <Typography variant="h5" className="subtitle">Why did I make this?</Typography>
       <p>
         There were a couple key motivators that encouraged me to build my own personal site. <b>One</b>, I was getting ready for a 
         new web development position with Hoffman Strategy Group and did not want to scramble to learn the basics at the start of the job. So, I started reading through 
@@ -86,12 +64,12 @@ const Projects = () => {
         wanted to make sure I was more than ready for the upcoming recruiting season. What better way to stand out as a candidate and showcase my skills than to catch your attention
         with a beautifully crafted personal webpage?
       </p>
-      <Typography variant="h5" className={classes.subtitle}>What did I learn?</Typography>
+      <Typography variant="h5" className="subtitle">What did I learn?</Typography>
       <p>
         I learned how to leverage React.js and Material-UI to create static web pages, primarily, as well as the basics of web development. On top of this, I learned how to create
         sensible user interfaces in order to showcase my abilities and display information in a meaningful way.
       </p>
-      <Typography variant="h5" className={classes.subtitle}>What would I change next time?</Typography>
+      <Typography variant="h5" className="subtitle">What would I change next time?</Typography>
       <p>
         In the future, whenever I decide that this current webpage has been rendered obsolete, I would probably look into using a static site generator like <a href="https://www.gatsbyjs.org/">Gatsby.js</a> so
         that my next website can be built more similar to a content managemetn system. However, I am still more than happy to have started off how I did, as it 
@@ -121,7 +99,7 @@ const Projects = () => {
         <a href="https://www.linkedin.com/in/olivia-rine"> Olivia Rine</a>, <a href="https://www.linkedin.com/in/zhaozhong-qi-64403b118">Dennis Qi</a>, 
         and <a href="https://www.linkedin.com/in/jake-ediger-373933129">Jake Ediger</a>. Our project could not have been nearly as successful as it was without their help.
       </p>
-      <Typography variant="h5" className={classes.subtitle}>What problem did the app solve?</Typography>
+      <Typography variant="h5" className="subtitle">What problem did the app solve?</Typography>
       <p>
         Buckle needed a way to provide a unified and appropriate social brand that protected the brand's image. Because they have so many stores across the US (449 to be exact),
         it proved to be impractical to field and service each stores' one-off requests for approving social media content. In order to solve this, Buckle wanted a mobile app that
@@ -137,7 +115,7 @@ const Projects = () => {
         showcase uniform content across the board and remediate individual store managers' worries about what content they were going to have to come up with on their own. It also created a 
         universal system for running discounts, promotions, and special events.
       </p>
-      <Typography variant="h5" className={classes.subtitle}>What did I learn?</Typography>
+      <Typography variant="h5" className="subtitle">What did I learn?</Typography>
       <p>
         Working on this project was an absolutely amazing experience due to the wealth of knowledge I was able to take away from it. For instance, in my position in charge of the project,
         I learned how to do things like manage a team of developers, elicit requirements effectively, collaborate in a team environment, effectively communicate with non-technical 
@@ -148,7 +126,7 @@ const Projects = () => {
         On the development aspect of things, I learned how to develop iOS applications and the steps it takes to deploy on a live device - it's more complicated than you think! I learned
         how to leverage a brand new technology, SwiftUI, and took on learning the Swift programming language, Apple's new flagship development language.
       </p>
-      <Typography variant="h5" className={classes.subtitle}>What would I change next time?</Typography>
+      <Typography variant="h5" className="subtitle">What would I change next time?</Typography>
       <p>
         Reflecting back on this experience, there is plenty of room for me to improve in my abilities as both a software engineer and a product manager. If I started this project over
         from scratch, I definitely would not have utilized Drupal as our content management system due to how outdated the technology felt while in use. On the flip side of that, I 
@@ -181,13 +159,13 @@ const Projects = () => {
         I worked on this project with <a href="https://www.linkedin.com/in/ethan-d-butt">Ethan Bütt</a>, <a href="https://www.linkedin.com/in/conner-hallett-8737a11a2">Conner Hallett</a>, 
         and <a href="https://www.linkedin.com/in/megan-whisenhunt-8b9156175">Megan Whisenhunt</a>.
       </p>
-      <Typography variant="h5" className={classes.subtitle}>What did I learn?</Typography>
+      <Typography variant="h5" className="subtitle">What did I learn?</Typography>
       <p>
         Through this course I learned the basics of modern game development, specifically with regards to virtual reality. It turns out that developing virtual reality games is not nearly as 
         complicated as it seems out to be, thanks to existing technologies and frameworks such as Unity and SteamVR. I also got to work side-by-side with emerging arts students to 
         understand the underlying effort that goes into rendering digital assets, and again sharpen my skills working in a collaborative environment.
       </p>
-      <Typography variant="h5" className={classes.subtitle}>Features</Typography>
+      <Typography variant="h5" className="subtitle">Features</Typography>
       <p>
         <ul>
           <li>Rebuild a high-power telescope using pieces scattered across the observatory</li>
@@ -212,14 +190,14 @@ const Projects = () => {
         care tracking application was a basic CRUD (create, read, update, destroy) application at its core, and proved to be my first substantial software development project
         that I had ever taken on.
       </p>
-      <Typography variant="h5" className={classes.subtitle}>What did I learn?</Typography>
+      <Typography variant="h5" className="subtitle">What did I learn?</Typography>
       <p>
         I picked up the Python programming language specifically for this course and was also learning the basics of database development in parallel. Our coursework taught us 
         basic SQL concepts such as one-to-many relationships, join tables, and how to use ORMs to form associations between software and persistent storage. We also learned how to 
         create user interfaces in code for the first time using a cross-platform Python framework called Kivy. The class, as well as the project, served as an important stepping stone
         in my software engineering career as I learned the foundations of front-end development and backend development with a basic, student-friendly set of tools.
       </p>
-      <Typography variant="h5" className={classes.subtitle}>Features</Typography>
+      <Typography variant="h5" className="subtitle">Features</Typography>
       <p>
         <ul>
           <li>Login as an existing patient, or create a new one</li>
@@ -234,7 +212,7 @@ const Projects = () => {
 
   return (
     <div>
-      <section className={isSmallScreen ? classes.responsiveContainer : classes.container}>
+      <section className={isSmallScreen ? "responsiveContainer" : "container"}>
         <Grid container justify="space-evenly">
           <ProjectPreview
             title="Personal Website"

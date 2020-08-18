@@ -17,23 +17,6 @@ import relogic from "../resources/experience/re-logic.png";
 import credits from "../resources/experience/credits.png";
 
 const useStyles = makeStyles(() => ({
-  container: {
-    paddingTop: 40,
-    paddingLeft: "12vw",
-    paddingRight: "12vw",
-  },
-  responsiveContainer: {
-    paddingTop: 40,
-    paddingLeft: "8vw",
-    paddingRight: "8vw",
-  },
-  title: {
-    fontWeight: "bold",
-    marginBottom: 20,
-  },
-  subtitle: {
-    fontWeight: "bold",
-  },
   position: {
     color: "#757575",
   },
@@ -57,7 +40,7 @@ const ReLogic = () => {
 
   return (
     <div>
-      <section className={isSmallScreen ? classes.responsiveContainer : classes.container}>
+      <section className={isSmallScreen ? "responsiveContainer" : "container"}>
         <p align="middle">
           <a href="https://re-logic.com/">
             <img 
@@ -109,7 +92,7 @@ const ReLogic = () => {
           (which was unofficial at the time) was known for developing popular fangame Super Mario Brothers X.
         </Typography>
         <br/>
-        <Typography variant="h5" className={classes.subtitle}>Responsibilities</Typography>
+        <Typography variant="h5" className="subtitle">Responsibilities</Typography>
         <Typography variant="body1">
           <ul>
             <li>Evaluated beta versions of Terraria in order to catch bugs before shipping out major community updates.</li>
@@ -123,7 +106,7 @@ const ReLogic = () => {
           Let's address the frequently asked questions, and if you have any more, feel free to <Link to="/contact">contact me!</Link>
         </Typography>
         <br/>
-        <Typography variant="h5" className={classes.subtitle}>What is Terraria?</Typography>
+        <Typography variant="h5" className="subtitle">What is Terraria?</Typography>
         <br/>
         <Typography variant="body1">
           Terraria is a 2D sandbox game with gameplay that revolves around exploration, 
@@ -134,7 +117,7 @@ const ReLogic = () => {
           similar to games such as the Metroid series and Minecraft.
         </Typography>
         <br/>
-        <Typography variant="h5" className={classes.subtitle}>How on Earth did I find myself with a job here at age 12?</Typography>
+        <Typography variant="h5" className="subtitle">How on Earth did I find myself with a job here at age 12?</Typography>
         <br/>
         <Typography variant="body1">
           When I was younger, I was really, really into Nintendo games. One of my favorite things
@@ -169,7 +152,7 @@ const ReLogic = () => {
           For how little content there was at the time, it was incredible, and quickly became the main way I would spend my free time.
         </Typography>
         <br/>
-        <Typography variant="h5" className={classes.subtitle}>How did Terraria get so big?</Typography>
+        <Typography variant="h5" className="subtitle">How did Terraria get so big?</Typography>
         <br/>
         <Typography variant="body1">
           Originally, Terraria was just meant as a pet project that would be the new topic of the old SMBX community. Much of the original base game
@@ -184,7 +167,7 @@ const ReLogic = () => {
           setting ourselves apart from Minecraft.
         </Typography>
         <br/>
-        <Typography variant="h5" className={classes.subtitle}>What exactly did I do?</Typography>
+        <Typography variant="h5" className="subtitle">What exactly did I do?</Typography>
         <br/>
         <Typography variant="body1">
           My role on the team was as a <b>Quality Assurance Game Tester.</b> This means most of my time was spent playtesting the game searching
@@ -195,7 +178,7 @@ const ReLogic = () => {
           and a variety of other small gameplay mechanics.
         </Typography>
         <br/>
-        <Typography variant="h5" className={classes.subtitle}>Is Terraria still alive?</Typography>
+        <Typography variant="h5" className="subtitle">Is Terraria still alive?</Typography>
         <br/>
         <Typography variant="body1">
           Yes, very much so! While I'm not an active part of the team anymore, those who remain just wrapped up work on the 1.4 Journey's End Update, which has added thousands of
@@ -204,7 +187,7 @@ const ReLogic = () => {
           still working on the game today. If I had to make an educated guess, I would say that the game will be ripe with major updates to come in the distant future.
         </Typography>
         <br/>
-        <Typography variant="h5" className={classes.subtitle}>Why did I leave the team?</Typography>
+        <Typography variant="h5" className="subtitle">Why did I leave the team?</Typography>
         <br/>
         <Typography variant="body1">
           I was 12 years old when I started this position. I worked in it until the summer of 2015, wrapping up my time with Re-Logic immediately following the official release
@@ -220,7 +203,7 @@ const ReLogic = () => {
           contributed to the Re-Logic team in a different medium? Could I have turned Re-Logic Games into a full-time opportunity?
         </Typography>
         <br/>
-        <Typography variant="h5" className={classes.subtitle}>Do you have any proof of your involvement?</Typography>
+        <Typography variant="h5" className="subtitle">Do you have any proof of your involvement?</Typography>
         <br/>
         <Typography variant="body1">
           Certainly. You can see my name appear <a href="https://terraria.org/credits">here</a> as

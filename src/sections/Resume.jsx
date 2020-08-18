@@ -13,20 +13,6 @@ import { makeStyles } from "@material-ui/core/styles";
 import resume from "../resources/resume.pdf";
 
 const useStyles = makeStyles(() => ({
-  container: {
-    paddingTop: 40,
-    paddingLeft: "12vw",
-    paddingRight: "12vw",
-  },
-  responsiveContainer: {
-    paddingTop: 40,
-    paddingLeft: '4vw',
-    paddingRight: '4vw',
-  },
-  title: {
-    fontWeight: "bold",
-    marginBottom: 20,
-  },
   pdf: {
     width: "100%",
     height: 1200,
@@ -39,8 +25,8 @@ const Resume = () => {
 
   return (
     <div>
-      <section className={isSmallScreen ? classes.responsiveContainer : classes.container}>
-        <Typography className={classes.title} variant="h4">Condensed Portfolio</Typography>
+      <section className={isSmallScreen ? "responsiveContainer" : "container"}>
+        <Typography className={"title"} variant="h4">Condensed Portfolio</Typography>
         <Typography variant="body1">Resume last updated on July 19th, 2020. Created with LaTeX.</Typography>
 
         <br/>

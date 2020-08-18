@@ -4,7 +4,6 @@ import React from "react";
 import {
   Typography,
   Grid,
-  Divider,
   useMediaQuery
 } from "@material-ui/core";
 import {
@@ -61,51 +60,12 @@ import premier from "../resources/skills/premier.svg";
 import figma from "../resources/skills/figma.svg";
 
 const useStyles = makeStyles(() => ({
-  container: {
-    paddingTop: 40,
-    paddingLeft: "12vw",
-    paddingRight: "12vw",
-  },
-  responsiveContainer: {
-    paddingTop: 40,
-    paddingLeft: "5vw",
-    paddingRight: "5vw",
-  },
-  title: {
-    fontWeight: "bold",
-    marginBottom: 20,
-  },
-  subtitle: {
-    fontWeight: "bold",
-  },
   icon: {
     color: "black",
     marginTop: 3,
     marginRight: 8,
     height: 35,
     width: "auto",
-  },
-  skillTable: {
-    boxShadow: "0px 0px 6px 1px #555",
-    padding: "20px 3% 30px 3%",
-    marginBottom: 50,
-  },
-  divider: {
-    width: "100%",
-    height: 3,
-    marginTop: 15,
-    marginBottom: 15,
-  },
-  media: {
-    height: 100,
-    width: 100,
-    padding: 5,
-  },
-  skill: {
-    textAlign: "center",
-    marginLeft: "3%",
-    marginRight: "3%",
-    marginBottom: 20,
   },
   graphic: {
     width: "40%",
@@ -123,10 +83,10 @@ const Skills = () => {
 
   return (
     <div>
-      <section className={isSmallScreen ? classes.responsiveContainer : classes.container}>
+      <section className={isSmallScreen ? "responsiveContainer" : "container"}>
         <Grid container>
           <Devices className={classes.icon}/>
-          <Typography variant="h4" className={classes.title}>Software Engineering</Typography>
+          <Typography variant="h4" className="title">Software Engineering</Typography>
         </Grid>
         <Typography variant="body1">
           I have been lucky enough to be directly exposed to a variety of different development technologies throughout my time at university and in industry.
@@ -307,9 +267,9 @@ const Skills = () => {
 
         <Grid container>
           <AssignmentInd className={classes.icon}/>
-          <Typography variant="h4" className={classes.title}>Product Management</Typography>
+          <Typography variant="h4" className="title">Product Management</Typography>
         </Grid>
-        <Typography variant="h5" className={classes.subtitle}>Time Management</Typography>
+        <Typography variant="h5" className="subtitle">Time Management</Typography>
         <Typography variant="body1">
           Balancing two part-time jobs, a busy 15 credit semester, and a social life all while majoring in software engineering can be tricky,
           but throughout my time at university I have managed to pull it off. On top of this, I have been able to maintain a steady GPA and continuously
@@ -317,7 +277,7 @@ const Skills = () => {
           can only continue serve me at your company.
         </Typography>
         <br/>
-        <Typography variant="h5" className={classes.subtitle}>Prioritization</Typography>
+        <Typography variant="h5" className="subtitle">Prioritization</Typography>
         <Typography variant="body1">
           It can be difficult to juggle changing requirements and see the big picture when developing new software projects.
           That is why you need someone like me to sift through all the fine details and know what to prioritize, as I 
@@ -325,21 +285,21 @@ const Skills = () => {
           in order for your team to iterate quickly in a way that makes sense.
         </Typography>
         <br/>
-        <Typography variant="h5" className={classes.subtitle}>Organization</Typography>
+        <Typography variant="h5" className="subtitle">Organization</Typography>
         <Typography variant="body1">
           When working with large-scale projects, it can become easy to get lost in the grand scheme of things. Staying organized is another one of
           my strengths while balancing busy schedules and vibrant software projects. You can trust me to aid in decluttering your software projects, your
           changing requirements, your schedules, and your task partitioning.
         </Typography>
         <br/>
-        <Typography variant="h5" className={classes.subtitle}>Documentation</Typography>
+        <Typography variant="h5" className="subtitle">Documentation</Typography>
         <Typography variant="body1">
           My previous manager at Raven Industries once told me he had "never seen someone document their code as thoroughly
           and sensibly as I did." I know a thing or two about writing good documentation because I have seen a thing or two
           about what it takes to write stellar docs. I have witnessed the good and bad and continued to learn how to be better.
         </Typography>
         <br/>
-        <Typography variant="h5" className={classes.subtitle}>Customer Relationship Management</Typography>
+        <Typography variant="h5" className="subtitle">Customer Relationship Management</Typography>
         <Typography variant="body1">
           I really enjoy speaking to project stakeholders and understanding how the software can benefit them directly. I embrace client-facing engineering
           positions and take pride in my ability to effectively communicate and form relationships with clients, all while listening to their feedback in
@@ -349,9 +309,9 @@ const Skills = () => {
 
         <Grid container>
           <AccountTree className={classes.icon}/>
-          <Typography variant="h4" className={classes.title}>Project Management</Typography>
+          <Typography variant="h4" className="title">Project Management</Typography>
         </Grid>
-        <Typography variant="h5" className={classes.subtitle}>Leadership</Typography>
+        <Typography variant="h5" className="subtitle">Leadership</Typography>
         <Typography variant="body1">
           I stepped up during my junior year of college and offered to take on the role of Squad Lead and Product Manager for my senior design team, which gave me the 
           opportunity to lead every aspect of development for my project over the course of a year. Since then, I have also taken over in a similar position with
@@ -366,20 +326,20 @@ const Skills = () => {
           leaders do.
         </Typography>
         <br/>
-        <Typography variant="h5" className={classes.subtitle}>Communication</Typography>
+        <Typography variant="h5" className="subtitle">Communication</Typography>
         <Typography variant="body1">
           I have proven myself in the past to be an effective communicator while taking charge of software projects. I can elicit requirements effectively, decompose them
           into managable pieces, take charge of creating presentation materials, and make sure that everyone on the team is on the same page when it comes time to develop.
         </Typography>
         <br/>
-        <Typography variant="h5" className={classes.subtitle}>Task Management</Typography>
+        <Typography variant="h5" className="subtitle">Task Management</Typography>
         <Typography variant="body1">
           Through my experiences, I am able to understand my projects at a high level and effectively partition the work in a way that makes sense in order to iterate quickly.
           I have proven this with my work on the Buckle Advocacy project as well as with Hoffman Analytics, as I took charge in decomposing our requirements in both instances
           to manageble pieces of development work.
         </Typography>
         <br/>
-        <Typography variant="h5" className={classes.subtitle}>Risk Management</Typography>
+        <Typography variant="h5" className="subtitle">Risk Management</Typography>
         <Typography variant="body1">
           Lastly, I know how to assess risk and pivot projects accordingly when things are not shaping up as expected. I always come ready with backup plans in case things go awry,
           or when requirements change unexpectedly, so that I can always be ready to move forward without additional hassle.

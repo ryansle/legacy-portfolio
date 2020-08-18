@@ -16,20 +16,6 @@ import raven from "../resources/experience/raven.png";
 
 
 const useStyles = makeStyles(() => ({
-  container: {
-    paddingTop: 40,
-    paddingLeft: "12vw",
-    paddingRight: "12vw",
-  },
-  responsiveContainer: {
-    paddingTop: 40,
-    paddingLeft: "8vw",
-    paddingRight: "8vw",
-  },
-  title: {
-    fontWeight: "bold",
-    marginBottom: 20,
-  },
   position: {
     color: "#757575",
   },
@@ -53,7 +39,7 @@ const Raven = () => {
 
   return (
     <div>
-      <section className={isSmallScreen ? classes.responsiveContainer : classes.container}>
+      <section className={isSmallScreen ? "responsiveContainer" : "container"}>
         <p align="middle">
           <a href="https://ravenind.com/">
             <img 
@@ -123,7 +109,7 @@ const Raven = () => {
           precision agriculture, high performance specialty films, and situational awareness markets.
         </Typography>
         <br/>
-        <Typography variant="h5" className={classes.title}>Responsibilities</Typography>
+        <Typography variant="h5" className={"title"}>Responsibilities</Typography>
         <Typography variant="body1">
           <ul>
             <li>Researched and create development requirements.</li>
@@ -137,7 +123,7 @@ const Raven = () => {
             <li>Familiarized myself with Kendo UI in order to simplify the web development process.</li>
           </ul>
         </Typography>
-        <Typography variant="h5" className={classes.title}>About This Position</Typography>
+        <Typography variant="h5" className={"title"}>About This Position</Typography>
         <Typography variant="body1">
           During my time at Raven, I worked on their Slingshot team, one of their few web-based software teams. I was primarily responsible
           for developing a report generation system that streamlined internal processes. Prior to my development of the DTC Report Generator, individuals
@@ -156,7 +142,7 @@ const Raven = () => {
           ever experience working in industry, I was quite proud of the work I had performed over the course of the summer.
         </Typography>
         <br/>
-        <Typography variant="h5" className={classes.title}>What did I learn?</Typography>
+        <Typography variant="h5" className={"title"}>What did I learn?</Typography>
         <Typography variant="body1">
             By far the most important lesson I learned during my time at Raven Industries was, in the words of my mentor, "learning how to learn on my own."
             Since this was my first industry experience, I came from a background of consistently being able to ask others for support when things did not make sense

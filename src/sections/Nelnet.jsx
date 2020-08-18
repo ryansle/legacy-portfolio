@@ -15,20 +15,6 @@ import { makeStyles } from "@material-ui/core/styles";
 import nelnet from "../resources/experience/nelnet.svg";
 
 const useStyles = makeStyles(() => ({
-  container: {
-    paddingTop: 40,
-    paddingLeft: "12vw",
-    paddingRight: "12vw",
-  },
-  responsiveContainer: {
-    paddingTop: 40,
-    paddingLeft: "8vw",
-    paddingRight: "8vw",
-  },
-  title: {
-    fontWeight: "bold",
-    marginBottom: 20,
-  },
   position: {
     color: "#757575",
   },
@@ -55,7 +41,7 @@ const Nelnet = () => {
 
   return (
     <div>
-      <section className={isSmallScreen ? classes.responsiveContainer : classes.container}>
+      <section className={isSmallScreen ? "responsiveContainer" : "container"}>
         <a href="https://nelnetinc.com/">
           <Grid container justify="center">
             <img 
@@ -108,7 +94,7 @@ const Nelnet = () => {
           the administration and repayment of student loans and education financial services.
         </Typography>
         <br/>
-        <Typography variant="h5" className={classes.title}>Responsibilities</Typography>
+        <Typography variant="h5" className={"title"}>Responsibilities</Typography>
         <Typography variant="body1">
           <ul>
             <li>Develop XSLT transformations for the Workday team.</li>
@@ -117,7 +103,7 @@ const Nelnet = () => {
             <li>Actively practice navigating an Agile workflow environment throughout the course of my remote internship.</li>
           </ul>
         </Typography>
-        <Typography variant="h5" className={classes.title}>About This Position</Typography>
+        <Typography variant="h5" className={"title"}>About This Position</Typography>
         <Typography variant="body1">
           When COVID-19 ravaged the United States and forced companies across the nation to cancel 
           their internship programs, Nelnet decided to use this opportunity to open their intern programs back up.
@@ -134,7 +120,7 @@ const Nelnet = () => {
           executive team.
         </Typography>
         <br/>
-        {/* <Typography variant="h5" className={classes.title}>What did I learn?</Typography>
+        {/* <Typography variant="h5" className={"title"}>What did I learn?</Typography>
         <Typography variant="body1">
           My manager, Billy Allen, has been doing an excellent job of incorporating an Agile mindset to our daily workflows. Thanks to that, and to his career
           coaching as I ready myself for full-time opportunities, I have learned how to 

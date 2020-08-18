@@ -38,10 +38,6 @@ const useStyles = makeStyles(() => ({
     paddingBottom: 15,
     scrollPadding: -15,
   },
-  title: {
-    fontWeight: "bold",
-    marginBottom: 20,
-  },
   tech: {
     margin: 4,
   },
@@ -100,7 +96,7 @@ const ProjectModal = React.forwardRef(
             <br/>
             <Grid container justify="space-between" style={{ flexWrap: "wrap" }}>
               <Grid item>
-                <Typography variant="h4" className={classes.title}>
+                <Typography variant="h4" className={"title"}>
                   {title}
                 </Typography>
               </Grid>

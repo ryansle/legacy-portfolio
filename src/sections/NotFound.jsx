@@ -20,16 +20,6 @@ import { makeStyles } from "@material-ui/core/styles";
 import missing from "../resources/404.svg";
 
 const useStyles = makeStyles(() => ({
-  container: {
-    paddingTop: 40,
-    paddingLeft: "12vw",
-    paddingRight: "12vw",
-  },
-  title: {
-    fontWeight: "bold",
-    textAlign: "center",
-    marginBottom: 20,
-  },
   media: {
     width: "30%", 
     height: "auto",
@@ -49,7 +39,7 @@ const Resume = () => {
 
   return (
     <div>
-      <section className={classes.container}>
+      <section className="container">
         <p align="middle">
           <img 
             src={missing}
@@ -58,7 +48,7 @@ const Resume = () => {
           />
         </p>
         <br/>
-        <Typography variant="h4" className={classes.title}>Oops, this page could not be found</Typography>
+        <Typography variant="h4" className={"title"}>Oops, this page could not be found</Typography>
         <Typography variant="body1" style={{ textAlign: "center" }}>Try accessing one of these pages instead?</Typography>
         <br/> <br/>
 

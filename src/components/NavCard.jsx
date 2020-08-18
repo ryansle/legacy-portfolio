@@ -43,17 +43,11 @@ const useStyles = makeStyles(() => ({
     width: "auto",
     paddingRight: 7,
   },
-  subtitle: {
-    fontWeight: "bold",
-    marginBottom: 4,
-  },
 }));
 
 const NavCard = ({ link, icon, title, description }) => {
   const classes = useStyles();
   const isSmallScreen = useMediaQuery("(max-width: 1100px)");
-
-  const route = `/${link}`;
 
   const renderIcon = (icon) => {
     switch(icon) {
@@ -79,12 +73,12 @@ const NavCard = ({ link, icon, title, description }) => {
       <Card 
         className={isSmallScreen ? classes.responsiveNav : classes.nav} 
         component={Link} 
-        to={route}
+        to={link}
       >
         <CardContent>
           <Grid container>
             {renderIcon(icon)}
-            <Typography variant="h5" className={classes.subtitle}>
+            <Typography variant="h5" className="subtitle">
               {title}
             </Typography>
           </Grid>

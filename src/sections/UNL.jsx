@@ -15,20 +15,6 @@ import { makeStyles } from "@material-ui/core/styles";
 import unl from "../resources/experience/unl.png";
 
 const useStyles = makeStyles(() => ({
-  container: {
-    paddingTop: 40,
-    paddingLeft: "12vw",
-    paddingRight: "12vw",
-  },
-  responsiveContainer: {
-    paddingTop: 40,
-    paddingLeft: "8vw",
-    paddingRight: "8vw",
-  },
-  title: {
-    fontWeight: "bold",
-    marginBottom: 20,
-  },
   position: {
     color: "#757575",
   },
@@ -52,7 +38,7 @@ const UNL = () => {
 
   return (
     <div>
-      <section className={isSmallScreen ? classes.responsiveContainer : classes.container}>
+      <section className={isSmallScreen ? "responsiveContainer" : "container"}>
         <p align="middle">
           <a href="https://cse.unl.edu/home">
             <img
@@ -65,7 +51,7 @@ const UNL = () => {
         <Grid container justify="space-between">
           <Grid item>
             <Typography variant="h5" className={classes.position}>Teaching Assistant</Typography>
-            <Typography variant="h5" className={classes.dateRange}>January 2019 - Now</Typography>
+            <Typography variant="h5" className={classes.dateRange}>January 2019 - May 2020</Typography>
           </Grid>
           <Grid item>
             <Chip
@@ -105,7 +91,7 @@ const UNL = () => {
           software project.
         </Typography>
         <br/>
-        <Typography variant="h5" className={classes.title}>Responsibilities</Typography>
+        <Typography variant="h5" className={"title"}>Responsibilities</Typography>
         <Typography variant="body1">
           <ul>
             <li>Advised three student teams through their software engineering capstone project throughout the semester.</li>
@@ -113,7 +99,7 @@ const UNL = () => {
             <li>Authored concise tutorials for the use of the JavaFX SceneBuilder in conjunction with IntelliJ IDEA.</li>
           </ul>
         </Typography>
-        <Typography variant="h5" className={classes.title}>About This Position</Typography>
+        <Typography variant="h5" className={"title"}>About This Position</Typography>
         <Typography variant="body1">
           My direct responsibilities in this position have been incredibly fluid as time has passed.
           The course has seen many changes throughout my time working with Dr. Chris Bohn; my first semester,

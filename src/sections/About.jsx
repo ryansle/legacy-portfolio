@@ -24,23 +24,6 @@ import kevan from "../resources/references/KevanGray.jpg";
 import marc from "../resources/references/MarcJohnson.jpeg";
 
 const useStyles = makeStyles(() => ({
-  container: {
-    paddingTop: 40,
-    paddingLeft: "12vw",
-    paddingRight: "12vw",
-  },
-  responsiveContainer: {
-    paddingTop: 40,
-    paddingLeft: "4vw",
-    paddingRight: "4vw",
-  },
-  title: {
-    fontWeight: "bold",
-    marginBottom: 20,
-  },
-  subtitle: {
-    fontWeight: "bold",
-  },
   whitespace: {
     margin: 60,
   },
@@ -60,8 +43,8 @@ const About = () => {
 
   return (
     <div>
-      <section className={isSmallScreen ? classes.responsiveContainer : classes.container}>
-        <Typography variant="h4" className={classes.title}>Who Am I?</Typography>
+      <section className={isSmallScreen ? "responsiveContainer" : "container"}>
+        <Typography variant="h4" className={"title"}>Who Am I?</Typography>
         <Typography variant="body1">
           I am an incoming senior at the University of Nebraska-Lincoln majoring in Software Engineering, with a minor in Mathematics. 
           I moved here from Sioux Falls, South Dakota back in August of 2017. Currently, I am working two different software development-based 
@@ -81,7 +64,7 @@ const About = () => {
 
         <div className={classes.whitespace}/>
 
-        <Typography variant="h4" className={classes.title}>Education</Typography>
+        <Typography variant="h4" className={"title"}>Education</Typography>
         <Typography variant="body1"><b>University of Nebraska-Lincoln</b></Typography>
         <Typography variant="body1">
           Bachelor of Science in 
@@ -122,7 +105,7 @@ const About = () => {
 
         <div className={classes.whitespace}/>
 
-        <Typography variant="h4" className={classes.title}>More About Me</Typography>
+        <Typography variant="h4" className={"title"}>More About Me</Typography>
         {/* <Typography variant="body1">
           I am an incredibly motivated and detail-oriented software engineer that is able to easily insert myself
           into any team dynamic. I thrive in collaborative environments and strive to always give every project my all,
@@ -147,7 +130,7 @@ const About = () => {
 
         <div className={classes.whitespace}/>
 
-        <Typography variant="h4" className={classes.title}>Professional References</Typography>
+        <Typography variant="h4" className={"title"}>Professional References</Typography>
         <Grid container justify="space-between">
           <Reference 
             name="Dr. Chris Bohn, PhD"

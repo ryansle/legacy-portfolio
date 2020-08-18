@@ -35,10 +35,7 @@ const useStyles = makeStyles(() => ({
   contents: {
     padding: 10,
   },
-  title: {
-    fontWeight: "bold",
-    marginBottom: 20,
-  },
+  
   tech: {
     margin: 4,
   },
@@ -72,7 +69,7 @@ const ProjectPreview = React.forwardRef(
         />
         <div className={classes.contents}>
           <CardContent>
-            <Typography className={classes.title} variant="h5">
+            <Typography className={"title"} variant="h5">
               {title}
             </Typography>
             {children}

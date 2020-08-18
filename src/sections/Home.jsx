@@ -9,32 +9,11 @@ import {
 import Banner from "../components/Banner";
 import NavCard from "../components/NavCard";
 
-// Utilities
-import { makeStyles } from "@material-ui/core/styles";
-
 // Assets
 import mountains from "../resources/MountainBanner.png";
 import cropped from "../resources/CroppedBanner.png";
 
-const useStyles = makeStyles(() => ({
-  container: {
-    paddingTop: 40,
-    paddingLeft: "12vw",
-    paddingRight: "12vw",
-  },
-  responsiveContainer: {
-    paddingTop: 40,
-    paddingLeft: '4vw',
-    paddingRight: '4vw',
-  },
-  title: {
-    fontWeight: "bold",
-    marginBottom: 20,
-  },
-}));
-
 const Home = () => {
-  const classes = useStyles();
   const isSmallScreen = useMediaQuery("(max-width: 1100px)");
 
   return (
@@ -44,8 +23,8 @@ const Home = () => {
         alt="Ryan Le - Dynamic Banner"
         screenHeight={50}
       />
-      <section className={isSmallScreen ? classes.responsiveContainer : classes.container}>
-        <Typography className={classes.title} variant="h3">Welcome.</Typography>
+      <section className={isSmallScreen ? "responsiveContainer" : "container"}>
+        <Typography className={"title"} variant="h3">Welcome.</Typography>
         <Typography variant="body1">
           I created this online portfolio from the ground up in order to showcase my skills, 
           gain some web development experience, go into greater detail about who I am, 

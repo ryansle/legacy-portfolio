@@ -20,16 +20,6 @@ import unl from "../resources/experience/unl.png";
 import relogic from "../resources/experience/re-logic.png";
 
 const useStyles = makeStyles(() => ({
-  container: {
-    paddingTop: 40,
-    paddingLeft: "12vw",
-    paddingRight: "12vw",
-  },
-  responsiveContainer: {
-    paddingTop: 40,
-    paddingLeft: '8vw',
-    paddingRight: '8vw',
-  },
   divider: {
     height: 3,
     marginTop: 30,
@@ -43,7 +33,7 @@ const Experience = () => {
 
   return (
     <div>
-      <section className={isMobileScreen ? classes.responsiveContainer : classes.container}>
+      <section className={isMobileScreen ? "responsiveContainer" : "container"}>
         <Grid container direction="column">
           <Position
             company="Hoffman Strategy Group"

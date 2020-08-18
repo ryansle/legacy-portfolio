@@ -37,10 +37,6 @@ const useStyles = makeStyles((theme) => ({
     paddingLeft: '5vw',
     paddingRight: '5vw',
   },
-  title: {
-    fontWeight: "bold",
-    marginBottom: 20,
-  },
   field: {
     marginBottom: "3vh",
   },
@@ -118,7 +114,7 @@ const Contact = () => {
   return (
     <div>
       <section className={isSmallScreen ? classes.responsiveContainer : classes.container}>
-        <Typography className={classes.title} variant="h4">Let's Talk!</Typography>
+        <Typography className="title" variant="h4">Let's Talk!</Typography>
         <Grid container>
 
           <Grid item xs={isSmallScreen ? 12 : 7}>
