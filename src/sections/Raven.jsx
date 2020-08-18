@@ -3,105 +3,27 @@ import React from "react";
 // Components
 import {
   Typography,
-  Grid,
-  Chip,
   useMediaQuery
 } from "@material-ui/core";
-
-// Utilities
-import { makeStyles } from "@material-ui/core/styles";
+import PositionHeader from "../components/PositionHeader";
 
 // Assets
 import raven from "../resources/experience/raven.png";
 
-
-const useStyles = makeStyles(() => ({
-  position: {
-    color: "#757575",
-  },
-  dateRange: {
-    fontStyle: "italic",
-    color: "#757575",
-    marginBottom: 20,
-  },
-  media: {
-    maxWidth: "90%",
-    height: "auto",
-  },
-  tech: {
-    margin: 5,
-  }
-}));
-
 const Raven = () => {
-  const classes = useStyles();
   const isSmallScreen = useMediaQuery("(max-width: 1100px)");
 
   return (
     <div>
       <section className={isSmallScreen ? "responsiveContainer" : "container"}>
-        <p align="middle">
-          <a href="https://ravenind.com/">
-            <img 
-              className={classes.media}
-              src={raven}
-              alt="Raven Industries"
-            />
-          </a>
-        </p>
-        <Grid container justify="space-between">
-          <Grid item>
-            <Typography variant="h5" className={classes.position}>Software Engineer Intern</Typography>
-            <Typography variant="h5" className={classes.dateRange}>May 2019 - August 2019</Typography>
-          </Grid>
-          <Grid item>
-          <Chip
-              className={classes.tech}
-              label="Kendo UI"
-            />
-            <Chip
-              className={classes.tech}
-              label="C#"
-            />
-            <Chip
-              className={classes.tech}
-              label="ASP.NET Core"
-            />
-            <Chip
-              className={classes.tech}
-              label="SQL"
-            />
-            <Chip
-              className={classes.tech}
-              label="Dapper"
-            />
-            <Chip
-              className={classes.tech}
-              label="JavaScript"
-            />
-            <Chip
-              className={classes.tech}
-              label="HTML"
-            />
-            <Chip
-              className={classes.tech}
-              label="CSS"
-            />
-            <Chip
-              className={classes.tech}
-              label="GitLab"
-            />
-            <Chip
-              className={classes.tech}
-              label="Visual Studio Code"
-            />
-          </Grid>
-        </Grid>
-
-        <Typography variant="body1">
-          <a href="https://ravenind.com/">Company Website</a>
-        </Typography>
-        <br/>
+        <PositionHeader
+          website="https://ravenind.com/"
+          image={raven}
+          alt="Raven Industries"
+          title="Software Engineer Intern"
+          dateRange="May 2019 - August 2019"
+          stack={["JavaScript", "Kendo UI", "C#", "ASP.NET Core", "SQL", "Dapper", "HTML", "CSS", "GitLab", "Visual Studio"]}
+        />
 
         <Typography variant="body1">
           Raven is a technology company that creates innovative solutions to great challenges. 

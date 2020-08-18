@@ -3,90 +3,27 @@ import React from "react";
 // Components
 import {
   Typography,
-  Grid,
-  Chip,
   useMediaQuery,
 } from "@material-ui/core";
-
-// Utilities
-import { makeStyles } from "@material-ui/core/styles";
+import PositionHeader from "../components/PositionHeader";
 
 // Assets
 import nelnet from "../resources/experience/nelnet.svg";
 
-const useStyles = makeStyles(() => ({
-  position: {
-    color: "#757575",
-  },
-  dateRange: {
-    fontStyle: "italic",
-    color: "#757575",
-    marginBottom: 20,
-  },
-  media: {
-    width: "100%",
-    height: "auto",
-    paddingLeft: "10vw",
-    paddingRight: "10vw",
-    paddingBottom: "3vh",
-  },
-  tech: {
-    margin: 5,
-  },
-}));
-
 const Nelnet = () => {
-  const classes = useStyles();
   const isSmallScreen = useMediaQuery("(max-width: 1100px)");
 
   return (
     <div>
       <section className={isSmallScreen ? "responsiveContainer" : "container"}>
-        <a href="https://nelnetinc.com/">
-          <Grid container justify="center">
-            <img 
-              className={classes.media}
-              src={nelnet}
-              alt="Nelnet"
-            />
-          </Grid>
-        </a>
-        <Grid container justify="space-between">
-          <Grid item>
-            <Typography variant="h5" className={classes.position}>IT Software Engineer Intern</Typography>
-            <Typography variant="h5" className={classes.dateRange}>June 2020 - Now</Typography>
-          </Grid>
-          <Grid item>
-            <Chip
-              className={classes.tech}
-              label="C#"
-            />
-            <Chip
-              className={classes.tech}
-              label="XSLT"
-            />
-            <Chip
-              className={classes.tech}
-              label="Oxygen XML Editor"
-            />
-            <Chip
-              className={classes.tech}
-              label=".NET MVC"
-            />
-            <Chip
-              className={classes.tech}
-              label="Visual Studio"
-            />
-            <Chip
-              className={classes.tech}
-              label="Microsoft TFS"
-            />
-          </Grid>
-        </Grid>
-
-        <Typography variant="body1">
-          <a href="https://nelnetinc.com/">Company Website</a>
-        </Typography>
+        <PositionHeader
+          website="https://nelnetinc.com/"
+          image={nelnet}
+          alt="Nelnet"
+          title="IT Software Engineer Intern"
+          dateRange="June 2020 - Now"
+          stack={["C#", "XSLT", "Oxygen XML Editor", ".NET MVC", "Visual Studio"]}
+        />
         <br/>
     
         <Typography variant="body1">
@@ -120,12 +57,6 @@ const Nelnet = () => {
           executive team.
         </Typography>
         <br/>
-        {/* <Typography variant="h5" className={"title"}>What did I learn?</Typography>
-        <Typography variant="body1">
-          My manager, Billy Allen, has been doing an excellent job of incorporating an Agile mindset to our daily workflows. Thanks to that, and to his career
-          coaching as I ready myself for full-time opportunities, I have learned how to 
-        </Typography>
-        <br/> <br/> <br/> */}
       </section>
     </div>
   );

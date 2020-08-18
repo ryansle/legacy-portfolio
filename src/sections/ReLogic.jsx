@@ -3,11 +3,10 @@ import React from "react";
 // Components
 import {
   Typography,
-  Grid,
-  Chip,
   useMediaQuery
 } from "@material-ui/core";
 import { Link } from "react-router-dom";
+import PositionHeader from "../components/PositionHeader";
 
 // Utilities
 import { makeStyles } from "@material-ui/core/styles";
@@ -17,21 +16,10 @@ import relogic from "../resources/experience/re-logic.png";
 import credits from "../resources/experience/credits.png";
 
 const useStyles = makeStyles(() => ({
-  position: {
-    color: "#757575",
-  },
-  dateRange: {
-    fontStyle: "italic",
-    color: "#757575",
-    marginBottom: 20,
-  },
   media: {
     maxWidth: "90%",
     height: "auto",
   },
-  tech: {
-    margin: 5,
-  }
 }));
 
 const ReLogic = () => {
@@ -41,47 +29,14 @@ const ReLogic = () => {
   return (
     <div>
       <section className={isSmallScreen ? "responsiveContainer" : "container"}>
-        <p align="middle">
-          <a href="https://re-logic.com/">
-            <img 
-              className={classes.media}
-              src={relogic}
-              alt="Re-Logic Games"
-            />
-          </a>
-        </p>
-        <Grid container justify="space-between">
-          <Grid item>
-            <Typography variant="h5" className={classes.position}>Quality Assurance Game Tester</Typography>
-            <Typography variant="h5" className={classes.dateRange}>January 2011 - June 2015</Typography>
-          </Grid>
-          <Grid item>
-            <Chip
-              className={classes.tech}
-              label="Jira"
-            />
-            <Chip
-              className={classes.tech}
-              label="Slack"
-            />
-            <Chip
-              className={classes.tech}
-              label="XChat"
-            />
-            <Chip
-              className={classes.tech}
-              label="C#"
-            />
-            <Chip
-              className={classes.tech}
-              label="Microsoft XNA"
-            />
-          </Grid>
-        </Grid>
-
-        <Typography variant="body1">
-          <a href="https://re-logic.com/">Company Website</a>
-        </Typography>
+        <PositionHeader
+          website="https://re-logic.com/"
+          image={relogic}
+          alt="Re-Logic Games"
+          title="Quality Assurance Game Tester"
+          dateRange="January 2011 - June 2015"
+          stack={["Jira", "Slack", "XChat", "C#", "Dropbox", "Microsoft XNA"]}
+        />
         <br/>
 
         <Typography variant="body1">

@@ -3,83 +3,27 @@ import React from "react";
 // Components
 import {
   Typography,
-  Grid,
-  Chip,
   useMediaQuery
 } from "@material-ui/core";
-
-// Utilities
-import { makeStyles } from "@material-ui/core/styles";
+import PositionHeader from "../components/PositionHeader";
 
 // Assets
 import unl from "../resources/experience/unl.png";
 
-const useStyles = makeStyles(() => ({
-  position: {
-    color: "#757575",
-  },
-  dateRange: {
-    fontStyle: "italic",
-    color: "#757575",
-    marginBottom: 20,
-  },
-  tech: {
-    margin: 5,
-  },
-  media: {
-    maxWidth: "90%",
-    height: "auto",
-  },
-}));
-
 const UNL = () => {
-  const classes = useStyles();
   const isSmallScreen = useMediaQuery("(max-width: 1100px)");
 
   return (
     <div>
       <section className={isSmallScreen ? "responsiveContainer" : "container"}>
-        <p align="middle">
-          <a href="https://cse.unl.edu/home">
-            <img
-              className={classes.media}
-              src={unl}
-              alt="University of Nebraska-Lincoln: College of Engineering, Department of Computer Science &amp; Engineering"
-            />
-          </a>
-        </p>
-        <Grid container justify="space-between">
-          <Grid item>
-            <Typography variant="h5" className={classes.position}>Teaching Assistant</Typography>
-            <Typography variant="h5" className={classes.dateRange}>January 2019 - May 2020</Typography>
-          </Grid>
-          <Grid item>
-            <Chip
-              className={classes.tech}
-              label="Java"
-            />
-            <Chip
-              className={classes.tech}
-              label="JavaFX"
-            />
-            <Chip
-              className={classes.tech}
-              label="JavaFX Scene Builder"
-            />
-            <Chip
-              className={classes.tech}
-              label="GitLab"
-            />
-            <Chip
-              className={classes.tech}
-              label="IntelliJ IDEA"
-            />
-          </Grid>
-        </Grid>
-
-        <Typography variant="body1">
-          <a href="https://cse.unl.edu/home">Department Website</a>
-        </Typography>
+        <PositionHeader
+          website="https://cse.unl.edu/home"
+          image={unl}
+          alt="University of Nebraska-Lincoln: College of Engineering, Department of Computer Science &amp; Engineering"
+          title="Teaching Assistant"
+          dateRange="January 2019 - May 2020"
+          stack={["Java", "JavaFX", "JavaFX Scene Builder", "GitLab", "IntelliJ IDEA"]}
+        />
         <br/>
 
         <Typography variant="body1">

@@ -4,12 +4,12 @@ import React, { useState } from "react";
 import {
   Typography,
   Grid,
-  Chip,
   Modal,
   Button,
   useMediaQuery,
 } from "@material-ui/core";
 import { Clear } from "@material-ui/icons";
+import PositionHeader from "../components/PositionHeader";
 
 // Utilities
 import { makeStyles } from "@material-ui/core/styles";
@@ -21,20 +21,6 @@ import projectHubPNG from "../resources/experience/project-hub.png";
 import projectPNG from "../resources/experience/project.png";
 
 const useStyles = makeStyles(() => ({
-  position: {
-    color: "#757575",
-  },
-  dateRange: {
-    fontStyle: "italic",
-    color: "#757575",
-  },
-  media: {
-    maxWidth: "90%",
-    height: "auto",
-  },
-  tech: {
-    margin: 5,
-  },
   galleryItem: {
     margin: 5,
     width: "30%",
@@ -140,48 +126,14 @@ const HoffmanStrategy = () => {
   return (
     <div>
       <section className={isSmallScreen ? "responsiveContainer" : "container"}>
-        <p align="middle">
-          <a href="https://hoffmanstrategygroup.com/">
-            <img 
-              className={classes.media}
-              src={hsg}
-              alt="Hoffman Strategy Group"
-            />
-          </a>
-        </p>
-        <Grid container justify="space-between">
-          <Grid item>
-            <Typography variant="h5" className={classes.position}>Software Engineer / Product Manager</Typography>
-            <Typography variant="h5" className={classes.dateRange}>November 2019 - Now</Typography>
-          </Grid>
-          <Grid item>
-            <Chip
-              className={classes.tech}
-              label="React"
-            />
-            <Chip
-              className={classes.tech}
-              label="GraphQL"
-            />
-            <Chip
-              className={classes.tech}
-              label="Material-UI"
-            />
-            <Chip
-              className={classes.tech}
-              label="Amazon Web Services"
-            />
-            <Chip
-              className={classes.tech}
-              label="React Router"
-            />
-          </Grid>
-        </Grid>
-        <br/> 
-
-        <Typography variant="body1">
-          <a href="https://hoffmanstrategygroup.com/">Company Website</a>
-        </Typography>
+        <PositionHeader
+          website="https://hoffmanstrategygroup.com/"
+          image={hsg}
+          alt="Hoffman Strategy Group"
+          title="Software Engineer &amp; Product Manager"
+          dateRange="November 2019 - Now"
+          stack={["React.js", "Material-UI", "GraphQL", "AWS Amplify", "AWS DynamoDB", "React-Router"]}
+        />
         <br/>
         
         <Typography variant="body1">
