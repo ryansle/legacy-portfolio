@@ -69,7 +69,7 @@ const ProjectPreview = React.forwardRef(
         />
         <div className={classes.contents}>
           <CardContent>
-            <Typography className={"title"} variant="h5">
+            <Typography className="title" variant="h5">
               {title}
             </Typography>
             {children}

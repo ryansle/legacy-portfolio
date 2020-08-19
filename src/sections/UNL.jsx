@@ -35,15 +35,15 @@ const UNL = () => {
           software project.
         </Typography>
         <br/>
-        <Typography variant="h5" className={"title"}>Responsibilities</Typography>
-        <Typography variant="body1">
+        <Typography variant="h5" className="title">Responsibilities</Typography>
+        <Typography variant="body1" component={"span"}>
           <ul>
             <li>Advised three student teams through their software engineering capstone project throughout the semester.</li>
             <li>Drove several changes to the contents of the midterm exam after peer review.</li>
             <li>Authored concise tutorials for the use of the JavaFX SceneBuilder in conjunction with IntelliJ IDEA.</li>
           </ul>
         </Typography>
-        <Typography variant="h5" className={"title"}>About This Position</Typography>
+        <Typography variant="h5" className="title">About This Position</Typography>
         <Typography variant="body1">
           My direct responsibilities in this position have been incredibly fluid as time has passed.
           The course has seen many changes throughout my time working with Dr. Chris Bohn; my first semester,

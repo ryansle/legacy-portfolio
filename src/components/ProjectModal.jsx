@@ -76,7 +76,7 @@ const ProjectModal = React.forwardRef(
     const isSmallScreen = useMediaQuery("(max-width: 1100px)");
 
     return (
-      <div className={isSmallScreen ? classes.responsiveOverlay : classes.overlay} ref={ref}>
+      <div className={isSmallScreen ? classes.responsiveOverlay : classes.overlay}>
         <Button
           className={classes.exitButton}
           size="small"
@@ -96,7 +96,7 @@ const ProjectModal = React.forwardRef(
             <br/>
             <Grid container justify="space-between" style={{ flexWrap: "wrap" }}>
               <Grid item>
-                <Typography variant="h4" className={"title"}>
+                <Typography variant="h4" className="title">
                   {title}
                 </Typography>
               </Grid>

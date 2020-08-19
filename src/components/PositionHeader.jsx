@@ -46,14 +46,15 @@ const PositionHeader = ({ website, image, alt, title, dateRange, stack }) => {
           <Typography variant="h5" className={classes.position}>
             {title}
           </Typography>
-          <Typography variant="h5" className={classes.dateRange}>
+          <Typography variant="h6" className={classes.dateRange}>
             {dateRange}
           </Typography>
         </Grid>
         <Grid item>
           {
-            stack.map((tech) => 
+            stack.map((tech, index) => 
               <Chip
+                key={index}
                 className={classes.tech}
                 label={tech}
               />

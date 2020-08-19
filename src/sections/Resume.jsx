@@ -26,7 +26,7 @@ const Resume = () => {
   return (
     <div>
       <section className={isSmallScreen ? "responsiveContainer" : "container"}>
-        <Typography className={"title"} variant="h4">Condensed Portfolio</Typography>
+        <Typography className="title" variant="h4">Condensed Portfolio</Typography>
         <Typography variant="body1">Resume last updated on August 19th, 2020. Created with LaTeX.</Typography>
 
         <br/>

@@ -44,7 +44,7 @@ const About = () => {
   return (
     <div>
       <section className={isSmallScreen ? "responsiveContainer" : "container"}>
-        <Typography variant="h4" className={"title"}>Who Am I?</Typography>
+        <Typography variant="h4" className="title">Who Am I?</Typography>
         <Typography variant="body1">
           I am an incoming senior at the University of Nebraska-Lincoln majoring in Software Engineering, with a minor in Mathematics. 
           I moved here from Sioux Falls, South Dakota back in August of 2017. Currently, I am working two different software development-based 
@@ -64,7 +64,7 @@ const About = () => {
 
         <div className={classes.whitespace}/>
 
-        <Typography variant="h4" className={"title"}>Education</Typography>
+        <Typography variant="h4" className="title">Education</Typography>
         <Typography variant="body1"><b>University of Nebraska-Lincoln</b></Typography>
         <Typography variant="body1">
           Bachelor of Science in 
@@ -105,7 +105,7 @@ const About = () => {
 
         <div className={classes.whitespace}/>
 
-        <Typography variant="h4" className={"title"}>More About Me</Typography>
+        <Typography variant="h4" className="title">More About Me</Typography>
         {/* <Typography variant="body1">
           I am an incredibly motivated and detail-oriented software engineer that is able to easily insert myself
           into any team dynamic. I thrive in collaborative environments and strive to always give every project my all,
@@ -114,7 +114,7 @@ const About = () => {
           diverse experience in gathering requirements, juggling a variety of development tasks, testing, and planning.
         </Typography> 
         <br/> */}
-        <Typography variant="body1">
+        <Typography variant="body1" component={"span"}>
           But as busy as my life can be with school, work, and extracurriculars, I can still find time to set aside to do things I love including...
           <ul>
             <li>Going for long jogs around Lincoln, NE to rest my mind <span role="img" aria-label="(Running Man)">🏃‍♂️</span></li>
@@ -130,7 +130,7 @@ const About = () => {
 
         <div className={classes.whitespace}/>
 
-        <Typography variant="h4" className={"title"}>Professional References</Typography>
+        <Typography variant="h4" className="title">Professional References</Typography>
         <Grid container justify="space-between">
           <Reference 
             name="Dr. Chris Bohn, PhD"

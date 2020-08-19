@@ -48,7 +48,7 @@ const ReLogic = () => {
         </Typography>
         <br/>
         <Typography variant="h5" className="subtitle">Responsibilities</Typography>
-        <Typography variant="body1">
+        <Typography variant="body1" component={"span"}>
           <ul>
             <li>Evaluated beta versions of Terraria in order to catch bugs before shipping out major community updates.</li>
             <li>Brainstormed ideas for new additions to Terraria and gameplay improvements.</li>

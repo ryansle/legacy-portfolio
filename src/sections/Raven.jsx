@@ -31,8 +31,8 @@ const Raven = () => {
           precision agriculture, high performance specialty films, and situational awareness markets.
         </Typography>
         <br/>
-        <Typography variant="h5" className={"title"}>Responsibilities</Typography>
-        <Typography variant="body1">
+        <Typography variant="h5" className="title">Responsibilities</Typography>
+        <Typography variant="body1" component={"span"}>
           <ul>
             <li>Researched and create development requirements.</li>
             <li>Documented test plans and perform necessary testing on development code.</li>
@@ -45,7 +45,7 @@ const Raven = () => {
             <li>Familiarized myself with Kendo UI in order to simplify the web development process.</li>
           </ul>
         </Typography>
-        <Typography variant="h5" className={"title"}>About This Position</Typography>
+        <Typography variant="h5" className="title">About This Position</Typography>
         <Typography variant="body1">
           During my time at Raven, I worked on their Slingshot team, one of their few web-based software teams. I was primarily responsible
           for developing a report generation system that streamlined internal processes. Prior to my development of the DTC Report Generator, individuals
@@ -64,8 +64,8 @@ const Raven = () => {
           ever experience working in industry, I was quite proud of the work I had performed over the course of the summer.
         </Typography>
         <br/>
-        <Typography variant="h5" className={"title"}>What did I learn?</Typography>
-        <Typography variant="body1">
+        <Typography variant="h5" className="title">What did I learn?</Typography>
+        <Typography variant="body1" component={"span"}>
             By far the most important lesson I learned during my time at Raven Industries was, in the words of my mentor, "learning how to learn on my own."
             Since this was my first industry experience, I came from a background of consistently being able to ask others for support when things did not make sense
             or if I did not know how to do things. Due to this, when I first started at Raven, I spent far too much time asking my mentor for help on things that were

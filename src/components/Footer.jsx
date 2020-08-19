@@ -35,7 +35,7 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <BottomNavigation className={isSmallScreen ? classes.responsiveBottom : classes.bottom}>
+    <BottomNavigation className={isSmallScreen ? classes.responsiveBottom : classes.bottom} component={"footer"}>
       <Typography variant={isSmallScreen ? "caption" : "h6"}>
         Copyright &copy; {currentYear} Ryan Le. Website made with React.js and Material-UI Components.
       </Typography>

@@ -72,8 +72,9 @@ const Position = ({
           <Grid item xs={isSmallScreen ? 12 : 6}>  
             {children}
             {
-              stack.map((tech) =>
+              stack.map((tech, index) =>
                 <Chip
+                  key={index}
                   className={classes.tech}
                   label={tech}
                 />

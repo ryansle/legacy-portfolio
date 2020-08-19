@@ -44,7 +44,7 @@ const Experience = () => {
             image={hsg}
             alt="Hoffman Strategy Group"
           >
-            <Typography variant="body1">
+            <Typography variant="body1" component={"span"}>
               My partner and I, <a href="https://msich.netlify.app/">Matt Sichterman,</a> inherited a pre-existing
               JavaScript codebase and worked together to redefine the product vision for the Hoffman Analytics platform.
               We lead the redevelopment of an online commercial real estate feasibility analytics and client report generation system.
@@ -67,7 +67,7 @@ const Experience = () => {
             image={nelnet}
             alt="Nelnet"
           >
-            <Typography variant="body1">
+            <Typography variant="body1" component={"span"}>
               Participated in a fully remote internship that focused on developing backend services that integrated with Nelnet's leased Workday system.
               I also worked to further the developments of an existing software project known as the LenderBond System, a .NET codebase that worked as the 
               one-stop shop for the AGM team's internal processes. In this position, I demonstrated the ability to:
@@ -89,7 +89,7 @@ const Experience = () => {
             image={raven}
             alt="Raven Industries"
           >
-            <Typography variant="body1">
+            <Typography variant="body1" component={"span"}> 
               Developed and maintained an internal report generation tool that streamlined the process of creating
               large, easy-to-read component reports. The system was built entirely new when I joined Raven using out-of-the-box
               web development toolsets like .NET Core and Kendo UI. This system allowed a user to:
@@ -110,7 +110,7 @@ const Experience = () => {
             image={unl}
             alt="University of Nebraska-Lincoln - Department of Computer Science &amp; Engineering"
           >
-            <Typography variant="body1">
+            <Typography variant="body1" component={"span"}>
               Aided Dr. Bohn in the planning and execution of his CSCE 361 (Software Engineering) course while also grading students assignments
               and holding weekly office hours. In this position, I also:
               <ul>
@@ -130,7 +130,7 @@ const Experience = () => {
             image={relogic}
             alt="Re-Logic Games"
           >
-            <Typography variant="body1">
+            <Typography variant="body1" component={"span"}>
               Evaluated beta versions of the hit indie game Terraria for bugs and gameplay issues prior to shipping out major community updates. Fun facts:
               <ul>
                 <li>Terraria has sold <b>30 MILLION</b> copies worldwide</li>

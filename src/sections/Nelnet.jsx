@@ -31,8 +31,8 @@ const Nelnet = () => {
           the administration and repayment of student loans and education financial services.
         </Typography>
         <br/>
-        <Typography variant="h5" className={"title"}>Responsibilities</Typography>
-        <Typography variant="body1">
+        <Typography variant="h5" className="title">Responsibilities</Typography>
+        <Typography variant="body1" component={"span"}>
           <ul>
             <li>Develop XSLT transformations for the Workday team.</li>
             <li>Redevelop an existing .NET web application into a functional component of daily workflow.</li>
@@ -40,7 +40,7 @@ const Nelnet = () => {
             <li>Actively practice navigating an Agile workflow environment throughout the course of my remote internship.</li>
           </ul>
         </Typography>
-        <Typography variant="h5" className={"title"}>About This Position</Typography>
+        <Typography variant="h5" className="title">About This Position</Typography>
         <Typography variant="body1">
           When COVID-19 ravaged the United States and forced companies across the nation to cancel 
           their internship programs, Nelnet decided to use this opportunity to open their intern programs back up.

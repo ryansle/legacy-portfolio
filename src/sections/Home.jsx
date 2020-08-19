@@ -24,7 +24,7 @@ const Home = () => {
         screenHeight={50}
       />
       <section className={isSmallScreen ? "responsiveContainer" : "container"}>
-        <Typography className={"title"} variant="h3">Welcome.</Typography>
+        <Typography className="title" variant="h3">Welcome.</Typography>
         <Typography variant="body1">
           I created this online portfolio from the ground up in order to showcase my skills, 
           gain some web development experience, go into greater detail about who I am, 

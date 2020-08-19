@@ -146,8 +146,8 @@ const HoffmanStrategy = () => {
           to successful real estate projects. 
         </Typography>
         <br/>
-        <Typography variant="h5" className={"title"}>Responsibilities</Typography>
-        <Typography variant="body1">
+        <Typography variant="h5" className="title">Responsibilities</Typography>
+        <Typography variant="body1" component={"span"}>
           <ul>
             <li>Refactor a pre-existing JavaScript codebase to improve maintainability and scalability.</li>
             <li>Leverage React and Material-UI to redevelop the front-end for a real-estate data analytics system.</li>
@@ -156,7 +156,7 @@ const HoffmanStrategy = () => {
             <li>Serve as a technology advisor for the group in calls with potential clients.</li>
           </ul>
         </Typography>
-        <Typography variant="h5" className={"title"}>About This Position</Typography>
+        <Typography variant="h5" className="title">About This Position</Typography>
         <Typography variant="body1">
           I was initially hired by the Hoffman Strategy Group in November 2019
           to take over their social media presence on LinkedIn, help
@@ -197,8 +197,8 @@ const HoffmanStrategy = () => {
           Hoffman Strategy Group for the opportunity.
         </Typography>
         <br/>
-        <Typography variant="h5" className={"title"}>What did I learn?</Typography>
-        <Typography variant="body1">
+        <Typography variant="h5" className="title">What did I learn?</Typography>
+        <Typography variant="body1" component={"span"}>
           Working with Hoffman Strategy Group was an excellent way to break into the web development domain of software engineering. It also helped that my partner Matt has
           been sharpening his web development skills over the course of the last year, and was always pointing me in the right direction for growth. Thanks to my summer with
           Hoffman Strategy Group, I learned how to:
@@ -211,7 +211,7 @@ const HoffmanStrategy = () => {
           </ul>
         </Typography>
         <br/>
-        <Typography variant="h5" className={"title"}>Gallery</Typography>
+        <Typography variant="h5" className="title">Gallery</Typography>
         <Typography variant="body1">
           You may notice in the screenshots below that many aspects of the Hoffman Analytics platform look strikingly similar to
           the contents of my personal website. This is due to the fact that I was developing both of these projects concurrently, using nearly identical
