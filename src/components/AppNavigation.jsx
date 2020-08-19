@@ -18,6 +18,8 @@ import {
   Code,
   Computer,
   Email,
+  Description,
+  BugReport,
   Menu
 } from "@material-ui/icons";
 import { useLocation } from "react-router-dom";
@@ -99,6 +101,14 @@ const AppNavigation = (props) => {
     if (currentItem) {
       setSelected(currentItem.title);
       setHeadline(currentItem.headline);
+    } else {
+      if (currentPath === "resume") {
+        setSelected("Resume");
+        setHeadline("My Resume");
+      } else {
+        setSelected("");
+        setHeadline("Page Not Found!");
+      }
     }
   }, [location]);
 
@@ -116,8 +126,11 @@ const AppNavigation = (props) => {
         return <Computer className={classes.icon} />;
       case "Contact":
         return <Email className={classes.icon} />;
+      case "Resume":
+        return <Description className={classes.icon}/>;
+      // if they aren't on any of the other pages, they must have 404'd
       default:
-        return;
+        return <BugReport className={classes.icon}/>;
     }
   };
 

@@ -48,7 +48,7 @@ const Resume = () => {
           />
         </p>
         <br/>
-        <Typography variant="h4" className={"title"}>Oops, this page could not be found</Typography>
+        <Typography variant="h4" className="title" style={{ textAlign: "center" }}>Oops, this page could not be found</Typography>
         <Typography variant="body1" style={{ textAlign: "center" }}>Try accessing one of these pages instead?</Typography>
         <br/> <br/>
 
