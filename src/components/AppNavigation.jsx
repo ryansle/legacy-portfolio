@@ -1,40 +1,145 @@
-import React from "react";
+import React, { useState } from "react";
 
 // Components
-import {
+import { 
   Grid,
-  Typography,
+  Drawer,
+  SwipeableDrawer,
   Divider,
   List,
   ListItem,
   ListItemIcon,
   ListItemText,
-  IconButton
+  Typography,
+  IconButton,
+  AppBar,
+  Toolbar,
+  Hidden,
+  CssBaseline
 } from "@material-ui/core";
-import { GitHub, LinkedIn, Description,
-Home, Person, Work, Code, Computer, Email } from "@material-ui/icons";
+import { 
+  Home, 
+  Person, 
+  Work,
+  Code, 
+  Computer,
+  Email, 
+  LinkedIn, 
+  GitHub,
+  Description, 
+  Menu
+} from "@material-ui/icons";
 import { Link } from "react-router-dom";
+import Router from "../Router";
+import Footer from "./Footer";
+import Sidebar from "./Sidebar";
 
 // Utilities
-import { makeStyles, useTheme } from "@material-ui/core";
-import { MenuItems } from "../utils/menu-items";
-import nav from "../utils/enums";
+import { makeStyles, useTheme } from "@material-ui/core/styles";
 
 // Assets
 import headshot from "../resources/RyanLe.png"
+// import rle from "../resources/logo.png";
 
-const useStyles = makeStyles(() => ({
+const sidebarWidth = 225;
 
+const useStyles = makeStyles((theme) => ({
+  root: {
+    display: "flex",
+  },
+  sidebar: {
+    width: sidebarWidth,
+    flexShrink: 0,
+  },
+  sidebarLinks: {
+    background: "#363740",
+    [theme.breakpoints.up("sm")]: {
+      width: sidebarWidth,
+      flexShrink: 0,
+    },
+  },
+  divider: {
+    height: 5,
+  },
+  profile: {
+    paddingTop: 20,
+    paddingBottom: 20,
+  },
+  whiteText: {
+    color: "white",
+  },
+  navIcon: {
+    color: "white",
+    height: 34,
+    width: "auto",
+  },
+  linkIcon: {
+    color: "white",
+    height: 34,
+    width: "auto",
+  },
+  active: {
+    backgroundColor: "#3e4049 !important",
+    color: "white",
+    borderLeft: "4px solid white",
+  },
+  drawer: {
+    [theme.breakpoints.up("sm")]: {
+      width: sidebarWidth,
+      flexShrink: 0,
+    },
+  },
+  appBar: {
+    [theme.breakpoints.up("sm")]: {
+      width: `calc(100% - ${sidebarWidth}px)`,
+      marginLeft: sidebarWidth,
+    },
+  },
+  menuButton: {
+    marginRight: theme.spacing(2),
+    [theme.breakpoints.up("sm")]: {
+      display: "none",
+    },
+  },
+  // necessary for content to be below app bar
+  toolbar: theme.mixins.toolbar,
+  content: {
+    flexGrow: 1,
+  },
+  link: {
+    color: "white",
+    textDecoration: "none",
+  },
+  logo: {
+    height: 30,
+    width: "auto",
+  }
 }));
 
-const Sidebar = ({ 
-  mobileOpen,
-  handleDrawerToggle,
-  selected,
-  setSelected
-}) => {
+const AppNavigation = (props) => {
   const classes = useStyles();
+  const theme = useTheme();
+  const { window } = props;
 
+  const container = window !== undefined ? () => window().document.body : undefined;
+  
+  const nav = {
+    HOME: "Home",
+    ABOUT: "About Me",
+    EXPERIENCE: "Work Experience",
+    SKILLS: "My Skillsets",
+    PROJECTS: "Projects I've Worked On",
+    CONTACT: "Contact Me!",
+    RESUME: "My Resume",
+    NOTFOUND: "404 - Page Not Found",
+  }
+  const [selected, setSelected] = useState(nav.HOME);
+  const [mobileOpen, setMobileOpen] = useState(false);
+
+  const handleDrawerToggle = () => {
+    setMobileOpen(!mobileOpen);
+  };
+  
   const sidebar = (
     <div>
       <Grid 
@@ -62,23 +167,6 @@ const Sidebar = ({
 
       {/* Navigation */}
       <List component="nav" className={classes.whiteText}>
-        {/* {MenuItems.map(({ path, title, icon}, index) => (
-          <div key={index}>
-            <ListItem
-              button
-              component={Link}
-              to={path}
-              className={title === selected ? classes.active : classes.listItem}
-              onClick={() => {
-                setSelected(title);
-                if (mobileOpen) handleDrawerToggle();
-              }}
-            >
-              <ListItemIcon>{icon}</ListItemIcon>
-              <ListItemText primary={title} />
-            </ListItem>
-          </div>
-        ))} */}
         <ListItem button
           classes={{ selected: classes.active }}
           component={Link}
@@ -144,6 +232,7 @@ const Sidebar = ({
           <ListItemIcon><Email className={classes.navIcon}/></ListItemIcon>
           <ListItemText primary="Contact"/>
         </ListItem>
+        
       </List>
 
       <Divider className={classes.divider}/>
@@ -298,15 +387,85 @@ const Sidebar = ({
     </div>
   );
 
-  if (mobileOpen) {
-    return (
-      {mobileSidebar}
-    );
-  } else {
-    return (
-      {sidebar}
-    );
-  }
-};
+  return (
+    <div className={classes.root}>
+      <CssBaseline />
+      <AppBar position="fixed" className={classes.appBar}>
+        <Toolbar>
+          <IconButton
+            color="inherit"
+            aria-label="open sidebar"
+            edge="start"
+            onClick={handleDrawerToggle}
+            className={classes.menuButton}
+          >
+            <Menu />
+          </IconButton>
+          <Typography variant="h5" noWrap>{selected}</Typography>
+        </Toolbar>
+      </AppBar>
+      
+      <nav className={classes.drawer} aria-label="navigation menu">
+        <Hidden smUp implementation="css">
+          {/* <SwipeableDrawer
+            className={classes.sidebar}
+            container={container}
+            variant="temporary"
+            anchor={theme.direction === "rtl" ? "right" : "left"}
+            open={mobileOpen}
+            onClose={handleDrawerToggle}
+            classes={{
+              paper: classes.sidebarLinks,
+            }}
+            ModalProps={{
+              keepMounted: true // Better open performance on mobile.
+            }}
+          >
+            {mobileSidebar}
+          </SwipeableDrawer> */}
+          <SwipeableDrawer
+            className={classes.sidebar}
+            anchor={theme.direction === "rtl" ? "right" : "left"}
+            open={mobileOpen}
+            onOpen={handleDrawerToggle}
+            onclose={handleDrawerToggle}
+            classes={{
+              paper: classes.sidebarLinks,
+            }}
+            ModalProps={{
+              keepMounted: true // Better open performance on mobile.
+            }}
+          >
+            {/* <Sidebar
+              mobileOpen={mobileOpen}
+              handleDrawerToggle={handleDrawerToggle}
+              selected={selected}
+              setSelected={setSelected}
+            /> */}
+            {mobileSidebar}
+          </SwipeableDrawer>
+        </Hidden>
+        <Hidden xsDown implementation="css">
+          <Drawer
+            className={classes.sidebar}
+            classes={{
+              paper: classes.sidebarLinks
+            }}
+            variant="permanent"
+            open
+          >
+            {sidebar}
+          </Drawer>
+        </Hidden>
+      </nav>
+      <main className={classes.content}>
+        <div className={classes.toolbar} />
+        {/* Main Content of the site */}
+        <Router/>
+        <Footer/>
+      </main>
+    </div>
+  );
+}
 
-export default Sidebar;
+export default AppNavigation;

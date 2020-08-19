@@ -28,3 +28,8 @@ a[aria-current="page"] {
 .subtitle {
   font-weight: bold !important;
 }
+
+.menu-icon {
+  color: #9fa2b4;
+  padding: 0;
+}
