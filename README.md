@@ -15,6 +15,5 @@ Welcome to the repository containing the code for my personal portfolio! I used 
 - JavaScript for random site scripting
 - React.js for the underlying user interface
 - Material-UI for out-of-the-box React.js components
-- Redux for global state management
 - React-Router for declarative client-side page rendering
 - Visual Studio Code as in the integrated development environment
