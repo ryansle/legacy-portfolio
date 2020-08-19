@@ -34,8 +34,8 @@ const Resume = () => {
           src={resume} 
           className={classes.pdf}
           title="My Resume"
-          allowfullscreen="" 
-          frameborder="0"
+          allowFullScreen="" 
+          frameBorder="0"
         />
         <br/> <br/>
       </section>

@@ -282,28 +282,36 @@ const Projects = () => {
           open={openSite}
           onClose={toggleSiteModal}
         >
-          {personalWebsite}
+          <>
+            {personalWebsite}
+          </>
         </Modal>
 
         <Modal
           open={openBuckle}
           onClose={toggleBuckleModal}
         >
-          {socialMediaMarketing}
+          <>
+            {socialMediaMarketing}
+          </>
         </Modal>
 
         <Modal
           open={openVR}
           onClose={toggleVRModal}
         >
-          {vrGame}
+          <>
+            {vrGame}
+          </>
         </Modal>
 
         <Modal
           open={openCare}
           onClose={toggleCareModal}
         >
-          {careTracking}
+          <>
+            {careTracking}
+          </>
         </Modal>
         <br/>
       </section>

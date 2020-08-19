@@ -75,8 +75,9 @@ const ProjectPreview = React.forwardRef(
             {children}
           </CardContent>
           {
-            stack.map((tech) =>
+            stack.map((tech, index) =>
               <Chip
+                key={index}
                 className={classes.tech}
                 label={tech}
               />

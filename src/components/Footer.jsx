@@ -1,11 +1,7 @@
 import React from "react";
 
 // Components
-import {
-  Typography,
-  BottomNavigation,
-  useMediaQuery
-} from "@material-ui/core"
+import { Typography, useMediaQuery } from "@material-ui/core"
 
 // Utilities
 import { makeStyles } from "@material-ui/core/styles";
@@ -16,7 +12,9 @@ const useStyles = makeStyles((theme) => ({
     color: "white",
     marginTop: 100,
     paddingTop: 10,
+    height: 50,
     bottom: 0,
+    textAlign: "center",
   },
   responsiveBottom: {
     background: "#3f51b5",
@@ -25,6 +23,7 @@ const useStyles = makeStyles((theme) => ({
     padding: 10,
     height: 70,
     bottom: 0,
+    textAlign: "center",
   }
 }));
 
@@ -35,11 +34,11 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <BottomNavigation className={isSmallScreen ? classes.responsiveBottom : classes.bottom} component={"footer"}>
+    <footer className={isSmallScreen ? classes.responsiveBottom : classes.bottom}>
       <Typography variant={isSmallScreen ? "caption" : "h6"}>
         Copyright &copy; {currentYear} Ryan Le. Website made with React.js and Material-UI Components.
       </Typography>
-    </BottomNavigation>
+    </footer>
   );
 }
 
