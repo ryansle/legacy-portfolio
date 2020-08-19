@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 // Components
 import { 
@@ -12,6 +12,7 @@ import {
   CssBaseline
 } from "@material-ui/core";
 import { Menu } from "@material-ui/icons";
+import { useHistory, useLocation } from "react-router-dom";
 import Router from "../Router";
 import Footer from "./Footer";
 import Sidebar from "./Sidebar";
@@ -19,6 +20,7 @@ import Sidebar from "./Sidebar";
 // Utilities
 import { makeStyles, useTheme } from "@material-ui/core/styles";
 import nav from "../utils/enums";
+import { MenuItems } from "../utils/menu-items";
 
 const sidebarWidth = 225;
 
@@ -72,6 +74,18 @@ const AppNavigation = (props) => {
   const handleDrawerToggle = () => {
     setMobileOpen(!mobileOpen);
   };
+
+  const location = useLocation();
+  // Check current path to make sure file remembers page on page reload
+  useEffect(() => {
+    const currentPath = location.pathname.split("/")[1];
+    const currentItem = MenuItems.find(
+      (item) => item.path === `/${currentPath}`
+    );
+    if (currentItem) {
+      setSelected(currentItem.title);
+    }
+  }, [location]);
 
   return (
     <div className={classes.root}>
