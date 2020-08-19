@@ -30,6 +30,7 @@ a[aria-current="page"] {
 }
 
 .menu-icon {
-  color: #9fa2b4;
-  padding: 0;
+  color: white;
+  height: 34px !important;
+  width: auto !important;
 }

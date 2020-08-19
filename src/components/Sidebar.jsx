@@ -42,14 +42,15 @@ const useStyles = makeStyles(() => ({
   divider: {
     height: 5,
   },
+  link: {
+    color: "white",
+    textDecoration: "none",
+  },
   linkIcon: {
     color: "white",
     height: 34,
     width: "auto",
-  },
-  link: {
-    color: "white",
-    textDecoration: "none",
+    padding: "0px 5px 0px 5px",
   },
 }));
 
@@ -183,13 +184,13 @@ const Sidebar = ({
       <List component="nav" className={classes.whiteText}>
         <a href="https://github.com/ryansle" className={classes.link}>
           <ListItem button>
-          <ListItemIcon><GitHub className={classes.navIcon}/></ListItemIcon>
+          <ListItemIcon><GitHub className={classes.linkIcon}/></ListItemIcon>
             <ListItemText primary="GitHub"/>
           </ListItem>
         </a>
         <a href="https://linkedin.com/in/ryansle" className={classes.link}>
           <ListItem button>
-          <ListItemIcon><LinkedIn className={classes.navIcon}/></ListItemIcon>
+          <ListItemIcon><LinkedIn className={classes.linkIcon}/></ListItemIcon>
             <ListItemText primary="LinkedIn"/>
           </ListItem>
         </a>
@@ -199,7 +200,7 @@ const Sidebar = ({
             onClick={() => {setSelected(nav.RESUME)}}
             selected={selected === nav.RESUME}
           >
-          <ListItemIcon><Description className={classes.navIcon}/></ListItemIcon>
+          <ListItemIcon><Description className={classes.linkIcon}/></ListItemIcon>
             <ListItemText primary="Resume" />
           </ListItem>
         </Link>

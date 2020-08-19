@@ -11,8 +11,16 @@ import {
   Hidden,
   CssBaseline
 } from "@material-ui/core";
-import { Menu } from "@material-ui/icons";
-import { useHistory, useLocation } from "react-router-dom";
+import { 
+  Home,
+  Person,
+  Work,
+  Code,
+  Computer,
+  Email,
+  Menu
+} from "@material-ui/icons";
+import { useLocation } from "react-router-dom";
 import Router from "../Router";
 import Footer from "./Footer";
 import Sidebar from "./Sidebar";
@@ -62,6 +70,11 @@ const useStyles = makeStyles((theme) => ({
   content: {
     flexGrow: 1,
   },
+  icon: {
+    height: 34,
+    width: "auto",
+    marginRight: 10,
+  }
 }));
 
 const AppNavigation = (props) => {
@@ -69,6 +82,7 @@ const AppNavigation = (props) => {
   const theme = useTheme();
   
   const [selected, setSelected] = useState(nav.HOME);
+  const [headline, setHeadline] = useState(nav.HOME);
   const [mobileOpen, setMobileOpen] = useState(false);
 
   const handleDrawerToggle = () => {
@@ -84,8 +98,28 @@ const AppNavigation = (props) => {
     );
     if (currentItem) {
       setSelected(currentItem.title);
+      setHeadline(currentItem.headline);
     }
   }, [location]);
+
+  const renderIcon = (title) => {
+    switch(title) {
+      case "Home":
+        return <Home className={classes.icon} />;
+      case "About":
+        return <Person className={classes.icon} />;
+      case "Experience":
+        return <Work className={classes.icon} />;
+      case "Skills":
+        return <Code className={classes.icon} />;
+      case "Projects":
+        return <Computer className={classes.icon} />;
+      case "Contact":
+        return <Email className={classes.icon} />;
+      default:
+        return;
+    }
+  };
 
   return (
     <div className={classes.root}>
@@ -101,7 +135,8 @@ const AppNavigation = (props) => {
           >
             <Menu />
           </IconButton>
-          <Typography variant="h5" noWrap>{selected}</Typography>
+          {renderIcon(selected)}
+          <Typography variant="h5" noWrap>{headline}</Typography>
         </Toolbar>
       </AppBar>
       
