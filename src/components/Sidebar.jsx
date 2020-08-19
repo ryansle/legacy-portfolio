@@ -11,12 +11,11 @@ import {
   ListItemText,
   IconButton
 } from "@material-ui/core";
-import { GitHub, LinkedIn, Description,
-Home, Person, Work, Code, Computer, Email } from "@material-ui/icons";
+import { GitHub, LinkedIn, Description } from "@material-ui/icons";
 import { Link } from "react-router-dom";
 
 // Utilities
-import { makeStyles, useTheme } from "@material-ui/core";
+import { makeStyles } from "@material-ui/core";
 import { MenuItems } from "../utils/menu-items";
 import nav from "../utils/enums";
 
@@ -24,7 +23,34 @@ import nav from "../utils/enums";
 import headshot from "../resources/RyanLe.png"
 
 const useStyles = makeStyles(() => ({
-
+  profile: {
+    paddingTop: 20,
+    paddingBottom: 20,
+  },
+  whiteText: {
+    color: "white",
+  },
+  listItem: {
+    backgroundColor: "#363740",
+    borderLeft: "4px solid #363740",
+  },
+  active: {
+    backgroundColor: "#3e4049 !important",
+    color: "white",
+    borderLeft: "4px solid white",
+  },
+  divider: {
+    height: 5,
+  },
+  linkIcon: {
+    color: "white",
+    height: 34,
+    width: "auto",
+  },
+  link: {
+    color: "white",
+    textDecoration: "none",
+  },
 }));
 
 const Sidebar = ({ 
@@ -62,7 +88,7 @@ const Sidebar = ({
 
       {/* Navigation */}
       <List component="nav" className={classes.whiteText}>
-        {/* {MenuItems.map(({ path, title, icon}, index) => (
+        {MenuItems.map(({ path, title, icon}, index) => (
           <div key={index}>
             <ListItem
               button
@@ -78,72 +104,7 @@ const Sidebar = ({
               <ListItemText primary={title} />
             </ListItem>
           </div>
-        ))} */}
-        <ListItem button
-          classes={{ selected: classes.active }}
-          component={Link}
-          to="/"
-          onClick={() => {setSelected(nav.HOME)}}
-          selected={selected === nav.HOME}
-        >
-          <ListItemIcon><Home className={classes.navIcon}/></ListItemIcon>
-          <ListItemText primary="Home"/>
-        </ListItem>
-
-        <ListItem button
-          classes={{ selected: classes.active }}
-          component={Link}
-          to="/about"
-          onClick={() => {setSelected(nav.ABOUT)}}
-          selected={selected === nav.ABOUT}
-        >
-          <ListItemIcon><Person className={classes.navIcon}/></ListItemIcon>
-          <ListItemText primary="About"/>
-        </ListItem>
-
-        <ListItem button
-          classes={{ selected: classes.active }}
-          component={Link}
-          to="/experience"
-          onClick={() => {setSelected(nav.EXPERIENCE)}}
-          selected={selected === nav.EXPERIENCE}
-        >
-          <ListItemIcon><Work className={classes.navIcon}/></ListItemIcon>
-          <ListItemText primary="Experience"/>
-        </ListItem>
-
-        <ListItem button
-          classes={{ selected: classes.active }}
-          component={Link}
-          to="/skills"
-          onClick={() => {setSelected(nav.SKILLS)}}
-          selected={selected === nav.SKILLS}
-        >
-          <ListItemIcon><Code className={classes.navIcon}/></ListItemIcon>
-          <ListItemText primary="Skills"/>
-        </ListItem>
-
-        <ListItem button
-          classes={{ selected: classes.active }}
-          component={Link}
-          to="/projects"
-          onClick={() => {setSelected(nav.PROJECTS)}}
-          selected={selected === nav.PROJECTS}
-        >
-          <ListItemIcon><Computer className={classes.navIcon}/></ListItemIcon>
-          <ListItemText primary="Projects"/>
-        </ListItem>
-
-        <ListItem button
-          classes={{ selected: classes.active }}
-          component={Link}
-          to="/contact"
-          onClick={() => {setSelected(nav.CONTACT)}}
-          selected={selected === nav.CONTACT}
-        >
-          <ListItemIcon><Email className={classes.navIcon}/></ListItemIcon>
-          <ListItemText primary="Contact"/>
-        </ListItem>
+        ))}
       </List>
 
       <Divider className={classes.divider}/>
@@ -196,72 +157,23 @@ const Sidebar = ({
 
       {/* Navigation */}
       <List component="nav" className={classes.whiteText}>
-        <ListItem button
-          classes={{ selected: classes.active }}
-          component={Link}
-          to="/"
-          onClick={() => {setSelected(nav.HOME)}}
-          selected={selected === nav.HOME}
-        >
-          <ListItemIcon><Home className={classes.navIcon}/></ListItemIcon>
-          <ListItemText primary="Home"/>
-        </ListItem>
-
-        <ListItem button
-          classes={{ selected: classes.active }}
-          component={Link}
-          to="/about"
-          onClick={() => {setSelected(nav.ABOUT)}}
-          selected={selected === nav.ABOUT}
-        >
-          <ListItemIcon><Person className={classes.navIcon}/></ListItemIcon>
-          <ListItemText primary="About"/>
-        </ListItem>
-
-        <ListItem button
-          classes={{ selected: classes.active }}
-          component={Link}
-          to="/experience"
-          onClick={() => {setSelected(nav.EXPERIENCE)}}
-          selected={selected === nav.EXPERIENCE}
-        >
-          <ListItemIcon><Work className={classes.navIcon}/></ListItemIcon>
-          <ListItemText primary="Experience"/>
-        </ListItem>
-
-        <ListItem button
-          classes={{ selected: classes.active }}
-          component={Link}
-          to="/skills"
-          onClick={() => {setSelected(nav.SKILLS)}}
-          selected={selected === nav.SKILLS}
-        >
-          <ListItemIcon><Code className={classes.navIcon}/></ListItemIcon>
-          <ListItemText primary="Skills"/>
-        </ListItem>
-
-        <ListItem button
-          classes={{ selected: classes.active }}
-          component={Link}
-          to="/projects"
-          onClick={() => {setSelected(nav.PROJECTS)}}
-          selected={selected === nav.PROJECTS}
-        >
-          <ListItemIcon><Computer className={classes.navIcon}/></ListItemIcon>
-          <ListItemText primary="Projects"/>
-        </ListItem>
-
-        <ListItem button
-          classes={{ selected: classes.active }}
-          component={Link}
-          to="/contact"
-          onClick={() => {setSelected(nav.CONTACT)}}
-          selected={selected === nav.CONTACT}
-        >
-          <ListItemIcon><Email className={classes.navIcon}/></ListItemIcon>
-          <ListItemText primary="Contact"/>
-        </ListItem>
-        
+      {MenuItems.map(({ path, title, icon}, index) => (
+          <div key={index}>
+            <ListItem
+              button
+              component={Link}
+              to={path}
+              className={title === selected ? classes.active : classes.listItem}
+              onClick={() => {
+                setSelected(title);
+                if (mobileOpen) handleDrawerToggle();
+              }}
+            >
+              <ListItemIcon>{icon}</ListItemIcon>
+              <ListItemText primary={title} />
+            </ListItem>
+          </div>
+        ))}
       </List>
 
       <Divider className={classes.divider}/>
@@ -300,11 +212,15 @@ const Sidebar = ({
 
   if (mobileOpen) {
     return (
-      {mobileSidebar}
+      <>
+        {mobileSidebar}
+      </>
     );
   } else {
     return (
-      {sidebar}
+      <>
+        {sidebar}
+      </>
     );
   }
 };

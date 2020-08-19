@@ -2,14 +2,8 @@ import React, { useState } from "react";
 
 // Components
 import { 
-  Grid,
   Drawer,
   SwipeableDrawer,
-  Divider,
-  List,
-  ListItem,
-  ListItemIcon,
-  ListItemText,
   Typography,
   IconButton,
   AppBar,
@@ -17,29 +11,14 @@ import {
   Hidden,
   CssBaseline
 } from "@material-ui/core";
-import { 
-  Home, 
-  Person, 
-  Work,
-  Code, 
-  Computer,
-  Email, 
-  LinkedIn, 
-  GitHub,
-  Description, 
-  Menu
-} from "@material-ui/icons";
-import { Link } from "react-router-dom";
+import { Menu } from "@material-ui/icons";
 import Router from "../Router";
 import Footer from "./Footer";
 import Sidebar from "./Sidebar";
 
 // Utilities
 import { makeStyles, useTheme } from "@material-ui/core/styles";
-
-// Assets
-import headshot from "../resources/RyanLe.png"
-// import rle from "../resources/logo.png";
+import nav from "../utils/enums";
 
 const sidebarWidth = 225;
 
@@ -57,31 +36,6 @@ const useStyles = makeStyles((theme) => ({
       width: sidebarWidth,
       flexShrink: 0,
     },
-  },
-  divider: {
-    height: 5,
-  },
-  profile: {
-    paddingTop: 20,
-    paddingBottom: 20,
-  },
-  whiteText: {
-    color: "white",
-  },
-  navIcon: {
-    color: "white",
-    height: 34,
-    width: "auto",
-  },
-  linkIcon: {
-    color: "white",
-    height: 34,
-    width: "auto",
-  },
-  active: {
-    backgroundColor: "#3e4049 !important",
-    color: "white",
-    borderLeft: "4px solid white",
   },
   drawer: {
     [theme.breakpoints.up("sm")]: {
@@ -106,286 +60,18 @@ const useStyles = makeStyles((theme) => ({
   content: {
     flexGrow: 1,
   },
-  link: {
-    color: "white",
-    textDecoration: "none",
-  },
-  logo: {
-    height: 30,
-    width: "auto",
-  }
 }));
 
 const AppNavigation = (props) => {
   const classes = useStyles();
   const theme = useTheme();
-  const { window } = props;
-
-  const container = window !== undefined ? () => window().document.body : undefined;
   
-  const nav = {
-    HOME: "Home",
-    ABOUT: "About Me",
-    EXPERIENCE: "Work Experience",
-    SKILLS: "My Skillsets",
-    PROJECTS: "Projects I've Worked On",
-    CONTACT: "Contact Me!",
-    RESUME: "My Resume",
-    NOTFOUND: "404 - Page Not Found",
-  }
   const [selected, setSelected] = useState(nav.HOME);
   const [mobileOpen, setMobileOpen] = useState(false);
 
   const handleDrawerToggle = () => {
     setMobileOpen(!mobileOpen);
   };
-  
-  const sidebar = (
-    <div>
-      <Grid 
-        container 
-        justify="center" 
-        alignItems="center" 
-        className={classes.profile}
-      >
-        <img
-          src={headshot}
-          width="70%"
-          height="auto"
-          alt="Ryan Le Headshot - Spring 2020"
-          style={{ borderRadius: "50%" }}
-        />
-      </Grid>
-      <div style={{ textAlign: "center" }}>
-        <Typography variant="h5" className={classes.whiteText}>Ryan Le</Typography>
-        <Typography variant="body2" className={classes.whiteText}>Software Engineer</Typography>
-        <Typography variant="body2" className={classes.whiteText}>University of Nebraska-Lincoln</Typography>
-      </div>
-      <p/>
-
-      <Divider className={classes.divider}/>
-
-      {/* Navigation */}
-      <List component="nav" className={classes.whiteText}>
-        <ListItem button
-          classes={{ selected: classes.active }}
-          component={Link}
-          to="/"
-          onClick={() => {setSelected(nav.HOME)}}
-          selected={selected === nav.HOME}
-        >
-          <ListItemIcon><Home className={classes.navIcon}/></ListItemIcon>
-          <ListItemText primary="Home"/>
-        </ListItem>
-
-        <ListItem button
-          classes={{ selected: classes.active }}
-          component={Link}
-          to="/about"
-          onClick={() => {setSelected(nav.ABOUT)}}
-          selected={selected === nav.ABOUT}
-        >
-          <ListItemIcon><Person className={classes.navIcon}/></ListItemIcon>
-          <ListItemText primary="About"/>
-        </ListItem>
-
-        <ListItem button
-          classes={{ selected: classes.active }}
-          component={Link}
-          to="/experience"
-          onClick={() => {setSelected(nav.EXPERIENCE)}}
-          selected={selected === nav.EXPERIENCE}
-        >
-          <ListItemIcon><Work className={classes.navIcon}/></ListItemIcon>
-          <ListItemText primary="Experience"/>
-        </ListItem>
-
-        <ListItem button
-          classes={{ selected: classes.active }}
-          component={Link}
-          to="/skills"
-          onClick={() => {setSelected(nav.SKILLS)}}
-          selected={selected === nav.SKILLS}
-        >
-          <ListItemIcon><Code className={classes.navIcon}/></ListItemIcon>
-          <ListItemText primary="Skills"/>
-        </ListItem>
-
-        <ListItem button
-          classes={{ selected: classes.active }}
-          component={Link}
-          to="/projects"
-          onClick={() => {setSelected(nav.PROJECTS)}}
-          selected={selected === nav.PROJECTS}
-        >
-          <ListItemIcon><Computer className={classes.navIcon}/></ListItemIcon>
-          <ListItemText primary="Projects"/>
-        </ListItem>
-
-        <ListItem button
-          classes={{ selected: classes.active }}
-          component={Link}
-          to="/contact"
-          onClick={() => {setSelected(nav.CONTACT)}}
-          selected={selected === nav.CONTACT}
-        >
-          <ListItemIcon><Email className={classes.navIcon}/></ListItemIcon>
-          <ListItemText primary="Contact"/>
-        </ListItem>
-        
-      </List>
-
-      <Divider className={classes.divider}/>
-
-      {/* Social Media */}
-      <Grid container direction="row" justify="center" alignItems="center">
-        <Grid item>
-          <Grid container direction="column" justify="center" alignItems="center">
-            <IconButton aria-label="GitHub">
-              <a href="https://github.com/ryansle"><GitHub className={classes.linkIcon}/></a>
-            </IconButton>
-            <Typography variant="caption" className={classes.whiteText}>GitHub</Typography>
-          </Grid>
-        </Grid>
-
-        <Grid item>
-          <Grid container direction="column" justify="center" alignItems="center">
-            <IconButton aria-label="GitHub">
-              <a href="https://www.linkedin.com/in/ryansle/"><LinkedIn className={classes.linkIcon}/></a>
-            </IconButton>
-            <Typography variant="caption" className={classes.whiteText}>LinkedIn</Typography>
-          </Grid>
-        </Grid>
-
-        <Grid item>
-          <Grid container direction="column" justify="center" alignItems="center">
-            <IconButton aria-label="GitHub">
-              <Link to="/resume">
-                <Description className={classes.linkIcon}/>
-              </Link>
-            </IconButton>
-            <Typography variant="caption" className={classes.whiteText}>Resume</Typography>
-          </Grid>
-        </Grid>
-      </Grid>
-    </div>
-  );
-
-  const mobileSidebar = (
-    <div>
-      <div style={{ textAlign: "center", margin: 15, }}>
-        <Typography variant="h5" className={classes.whiteText}>Ryan Le</Typography>
-        <Typography variant="body1" className={classes.whiteText}>Software Engineer</Typography>
-        <br />
-        <Typography variant="body1" className={classes.whiteText}>Hey, nice phone!</Typography>
-      </div>
-      <p/>
-
-      <Divider className={classes.divider}/>
-
-      {/* Navigation */}
-      <List component="nav" className={classes.whiteText}>
-        <ListItem button
-          classes={{ selected: classes.active }}
-          component={Link}
-          to="/"
-          onClick={() => {setSelected(nav.HOME)}}
-          selected={selected === nav.HOME}
-        >
-          <ListItemIcon><Home className={classes.navIcon}/></ListItemIcon>
-          <ListItemText primary="Home"/>
-        </ListItem>
-
-        <ListItem button
-          classes={{ selected: classes.active }}
-          component={Link}
-          to="/about"
-          onClick={() => {setSelected(nav.ABOUT)}}
-          selected={selected === nav.ABOUT}
-        >
-          <ListItemIcon><Person className={classes.navIcon}/></ListItemIcon>
-          <ListItemText primary="About"/>
-        </ListItem>
-
-        <ListItem button
-          classes={{ selected: classes.active }}
-          component={Link}
-          to="/experience"
-          onClick={() => {setSelected(nav.EXPERIENCE)}}
-          selected={selected === nav.EXPERIENCE}
-        >
-          <ListItemIcon><Work className={classes.navIcon}/></ListItemIcon>
-          <ListItemText primary="Experience"/>
-        </ListItem>
-
-        <ListItem button
-          classes={{ selected: classes.active }}
-          component={Link}
-          to="/skills"
-          onClick={() => {setSelected(nav.SKILLS)}}
-          selected={selected === nav.SKILLS}
-        >
-          <ListItemIcon><Code className={classes.navIcon}/></ListItemIcon>
-          <ListItemText primary="Skills"/>
-        </ListItem>
-
-        <ListItem button
-          classes={{ selected: classes.active }}
-          component={Link}
-          to="/projects"
-          onClick={() => {setSelected(nav.PROJECTS)}}
-          selected={selected === nav.PROJECTS}
-        >
-          <ListItemIcon><Computer className={classes.navIcon}/></ListItemIcon>
-          <ListItemText primary="Projects"/>
-        </ListItem>
-
-        <ListItem button
-          classes={{ selected: classes.active }}
-          component={Link}
-          to="/contact"
-          onClick={() => {setSelected(nav.CONTACT)}}
-          selected={selected === nav.CONTACT}
-        >
-          <ListItemIcon><Email className={classes.navIcon}/></ListItemIcon>
-          <ListItemText primary="Contact"/>
-        </ListItem>
-        
-      </List>
-
-      <Divider className={classes.divider}/>
-
-      <Typography variant="body1" className={classes.whiteText} style={{ textAlign: "center", paddingTop: 10 }}>Other Platforms</Typography>
-
-      <List component="nav" className={classes.whiteText}>
-        <a href="https://github.com/ryansle" className={classes.link}>
-          <ListItem button>
-          <ListItemIcon><GitHub className={classes.navIcon}/></ListItemIcon>
-            <ListItemText primary="GitHub"/>
-          </ListItem>
-        </a>
-        <a href="https://linkedin.com/in/ryansle" className={classes.link}>
-          <ListItem button>
-          <ListItemIcon><LinkedIn className={classes.navIcon}/></ListItemIcon>
-            <ListItemText primary="LinkedIn"/>
-          </ListItem>
-        </a>
-        <Link className={classes.link} to="/resume">
-          <ListItem button 
-            classes={{ selected: classes.active }}
-            onClick={() => {setSelected(nav.RESUME)}}
-            selected={selected === nav.RESUME}
-          >
-          <ListItemIcon><Description className={classes.navIcon}/></ListItemIcon>
-            <ListItemText primary="Resume" />
-          </ListItem>
-        </Link>
-      </List>
-
-      <Divider className={classes.divider}/>
-      
-    </div>
-  );
 
   return (
     <div className={classes.root}>
@@ -407,12 +93,11 @@ const AppNavigation = (props) => {
       
       <nav className={classes.drawer} aria-label="navigation menu">
         <Hidden smUp implementation="css">
-          {/* <SwipeableDrawer
+          <SwipeableDrawer
             className={classes.sidebar}
-            container={container}
-            variant="temporary"
             anchor={theme.direction === "rtl" ? "right" : "left"}
             open={mobileOpen}
+            onOpen={handleDrawerToggle}
             onClose={handleDrawerToggle}
             classes={{
               paper: classes.sidebarLinks,
@@ -421,28 +106,13 @@ const AppNavigation = (props) => {
               keepMounted: true // Better open performance on mobile.
             }}
           >
-            {mobileSidebar}
-          </SwipeableDrawer> */}
-          <SwipeableDrawer
-            className={classes.sidebar}
-            anchor={theme.direction === "rtl" ? "right" : "left"}
-            open={mobileOpen}
-            onOpen={handleDrawerToggle}
-            onclose={handleDrawerToggle}
-            classes={{
-              paper: classes.sidebarLinks,
-            }}
-            ModalProps={{
-              keepMounted: true // Better open performance on mobile.
-            }}
-          >
-            {/* <Sidebar
+            <Sidebar
               mobileOpen={mobileOpen}
               handleDrawerToggle={handleDrawerToggle}
               selected={selected}
               setSelected={setSelected}
-            /> */}
-            {mobileSidebar}
+            />
+            {/* {mobileSidebar} */}
           </SwipeableDrawer>
         </Hidden>
         <Hidden xsDown implementation="css">
@@ -454,7 +124,12 @@ const AppNavigation = (props) => {
             variant="permanent"
             open
           >
-            {sidebar}
+            <Sidebar
+              mobileOpen={mobileOpen}
+              handleDrawerToggle={handleDrawerToggle}
+              selected={selected}
+              setSelected={setSelected}
+            />
           </Drawer>
         </Hidden>
       </nav>
