@@ -72,7 +72,7 @@ const About = () => {
           Minor in <b>Mathematics</b>
         </Typography>
         <Typography variant="body1">
-          <b>Cumulative GPA:</b> 3.567/4.000
+          <b>Cumulative GPA:</b> 3.597/4.000
         </Typography>
         <br />
         <Typography variant="body1">
