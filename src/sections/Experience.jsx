@@ -62,12 +62,12 @@ const Experience = () => {
             company="Nelnet"
             title="IT Software Engineer Intern"
             dateRange="June 2020 - Now"
-            stack={["C#", "XSLT", "Oxygen XML Editor", ".NET MVC"]}
+            stack={["Swift", "SwiftUI", "Amazon Web Services", "XSLT",]}
             link="nelnet"
             image={nelnet}
             alt="Nelnet"
           >
-            <Typography variant="body1" component={"span"}>
+            {/* <Typography variant="body1" component={"span"}>
               Participated in a fully remote internship that focused on developing backend services that integrated with Nelnet's leased Workday system.
               I also worked to further the developments of an existing software project known as the LenderBond System, a .NET codebase that worked as the 
               one-stop shop for the AGM team's internal processes. In this position, I demonstrated the ability to:
@@ -76,6 +76,17 @@ const Experience = () => {
                 <li>Research and create software development requirements</li>
                 <li>Perform XML data transformations using the XSLT functional language</li>
                 <li>Practice agile methodologies while contributing to an existing codebase</li>
+              </ul>
+            </Typography> */}
+            <Typography variant="body1" component={"span"}>
+              Participated in a fully remote internship that focused on developing iOS applications for Nelnet's <a href="https://campuscommerce.com/campuskey/">Campus Key</a> team.
+              Previously, I worked on Nelnet's Workday team that focused on developing backend services and integrations for the company. Now, I utilize the latest-and-greatest mobile development standards 
+              including the Swift progamming language, SwiftUI, and the Serverless Framework. I also had the opportunity to utilize my creative skillsets to develop and design interactive user experiences. 
+              Some of the things I've had the chance to do in this position:
+              <ul>
+                <li>Design and develop rich, interactive user experiences utilizing the power of SwiftUI</li>
+                <li>Developed dynamically scalable iOS applications using the power of Serverless</li>
+                <li>Perform XML data transformations using the XSLT functional language</li>
               </ul>
             </Typography>
           </Position>

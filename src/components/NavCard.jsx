@@ -29,6 +29,9 @@ const useStyles = makeStyles(() => ({
     boxShadow: "0px 3px 4px 0px #555",
     border: "1px solid #9fa2b4",
     textDecoration: "none",
+    "&:hover": {
+      backgroundColor: "#afeeee",
+    }
   },
   responsiveNav: {
     width: "100%",
@@ -37,6 +40,9 @@ const useStyles = makeStyles(() => ({
     boxShadow: "0px 3px 4px 0px #555",
     border: "1px solid #9fa2b4",
     textDecoration: "none",
+    "&:hover": {
+      backgroundColor: "#afeeee",
+    }
   },
   icon: {
     height: 30,

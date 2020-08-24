@@ -295,13 +295,13 @@ const Skills = () => {
         <Typography variant="h5" className="subtitle">Documentation</Typography>
         <Typography variant="body1">
           My previous manager at Raven Industries once told me he had "never seen someone document their code as thoroughly
-          and sensibly as I did." I know a thing or two about writing good documentation because I have seen a thing or two
-          about what it takes to write stellar docs. I have witnessed the good and bad and continued to learn how to be better.
+          and sensibly as I did." Alongside code, I can create clear and concise documentation to aid future developers in a 
+          meaningful way.
         </Typography>
         <br/>
         <Typography variant="h5" className="subtitle">Customer Relationship Management</Typography>
         <Typography variant="body1">
-          I really enjoy speaking to project stakeholders and understanding how the software can benefit them directly. I embrace client-facing engineering
+          I really enjoy speaking to project stakeholders and understanding how software can benefit them directly. I embrace client-facing engineering
           positions and take pride in my ability to effectively communicate and form relationships with clients, all while listening to their feedback in
           order to improve a software's capabilities.
         </Typography>
@@ -335,7 +335,7 @@ const Skills = () => {
         <Typography variant="h5" className="subtitle">Task Management</Typography>
         <Typography variant="body1">
           Through my experiences, I am able to understand my projects at a high level and effectively partition the work in a way that makes sense in order to iterate quickly.
-          I have proven this with my work on the Buckle Advocacy project as well as with Hoffman Analytics, as I took charge in decomposing our requirements in both instances
+          I have proven this with my work on the Social Media Marketing project as well as with Hoffman Analytics, where I took charge in decomposing our requirements in both instances
           to manageble pieces of development work.
         </Typography>
         <br/>

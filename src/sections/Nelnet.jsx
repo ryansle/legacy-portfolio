@@ -22,7 +22,7 @@ const Nelnet = () => {
           alt="Nelnet"
           title="IT Software Engineer Intern"
           dateRange="June 2020 - Now"
-          stack={["C#", "XSLT", "Oxygen XML Editor", ".NET MVC", "Visual Studio"]}
+          stack={["Swift", "SwiftUI", "Amazon Web Services", "C#", "XSLT", ".NET MVC", "Visual Studio"]}
         />
         <br/>
     
@@ -34,8 +34,9 @@ const Nelnet = () => {
         <Typography variant="h5" className="title">Responsibilities</Typography>
         <Typography variant="body1" component={"span"}>
           <ul>
+            <li>Design and develop rich, interactive user experiences utilizing the power of SwiftUI</li>
+            <li>Developed dynamically scalable iOS applications using the power of Serverless</li>
             <li>Develop XSLT transformations for the Workday team.</li>
-            <li>Redevelop an existing .NET web application into a functional component of daily workflow.</li>
             <li>Participate in an intern pod team that delivered a business proposal to senior members of the Nelnet organization.</li>
             <li>Actively practice navigating an Agile workflow environment throughout the course of my remote internship.</li>
           </ul>
@@ -55,6 +56,13 @@ const Nelnet = () => {
           My time was divided between writing XSLT transformations, furthering the developments of an existing
           .NET MVC codebase, and collaborating with my intern team to deliver further business opporunity proposals to Nelnet's
           executive team.
+        </Typography>
+        <br/>
+        <Typography variant="body1">
+          With the start of the fall semester, I've switched gears and joined Nelnet's Campus Key team to work once again as a mobile developer, primarily
+          with up-and-coming technologies like Swift, SwiftUI, and Amazon Web Services. In this new position, I get to showcase my skills in making interactive
+          user interfaces while also gaining hands-on experience with the new Serverless Framework, something I've been excited to work with since my position with
+          Hoffman Strategy Group.
         </Typography>
         <br/>
       </section>
