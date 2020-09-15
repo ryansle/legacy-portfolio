@@ -22,6 +22,8 @@ import christian from "../resources/references/ChristianBerck.png";
 import jerry from "../resources/references/JerryHoffman.png";
 import kevan from "../resources/references/KevanGray.jpg";
 import marc from "../resources/references/MarcJohnson.jpeg";
+import contact from "../resources/stock/contact.jpeg";
+
 
 const useStyles = makeStyles(() => ({
   whitespace: {
