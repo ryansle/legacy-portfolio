@@ -68,18 +68,20 @@ const ProjectPreview = React.forwardRef(
 
 const useStyles = makeStyles(() => ({
   project: {
-    minHeight: 425,
-    minWidth: 355,
-    maxHeight: "30vw",
-    maxWidth: "25vw",
-    boxShadow: "0px 3px 6px 0px #555",
+    width: "45%",
     margin: 10,
+    border: "1px solid #9fa2b4",
+    "&:hover": {
+      boxShadow: "0 4px 8px 1px rgba(0, 0, 0, 0.2), 0 6px 20px 1px rgba(0, 0, 0, 0.19)",
+    },
   },
   responsiveProject: {
     width: "100%",
-    height: "auto",
-    boxShadow: "0px 3px 6px 0px #555",
     margin: 10,
+    border: "1px solid #9fa2b4",
+    "&:hover": {
+      boxShadow: "0 4px 8px 1px rgba(0, 0, 0, 0.2), 0 6px 20px 1px rgba(0, 0, 0, 0.19)",
+    },
   },
   media: {
     height: "auto",

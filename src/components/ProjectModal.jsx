@@ -29,7 +29,7 @@ const ProjectModal = React.forwardRef(
     ref
   ) => {
     const classes = useStyles();
-    const isSmallScreen = useMediaQuery("(max-width: 1100px)");
+    const isSmallScreen = useMediaQuery("(max-width: 1300px)");
 
     return (
       <div className={isSmallScreen ? classes.responsiveOverlay : classes.overlay} ref={ref}>
@@ -50,29 +50,30 @@ const ProjectModal = React.forwardRef(
         <div className={classes.scrollable}>
           <section className={isSmallScreen ? classes.responsiveDescription : classes.description}>
             <br/>
-            <Grid container justify="space-between" style={{ flexWrap: "wrap" }}>
-              <Grid item>
+            <Grid container justify="space-between" className={classes.raised}>
+              <Grid item xs={isSmallScreen ? 12 : 5}>
                 <Typography variant="h4" className={"title"}>
                   {title}
                 </Typography>
               </Grid>
-              <Grid item>
-                {
-                  stack.map((tech, index) =>
-                    <Chip
-                      key={index}
-                      className={classes.tech}
-                      label={tech}
-                    />
-                  )
-                }
-                {
-                  github !== "" && 
-                    <IconButton className={classes.tech}>
-                      <a href={github}><GitHub/></a>
-                    </IconButton>
-                }
-
+              <Grid item xs={isSmallScreen ? 12 : 7}>
+                <Grid container justify={isSmallScreen ? "flex-start" : "flex-end"} alignItems="center">
+                  {
+                    stack.map((tech, index) =>
+                      <Chip
+                        key={index}
+                        className={classes.tech}
+                        label={tech}
+                      />
+                    )
+                  }
+                  {
+                    github !== "" && 
+                      <IconButton className={classes.tech}>
+                        <a href={github}><GitHub/></a>
+                      </IconButton>
+                  }
+                </Grid>
               </Grid>
             </Grid>
 
@@ -127,6 +128,9 @@ const useStyles = makeStyles(() => ({
     background: "white",
     width: "90%",
   },
+  raised: {
+    zIndex: 5,
+  }
 }));
 
 export default ProjectModal;

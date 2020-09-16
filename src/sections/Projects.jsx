@@ -11,6 +11,8 @@ import ProjectModal from "../components/ProjectModal";
 import ProjectPreview from "../components/ProjectPreview";
 
 // Assets
+import pokemonCropped from "../resources/projects/pokemon-cropped.jpg";
+import pokemonBanner from "../resources/projects/pokemon.jpg";
 import banner from "../resources/projects/banner-resized.png";
 import buckle from "../resources/projects/buckle.jpg";
 import buckleSVG from "../resources/projects/buckle.svg";
@@ -22,24 +24,58 @@ import fullBanner from "../resources/MountainBanner.png";
 import croppedBanner from "../resources/CroppedBanner.png";
 
 const Projects = () => {
-  const isSmallScreen = useMediaQuery("(max-width: 1100px)");
+  const isSmallScreen = useMediaQuery("(max-width: 1200px)");
 
+  const [openPokemon, setOpenPokemon] = useState(false);
   const [openSite, setOpenSite] = useState(false);
   const [openBuckle, setOpenBuckle] = useState(false);
   const [openVR, setOpenVR] = useState(false);
   const [openCare, setOpenCare] = useState(false);
 
+  const togglePokemonModal = () => { setOpenPokemon(!openPokemon); };
   const toggleSiteModal = () => { setOpenSite(!openSite); };
   const toggleBuckleModal = () => { setOpenBuckle(!openBuckle); };
   const toggleVRModal = () => { setOpenVR(!openVR); };
   const toggleCareModal = () => { setOpenCare(!openCare); };
 
-  // individual projects, probably break them into their own jsx later
+  const pokemon = (
+    <ProjectModal
+      title="Pokémon Team Builder"
+      toggleModal={togglePokemonModal}
+      stack={["AWS Amplify", "AWS AppSync", "AWS DynamoDB", "AWS Cognito", "GraphQL", "React.js", "Material-UI", "PokéAPI", "React-Router", "CSS",]}
+      banner={pokemonCropped}
+      bannerAlt="Pokémon Team Builder"
+      github="https://github.com/ryansle/pokemon-team-checker"
+    >
+      <Typography variant="h5" className="subtitle">Why am I making this?</Typography>
+      <p>
+        This platform was intended to solve my age-old problem of trying to plan out my Pokémon teams when starting a new game. I'm an
+        organized person; I like to plan things out before I execute, gameplay included. I also love know what Pokémon I have and haven't used
+        before so I can try to prioritize new Pokémon for new experiences. There was never any system like this that allowed me to organize
+        my thoughts, see statistics, and keep records of my gameplay. So, I decided to start trying to build my own.
+      </p>
+      <p>
+        On top of that, I had little prior experience using Amazon Web Services, aside from the Hoffman project, so this served as a good
+        opportunity to teach myself some new skills while building something that I (and I'm sure many others) would be able to use.
+      </p>
+      <Typography variant="h5" className="subtitle">Planned Features</Typography>
+      <p>
+        <ul>
+          <li>Plan out countless numbers of Pokémon teams utilizing the Team Building Interface</li>
+          <li>Create an account in order to save your created teams for future consumption</li>
+          <li>Retrieve analytics on your Pokémon teams to see type advantages, disadvantages, and various other statistics</li>
+          <li>Share your compiled Pokémon teams with your friends</li>
+          <li>Keep records of your previously used Pokémon</li>
+        </ul>
+      </p>
+    </ProjectModal>
+  );
+
   const personalWebsite = (
     <ProjectModal
       title="Personal Website"
       toggleModal={toggleSiteModal}
-      stack={["React.js", "Material-UI", "JavaScript", "React-Router", "HTML", "CSS", "GitHub"]}
+      stack={["React.js", "Material-UI", "JavaScript", "React-Router", "CSS", "GitHub"]}
       banner={isSmallScreen ? croppedBanner : fullBanner}
       bannerAlt="Ryan Le Banner"
       github="https://github.com/ryansle/portfolio"
@@ -211,8 +247,23 @@ const Projects = () => {
   );
 
   return (
-    <div className={isSmallScreen ? "responsiveContainer" : "container"}>
-      <Grid container justify="space-evenly">
+    <div className={isSmallScreen ? "responsive-container" : "container"}>
+      <Grid container justify="space-between">
+        <ProjectPreview
+          title="Pokémon Team Builder"
+          toggleModal={togglePokemonModal}
+          banner={pokemonBanner}
+          bannerAlt="Pokémon Team Builder"
+          stack={["Amazon Web Services", "React.js", "PokéAPI"]}
+        >
+          <Typography variant="body2">
+            I switched to an iOS team at Nelnet that worked with Amazon Web Services for
+            their serverless backend. Up until now, I had minimal expose to the technologies,
+            so I started working on a platform that allowed you to build and plan out your
+            Pokémon teams, track your team statistics, and do a couple more things as well.
+            <b> This project is still a work in progress.</b>
+          </Typography>
+        </ProjectPreview>
         <ProjectPreview
           title="Personal Website"
           toggleModal={toggleSiteModal}
@@ -278,6 +329,15 @@ const Projects = () => {
 
       {/* Invisible modal displays */}
       <Modal
+        open={openPokemon}
+        onClose={togglePokemonModal}
+      >
+        <>
+          {pokemon}
+        </>
+      </Modal>
+
+      <Modal
         open={openSite}
         onClose={toggleSiteModal}
       >
@@ -315,6 +375,6 @@ const Projects = () => {
       <br/>
     </div>
   );
-}
+};
   
 export default Projects;
