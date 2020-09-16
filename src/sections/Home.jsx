@@ -54,7 +54,7 @@ const Home = () => {
             image={experience}
             icon="experience"
             title="Experience"
-            description="Check out where I have been working over the last few years (and contact me to add your company to the list!)."
+            description="Check out where I have been working over the last few years, and how I have managed to contribute to corporations in the past."
             link="/experience"
             linkText="See where I have worked in the past"
           />

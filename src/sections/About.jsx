@@ -138,6 +138,7 @@ const About = () => {
             name="Dr. Chris Bohn, PhD"
             title="Assistant Professor of Practice"
             company="University of Nebraska-Lincoln"
+            location="Lincoln, NE"
             email="bohn@unl.edu"
             image={chris}
             alt="Dr. Christopher Bohn, PhD"
@@ -146,6 +147,7 @@ const About = () => {
             name="Dr. Brady Garvin, PhD"
             title="Assistant Professor of Practice"
             company="University of Nebraska-Lincoln"
+            location="Lincoln, NE"
             email="bgarvin@cse.unl.edu"
             phone="402-472-5088"
             image={brady}
@@ -155,6 +157,7 @@ const About = () => {
             name="Dr. Suzette Person, PhD"
             title="Associate Professor of Practice"
             company="University of Nebraska-Lincoln"
+            location="Lincoln, NE"
             email="suzette.person@unl.edu"
             image={suzette}
             alt="Dr. Suzette Jean Person, PhD"
@@ -163,6 +166,7 @@ const About = () => {
             name="Jerry L. Hoffman"
             title="Founder &amp; Partner"
             company="Hoffman Strategy Group"
+            location="Lincoln, NE"
             email="jerry@hoffmanstrategy.com"
             image={jerry}
             alt="Jerry L. Hoffman, Founder of the Hoffman Strategy Group"
@@ -171,6 +175,7 @@ const About = () => {
             name="Kevan Gray"
             title="Lead Technical Project Manager"
             company="Buckle"
+            location="Kearney, NE"
             email="kevan.gray@buckle.com"
             phone="308-455-0711"
             image={kevan}
@@ -180,6 +185,7 @@ const About = () => {
             name="Christian Berck"
             title="Software Engineer"
             company="Microsoft"
+            location="Redmond, WA"
             email="christian@berck.org"
             phone="402-270-0986"
             image={christian}
@@ -189,6 +195,7 @@ const About = () => {
             name="Marc Johnson"
             title="IT Infrastructure Engineer"
             company="Nelnet"
+            location="Lincoln, NE"
             email="marc.johnson@nelnet.net"
             image={marc}
             alt="Marc Johnson"
@@ -197,6 +204,7 @@ const About = () => {
             name="Billy Allen"
             title="IT Manager"
             company="Nelnet"
+            location="Dallas, TX"
             email="billy.allen@nelnet.net"
             image={billy}
             alt="Billy Allen"

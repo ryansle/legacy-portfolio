@@ -110,9 +110,7 @@ const NavCard = ({ image, icon, title, description, link, linkText }) => {
       style={{
         height: "auto",
         marginBottom: 20,
-        // 
         border: "1px solid #9fa2b4",
-        textDecoration: "none",
       }}
     >
       <CardMedia className={classes.media} image={image} title={title}/>
