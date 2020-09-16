@@ -7,6 +7,60 @@ import { Mail, Phone } from "@material-ui/icons";
 // Utilities
 import { makeStyles } from "@material-ui/core/styles";
 
+const Reference = ({ name, title, company, location, email, phone="", image, alt }) => {
+  const classes = useStyles();
+  const isSmallScreen = useMediaQuery("(max-width: 1550px)");
+  const mailto = `mailto:${email}`;
+  const tel = `tel:1-${phone}`;
+  const areaCode = phone.substring(0, 3);
+  const middle = phone.substring(4, 7);
+  const end = phone.substring(8);
+  const formattedTel = `(${areaCode}) ${middle}-${end}`;
+
+  return (
+    <Card className={isSmallScreen ? classes.responsiveReference : classes.reference}>
+      <div className={classes.details}>
+        <Typography variant="h6">
+          {name}
+        </Typography>
+        <Typography variant="subtitle1" color="textSecondary">
+          {title}
+        </Typography>
+        <Typography variant="subtitle1" color="textSecondary">
+          {company}
+        </Typography>
+        <Typography variant="subtitle1" color="textSecondary">
+          {location}
+        </Typography>
+        <br/>
+        <a href={mailto}>
+          <Grid container>
+            <Mail className={classes.referenceIcon}/>
+            <Typography variant="subtitle1">
+              {email}
+            </Typography>
+          </Grid>
+        </a>
+        {phone !== "" &&
+          <a href={tel}>
+            <Grid container>
+              <Phone className={classes.referenceIcon}/>
+              <Typography variant="subtitle1">
+                {formattedTel}
+              </Typography>
+            </Grid>
+          </a>
+        }
+      </div>
+      <CardMedia
+        className={classes.cover}
+        image={image}
+        title={alt}
+      />
+    </Card> 
+  );
+};
+
 const useStyles = makeStyles(() => ({
   responsiveReference: {
     display: "flex",
@@ -43,61 +97,5 @@ const useStyles = makeStyles(() => ({
     width: "40%",
   },
 }));
-
-const Reference = ({ name, title, company, location, email, phone="", image, alt }) => {
-  const classes = useStyles();
-  const isSmallScreen = useMediaQuery("(max-width: 1550px)");
-  const mailto = `mailto:${email}`;
-  const tel = `tel:1-${phone}`;
-  const areaCode = phone.substring(0, 3);
-  const middle = phone.substring(4, 7);
-  const end = phone.substring(8);
-  const formattedTel = `(${areaCode}) ${middle}-${end}`;
-
-  return (
-    <>
-      <Card className={isSmallScreen ? classes.responsiveReference : classes.reference}>
-        <div className={classes.details}>
-          <Typography variant="h6">
-            {name}
-          </Typography>
-          <Typography variant="subtitle1" color="textSecondary">
-            {title}
-          </Typography>
-          <Typography variant="subtitle1" color="textSecondary">
-            {company}
-          </Typography>
-          <Typography variant="subtitle1" color="textSecondary">
-            {location}
-          </Typography>
-          <br/>
-          <a href={mailto}>
-            <Grid container>
-              <Mail className={classes.referenceIcon}/>
-              <Typography variant="subtitle1">
-                {email}
-              </Typography>
-            </Grid>
-          </a>
-          {phone !== "" &&
-            <a href={tel}>
-              <Grid container>
-                <Phone className={classes.referenceIcon}/>
-                <Typography variant="subtitle1">
-                  {formattedTel}
-                </Typography>
-              </Grid>
-            </a>
-          }
-        </div>
-        <CardMedia
-          className={classes.cover}
-          image={image}
-          title={alt}
-        />
-      </Card> 
-    </>
-  )
-}
 
 export default Reference;

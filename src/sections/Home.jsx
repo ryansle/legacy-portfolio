@@ -19,7 +19,6 @@ import projects from "../resources/stock/projects.jpeg";
 import contact from "../resources/stock/contact.jpeg";
 import resume from "../resources/stock/resume.jpg";
 
-
 const Home = () => {
   const isSmallScreen = useMediaQuery("(max-width: 1100px)");
 
@@ -94,6 +93,6 @@ const Home = () => {
       </section>
     </div>
   );
-}
+};
   
 export default Home;

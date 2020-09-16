@@ -10,6 +10,28 @@ import {
 // Utilities
 import { makeStyles } from "@material-ui/core/styles";
 
+const SkillTable = ({ title, children }) => {
+  const classes = useStyles();
+
+  return (
+    <Grid
+      container
+      className={classes.skillTable}
+      justify="flex-start"
+    >
+      <Grid container>
+        <Typography variant="h4">
+          {title}
+        </Typography>
+        <Divider className={classes.divider}/>
+
+        {children}
+
+      </Grid>
+    </Grid>
+  );
+};
+
 const useStyles = makeStyles(() => ({
   skillTable: {
     boxShadow: "0px 0px 6px 1px #555",
@@ -23,29 +45,5 @@ const useStyles = makeStyles(() => ({
     marginBottom: 15,
   },
 }));
-
-const SkillTable = ({ title, children }) => {
-  const classes = useStyles();
-
-  return (
-    <>
-      <Grid
-        container
-        className={classes.skillTable}
-        justify="flex-start"
-      >
-        <Grid container>
-          <Typography variant="h4">
-            {title}
-          </Typography>
-          <Divider className={classes.divider}/>
-
-          {children}
-
-        </Grid>
-      </Grid>
-    </>
-  );
-};
 
 export default SkillTable;

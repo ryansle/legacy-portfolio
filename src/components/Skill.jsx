@@ -9,6 +9,26 @@ import {
 // Utilities
 import { makeStyles } from "@material-ui/core/styles";
 
+const Skill = ({ name, image, alt }) => {
+  const classes = useStyles();
+
+  return (
+    <Grid 
+      item 
+      className={classes.skill}
+    >
+      <img 
+        src={image} 
+        alt={alt} 
+        className={classes.media}
+      />
+      <Typography variant="h6">
+        {name}
+      </Typography>
+    </Grid>
+  );
+};
+
 const useStyles = makeStyles(() => ({
   media: {
     height: 100,
@@ -22,27 +42,5 @@ const useStyles = makeStyles(() => ({
     marginBottom: 20,
   },
 }));
-
-const Skill = ({ name, image, alt }) => {
-  const classes = useStyles();
-
-  return (
-    <>
-      <Grid 
-        item 
-        className={classes.skill}
-      >
-        <img 
-          src={image} 
-          alt={alt} 
-          className={classes.media}
-        />
-        <Typography variant="h6">
-          {name}
-        </Typography>
-      </Grid>
-    </>
-  );
-};
 
 export default Skill;

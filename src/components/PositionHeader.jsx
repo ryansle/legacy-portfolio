@@ -11,16 +11,6 @@ import {
 // Utilities
 import { makeStyles } from "@material-ui/core/styles";
 
-const useStyles = makeStyles(() => ({
-  media: {
-    maxWidth: "90%",
-    height: "auto",
-  },
-  tech: {
-    margin: 5,
-  },
-}));
-
 const PositionHeader = ({ website, image, alt, title, dateRange, stack }) => {
   const classes = useStyles();
   const isSmallScreen = useMediaQuery("(max-width: 1300px)");
@@ -66,5 +56,15 @@ const PositionHeader = ({ website, image, alt, title, dateRange, stack }) => {
     </>
   );
 };
+
+const useStyles = makeStyles(() => ({
+  media: {
+    maxWidth: "90%",
+    height: "auto",
+  },
+  tech: {
+    margin: 5,
+  },
+}));
 
 export default PositionHeader;

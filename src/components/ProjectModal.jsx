@@ -15,50 +15,6 @@ import Banner from "./Banner";
 // Utilities
 import { makeStyles } from "@material-ui/core/styles";
 
-const useStyles = makeStyles(() => ({
-  exitButton: {
-    margin: 5,
-    position: "absolute",
-    zIndex: 1,
-    right: 0,
-  },
-  scrollable: {
-    overflow: "scroll",
-    maxHeight: "55vh",
-  },
-  description: {
-    paddingLeft: 70,
-    paddingRight: 70,
-    paddingBottom: 15,
-    scrollPadding: -15,
-  },
-  responsiveDescription: {
-    paddingLeft: 30,
-    paddingRight: 30,
-    paddingBottom: 15,
-    scrollPadding: -15,
-  },
-  tech: {
-    margin: 4,
-  },
-  overlay: {
-    position: "fixed",
-    top: "50%",
-    left: "50%",
-    transform: "translate(-50%, -50%) !important",
-    background: "white",
-    width: "70%",
-  },
-  responsiveOverlay: {
-    position: "fixed",
-    top: "50%",
-    left: "50%",
-    transform: "translate(-50%, -50%)",
-    background: "white",
-    width: "90%",
-  },
-}));
-
 const ProjectModal = React.forwardRef(
   (
     { 
@@ -128,5 +84,49 @@ const ProjectModal = React.forwardRef(
     );
   }
 );
+
+const useStyles = makeStyles(() => ({
+  exitButton: {
+    margin: 5,
+    position: "absolute",
+    zIndex: 1,
+    right: 0,
+  },
+  scrollable: {
+    overflow: "scroll",
+    maxHeight: "55vh",
+  },
+  description: {
+    paddingLeft: 70,
+    paddingRight: 70,
+    paddingBottom: 15,
+    scrollPadding: -15,
+  },
+  responsiveDescription: {
+    paddingLeft: 30,
+    paddingRight: 30,
+    paddingBottom: 15,
+    scrollPadding: -15,
+  },
+  tech: {
+    margin: 4,
+  },
+  overlay: {
+    position: "fixed",
+    top: "50%",
+    left: "50%",
+    transform: "translate(-50%, -50%) !important",
+    background: "white",
+    width: "70%",
+  },
+  responsiveOverlay: {
+    position: "fixed",
+    top: "50%",
+    left: "50%",
+    transform: "translate(-50%, -50%)",
+    background: "white",
+    width: "90%",
+  },
+}));
 
 export default ProjectModal;

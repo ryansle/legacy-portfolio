@@ -3,14 +3,6 @@ import React from "react";
 // Utilities
 import { makeStyles } from "@material-ui/core/styles";
 
-const useStyles = makeStyles(() => ({
-  banner: {
-    display: "flex",
-    backgroundPosition: "left",
-    backgroundSize: "cover",
-  },
-}));
-
 // Credit to Peyton Tanzillo (PeytonTanzillo.com) for the banner component
 const Banner = ({ image, alt, screenHeight }) => {
   const classes = useStyles();
@@ -26,7 +18,15 @@ const Banner = ({ image, alt, screenHeight }) => {
       }}
       alt={alt}
     />
-  )
-}
+  );
+};
+
+const useStyles = makeStyles(() => ({
+  banner: {
+    display: "flex",
+    backgroundPosition: "left",
+    backgroundSize: "cover",
+  },
+}));
 
 export default Banner;

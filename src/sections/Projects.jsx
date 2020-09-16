@@ -22,7 +22,7 @@ import fullBanner from "../resources/MountainBanner.png";
 import croppedBanner from "../resources/CroppedBanner.png";
 
 const Projects = () => {
-  const isSmallScreen = useMediaQuery("(max-width:1100px)");
+  const isSmallScreen = useMediaQuery("(max-width: 1100px)");
 
   const [openSite, setOpenSite] = useState(false);
   const [openBuckle, setOpenBuckle] = useState(false);
@@ -211,110 +211,108 @@ const Projects = () => {
   );
 
   return (
-    <div>
-      <section className={isSmallScreen ? "responsiveContainer" : "container"}>
-        <Grid container justify="space-evenly">
-          <ProjectPreview
-            title="Personal Website"
-            toggleModal={toggleSiteModal}
-            banner={banner}
-            bannerAlt="My Banner"
-            stack={["React.js", "Material-UI"]}
-          >
-            <Typography variant="body2">
-              Since I never had the chance to learn React.js prior 
-              to working with the Hoffman Strategy Group, I wanted to 
-              give myself some practice beforehand. Building this website 
-              was a good way to teach myself the basics and gain a firm enough 
-              grasp on the underlying tech stack before diving headfirst into 
-              their project.
-            </Typography>
-          </ProjectPreview>
-          <ProjectPreview
-            title="Social Media Marketing"
-            toggleModal={toggleBuckleModal}
-            banner={buckle}
-            bannerAlt="The Buckle"
-            stack={["Swift", "SwiftUI", "Drupal"]}
-          >
-            <Typography variant="body2">
-              I worked as the Squad Lead & Product Manager on 
-              my senior design project as we tackled a year-long project to 
-              create a social media marketing application for the 
-              Buckle. The app consolidated all of their marketing 
-              department's potential social media posts into one 
-              place for easier sharing of corporate promotions.
-            </Typography>
-          </ProjectPreview>
-          <ProjectPreview
-            title="Virtual Reality Space Explorer"
-            toggleModal={toggleVRModal}
-            banner={spaceExplorer}
-            bannerAlt="Virtual Reality Space Explorer"
-            stack={["C#", "Unity", "SteamVR"]}
-          >
-            <Typography variant="body2">
-              The university offered an amazing special topics course last spring entitled 
-              "Exploring Virtual Reality." We learned how to use tools like C#, 
-              Unity, and SteamVR to develop interactive virtual reality games 
-              while partnering up with Emerging Arts students at the university.
-            </Typography>
-          </ProjectPreview>
-          <ProjectPreview
-            title="Care Tracking Application"
-            toggleModal={toggleCareModal}
-            banner={care}
-            bannerAlt="Care Tracking Application - Freshman Year Capstone Project"
-            stack={["Python", "MySQL", "Kivy"]}
-          >
-            <Typography variant="body2">
-              This was the first CRUD application I ever developed, through one 
-              of my Software Engineering courses at the end of my freshman year 
-              of college. This system allowed a user to input patient data to be 
-              parsed down, organized into different data tables, and then pulled 
-              back out for observation and modified accordingly.
-            </Typography>
-          </ProjectPreview>
-        </Grid>
-
-        {/* Invisible modal displays */}
-        <Modal
-          open={openSite}
-          onClose={toggleSiteModal}
+    <div className={isSmallScreen ? "responsiveContainer" : "container"}>
+      <Grid container justify="space-evenly">
+        <ProjectPreview
+          title="Personal Website"
+          toggleModal={toggleSiteModal}
+          banner={banner}
+          bannerAlt="My Banner"
+          stack={["React.js", "Material-UI"]}
         >
-          <>
-            {personalWebsite}
-          </>
-        </Modal>
-
-        <Modal
-          open={openBuckle}
-          onClose={toggleBuckleModal}
+          <Typography variant="body2">
+            Since I never had the chance to learn React.js prior 
+            to working with the Hoffman Strategy Group, I wanted to 
+            give myself some practice beforehand. Building this website 
+            was a good way to teach myself the basics and gain a firm enough 
+            grasp on the underlying tech stack before diving headfirst into 
+            their project.
+          </Typography>
+        </ProjectPreview>
+        <ProjectPreview
+          title="Social Media Marketing"
+          toggleModal={toggleBuckleModal}
+          banner={buckle}
+          bannerAlt="The Buckle"
+          stack={["Swift", "SwiftUI", "Drupal"]}
         >
-          <>
-            {socialMediaMarketing}
-          </>
-        </Modal>
-
-        <Modal
-          open={openVR}
-          onClose={toggleVRModal}
+          <Typography variant="body2">
+            I worked as the Squad Lead & Product Manager on 
+            my senior design project as we tackled a year-long project to 
+            create a social media marketing application for the 
+            Buckle. The app consolidated all of their marketing 
+            department's potential social media posts into one 
+            place for easier sharing of corporate promotions.
+          </Typography>
+        </ProjectPreview>
+        <ProjectPreview
+          title="Virtual Reality Space Explorer"
+          toggleModal={toggleVRModal}
+          banner={spaceExplorer}
+          bannerAlt="Virtual Reality Space Explorer"
+          stack={["C#", "Unity", "SteamVR"]}
         >
-          <>
-            {vrGame}
-          </>
-        </Modal>
-
-        <Modal
-          open={openCare}
-          onClose={toggleCareModal}
+          <Typography variant="body2">
+            The university offered an amazing special topics course last spring entitled 
+            "Exploring Virtual Reality." We learned how to use tools like C#, 
+            Unity, and SteamVR to develop interactive virtual reality games 
+            while partnering up with Emerging Arts students at the university.
+          </Typography>
+        </ProjectPreview>
+        <ProjectPreview
+          title="Care Tracking Application"
+          toggleModal={toggleCareModal}
+          banner={care}
+          bannerAlt="Care Tracking Application - Freshman Year Capstone Project"
+          stack={["Python", "MySQL", "Kivy"]}
         >
-          <>
-            {careTracking}
-          </>
-        </Modal>
-        <br/>
-      </section>
+          <Typography variant="body2">
+            This was the first CRUD application I ever developed, through one 
+            of my Software Engineering courses at the end of my freshman year 
+            of college. This system allowed a user to input patient data to be 
+            parsed down, organized into different data tables, and then pulled 
+            back out for observation and modified accordingly.
+          </Typography>
+        </ProjectPreview>
+      </Grid>
+
+      {/* Invisible modal displays */}
+      <Modal
+        open={openSite}
+        onClose={toggleSiteModal}
+      >
+        <>
+          {personalWebsite}
+        </>
+      </Modal>
+
+      <Modal
+        open={openBuckle}
+        onClose={toggleBuckleModal}
+      >
+        <>
+          {socialMediaMarketing}
+        </>
+      </Modal>
+
+      <Modal
+        open={openVR}
+        onClose={toggleVRModal}
+      >
+        <>
+          {vrGame}
+        </>
+      </Modal>
+
+      <Modal
+        open={openCare}
+        onClose={toggleCareModal}
+      >
+        <>
+          {careTracking}
+        </>
+      </Modal>
+      <br/>
     </div>
   );
 }

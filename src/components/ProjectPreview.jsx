@@ -13,38 +13,6 @@ import {
 // Utilities
 import { makeStyles } from "@material-ui/core/styles";
 
-const useStyles = makeStyles(() => ({
-  project: {
-    minHeight: 425,
-    minWidth: 355,
-    maxHeight: "30vw",
-    maxWidth: "25vw",
-    boxShadow: "0px 3px 6px 0px #555",
-    margin: 10,
-  },
-  responsiveProject: {
-    width: "100%",
-    height: "auto",
-    boxShadow: "0px 3px 6px 0px #555",
-    margin: 10,
-  },
-  media: {
-    height: "auto",
-    width: "100%",
-  },
-  contents: {
-    padding: 10,
-  },
-  
-  tech: {
-    margin: 4,
-  },
-  learnMore: {
-    float: "right",
-    margin: 6,
-  },
-}));
-
 const ProjectPreview = React.forwardRef(
   (
     {
@@ -94,8 +62,39 @@ const ProjectPreview = React.forwardRef(
           </Button>
         </div>
       </Card>
-    )
+    );
   }
 );
+
+const useStyles = makeStyles(() => ({
+  project: {
+    minHeight: 425,
+    minWidth: 355,
+    maxHeight: "30vw",
+    maxWidth: "25vw",
+    boxShadow: "0px 3px 6px 0px #555",
+    margin: 10,
+  },
+  responsiveProject: {
+    width: "100%",
+    height: "auto",
+    boxShadow: "0px 3px 6px 0px #555",
+    margin: 10,
+  },
+  media: {
+    height: "auto",
+    width: "100%",
+  },
+  contents: {
+    padding: 10,
+  },
+  tech: {
+    margin: 4,
+  },
+  learnMore: {
+    float: "right",
+    margin: 6,
+  },
+}));
 
 export default ProjectPreview;

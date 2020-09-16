@@ -15,17 +15,6 @@ import { Send } from "@material-ui/icons";
 import { makeStyles } from "@material-ui/core";
 import emailjs from "emailjs-com";
 
-
-const useStyles = makeStyles((theme) => ({
-  field: {
-    marginBottom: "3vh",
-  },
-  backdrop: {
-    zIndex: theme.zIndex.drawer + 1,
-    color: '#fff',
-  },
-}));
-
 const ContactForm = () => {
   const classes = useStyles();
 
@@ -151,7 +140,17 @@ const ContactForm = () => {
           </Alert>
         </Snackbar>
     </>
-  )
+  );
 };
+
+const useStyles = makeStyles((theme) => ({
+  field: {
+    marginBottom: "3vh",
+  },
+  backdrop: {
+    zIndex: theme.zIndex.drawer + 1,
+    color: '#fff',
+  },
+}));
 
 export default ContactForm;

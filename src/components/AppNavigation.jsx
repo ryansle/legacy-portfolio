@@ -34,51 +34,6 @@ import { MenuItems } from "../utils/menu-items";
 
 const sidebarWidth = 225;
 
-const useStyles = makeStyles((theme) => ({
-  root: {
-    display: "flex",
-  },
-  sidebar: {
-    width: sidebarWidth,
-    flexShrink: 0,
-  },
-  sidebarLinks: {
-    background: "#363740",
-    [theme.breakpoints.up("sm")]: {
-      width: sidebarWidth,
-      flexShrink: 0,
-    },
-  },
-  drawer: {
-    [theme.breakpoints.up("sm")]: {
-      width: sidebarWidth,
-      flexShrink: 0,
-    },
-  },
-  appBar: {
-    [theme.breakpoints.up("sm")]: {
-      width: `calc(100% - ${sidebarWidth}px)`,
-      marginLeft: sidebarWidth,
-    },
-  },
-  menuButton: {
-    marginRight: theme.spacing(2),
-    [theme.breakpoints.up("sm")]: {
-      display: "none",
-    },
-  },
-  // necessary for content to be below app bar
-  toolbar: theme.mixins.toolbar,
-  content: {
-    flexGrow: 1,
-  },
-  icon: {
-    height: 34,
-    width: "auto",
-    marginRight: 10,
-  }
-}));
-
 const AppNavigation = (props) => {
   const classes = useStyles();
   const theme = useTheme();
@@ -203,6 +158,51 @@ const AppNavigation = (props) => {
       </main>
     </div>
   );
-}
+};
+
+const useStyles = makeStyles((theme) => ({
+  root: {
+    display: "flex",
+  },
+  sidebar: {
+    width: sidebarWidth,
+    flexShrink: 0,
+  },
+  sidebarLinks: {
+    background: "#363740",
+    [theme.breakpoints.up("sm")]: {
+      width: sidebarWidth,
+      flexShrink: 0,
+    },
+  },
+  drawer: {
+    [theme.breakpoints.up("sm")]: {
+      width: sidebarWidth,
+      flexShrink: 0,
+    },
+  },
+  appBar: {
+    [theme.breakpoints.up("sm")]: {
+      width: `calc(100% - ${sidebarWidth}px)`,
+      marginLeft: sidebarWidth,
+    },
+  },
+  menuButton: {
+    marginRight: theme.spacing(2),
+    [theme.breakpoints.up("sm")]: {
+      display: "none",
+    },
+  },
+  // necessary for content to be below app bar
+  toolbar: theme.mixins.toolbar,
+  content: {
+    flexGrow: 1,
+  },
+  icon: {
+    height: 34,
+    width: "auto",
+    marginRight: 10,
+  }
+}));
 
 export default AppNavigation;

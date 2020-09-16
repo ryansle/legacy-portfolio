@@ -25,56 +25,6 @@ import { Link } from "react-router-dom";
 // Utilities
 import { makeStyles } from "@material-ui/core/styles";
 
-const useStyles = makeStyles(() => ({
-  full: {
-    width: "100%",
-    "&:hover": {
-      boxShadow: "0px 2px 3px 1px #555",
-    },
-    "& a": {
-      textDecoration: "none",
-    },
-    "& span": {
-      fontWeight: "bold",
-    },
-  },
-  half: {
-    width: "49%",
-    "&:hover": {
-      boxShadow: "0px 2px 3px 1px #555",
-    },
-    "& a": {
-      textDecoration: "none",
-    },
-    "& span": {
-      fontWeight: "bold",
-    },
-  },
-  third: {
-    width: "32%",
-    "&:hover": {
-      boxShadow: "0 4px 8px 1px rgba(0, 0, 0, 0.2), 0 6px 20px 1px rgba(0, 0, 0, 0.19)",
-    },
-    "& a": {
-      textDecoration: "none",
-    },
-    "& span": {
-      fontWeight: "bold",
-    },
-  },
-  icon: {
-    height: 30,
-    width: "auto",
-    paddingRight: 7,
-  },
-  media: {
-    width: "100%",
-    objectFit: "cover",
-    height: 200,
-    objectPosition: "50% 20%"
-  },
-}));
-
 const NavCard = ({ image, icon, title, description, link, linkText }) => {
   const classes = useStyles();
   const isSmallScreen = useMediaQuery("(max-width: 1100px)");
@@ -135,5 +85,55 @@ const NavCard = ({ image, icon, title, description, link, linkText }) => {
     </Card>
   );
 };
+
+const useStyles = makeStyles(() => ({
+  full: {
+    width: "100%",
+    "&:hover": {
+      boxShadow: "0px 2px 3px 1px #555",
+    },
+    "& a": {
+      textDecoration: "none",
+    },
+    "& span": {
+      fontWeight: "bold",
+    },
+  },
+  half: {
+    width: "49%",
+    "&:hover": {
+      boxShadow: "0px 2px 3px 1px #555",
+    },
+    "& a": {
+      textDecoration: "none",
+    },
+    "& span": {
+      fontWeight: "bold",
+    },
+  },
+  third: {
+    width: "32%",
+    "&:hover": {
+      boxShadow: "0 4px 8px 1px rgba(0, 0, 0, 0.2), 0 6px 20px 1px rgba(0, 0, 0, 0.19)",
+    },
+    "& a": {
+      textDecoration: "none",
+    },
+    "& span": {
+      fontWeight: "bold",
+    },
+  },
+  icon: {
+    height: 30,
+    width: "auto",
+    paddingRight: 7,
+  },
+  media: {
+    width: "100%",
+    objectFit: "cover",
+    height: 200,
+    objectPosition: "50% 20%"
+  },
+}));
 
 export default NavCard;

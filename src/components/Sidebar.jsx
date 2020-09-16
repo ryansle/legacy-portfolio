@@ -22,38 +22,6 @@ import nav from "../utils/enums";
 // Assets
 import headshot from "../resources/RyanLe.png"
 
-const useStyles = makeStyles(() => ({
-  profile: {
-    paddingTop: 20,
-    paddingBottom: 20,
-  },
-  whiteText: {
-    color: "white",
-  },
-  listItem: {
-    backgroundColor: "#363740",
-    borderLeft: "4px solid #363740",
-  },
-  active: {
-    backgroundColor: "#3e4049 !important",
-    color: "white",
-    borderLeft: "4px solid white",
-  },
-  divider: {
-    height: 5,
-  },
-  link: {
-    color: "white",
-    textDecoration: "none",
-  },
-  linkIcon: {
-    color: "white",
-    height: 34,
-    width: "auto",
-    padding: "0px 5px 0px 5px",
-  },
-}));
-
 const Sidebar = ({ 
   mobileOpen,
   handleDrawerToggle,
@@ -63,7 +31,7 @@ const Sidebar = ({
   const classes = useStyles();
 
   const sidebar = (
-    <div>
+    <>
       <Grid 
         container 
         justify="center" 
@@ -141,11 +109,11 @@ const Sidebar = ({
           </Grid>
         </Grid>
       </Grid>
-    </div>
+    </>
   );
 
   const mobileSidebar = (
-    <div>
+    <>
       <div style={{ textAlign: "center", margin: 15, }}>
         <Typography variant="h5" className={classes.whiteText}>Ryan Le</Typography>
         <Typography variant="body1" className={classes.whiteText}>Software Engineer</Typography>
@@ -207,8 +175,7 @@ const Sidebar = ({
       </List>
 
       <Divider className={classes.divider}/>
-      
-    </div>
+    </>
   );
 
   if (mobileOpen) {
@@ -225,5 +192,37 @@ const Sidebar = ({
     );
   }
 };
+
+const useStyles = makeStyles(() => ({
+  profile: {
+    paddingTop: 20,
+    paddingBottom: 20,
+  },
+  whiteText: {
+    color: "white",
+  },
+  listItem: {
+    backgroundColor: "#363740",
+    borderLeft: "4px solid #363740",
+  },
+  active: {
+    backgroundColor: "#3e4049 !important",
+    color: "white",
+    borderLeft: "4px solid white",
+  },
+  divider: {
+    height: 5,
+  },
+  link: {
+    color: "white",
+    textDecoration: "none",
+  },
+  linkIcon: {
+    color: "white",
+    height: 34,
+    width: "auto",
+    padding: "0px 5px 0px 5px",
+  },
+}));
 
 export default Sidebar;

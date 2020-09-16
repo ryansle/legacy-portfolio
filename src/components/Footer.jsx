@@ -6,6 +6,21 @@ import { Typography, useMediaQuery } from "@material-ui/core"
 // Utilities
 import { makeStyles } from "@material-ui/core/styles";
 
+const Footer = () => {
+  const classes = useStyles();
+  const isSmallScreen = useMediaQuery("(max-width: 1100px)");
+
+  const currentYear = new Date().getFullYear();
+
+  return (
+    <footer className={isSmallScreen ? classes.responsiveBottom : classes.bottom}>
+      <Typography variant={isSmallScreen ? "caption" : "h6"}>
+        Copyright &copy; {currentYear} Ryan Le. Website made with React.js and Material-UI Components.
+      </Typography>
+    </footer>
+  );
+};
+
 const useStyles = makeStyles((theme) => ({
   bottom: {
     background: "#3f51b5",
@@ -26,20 +41,5 @@ const useStyles = makeStyles((theme) => ({
     textAlign: "center",
   }
 }));
-
-const Footer = () => {
-  const classes = useStyles();
-  const isSmallScreen = useMediaQuery("(max-width: 1100px)");
-
-  const currentYear = new Date().getFullYear();
-
-  return (
-    <footer className={isSmallScreen ? classes.responsiveBottom : classes.bottom}>
-      <Typography variant={isSmallScreen ? "caption" : "h6"}>
-        Copyright &copy; {currentYear} Ryan Le. Website made with React.js and Material-UI Components.
-      </Typography>
-    </footer>
-  );
-}
 
 export default Footer;
