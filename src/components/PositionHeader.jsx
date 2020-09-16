@@ -5,19 +5,13 @@ import {
   Grid,
   Typography,
   Chip,
+  useMediaQuery,
 } from "@material-ui/core";
 
 // Utilities
 import { makeStyles } from "@material-ui/core/styles";
 
 const useStyles = makeStyles(() => ({
-  position: {
-    color: "#757575",
-  },
-  dateRange: {
-    fontStyle: "italic",
-    color: "#757575",
-  },
   media: {
     maxWidth: "90%",
     height: "auto",
@@ -29,6 +23,7 @@ const useStyles = makeStyles(() => ({
 
 const PositionHeader = ({ website, image, alt, title, dateRange, stack }) => {
   const classes = useStyles();
+  const isSmallScreen = useMediaQuery("(max-width: 1300px)");
 
   return (
     <>
@@ -42,32 +37,32 @@ const PositionHeader = ({ website, image, alt, title, dateRange, stack }) => {
         </a>
       </p>
       <Grid container justify="space-between">
-        <Grid item>
-          <Typography variant="h5" className={classes.position}>
+        <Grid item xs={isSmallScreen ? 12 : 5}>
+          <Typography variant="h5" color="textSecondary">
             {title}
           </Typography>
-          <Typography variant="h6" className={classes.dateRange}>
-            {dateRange}
+          <Typography variant="h6" color="textSecondary">
+            <i>{dateRange}</i>
           </Typography>
+          <Typography variant="body1">
+            <a href={website}>Company Website</a>
+          </Typography>
+          <br/>
         </Grid>
-        <Grid item>
-          {
-            stack.map((tech, index) => 
-              <Chip
-                key={index}
-                className={classes.tech}
-                label={tech}
-              />
-            )
-          }
+        <Grid item xs={isSmallScreen ? 12 : 5}>
+          <Grid container justify={isSmallScreen ? "flex-start" : "flex-end"}>
+            {
+              stack.map((tech, index) => 
+                <Chip
+                  key={index}
+                  className={classes.tech}
+                  label={tech}
+                />
+              )
+            }
+          </Grid>
         </Grid>
       </Grid>
-      <br/> 
-
-      <Typography variant="body1">
-        <a href={website}>Company Website</a>
-      </Typography>
-      <br/>
     </>
   );
 };

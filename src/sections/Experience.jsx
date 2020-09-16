@@ -36,57 +36,46 @@ const Experience = () => {
       <section className={isMobileScreen ? "responsiveContainer" : "container"}>
         <Grid container direction="column">
           <Position
-            company="Hoffman Strategy Group"
-            title="Software Engineer | Product Manager"
-            dateRange="November 2019 - Now"
-            stack={["React.js", "Material-UI", "GraphQL", "Amazon Web Services"]}
-            link="hoffman-strategy-group"
-            image={hsg}
-            alt="Hoffman Strategy Group"
+            company="Nelnet"
+            title="IT Software Engineer Intern"
+            dateRange="June 2020 - Now"
+            stack={["Swift", "UIKit", "Amazon Web Services", "Figma", "XSLT",]}
+            link="nelnet"
+            image={nelnet}
+            alt="Nelnet"
           >
             <Typography variant="body1" component={"span"}>
-              My partner and I, <a href="https://msich.netlify.app/">Matt Sichterman,</a> inherited a pre-existing
-              JavaScript codebase and worked together to redefine the product vision for the Hoffman Analytics platform.
-              We lead the redevelopment of an online commercial real estate feasibility analytics and client report generation system.
-              This enhanced system allows you to:
+              Participated in a fully remote internship that focused on developing iOS applications for Nelnet's <a href="https://campuscommerce.com/campuskey/">Campus Key</a> team.
+              Previously, I worked on Nelnet's Workday team that focused on developing backend services and integrations for the company. Now, I utilize the latest-and-greatest mobile development standards 
+              including the Swift progamming language, SwiftUI, and the Serverless Framework. 
+              Some of the things I've had the chance to do in this position:
               <ul>
-                <li>Quickly organize data by project to upload and download files with ease</li>
-                <li>Create meaningful insights by harnessing the power of business intellegence</li>
-                <li>See the latest team activity and have quick access to recent file uploads and project updates</li>
-                <li>Stay organized and keep tabs on the team while promoting ultimate productivity</li>
+                <li>Develop dynamically scalable iOS applications with Swift, UIKit, and the Serverless Framework</li>
+                <li>Design and develop rich, interactive user experiences utilizing the power of UIKit</li>
+                <li>Perform XML data transformations using the XSLT functional language</li>
               </ul>
             </Typography>
           </Position>
           <Divider className={classes.divider}/>
           <Position
-            company="Nelnet"
-            title="IT Software Engineer Intern"
-            dateRange="June 2020 - Now"
-            stack={["Swift", "SwiftUI", "Amazon Web Services", "XSLT",]}
-            link="nelnet"
-            image={nelnet}
-            alt="Nelnet"
+            company="Hoffman Strategy Group"
+            title="Software Engineer | Product Manager"
+            dateRange="November 2019 - September 2020"
+            stack={["React.js", "Material-UI", "Amazon Web Services", "GraphQL"]}
+            link="hoffman-strategy-group"
+            image={hsg}
+            alt="Hoffman Strategy Group"
           >
-            {/* <Typography variant="body1" component={"span"}>
-              Participated in a fully remote internship that focused on developing backend services that integrated with Nelnet's leased Workday system.
-              I also worked to further the developments of an existing software project known as the LenderBond System, a .NET codebase that worked as the 
-              one-stop shop for the AGM team's internal processes. In this position, I demonstrated the ability to:
-              <ul>
-                <li>Document test plans and perform necessary testing on development code</li>
-                <li>Research and create software development requirements</li>
-                <li>Perform XML data transformations using the XSLT functional language</li>
-                <li>Practice agile methodologies while contributing to an existing codebase</li>
-              </ul>
-            </Typography> */}
             <Typography variant="body1" component={"span"}>
-              Participated in a fully remote internship that focused on developing iOS applications for Nelnet's <a href="https://campuscommerce.com/campuskey/">Campus Key</a> team.
-              Previously, I worked on Nelnet's Workday team that focused on developing backend services and integrations for the company. Now, I utilize the latest-and-greatest mobile development standards 
-              including the Swift progamming language, SwiftUI, and the Serverless Framework. I also had the opportunity to utilize my creative skillsets to develop and design interactive user experiences. 
-              Some of the things I've had the chance to do in this position:
+              My partner and I, <a href="https://msich.dev/">Matt Sichterman,</a> inherited a pre-existing
+              JavaScript codebase and worked together to redefine the product vision for the Hoffman Analytics platform.
+              We lead the redevelopment of an online commercial real estate feasibility analytics and client report generation system.
+              This enhanced system allows you to:
               <ul>
-                <li>Design and develop rich, interactive user experiences utilizing the power of SwiftUI</li>
-                <li>Developed dynamically scalable iOS applications using the power of Serverless</li>
-                <li>Perform XML data transformations using the XSLT functional language</li>
+                <li>Quickly organize data by project to upload and download files with ease</li>
+                <li>Directly integrate with a variety of Amazon Web Services to store files, authenticate users, and create and store project information</li>
+                <li>Search, filter, and compare projects to painlessly track down similar markets</li>
+                <li>Easily upload and download files to a variety of projects with bulk capabilities</li>
               </ul>
             </Typography>
           </Position>
@@ -106,8 +95,8 @@ const Experience = () => {
               web development toolsets like .NET Core and Kendo UI. This system allowed a user to:
               <ul>
                 <li>Easily export database information onto a formatted PDF</li>
-                <li>Filter through 2,000 database entries quickly based on their entity relationships</li>
-                <li>View all the corresponding data to an electronic component unit at the touch of a button</li>
+                <li>Filter through 2,000 database entries quickly and easily based on their entity relationships</li>
+                <li>Query all of an eletronic component unit's corresponding data at the touch of a button to be displayed in a sensical, easy-to-read way</li>
               </ul>
             </Typography>
           </Position>
@@ -122,7 +111,7 @@ const Experience = () => {
             alt="University of Nebraska-Lincoln - Department of Computer Science &amp; Engineering"
           >
             <Typography variant="body1" component={"span"}>
-              Aided Dr. Bohn in the planning and execution of his CSCE 361 (Software Engineering) course while also grading students assignments
+              Aided Dr. Bohn in the planning and execution of his CSCE 361 (Software Engineering) course while also grading student assignments
               and holding weekly office hours. In this position, I also:
               <ul>
                 <li>Managed three student software teams as they tackled a semester-long development project</li>

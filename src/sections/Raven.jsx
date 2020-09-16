@@ -24,6 +24,7 @@ const Raven = () => {
           dateRange="May 2019 - August 2019"
           stack={["JavaScript", "Kendo UI", "C#", "ASP.NET Core", "SQL", "Dapper", "HTML", "CSS", "GitLab", "Visual Studio"]}
         />
+        <br/>
 
         <Typography variant="body1">
           Raven is a technology company that creates innovative solutions to great challenges. 
@@ -34,26 +35,23 @@ const Raven = () => {
         <Typography variant="h5" className="title">Responsibilities</Typography>
         <Typography variant="body1" component={"span"}>
           <ul>
+            <li>Streamlined the report generation process by developing a system that quickly exported database information onto a formatted PDF, saving time and maintaining consistency across reports.</li>
+            <li>Learned best practices with version control by rebasing, squashing, and branching with Git.</li>
+            <li>Familiarized myself with Kendo UI in order to simplify the web development process.</li>
             <li>Researched and create development requirements.</li>
             <li>Documented test plans and perform necessary testing on development code.</li>
             <li>Coordinated with my supervisor, mentor, and project management on development tasks.</li>
-            <li>Learned best practices in a team development environment.</li>
-            <li>Developed software (work closely with mentor and development team to meet objectives).</li>
-            <li>Developed a Report Generator to easily export database information onto a formatted PDF.</li>
-            <li>Utilized Chrome DevTools and Visual Studio Professional to trace through non-functional code.</li>
-            <li>Learned best practices with version control by rebasing, squashing, and branching with Git.</li>
-            <li>Familiarized myself with Kendo UI in order to simplify the web development process.</li>
           </ul>
         </Typography>
         <Typography variant="h5" className="title">About This Position</Typography>
         <Typography variant="body1">
-          During my time at Raven, I worked on their Slingshot team, one of their few web-based software teams. I was primarily responsible
+          During my time at Raven, I worked on their Slingshot team. I was primarily responsible
           for developing a report generation system that streamlined internal processes. Prior to my development of the DTC Report Generator, individuals
           within the company would have to manually filter through a 2000+ item Excel spreadsheet to find pertinent data for upcoming meetings, format it 
           into a readable report, and then take these reports into their meetings with them. Based on that description alone, it is easy to understand
           why that already was not a good system. The Slingshot team took it upon themselves to transfer all of the data into a SQL database prior to my 
           internship start date, and when I began, I simply had to create the report system that would query the database accordingly and allow a user a
-          consistent, easy-to-use method of generating large-scale reports.
+          consistent, easy-to-use method of generating large scale reports.
         </Typography>
         <br/>
         <Typography variant="body1">

@@ -22,7 +22,7 @@ const Nelnet = () => {
           alt="Nelnet"
           title="IT Software Engineer Intern"
           dateRange="June 2020 - Now"
-          stack={["Swift", "SwiftUI", "Amazon Web Services", "C#", "XSLT", ".NET MVC", "Visual Studio"]}
+          stack={["Swift", "UIKit", "Figma", "AWS DynamoDB", "AWS Cognito", "Xcode", "XSLT", "Oxygen XML Editor"]}
         />
         <br/>
     
@@ -34,16 +34,15 @@ const Nelnet = () => {
         <Typography variant="h5" className="title">Responsibilities</Typography>
         <Typography variant="body1" component={"span"}>
           <ul>
-            <li>Design and develop rich, interactive user experiences utilizing the power of SwiftUI</li>
-            <li>Developed dynamically scalable iOS applications using the power of Serverless</li>
-            <li>Develop XSLT transformations for the Workday team.</li>
-            <li>Participate in an intern pod team that delivered a business proposal to senior members of the Nelnet organization.</li>
-            <li>Actively practice navigating an Agile workflow environment throughout the course of my remote internship.</li>
+            <li>Develop dynamically scalable iOS applications with wift, UIKit, and the Serverless Framework.</li>
+            <li>Design and develop rich, interactive uer experiences utilizing the power of UIKit.</li>
+            <li>Participate in an intern pod team that delivered a business proposal to senior members of the Nelnet organization, winning third place in the company-wide competition</li>
+            <li>Create XSLT transformations for the Workday team.</li>
           </ul>
         </Typography>
         <Typography variant="h5" className="title">About This Position</Typography>
         <Typography variant="body1">
-          When COVID-19 ravaged the United States and forced companies across the nation to cancel 
+          When COVID-19 took hold of the United States and forced companies across the nation to cancel 
           their internship programs, Nelnet decided to use this opportunity to open their intern programs back up.
           Having originally finished out their recruiting season earlier in the year, Nelnet saw an opportunity
           to provide aid to the community and quickly took the chance to help students who had lost their original
@@ -60,8 +59,8 @@ const Nelnet = () => {
         <br/>
         <Typography variant="body1">
           With the start of the fall semester, I've switched gears and joined Nelnet's Campus Key team to work once again as a mobile developer, primarily
-          with up-and-coming technologies like Swift, SwiftUI, and Amazon Web Services. In this new position, I get to showcase my skills in making interactive
-          user interfaces while also gaining hands-on experience with the new Serverless Framework, something I've been excited to work with since my position with
+          with up-and-coming technologies like Swift, UIKit, and Amazon Web Services like AWS Cognito and AWS DynamoDB. In this new position, I get to showcase my skills in making interactive
+          user interfaces while also gaining hands-on experience with the new Serverless Framework, something I've been excited to work with ever since my position with
           Hoffman Strategy Group.
         </Typography>
         <br/>

@@ -34,3 +34,7 @@ a[aria-current="page"] {
   height: 34px !important;
   width: auto !important;
 }
+
+.grow {
+  flex-grow: 1;
+}

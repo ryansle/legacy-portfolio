@@ -16,9 +16,9 @@ import { makeStyles } from "@material-ui/core/styles";
 
 // Assets
 import hsg from "../resources/experience/hsg.png";
-import fileManagerPNG from "../resources/experience/file-manager.png";
-import projectHubPNG from "../resources/experience/project-hub.png";
-import projectPNG from "../resources/experience/project.png";
+import dashboardImg from "../resources/experience/dashboard.png";
+import projectHubImg from "../resources/experience/project-hub.png";
+import fileManagerImg from "../resources/experience/file-manager.png";
 
 const useStyles = makeStyles(() => ({
   galleryItem: {
@@ -55,32 +55,29 @@ const HoffmanStrategy = () => {
   const classes = useStyles();
   const isSmallScreen = useMediaQuery("(max-width: 1100px)");
 
-  const [openFileManager, setOpenFileManager] = useState(false);
+  const [openDashboard, setOpenDashboard] = useState(false);
   const [openProjectHub, setOpenProjectHub] = useState(false);
-  const [openProject, setOpenProject] = useState(false);
+  const [openFileManager, setOpenFileManager] = useState(false);
 
-  const openFileModal = () => { setOpenFileManager(true) };
-  const closeFileModal = () => { setOpenFileManager(false) };
-  const openProjectHubModal = () => { setOpenProjectHub(true) };
-  const closeProjectHubModal = () => { setOpenProjectHub(false) };
-  const openProjectModal = () => { setOpenProject(true) };
-  const closeProjectModal = () => { setOpenProject(false) };
+  const toggleDashboardModal = () => { setOpenDashboard(!openDashboard); };
+  const toggleProjectModal = () => { setOpenProjectHub(!openProjectHub); };
+  const toggleFileModal = () => { setOpenFileManager(!openFileManager); };
 
-  const fileManager = (
+  const dashboard = (
     <div className={classes.overlay}>
       <Button
         className={classes.exitButton}
         size="small"
         variant="contained"
         color="secondary"
-        onClick={closeFileModal}
+        onClick={toggleDashboardModal}
       >
         <Clear/>
       </Button>
       <img 
         className={classes.modalImage}
-        src={fileManagerPNG} 
-        alt="A better look into the Hoffman Analytics File Management System"
+        src={dashboardImg} 
+        alt="Hoffman Analytics Dashboard"
       />
     </div>
   );
@@ -92,33 +89,33 @@ const HoffmanStrategy = () => {
         size="small"
         variant="contained"
         color="secondary"
-        onClick={closeProjectHubModal}
+        onClick={toggleProjectModal}
       >
         <Clear/>
       </Button>
       <img 
         className={classes.modalImage}
-        src={projectHubPNG} 
+        src={projectHubImg} 
         alt="A better look into the Hoffman Analytics Project Hub"
       />
     </div>
   );
 
-  const project = (
+  const fileManager = (
     <div className={classes.overlay}>
       <Button
         className={classes.exitButton}
         size="small"
         variant="contained"
         color="secondary"
-        onClick={closeProjectModal}
+        onClick={toggleFileModal}
       >
         <Clear/>
       </Button>
       <img 
         className={classes.modalImage}
-        src={projectPNG} 
-        alt="A better look into how Hoffman Analytics handles specific projects"
+        src={fileManagerImg} 
+        alt="A better look into how Hoffman Analytics handles file lookup"
       />
     </div>
   );
@@ -131,11 +128,10 @@ const HoffmanStrategy = () => {
           image={hsg}
           alt="Hoffman Strategy Group"
           title="Software Engineer &amp; Product Manager"
-          dateRange="November 2019 - Now"
-          stack={["React.js", "Material-UI", "GraphQL", "AWS Amplify", "AWS DynamoDB", "React-Router"]}
+          dateRange="November 2019 - September 2020"
+          stack={["React.js", "Material-UI", "AWS Amplify", "AWS DynamoDB", "AWS AppSync", "GraphQL", "React-Router", "Python", "Selenium"]}
         />
         <br/>
-        
         <Typography variant="body1">
           Hoffman Strategy Group is a boutique, national real estate 
           advisory firm. Over their collective firm experience of 85 
@@ -149,46 +145,36 @@ const HoffmanStrategy = () => {
         <Typography variant="h5" className="title">Responsibilities</Typography>
         <Typography variant="body1" component={"span"}>
           <ul>
-            <li>Refactor a pre-existing JavaScript codebase to improve maintainability and scalability.</li>
-            <li>Leverage React and Material-UI to redevelop the front-end for a real-estate data analytics system.</li>
-            <li>Lead the product vision for the new Hoffman Analytics software subsidiary.</li>
-            <li>Utilize Python and Selenium to scrape business data (2000 entries) from the web in an a fast, organized manner onto an Excel sheet.</li>
-            <li>Serve as a technology advisor for the group in calls with potential clients.</li>
+            <li>Steered the product vision for the new Hoffman Analytics subsidiary.</li>
+            <li>Leveraged React.js and Material-UI to redevelop the front-end for a real-estate data analytics platform, improving the user experience and consolidating stakeholder processes.</li>
+            <li>Modernized the data collection process by using Python and Selenium to scrape 2000+ data points from the web in a fast, organized manner onto an Excel sheet - all in place of performing the process manually.</li>
+            <li>Served as a technology advisor for the group in calls with potential clients.</li>
           </ul>
         </Typography>
         <Typography variant="h5" className="title">About This Position</Typography>
         <Typography variant="body1">
-          I was initially hired by the Hoffman Strategy Group in November 2019
-          to take over their social media presence on LinkedIn, help
-          keep their Squarespace website up-to-date, and occasionally
-          write web-scraping Python scripts to collect real-estate data in 
-          a quick, automated manner. During the 2019-2020 academic year,
-          the group sponsored a senior design project at the University
-          of Nebraska-Lincoln dubbed <span style={{ fontWeight: "bolder" }}>Hoffman Analytics.</span> Hoffman Analytics
+          I started off with the Hoffman Strategy Group as their Director of Social Media, taking over their social media
+          presence as well as helping to maintain their Squarespace website. At this same time, the Hoffman Strategy Group
+          was sponsoring a senior design project at my university being dubbed <b>Hoffman Analytics.</b> Hoffman Analytics
           is an ambitious project aiming to consolidate the groups' daily
           workflows in data warehousing, project management, report generation,
           and business intelligence.
         </Typography>
         <br/>
         <Typography variant="body1">
-          When I lost my originally planned internship to the COVID-19
-          pandemic, I contacted Jerry Hoffman to see if there was a potential
-          opportunity furthering the developments of the Hoffman Analytics
-          software system, and immediately pivoted my position within the group
-          to become their new Software Engineer &amp; Product Manager. In this new position,
-          my partner <a href="https://msich.netlify.app">Matt Sichterman</a> and I
-          have been working to redevelop the existing senior design solution into something
-          more maintainable, and thus easier to iterate on. We've redefined the vision for
-          Hoffman Analytics to become a platform that not only consolidates their
-          daily workflows, but also promotes productivity through a variety of new features
-          including a task management system, an activity tracker, and much more. It should be noted
-          that I worked in this position with Hoffman Strategy Group in parallel with my role
-          at Nelnet as an IT Software Engineer Intern, managing my time between the two accordingly.
+          Having had my foot in the door already throughout the school year, I was quickly able to pivot my position within
+          the group and take over the day-to-day software development operations once the academic year ended and Hoffman
+          Analytics project was no longer under the senior design wing. In this new position, my partner <a href="https://msich.dev">Matt Sichterman</a> and
+          I had been working to redevelop the existing senior design solution into something both more maintainable and more cohesive.
+          We redefined the vision for the Hoffman Analytics platform to become something that not only consolidated their daily
+          workflows, but also promote productivity through a variety of new feature ideas including a task management system, an 
+          activity tracker, and much more. I worked this role in parallel over the summer with my internship at Nelnet as an IT
+          Software Engineer Intern, managing my time between the two accordingly.
         </Typography>
         <br/>
         <Typography variant="body1">
           Through a summer of cooperation, Matt and I rebuilt the entire platform
-          from the ground up using new technologies such as Node.js, Material-UI, and Express while leaning primarily on one another when we
+          from the ground up using new technologies such as Material-UI, AWS DynamoDB, and AWS AppSync while leaning primarily on one another when we
           occasionally faced problems. Working as a software engineer for the Hoffman Strategy Group
           has been a unique experience in itself as Matt and I make up 100% of their engineering department - 
           there are no senior developers, mentors, or external contractors within the company that we were able
@@ -203,64 +189,56 @@ const HoffmanStrategy = () => {
           been sharpening his web development skills over the course of the last year, and was always pointing me in the right direction for growth. Thanks to my summer with
           Hoffman Strategy Group, I learned how to:
           <ul>
-            <li>Develop beautifully responsive React front-ends from the ground up.</li>
+            <li>Develop beautifully responsive React.js front-ends from the ground up.</li>
             <li>Manage diverse client expectations from non-technical stakeholders.</li>
             <li>Continue to practice leading the development of large-scale software applications.</li>
-            <li>Work with up-and-coming web development frameworks and technologies like React, Redux, Node.js, and Amazon Web Services.</li>
+            <li>Work with up-and-coming web development frameworks and technologies like React.js, Material-UI, and Amazon Web Services.</li>
             <li>Pace my time accordingly between two concurrent software development positions.</li>
           </ul>
         </Typography>
         <br/>
         <Typography variant="h5" className="title">Gallery</Typography>
-        <Typography variant="body1">
-          You may notice in the screenshots below that many aspects of the Hoffman Analytics platform look strikingly similar to
-          the contents of my personal website. This is due to the fact that I was developing both of these projects concurrently, using nearly identical
-          technology stacks. Both applications are heavily based upon Material-UI's React component library. Originally, I initiated development
-          on this webpage in order to give myself some practice developing websites prior to my role with Hoffman Strategy Group, but as the summer went on,
-          these two projects intertwined greatly and have ended up sharing many different front-end assets.
-        </Typography>
-        <br/>
         <Grid container justify="space-between">
           <img
-            src={fileManagerPNG}
+            src={dashboardImg}
+            alt="Hoffman Analytics Dashboard"
+            className={isSmallScreen ? classes.responsiveGalleryItem : classes.galleryItem}
+            onClick={toggleDashboardModal}
+          />
+          <img
+            src={projectHubImg}
+            alt="Hoffman Analytics Project Hub"
+            className={isSmallScreen ? classes.responsiveGalleryItem : classes.galleryItem}
+            onClick={toggleProjectModal}
+          />
+          <img
+            src={fileManagerImg}
             alt="Hoffman Analytics File Manager"
             className={isSmallScreen ? classes.responsiveGalleryItem : classes.galleryItem}
-            onClick={openFileModal}
-          />
-          <img
-            src={projectHubPNG}
-            alt="Hoffman Analytics Project Hub - Generalized"
-            className={isSmallScreen ? classes.responsiveGalleryItem : classes.galleryItem}
-            onClick={openProjectHubModal}
-          />
-          <img
-            src={projectPNG}
-            alt="Hoffman Analytics Project - Generalized"
-            className={isSmallScreen ? classes.responsiveGalleryItem : classes.galleryItem}
-            onClick={openProjectModal}
+            onClick={toggleFileModal}
           />
         </Grid>
         <br/>
 
         <Modal
-          open={openFileManager}
-          onClose={closeFileModal}
+          open={openDashboard}
+          onClose={toggleDashboardModal}
         >
-          {fileManager}
+          {dashboard}
         </Modal>
 
         <Modal
           open={openProjectHub}
-          onClose={closeProjectHubModal}
+          onClose={toggleProjectModal}
         >
           {projectHub}
         </Modal>
 
         <Modal
-          open={openProject}
-          onClose={closeProjectModal}
+          open={openFileManager}
+          onClose={toggleFileModal}
         >
-          {project}
+          {fileManager}
         </Modal>
       </section>
     </div>

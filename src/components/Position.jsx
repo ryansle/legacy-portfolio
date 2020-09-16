@@ -14,12 +14,8 @@ import { Link } from "react-router-dom";
 import { makeStyles } from "@material-ui/core/styles";
 
 const useStyles = makeStyles(() => ({
-  position: {
-    color: "#757575",
-  },
   dateRange: {
     fontStyle: "italic",
-    color: "#757575",
     marginBottom: 20,
   },
   tech: {
@@ -62,10 +58,10 @@ const Position = ({
         <Typography variant="h5">
           {company}
         </Typography>
-        <Typography variant="subtitle1" className={classes.position}>
+        <Typography variant="subtitle1" className={classes.position} color="textSecondary">
           {title}
         </Typography>
-        <Typography variant="subtitle1" className={classes.dateRange}>
+        <Typography variant="subtitle1" className={classes.dateRange} color="textSecondary">
           {dateRange}
         </Typography>
         <Grid container wrap="wrap-reverse">
