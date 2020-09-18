@@ -31,20 +31,16 @@ const About = () => {
     <div className={isSmallScreen ? "responsiveContainer" : "container"}>
       <Typography variant="h4" className="title">Who Am I?</Typography>
       <Typography variant="body1">
-        I am an incoming senior at the University of Nebraska-Lincoln majoring in Software Engineering, with a minor in Mathematics. 
-        I moved here from Sioux Falls, South Dakota back in August of 2017. Currently, I am working two different software development-based 
-        roles over the summer as Software Engineer &amp; Product Manager with Hoffman Strategy Group, and also as an IT
-        Software Engineer Intern at Nelnet. After losing my initially planned internship to the ongoing pandemic,
-        I shifted gears and decided to take advantage of the remote work opportunity by
-        signing on for two separate development opportunities. Things are going great!
+        Hello! My name is Ryan Le and I am a senior at the University of Nebraska-Lincoln majoring in Software Engineering, with a minor in Mathematics.
+        Back in August of 2017, I moved to Lincoln, Nebraska, from my hometown of Sioux Falls, South Dakota, in order to kickstart my college career
+        and learn the ins and outs of software development. Since then, I have learned a lot and have been enjoying every minute of it.
+        Now, I am on the search for a full-time web development opportunity!
       </Typography>
       <br />
       <Typography variant="body1">
         So far, I have been enjoying front-end development the most as it allows me to utilize my creative side while
-        also leveraging my client-facing skills. Lately, I have been focusing on JavaScript in collaboration with technologies
-        like React.js, Material-UI, Node.js, and Express to create my projects. In the past I've worked
-        extensively as well with things like Python, Java, Swift, SwiftUI, and SQL databases. Moving forward, I am specifically interested
-        in full-stack development opportunities.
+        also leveraging my client-facing abilities to learn how to improve the user experience. Lately, I have been focusing on 
+        JavaScript in collaboration with technologies like React.js, Material-UI, and Amazon Web Services (which I am still in the process of learning) to create my projects.
       </Typography>
 
       <div className={classes.whitespace}/>
@@ -62,23 +58,22 @@ const About = () => {
       <br />
       <Typography variant="body1">
         Throughout my college career, I have gained a variety of experiences in different aspects of leadership and software development.
-        You can learn more about these different experiences by visiting my <Link to="/projects">projects</Link> page here, or read about my
-        specific skillsets by reading through my <Link to="/skills">skills</Link> page.
+        You can learn more about these different experiences by visiting my <Link to="/projects">projects page</Link>, or read about my
+        specific skillsets by reading through my <Link to="/skills">skills page</Link>.
       </Typography>
       <br />
       <Typography variant="body1">
-        For the upcoming fall semester, I have been elected to the post of Vice President of Communications for the university's 
-        Engineering Student Advisory Board, the governing student body our College of Engineering. Along with that, my
-        friends and I within the software engineering major have been working to get our senior year curriculum changed so that
-        we can pursue our idea of founding our "SOFTie Startup" through the university's senior design program. And we have just reached our first
-        milestone: getting official faculty approval for the improved program pitch.
+        Now that I'm a senior at UNL, I am keeping busy with my duties as the Vice President of Communications for the university's Engineering
+        Student Advisory Board (a position I was recently elected to), which is the governing body for our school's College of Engineering. Along with that, 
+        my friends and I are hard at work on our SOFTie Startup initiative to form a company through our university's senior design program as our capstone
+        achievement. 
       </Typography>
       <br />
       <Typography variant="body1">
-        This means that, instead of signing on for another year of working for an industry-sponsored project, the university will be allowing our 
-        assembled team of students to pursue our own startup project where we get to be our own primary stakeholders. A project in which we call the shots, 
+        Here's how it works: instead of signing on for another year of working for an industry-sponsored project, the university is allowing our 
+        assembled team of student developers to pursue our own startup project where we get to be our own primary stakeholders. A project in which we call the shots, 
         define our project vision, incubate our ideas from the ground up, and pursue technologies of interest in a startup environment all with the backing
-        of our own tuition dollars, mitigating any and all risk of forming a company from the ground up.
+        of our own tuition dollars, mitigating any and all risk of forming a company from the ground up. Things are going great so far!
       </Typography>
       <p align="center">
         <img 

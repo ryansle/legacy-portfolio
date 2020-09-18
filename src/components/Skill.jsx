@@ -4,12 +4,13 @@ import React from "react";
 import {
   Grid,
   Typography,
+  Slider,
 } from "@material-ui/core";
 
 // Utilities
-import { makeStyles } from "@material-ui/core/styles";
+import { withStyles, makeStyles } from "@material-ui/core/styles";
 
-const Skill = ({ name, image, alt }) => {
+const Skill = ({ name, image, alt, level }) => {
   const classes = useStyles();
 
   return (
@@ -25,9 +26,54 @@ const Skill = ({ name, image, alt }) => {
       <Typography variant="h6">
         {name}
       </Typography>
+      <SkillBar
+        value={level} 
+        valueLabelDisplay="auto"
+        min={1}
+        max={10}
+        style={{
+          height: "10px !important",
+        }}
+      />
     </Grid>
   );
 };
+
+const SkillBar = withStyles({
+  root: {
+    color: "#52af77",
+    height: 8
+  },
+  thumb: {
+    height: 16,
+    width: 16,
+    backgroundColor: "#fff",
+    border: "2px solid currentColor",
+    marginTop: -4,
+    marginLeft: -12,
+    "&:focus, &:hover, &$active": {
+      boxShadow: "inherit"
+    }
+  },
+  active: {},
+  valueLabel: {
+    left: "calc(-50% - 4px)"
+  },
+  track: {
+    height: 8,
+    borderRadius: 4
+  },
+  rail: {
+    height: 8,
+    borderRadius: 4
+  },
+  // mark: {
+  //   backgroundColor: "#bfbfbf",
+  //   height: 14,
+  //   width: 1,
+  //   marginTop: -3
+  // }
+})(Slider);
 
 const useStyles = makeStyles(() => ({
   media: {

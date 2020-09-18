@@ -26,8 +26,8 @@ import python from "../resources/skills/python.svg";
 import javascript from "../resources/skills/javascript.svg";
 import swift from "../resources/skills/swift.svg";
 import csharp from "../resources/skills/csharp.svg";
-import java from "../resources/skills/java.svg";
-import mysql from "../resources/skills/sql.svg";
+import java from "../resources/skills/java.png";
+import sql from "../resources/skills/sql.png";
 import html from "../resources/skills/html.svg";
 import css from "../resources/skills/css.svg";
 import antlr from "../resources/skills/antlr.svg";
@@ -37,7 +37,6 @@ import xslt from "../resources/skills/xslt.svg";
 import react from "../resources/skills/react.svg";
 import swiftui from "../resources/skills/swiftui.png";
 import kendo from "../resources/skills/kendo.png";
-import redux from "../resources/skills/redux.svg";
 import material from "../resources/skills/materialui.svg";
 import selenium from "../resources/skills/selenium.svg";
 import javafx from "../resources/skills/javafx.png";
@@ -47,6 +46,11 @@ import kivy from "../resources/skills/kivy.svg";
 import postman from "../resources/skills/postman.svg";
 import alamofire from "../resources/skills/alamofire.png";
 import kingfisher from "../resources/skills/kingfisher.png";
+import chakra from "../resources/skills/chakra.png";
+import graphql from "../resources/skills/graphql.svg";
+import amplify from "../resources/skills/amplify.png";
+import cognito from "../resources/skills/cognito.png";
+import dynamodb from "../resources/skills/dynamodb.png";
 
 // Version Control
 import github from "../resources/skills/github.svg";
@@ -81,51 +85,61 @@ const Skills = () => {
           name="Python"
           image={python}
           alt="Python"
+          level={9}
         />
         <Skill
           name="JavaScript"
           image={javascript}
           alt="JavaScript"
+          level={9}
         />
         <Skill
           name="Swift"
           image={swift}
           alt="Swift"
+          level={8}
         />
         <Skill
           name="C#"
           image={csharp}
           alt="C#"
+          level={7}
         />
         <Skill
           name="Java"
           image={java}
           alt="Java"
-        />
-        <Skill
-          name="MySQL"
-          image={mysql}
-          alt="MySQL"
+          level={6}
         />
         <Skill
           name="HTML"
           image={html}
           alt="HTML"
+          level={8}
         />
         <Skill
           name="CSS"
           image={css}
           alt="CSS"
+          level={7}
+        />
+        <Skill
+          name="SQL"
+          image={sql}
+          alt="Structured Query Language"
+          level={6}
         />
         <Skill
           name="XSLT"
           image={xslt}
           alt="XSLT"
+          level={8}
         />
         <Skill
           name="ANTLR"
           image={antlr}
           alt="ANTLR"
+          level={6}
         />
       </SkillTable>
 
@@ -135,66 +149,103 @@ const Skills = () => {
           name="React.js"
           image={react}
           alt="React.js"
-        />
-        <Skill
-          name="Redux"
-          image={redux}
-          alt="Redux State Management"
+          level={6}
         />
         <Skill
           name="Material-UI"
           image={material}
-          alt="Material-UI - A React component library"
+          alt="Material-UI - A React.js component library"
+          level={10}
+        />
+        <Skill
+          name="Chakra UI"
+          image={chakra}
+          alt="Chakra UI - A React.js component library"
+          level={10}
         />
         <Skill
           name="SwiftUI"
           image={swiftui}
           alt="SwiftUI"
+          level={7}
+        />
+        <Skill
+          name="Amplify"
+          image={amplify}
+          alt="AWS Amplify"
+          level={5}
+        />
+        <Skill
+          name="Cognito"
+          image={cognito}
+          alt="AWS Cognito"
+          level={5}
+        />
+        <Skill
+          name="DynamoDB"
+          image={dynamodb}
+          alt="DynamoDB"
+          level={4}
+        />
+        <Skill
+          name="GraphQL"
+          image={graphql}
+          alt="GraphQL"
+          level={4}
         />
         <Skill
           name="Alamofire"
           image={alamofire}
           alt="Alamofire"
+          level={8}
         />
         <Skill
           name="Kingfisher"
           image={kingfisher}
           alt="Kingfisher"
+          level={7}
         />
         <Skill
           name="Selenium"
           image={selenium}
           alt="Selenium"
+          level={9}
         />
         <Skill
           name="Kendo UI"
           image={kendo}
           alt="Kendo UI"
+          level={7}
         />
         <Skill
           name="JavaFX"
           image={javafx}
           alt="JavaFX"
+          level={5}
         />
         <Skill
           name="Unity"
           image={unity}
           alt="Unity Game Engine"
+          level={6}
         />
         <Skill
           name="SteamVR"
           image={steamVR}
           alt="SteamVR"
+          level={5}
         />
         <Skill
           name="Kivy"
           image={kivy}
           alt="Kivy"
+          level={5}
         />
         <Skill
           name="Postman"
           image={postman}
           alt="Postman"
+          level={7}
         />
       </SkillTable>
 
@@ -204,16 +255,19 @@ const Skills = () => {
           name="GitHub"
           image={github}
           alt="GitHub"
+          level={9}
         />
         <Skill
           name="GitLab"
           image={gitlab}
           alt="GitLab"
+          level={9}
         />
         <Skill
           name="Microsoft TFS"
           image={visualStudio}
           alt="Microsoft Team Foundation Server"
+          level={3}
         />
       </SkillTable>
 
@@ -223,21 +277,25 @@ const Skills = () => {
           name="LaTeX"
           image={latex}
           alt="LaTeX"
+          level={8}
         />
         <Skill
           name="Photoshop"
           image={photoshop}
           alt="Adobe Photoshop"
+          level={7}
         />
         <Skill
           name="Premier Pro"
           image={premier}
           alt="Adobe Premier Pro"
+          level={6}
         />
         <Skill
           name="Figma"
           image={figma}
           alt="Figma"
+          level={8}
         />
       </SkillTable>
 
