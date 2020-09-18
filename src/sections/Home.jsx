@@ -12,11 +12,11 @@ import NavCard from "../components/NavCard";
 // Assets
 import mountains from "../resources/MountainBanner.png";
 import cropped from "../resources/CroppedBanner.png";
-import about from "../resources/stock/about.jpeg";
-import experience from "../resources/stock/experience.jpeg";
-import skills from "../resources/stock/skills.jpeg";
-import projects from "../resources/stock/projects.jpeg";
-import contact from "../resources/stock/contact.jpeg";
+import about from "../resources/stock/about.jpg";
+import experience from "../resources/stock/experience.jpg";
+import skills from "../resources/stock/skills.jpg";
+import projects from "../resources/stock/projects.jpg";
+import contact from "../resources/stock/contact.jpg";
 import resume from "../resources/stock/resume.jpg";
 
 const Home = () => {

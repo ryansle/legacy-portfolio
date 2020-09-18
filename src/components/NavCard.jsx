@@ -90,7 +90,7 @@ const useStyles = makeStyles(() => ({
   full: {
     width: "100%",
     "&:hover": {
-      boxShadow: "0px 2px 3px 1px #555",
+      boxShadow: "0 4px 8px 1px rgba(0, 0, 0, 0.2), 0 6px 20px 1px rgba(0, 0, 0, 0.19)",
     },
     "& a": {
       textDecoration: "none",
@@ -102,7 +102,7 @@ const useStyles = makeStyles(() => ({
   half: {
     width: "49%",
     "&:hover": {
-      boxShadow: "0px 2px 3px 1px #555",
+      boxShadow: "0 4px 8px 1px rgba(0, 0, 0, 0.2), 0 6px 20px 1px rgba(0, 0, 0, 0.19)",
     },
     "& a": {
       textDecoration: "none",
