@@ -81,6 +81,11 @@ const useStyles = makeStyles(() => ({
     width: 100,
     padding: 5,
   },
+  responsiveMedia: {
+    width: "50%",
+    height: "auto",
+    padding: 5,
+  },
   skill: {
     textAlign: "center",
     marginLeft: "3%",

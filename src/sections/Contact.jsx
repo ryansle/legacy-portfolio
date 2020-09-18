@@ -59,11 +59,13 @@ const useStyles = makeStyles((theme) => ({
     paddingTop: 40,
     paddingLeft: "20vw",
     paddingRight: "20vw",
+    minHeight: "calc(90vh + 10px)",
   },
   responsiveContainer: {
     paddingTop: 40,
     paddingLeft: '5vw',
     paddingRight: '5vw',
+    minHeight: "calc(90vh + 10px)",
   },
   responsiveImage: {
     width: "80%",

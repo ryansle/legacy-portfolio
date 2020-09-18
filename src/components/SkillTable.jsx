@@ -35,7 +35,7 @@ const SkillTable = ({ title, children }) => {
 const useStyles = makeStyles(() => ({
   skillTable: {
     border: "1px solid #9fa2b4",
-    padding: "20px 3% 30px 3%",
+    padding: "20px 30px 30px 30px",
     marginBottom: 50,
     boxShadow: "0 4px 8px 1px rgba(0, 0, 0, 0.2), 0 6px 20px 1px rgba(0, 0, 0, 0.19)",
   },

@@ -56,7 +56,7 @@ const Sidebar = ({
       <Divider className={classes.divider}/>
 
       {/* Navigation */}
-      <List component="nav" className={classes.whiteText}>
+      <List component="nav">
         {MenuItems.map(({ path, title, icon}, index) => (
           <div key={index}>
             <ListItem
@@ -127,22 +127,22 @@ const Sidebar = ({
       {/* Navigation */}
       <List component="nav" className={classes.whiteText}>
       {MenuItems.map(({ path, title, icon}, index) => (
-          <div key={index}>
-            <ListItem
-              button
-              component={Link}
-              to={path}
-              className={title === selected ? classes.active : classes.listItem}
-              onClick={() => {
-                setSelected(title);
-                if (mobileOpen) handleDrawerToggle();
-              }}
-            >
-              <ListItemIcon>{icon}</ListItemIcon>
-              <ListItemText primary={title} />
-            </ListItem>
-          </div>
-        ))}
+        <div key={index}>
+          <ListItem
+            button
+            component={Link}
+            to={path}
+            className={title === selected ? classes.active : classes.listItem}
+            onClick={() => {
+              setSelected(title);
+              if (mobileOpen) handleDrawerToggle();
+            }}
+          >
+            <ListItemIcon>{icon}</ListItemIcon>
+            <ListItemText primary={title} />
+          </ListItem>
+        </div>
+      ))}
       </List>
 
       <Divider className={classes.divider}/>
@@ -204,6 +204,7 @@ const useStyles = makeStyles(() => ({
   listItem: {
     backgroundColor: "#363740",
     borderLeft: "4px solid #363740",
+    color: "#9fa2b4 !important",
   },
   active: {
     backgroundColor: "#3e4049 !important",

@@ -149,7 +149,7 @@ const Skills = () => {
           name="React.js"
           image={react}
           alt="React.js"
-          level={6}
+          level={8}
         />
         <Skill
           name="Material-UI"
