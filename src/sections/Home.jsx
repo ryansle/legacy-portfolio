@@ -28,6 +28,9 @@ const Home = () => {
         image={isSmallScreen ? cropped : mountains}
         alt="Ryan Le - Dynamic Banner"
         screenHeight={50}
+        pre="You should hire"
+        name="Ryan Le"
+        post="as your new front-end developer."
       />
       <section className={isSmallScreen ? "responsiveContainer" : "container"}>
         <Typography className="title" variant="h3">Welcome.</Typography>

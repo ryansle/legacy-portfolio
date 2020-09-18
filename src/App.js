@@ -1,13 +1,15 @@
 import React from 'react';
+
+// Components
 import AppNavigation from "./components/AppNavigation";
+
+// Utilities
 import "./App.css";
 
-function App() {
+const App = () => {
   return (
-    <div>
-      <AppNavigation/>
-    </div>
+    <AppNavigation/>
   );
-}
+};
 
 export default App;
