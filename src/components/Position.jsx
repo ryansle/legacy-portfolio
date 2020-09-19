@@ -6,12 +6,14 @@ import {
   Typography,
   Chip,
   Button,
+  Avatar,
   useMediaQuery
 } from "@material-ui/core";
 import { Link } from "react-router-dom";
 
 // Utilities
 import { makeStyles } from "@material-ui/core/styles";
+import { renderIcon } from "../utils/render-avatars";
 
 const Position = ({ 
   company, 
@@ -48,6 +50,7 @@ const Position = ({
                 key={index}
                 className={classes.tech}
                 label={tech}
+                avatar={<Avatar src={renderIcon(tech)} />}
               />
             )
           }

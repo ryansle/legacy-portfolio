@@ -21,7 +21,7 @@ const Nelnet = () => {
         alt="Nelnet"
         title="IT Software Engineer Intern"
         dateRange="June 2020 - Now"
-        stack={["Swift", "UIKit", "Figma", "AWS DynamoDB", "AWS Cognito", "Xcode", "XSLT", "Oxygen XML Editor"]}
+        stack={["Swift", "UIKit", "Figma", "AWS DynamoDB", "AWS Cognito", "XSLT"]}
       />
       <br/>
   

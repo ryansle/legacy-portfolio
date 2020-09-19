@@ -7,6 +7,7 @@ import {
   Typography,
   Chip,
   IconButton,
+  Avatar,
   useMediaQuery
 } from "@material-ui/core";
 import { Clear, GitHub } from "@material-ui/icons";
@@ -14,6 +15,7 @@ import Banner from "./Banner";
 
 // Utilities
 import { makeStyles } from "@material-ui/core/styles";
+import { renderIcon } from "../utils/render-avatars";
 
 const ProjectModal = React.forwardRef(
   (
@@ -51,12 +53,12 @@ const ProjectModal = React.forwardRef(
           <section className={isSmallScreen ? classes.responsiveDescription : classes.description}>
             <br/>
             <Grid container justify="space-between" className={classes.raised}>
-              <Grid item xs={isSmallScreen ? 12 : 5}>
+              <Grid item xs={isSmallScreen ? 12 : 4}>
                 <Typography variant="h4" className={"title"}>
                   {title}
                 </Typography>
               </Grid>
-              <Grid item xs={isSmallScreen ? 12 : 7}>
+              <Grid item xs={isSmallScreen ? 12 : 8}>
                 <Grid container justify={isSmallScreen ? "flex-start" : "flex-end"} alignItems="center">
                   {
                     stack.map((tech, index) =>
@@ -64,6 +66,7 @@ const ProjectModal = React.forwardRef(
                         key={index}
                         className={classes.tech}
                         label={tech}
+                        avatar={<Avatar src={renderIcon(tech)} />}
                       />
                     )
                   }

@@ -214,7 +214,7 @@ const Projects = () => {
 
   const careTracking = (
     <ProjectModal
-      title="Care Tracking Application"
+      title="Care Tracking App"
       toggleModal={toggleCareModal}
       stack={["Python", "MySQL", "Kivy", "SQLAlchemy", "PyCharm", "GitLab"]}
       banner={software}
@@ -269,7 +269,7 @@ const Projects = () => {
           toggleModal={toggleSiteModal}
           banner={banner}
           bannerAlt="My Banner"
-          stack={["React.js", "Material-UI"]}
+          stack={["React.js", "Material-UI", "CSS"]}
         >
           <Typography variant="body2">
             Since I never had the chance to learn React.js prior 

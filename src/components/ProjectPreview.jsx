@@ -7,11 +7,13 @@ import {
   Typography, 
   Chip, 
   Button, 
+  Avatar,
   useMediaQuery 
 } from "@material-ui/core";
 
 // Utilities
 import { makeStyles } from "@material-ui/core/styles";
+import { renderIcon } from "../utils/render-avatars";
 
 const ProjectPreview = React.forwardRef(
   (
@@ -48,6 +50,7 @@ const ProjectPreview = React.forwardRef(
                 key={index}
                 className={classes.tech}
                 label={tech}
+                avatar={<Avatar src={renderIcon(tech)} />}
               />
             )
           }

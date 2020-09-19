@@ -5,11 +5,13 @@ import {
   Grid,
   Typography,
   Chip,
+  Avatar,
   useMediaQuery,
 } from "@material-ui/core";
 
 // Utilities
 import { makeStyles } from "@material-ui/core/styles";
+import { renderIcon } from "../utils/render-avatars";
 
 const PositionHeader = ({ website, image, alt, title, dateRange, stack }) => {
   const classes = useStyles();
@@ -47,6 +49,7 @@ const PositionHeader = ({ website, image, alt, title, dateRange, stack }) => {
                   key={index}
                   className={classes.tech}
                   label={tech}
+                  avatar={<Avatar src={renderIcon(tech)} />}
                 />
               )
             }

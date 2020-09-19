@@ -29,7 +29,7 @@ const ReLogic = () => {
         alt="Re-Logic Games"
         title="Quality Assurance Game Tester"
         dateRange="January 2011 - June 2015"
-        stack={["Jira", "Slack", "XChat", "C#", "Dropbox", "Microsoft XNA"]}
+        stack={["Jira", "Slack", "XChat", "Dropbox"]}
       />
       <br/>
 

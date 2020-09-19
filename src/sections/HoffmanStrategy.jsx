@@ -97,7 +97,7 @@ const HoffmanStrategy = () => {
         alt="Hoffman Strategy Group"
         title="Software Engineer &amp; Product Manager"
         dateRange="November 2019 - September 2020"
-        stack={["React.js", "Material-UI", "AWS Amplify", "AWS DynamoDB", "AWS AppSync", "GraphQL", "React-Router", "Python", "Selenium"]}
+        stack={["React.js", "Material-UI", "CSS", "AWS Amplify", "AWS DynamoDB", "AWS AppSync", "GraphQL", "React-Router", "Python", "Selenium"]}
       />
       <br/>
       <Typography variant="body1">

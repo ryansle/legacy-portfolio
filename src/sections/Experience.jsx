@@ -30,7 +30,7 @@ const Experience = () => {
           company="Nelnet"
           title="IT Software Engineer Intern"
           dateRange="June 2020 - Now"
-          stack={["Swift", "UIKit", "Amazon Web Services", "Figma", "XSLT",]}
+          stack={["Swift", "UIKit", "Amazon Web Services", "Figma",]}
           link="nelnet"
           image={nelnet}
           alt="Nelnet"
@@ -116,7 +116,7 @@ const Experience = () => {
           company="Re-Logic Games"
           title="Quality Assurance Game Tester"
           dateRange="January 2011 - June 2015"
-          stack={["Jira", "Slack", "XChat", "C#", "Microsoft XNA"]}
+          stack={["Jira", "Slack", "XChat", "Dropbox",]}
           link="relogic-games"
           image={relogic}
           alt="Re-Logic Games"

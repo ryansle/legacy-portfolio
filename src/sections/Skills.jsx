@@ -51,6 +51,8 @@ import graphql from "../resources/skills/graphql.svg";
 import amplify from "../resources/skills/amplify.png";
 import cognito from "../resources/skills/cognito.png";
 import dynamodb from "../resources/skills/dynamodb.png";
+import xcode from "../resources/skills/xcode.png";
+import router from "../resources/skills/react-router.png";
 
 // Version Control
 import github from "../resources/skills/github.svg";
@@ -167,6 +169,18 @@ const Skills = () => {
           name="SwiftUI"
           image={swiftui}
           alt="SwiftUI"
+          level={7}
+        />
+        <Skill
+          name="UIKit"
+          image={xcode}
+          alt="UIKit"
+          level={6}
+        />
+        <Skill
+          name="React-Router"
+          image={router}
+          alt="React-Router - Declarative Routing for React.js"
           level={7}
         />
         <Skill
