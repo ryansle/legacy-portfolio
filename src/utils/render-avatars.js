@@ -43,6 +43,7 @@ import alamofire from "../resources/skills/alamofire.png";
 import kingfisher from "../resources/skills/kingfisher.png";
 import testflight from "../resources/skills/testflight.png";
 import pycharm from "../resources/skills/pycharm.png";
+import redux from "../resources/skills/redux.svg";
 
 // If you are reading through this codebase, I apologize.
 //  Because I render the skill chips with Array.map, I could
@@ -144,6 +145,8 @@ export const renderIcon = (tech) => {
       return drupal;
     case "GitHub":
       return github;
+    case "Redux":
+      return redux;
     default:
       return;
   }

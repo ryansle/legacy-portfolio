@@ -31,7 +31,7 @@ const About = () => {
     <div className={isSmallScreen ? "responsiveContainer" : "container"}>
       <Typography variant="h4" className="title">Who Am I?</Typography>
       <Typography variant="body1">
-        Hello! My name is Ryan Le and I am a senior at the University of Nebraska-Lincoln majoring in Software Engineering, with a minor in Mathematics.
+        Hello! My name is Ryan Le and I am a senior at the University of Nebraska-Lincoln studying Software Engineering.
         Back in August of 2017, I moved to Lincoln, Nebraska, from my hometown of Sioux Falls, South Dakota, in order to kickstart my college career
         and learn the ins and outs of software development. Since then, I have learned a lot and have been enjoying every minute of it.
         Now, I am on the search for a full-time web development opportunity!
@@ -39,7 +39,7 @@ const About = () => {
       <br />
       <Typography variant="body1">
         So far, I have been enjoying front-end development the most as it allows me to utilize my creative side while
-        also leveraging my client-facing abilities to learn how to improve the user experience. Lately, I have been focusing on 
+        also leveraging my client-facing abilities to learn how to improve the user experience. Lately, I have been writing a lot of 
         JavaScript in collaboration with technologies like React.js, Material-UI, and Amazon Web Services (which I am still in the process of learning) to create my projects.
       </Typography>
 
@@ -63,10 +63,9 @@ const About = () => {
       </Typography>
       <br />
       <Typography variant="body1">
-        Now that I'm a senior at UNL, I am keeping busy with my duties as the Vice President of Communications for the university's Engineering
-        Student Advisory Board (a position I was recently elected to), which is the governing body for our school's College of Engineering. Along with that, 
-        my friends and I are hard at work on our SOFTie Startup initiative to form a company through our university's senior design program as our capstone
-        achievement. 
+        I am also heavily involved in my university's Engineering Student Advisory Board, serving as the board's Vice President of Communcation. 
+        Along with that, my friends and I are hard at work on our SOFTie Startup initiative through our university's senior design program,
+        an altered version of our school's capstone experience that allows us to pursue our own unique project idea.
       </Typography>
       <br />
       <Typography variant="body1">

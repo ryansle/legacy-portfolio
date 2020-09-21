@@ -36,9 +36,9 @@ const Experience = () => {
           alt="Nelnet"
         >
           <Typography variant="body1" component={"span"}>
-            Participated in a fully remote internship that focused on developing iOS applications for Nelnet's <a href="https://campuscommerce.com/campuskey/">Campus Key</a> team.
-            Previously, I worked on Nelnet's Workday team that focused on developing backend services and integrations for the company. Now, I utilize the latest-and-greatest mobile development standards 
-            including the Swift progamming language, SwiftUI, and the Serverless Framework. 
+            Currently participating in a fully remote internship focusing on developing iOS applications for Nelnet's <a href="https://campuscommerce.com/campuskey/">Campus Key</a> team.
+            In this role, I get to utilize some of the latest mobile development standards 
+            including the Swift progamming language, UIKit, and the Serverless Framework. 
             Some of the things I've had the chance to do in this position:
             <ul>
               <li>Develop dynamically scalable iOS applications with Swift, UIKit, and the Serverless Framework</li>
@@ -50,7 +50,7 @@ const Experience = () => {
         <Divider className={classes.divider}/>
         <Position
           company="Hoffman Strategy Group"
-          title="Software Engineer | Product Manager"
+          title="Software Engineer &amp; Product Manager"
           dateRange="November 2019 - September 2020"
           stack={["React.js", "Material-UI", "Amazon Web Services", "GraphQL"]}
           link="hoffman-strategy-group"

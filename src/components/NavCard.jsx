@@ -25,6 +25,7 @@ import { Link } from "react-router-dom";
 // Utilities
 import { makeStyles } from "@material-ui/core/styles";
 
+// Credit to Matt Sichterman for the beautiful design of this extended Material Component
 const NavCard = ({ image, icon, title, description, link, linkText }) => {
   const classes = useStyles();
   const isSmallScreen = useMediaQuery("(max-width: 1100px)");

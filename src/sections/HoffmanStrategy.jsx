@@ -97,7 +97,7 @@ const HoffmanStrategy = () => {
         alt="Hoffman Strategy Group"
         title="Software Engineer &amp; Product Manager"
         dateRange="November 2019 - September 2020"
-        stack={["React.js", "Material-UI", "CSS", "AWS Amplify", "AWS DynamoDB", "AWS AppSync", "GraphQL", "React-Router", "Python", "Selenium"]}
+        stack={["React.js", "Material-UI", "CSS", "AWS Amplify", "AWS DynamoDB", "AWS AppSync", "GraphQL", "Redux", "React-Router", "Python", "Selenium"]}
       />
       <br/>
       <Typography variant="body1">
@@ -121,19 +121,10 @@ const HoffmanStrategy = () => {
       </Typography>
       <Typography variant="h5" className="title">About This Position</Typography>
       <Typography variant="body1">
-        I started off with the Hoffman Strategy Group as their Director of Social Media, taking over their social media
-        presence as well as helping to maintain their Squarespace website. At this same time, the Hoffman Strategy Group
-        was sponsoring a senior design project at my university being dubbed <b>Hoffman Analytics.</b> Hoffman Analytics
-        is an ambitious project aiming to consolidate the groups' daily
+        Hoffman Analytics is an ambitious project aiming to consolidate the groups' daily
         workflows in data warehousing, project management, report generation,
-        and business intelligence.
-      </Typography>
-      <br/>
-      <Typography variant="body1">
-        Having had my foot in the door already throughout the school year, I was quickly able to pivot my position within
-        the group and take over the day-to-day software development operations once the academic year ended and Hoffman
-        Analytics project was no longer under the senior design wing. In this new position, my partner <a href="https://msich.dev">Matt Sichterman</a> and
-        I had been working to redevelop the existing senior design solution into something both more maintainable and more cohesive.
+        and business intelligence. My partner <a href="https://msich.dev">Matt Sichterman</a> and I worked to 
+        redevelop the existing senior design solution into something both more maintainable and more cohesive.
         We redefined the vision for the Hoffman Analytics platform to become something that not only consolidated their daily
         workflows, but also promote productivity through a variety of new feature ideas including a task management system, an 
         activity tracker, and much more. I worked this role in parallel over the summer with my internship at Nelnet as an IT

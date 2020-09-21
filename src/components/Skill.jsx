@@ -77,8 +77,8 @@ const SkillBar = withStyles({
 
 const useStyles = makeStyles(() => ({
   media: {
-    height: 100,
-    width: 100,
+    height: 95,
+    width: 95,
     padding: 5,
   },
   responsiveMedia: {

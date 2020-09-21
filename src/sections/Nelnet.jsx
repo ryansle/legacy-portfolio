@@ -7,14 +7,18 @@ import {
 } from "@material-ui/core";
 import PositionHeader from "../components/PositionHeader";
 
+// Utilities
+import { makeStyles } from "@material-ui/core/styles";
+
 // Assets
 import nelnet from "../resources/experience/nelnet.svg";
 
 const Nelnet = () => {
+  const classes = useStyles();
   const isSmallScreen = useMediaQuery("(max-width: 1100px)");
 
   return (
-    <div className={isSmallScreen ? "responsiveContainer" : "container"}>
+    <div className={isSmallScreen ? classes.responsiveContainer : classes.container}>
       <PositionHeader
         website="https://nelnetinc.com/"
         image={nelnet}
@@ -66,5 +70,20 @@ const Nelnet = () => {
     </div>
   );
 };
+
+const useStyles = makeStyles(() => ({
+  container: {
+    paddingTop: 40,
+    paddingLeft: "12vw",
+    paddingRight: "12vw",
+    minHeight: "calc(90vh - 90px)",
+  },
+  responsiveContainer: {
+    paddingTop: 40,
+    paddingLeft: '4vw',
+    paddingRight: '4vw',
+    minHeight: "calc(90vh - 90px)",
+  },
+}));
 
 export default Nelnet;

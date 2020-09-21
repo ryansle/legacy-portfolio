@@ -50,9 +50,9 @@ const Projects = () => {
       <Typography variant="h5" className="subtitle">Why am I making this?</Typography>
       <p>
         This platform was intended to solve my age-old problem of trying to plan out my Pokémon teams when starting a new game. I'm an
-        organized person; I like to plan things out before I execute, gameplay included. I also love know what Pokémon I have and haven't used
-        before so I can try to prioritize new Pokémon for new experiences. There was never any system like this that allowed me to organize
-        my thoughts, see statistics, and keep records of my gameplay. So, I decided to start trying to build my own.
+        organized person; I like to plan things out before I execute, gameplay included. I also love knowing what Pokémon I have and haven't used
+        before so I can try to prioritize new Pokémon for new gameplay experiences. There was never any system like this that allowed me to organize
+        my thoughts, see statistics, and keep records of my gameplay - so I decided to start trying to build my own.
       </p>
       <p>
         On top of that, I had little prior experience using Amazon Web Services, aside from the Hoffman project, so this served as a good
@@ -81,21 +81,21 @@ const Projects = () => {
       github="https://github.com/ryansle/portfolio"
     >
       <p>
-        So, like I said: this is my first true web development experience. That means there might be more than a few problems here and there while you
+        So, like I said: this is my first true web development experience. That means there might be a few problems here and there while you
         poke around on my website, and certainly if you poke around in the code. Which, by the way, I have provided public access to on GitHub by clicking the icon at the top right.
-        From building this website, I learned <b>a lot.</b> That's exactly what my intention was with building this website - learn as much as I could about web development while 
-        also showcasing my skills in order to find a new opportunity.
+        From building this website, I learned <b>a lot.</b> That's exactly what my intention was with building this website - learn something new while 
+        also showcasing my skills in order to begin searching for new opportunities.
       </p>
       <p>
         I received lots of inspiration and help for this page from my 
-        friends <a href="https://msich.netlify.app/">Matt Sichterman</a> and <a href="https://peytontanzillo.com/default/home">Peyton Tanzillo</a>.
+        friends <a href="https://msich.dev">Matt Sichterman</a> and <a href="https://peytontanzillo.com/default/home">Peyton Tanzillo</a>.
       </p>
       <Typography variant="h5" className="subtitle">Why did I make this?</Typography>
       <p>
         There were a couple key motivators that encouraged me to build my own personal site. <b>One</b>, I was getting ready for a 
-        new web development position with Hoffman Strategy Group and did not want to scramble to learn the basics at the start of the job. So, I started reading through 
-        some <a href="https://www.freecodecamp.org/learn/">free, online tutorials</a> to teach myself the basics, and decided that building a personal website would make better practice 
-        than just reading about web development. <b>Two,</b> I love teaching myself new skills. Web development seemed like the next logical step in my software 
+        new position with Hoffman Strategy Group and did not want to scramble to learn the basics at the start of the job. So, I started reading through 
+        some <a href="https://www.freecodecamp.org/learn/">free, online tutorials</a> to teach myself what I could, and decided that building a personal website would be better practice 
+        than just reading about web development. <b>Two,</b> I love teaching myself new things. Web development seemed like the next logical step in my software 
         engineering career after spending the last year working in iOS development. <b>Three,</b> I 
         wanted to make sure I was more than ready for the upcoming recruiting season. What better way to stand out as a candidate and showcase my skills than to catch your attention
         with a beautifully crafted personal webpage?
@@ -108,7 +108,7 @@ const Projects = () => {
       <Typography variant="h5" className="subtitle">What would I change next time?</Typography>
       <p>
         In the future, whenever I decide that this current webpage has been rendered obsolete, I would probably look into using a static site generator like <a href="https://www.gatsbyjs.org/">Gatsby.js</a> so
-        that my next website can be built more similar to a content managemetn system. However, I am still more than happy to have started off how I did, as it 
+        that my next website can be built more similar to a content management system. However, I am still more than happy to have started off how I did, as it 
         has proven to be an excellent foundation to build upon in the future. I'd definitely also build my pages with responsitivity in mind at the beginning so that I don't
         have to deal with the nightmare that has been refactoring my website thus far.
       </p>
@@ -133,7 +133,7 @@ const Projects = () => {
       <p>
         I worked on this project alongside <a href="https://www.linkedin.com/in/kaileimao">Kailei Mao</a>, <a href="https://www.linkedin.com/in/arreyaahrom">Arreya Ahrom</a>,
         <a href="https://www.linkedin.com/in/olivia-rine"> Olivia Rine</a>, <a href="https://www.linkedin.com/in/zhaozhong-qi-64403b118">Dennis Qi</a>, 
-        and <a href="https://www.linkedin.com/in/jake-ediger-373933129">Jake Ediger</a>. Our project could not have been nearly as successful as it was without their help.
+        and <a href="https://www.linkedin.com/in/jake-ediger-373933129">Jake Ediger</a>. Our project could not have been nearly as successful as it was without the help of our amazing team.
       </p>
       <Typography variant="h5" className="subtitle">What problem did the app solve?</Typography>
       <p>
@@ -154,7 +154,7 @@ const Projects = () => {
       <Typography variant="h5" className="subtitle">What did I learn?</Typography>
       <p>
         Working on this project was an absolutely amazing experience due to the wealth of knowledge I was able to take away from it. For instance, in my position in charge of the project,
-        I learned how to do things like manage a team of developers, elicit requirements effectively, collaborate in a team environment, effectively communicate with non-technical 
+        I learned how to do things like manage a team of developers, elicit requirements effectively, collaborate in a team environment, communicate with non-technical 
         stakeholders, and partition tasks productively. My work on Buckle Advocacy opened up brand new career opportunities for me in Product Management leveraging the skills I sharpened
         over the course of a year, and also aided me in sharpening my leadership capabilities.
       </p>
@@ -166,7 +166,7 @@ const Projects = () => {
       <p>
         Reflecting back on this experience, there is plenty of room for me to improve in my abilities as both a software engineer and a product manager. If I started this project over
         from scratch, I definitely would not have utilized Drupal as our content management system due to how outdated the technology felt while in use. On the flip side of that, I 
-        also would have allowed SwiftUI to mature more as a framework before committing to working on a project as large-scale as this in such a current technology.
+        also would have allowed SwiftUI to mature more as a framework before committing to working on a project as large-scale as this in such an up-and-coming technology.
       </p>
     </ProjectModal>
   );
@@ -258,7 +258,7 @@ const Projects = () => {
         >
           <Typography variant="body2">
             I switched to an iOS team at Nelnet that worked with Amazon Web Services for
-            their serverless backend. Up until now, I had minimal expose to the technologies,
+            their serverless backend. Up until now, I had minimal exposure to the technologies,
             so I started working on a platform that allowed you to build and plan out your
             Pokémon teams, track your team statistics, and do a couple more things as well.
             <b> This project is still a work in progress.</b>

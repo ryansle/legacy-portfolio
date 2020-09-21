@@ -7,14 +7,18 @@ import {
 } from "@material-ui/core";
 import PositionHeader from "../components/PositionHeader";
 
+// Utilities
+import { makeStyles } from "@material-ui/core/styles";
+
 // Assets
 import unl from "../resources/experience/unl.png";
 
 const UNL = () => {
+  const classes = useStyles();
   const isSmallScreen = useMediaQuery("(max-width: 1100px)");
 
   return (
-    <div className={isSmallScreen ? "responsiveContainer" : "container"}>
+    <div className={isSmallScreen ? classes.responsiveContainer : classes.container}>
       <PositionHeader
         website="https://cse.unl.edu/home"
         image={unl}
@@ -59,5 +63,20 @@ const UNL = () => {
     </div>
   );
 };
+
+const useStyles = makeStyles(() => ({
+  container: {
+    paddingTop: 40,
+    paddingLeft: "12vw",
+    paddingRight: "12vw",
+    minHeight: "calc(90vh - 90px)",
+  },
+  responsiveContainer: {
+    paddingTop: 40,
+    paddingLeft: '4vw',
+    paddingRight: '4vw',
+    minHeight: "calc(90vh - 90px)",
+  },
+}));
 
 export default UNL;

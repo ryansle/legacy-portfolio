@@ -75,12 +75,6 @@ const Skills = () => {
         <Devices className={classes.icon}/>
         <Typography variant="h4" className="title">Software Engineering</Typography>
       </Grid>
-      <Typography variant="body1">
-        I have been lucky enough to be directly exposed to a variety of different development technologies throughout my time at university and in industry.
-        As of right now, I am searching for a position that can aid me in furthering my skills in any of the following development languages:
-      </Typography>
-      <br />
-
       {/* Development Langauges */}
       <SkillTable title="Development Languages">
         <Skill

@@ -33,12 +33,16 @@ const Home = () => {
         // post="as your new front-end developer."
       />
       <section className={isSmallScreen ? "responsiveContainer" : "container"}>
-        <Typography className="title" variant="h3">Welcome.</Typography>
+        <Typography variant="h3"><b>Ryan Le</b></Typography>
+        <Typography variant="h5" color="textSecondary"><i>Software Engineer &amp; Product Manager</i></Typography>
+        <br/>
         <Typography variant="body1">
-          I created this online portfolio from the ground up in order to showcase my skills, 
-          gain some web development experience, go into greater detail about who I am, 
-          and help you understand why you should consider me for full-time software engineering positions 
-          at your company. You can learn a lot more by navigating between the links to the side or below!
+          I created this online portfolio from the ground up in order to showcase my skills and help you
+          understand why you should consider hiring <b>me</b> on as your new front-end web developer. Check
+          out the links below to learn more about what makes me a great applicant.
+        </Typography>
+        <Typography variant="body1">
+
         </Typography>
         <br/>
         <Typography variant="h5">Quick Links</Typography>
