@@ -35,8 +35,8 @@ const Reference = ({ name, title, company, location, email, phone="", image, alt
         <br/>
         <a href={mailto}>
           <Grid container>
-            <Mail className={isSmallScreen ? classes.smallIcon : classes.referenceIcon}/>
             <Typography variant={isSmallScreen ? "caption" : "subtitle1"}>
+              <Mail className={isSmallScreen ? classes.smallIcon : classes.referenceIcon}/>
               {email}
             </Typography>
           </Grid>
@@ -44,8 +44,8 @@ const Reference = ({ name, title, company, location, email, phone="", image, alt
         {phone !== "" &&
           <a href={tel}>
             <Grid container>
-              <Phone className={isSmallScreen ? classes.smallIcon : classes.referenceIcon}/>
               <Typography variant={isSmallScreen ? "caption" : "subtitle1"}>
+              <Phone className={isSmallScreen ? classes.smallIcon : classes.referenceIcon}/>
                 {formattedTel}
               </Typography>
             </Grid>
