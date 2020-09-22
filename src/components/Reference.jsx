@@ -20,23 +20,23 @@ const Reference = ({ name, title, company, location, email, phone="", image, alt
   return (
     <Card className={isSmallScreen ? classes.responsiveReference : classes.reference}>
       <div className={classes.details}>
-        <Typography variant="h6">
+        <Typography variant={isSmallScreen ? "body1" : "h6"}>
           {name}
         </Typography>
-        <Typography variant="subtitle1" color="textSecondary">
+        <Typography variant={isSmallScreen ? "caption" : "subtitle1"} color="textSecondary">
           {title}
         </Typography>
-        <Typography variant="subtitle1" color="textSecondary">
+        <Typography variant={isSmallScreen ? "caption" : "subtitle1"} color="textSecondary">
           {company}
         </Typography>
-        <Typography variant="subtitle1" color="textSecondary">
+        <Typography variant={isSmallScreen ? "caption" : "subtitle1"} color="textSecondary">
           {location}
         </Typography>
         <br/>
         <a href={mailto}>
           <Grid container>
-            <Mail className={classes.referenceIcon}/>
-            <Typography variant="subtitle1">
+            <Mail className={isSmallScreen ? classes.smallIcon : classes.referenceIcon}/>
+            <Typography variant={isSmallScreen ? "caption" : "subtitle1"}>
               {email}
             </Typography>
           </Grid>
@@ -44,8 +44,8 @@ const Reference = ({ name, title, company, location, email, phone="", image, alt
         {phone !== "" &&
           <a href={tel}>
             <Grid container>
-              <Phone className={classes.referenceIcon}/>
-              <Typography variant="subtitle1">
+              <Phone className={isSmallScreen ? classes.smallIcon : classes.referenceIcon}/>
+              <Typography variant={isSmallScreen ? "caption" : "subtitle1"}>
                 {formattedTel}
               </Typography>
             </Grid>
@@ -92,6 +92,11 @@ const useStyles = makeStyles(() => ({
   },
   referenceIcon: {
     marginRight: 10,
+  },
+  smallIcon: {
+    width: 15,
+    height: "auto",
+    marginRight: 4,
   },
   cover: {
     width: "40%",

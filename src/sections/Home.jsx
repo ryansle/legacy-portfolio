@@ -34,7 +34,7 @@ const Home = () => {
       />
       <section className={isSmallScreen ? "responsiveContainer" : "container"}>
         <Typography variant="h3"><b>Ryan Le</b></Typography>
-        <Typography variant="h5" color="textSecondary"><i>Software Engineer &amp; Product Manager</i></Typography>
+        <Typography variant={isSmallScreen ? "h6" : "h5"} color="textSecondary"><i>Software Engineer &amp; Product Manager</i></Typography>
         <br/>
         <Typography variant="body1">
           I created this online portfolio from the ground up in order to showcase my skills and help you
