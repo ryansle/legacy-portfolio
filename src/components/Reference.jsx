@@ -65,7 +65,7 @@ const useStyles = makeStyles(() => ({
   responsiveReference: {
     display: "flex",
     width: "100%",
-    height: "auto",
+    height: 200,
     marginTop: 10,
     marginBottom: 10,
     border: "1px solid #9fa2b4",
