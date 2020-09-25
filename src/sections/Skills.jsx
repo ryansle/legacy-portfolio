@@ -294,7 +294,7 @@ const Skills = () => {
           level={7}
         />
         <Skill
-          name="Premier Pro"
+          name="Premiere Pro"
           image={premier}
           alt="Adobe Premiere Pro"
           level={6}
