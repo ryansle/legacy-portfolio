@@ -45,7 +45,7 @@ const Projects = () => {
       stack={["AWS Amplify", "AWS AppSync", "AWS DynamoDB", "AWS Cognito", "GraphQL", "React.js", "Material-UI", "PokéAPI", "React-Router", "CSS",]}
       banner={pokemonCropped}
       bannerAlt="Pokémon Team Builder"
-      github="https://github.com/ryansle/pokemon-team-checker"
+      // github="https://github.com/ryansle/pokemon-team-checker"
     >
       <Typography variant="h5" className="subtitle">Why am I making this?</Typography>
       <p>
