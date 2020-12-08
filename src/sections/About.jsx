@@ -34,46 +34,42 @@ const About = () => {
         Hello! My name is Ryan Le and I am a senior at the University of Nebraska-Lincoln studying Software Engineering.
         Back in August of 2017, I moved to Lincoln, Nebraska, from my hometown of Sioux Falls, South Dakota, in order to kickstart my college career
         and learn the ins and outs of software development. Since then, I have learned a lot and have been enjoying every minute of it.
-        Now, I am on the search for a full-time web development opportunity!
       </Typography>
       <br />
+
       <Typography variant="body1">
         So far, I have been enjoying front-end development the most as it allows me to utilize my creative side while
         also leveraging my client-facing abilities to learn how to improve the user experience. Lately, I have been writing a lot of 
-        JavaScript in collaboration with technologies like React.js, Material-UI, and Amazon Web Services (which I am still in the process of learning) to create my projects.
+        JavaScript in collaboration with technologies like React.js and Material-UI to create my projects. In time, I'm hoping to pivot and
+        gain additional experience in a full-stack environment leveraging tools like Amazon Web Services and the Serverless Framework.
       </Typography>
-
-      <div className={classes.whitespace}/>
+      <br /> <br />
 
       <Typography variant="h4" className="title">Education</Typography>
       <Typography variant="body1"><b>University of Nebraska-Lincoln</b></Typography>
       <Typography variant="body1">
-        Bachelor of Science in 
-        <b> Software Engineering</b>, 
-        Minor in <b>Mathematics</b>
+        Bachelor of Science in <b> Software Engineering</b>, Minor in <b>Mathematics</b>
       </Typography>
       <Typography variant="body1">
         <b>Cumulative GPA:</b> 3.597/4.000
       </Typography>
       <br />
+
       <Typography variant="body1">
         Throughout my college career, I have gained a variety of experiences in different aspects of leadership and software development.
         You can learn more about these different experiences by visiting my <Link to="/projects">projects page</Link>, or read about my
         specific skillsets by reading through my <Link to="/skills">skills page</Link>.
       </Typography>
       <br />
+
       <Typography variant="body1">
         I am also heavily involved in my university's Engineering Student Advisory Board, serving as the board's Vice President of Communcation. 
-        Along with that, my friends and I are hard at work on our SOFTie Startup initiative through our university's senior design program,
-        an altered version of our school's capstone experience that allows us to pursue our own unique project idea.
+        Along with that, my friends and I are busy at work on our SOFTie Startup initiative through our university's senior design program,
+        an altered version of our school's capstone experience that allows us to pursue our own unique project idea while simulating the early 
+        stages of a startup environment.
       </Typography>
       <br />
-      <Typography variant="body1">
-        Here's how it works: instead of signing on for another year of working for an industry-sponsored project, the university is allowing our 
-        assembled team of student developers to pursue our own startup project where we get to be our own primary stakeholders. A project in which we call the shots, 
-        define our project vision, incubate our ideas from the ground up, and pursue technologies of interest in a startup environment all with the backing
-        of our own tuition dollars, mitigating any and all risk of forming a company from the ground up. Things are going great so far!
-      </Typography>
+
       <p align="center">
         <img 
           src={nebraska} 
@@ -81,15 +77,13 @@ const About = () => {
           alt="Go Big Red!"
         />
       </p>
+      <br /> <br />
 
-      <div className={classes.whitespace}/>
-
-      <Typography variant="h4" className="title">More About Me</Typography>
+      <Typography variant="h4" className="title">Personal</Typography>
       <Typography variant="body1" component={"span"}>
         But as busy as my life can be with school, work, and extracurriculars, I can still find time to set aside to do things I love including...
         <ul>
           <li>Going for long jogs around Lincoln, NE to rest my mind <span role="img" aria-label="(Running Man)">🏃‍♂️</span></li>
-          <li>Practicing (amateur) photograpy of people and places <span role="img" aria-label="(Camera)">📸</span></li>
           <li>Traveling within the country to brand new places with my amazing group of friends <span role="img" aria-label="(Mountain)">⛰️</span></li>
           <li>Spending quality time with friends and family <span role="img" aria-label="(Family)">👨‍👩‍👧‍👦</span></li>
           <li>Learning how to improve my skills as a software engineer <span role="img" aria-label="(Laptop)">💻</span></li>
@@ -98,8 +92,7 @@ const About = () => {
         I consider myself very much a people person; I love meeting new people and am always willing to put myself out there 
         into social situations where I can talk to new people.
       </Typography>
-
-      <div className={classes.whitespace}/>
+      <br /> <br />
 
       <Typography variant="h4" className="title">Professional References</Typography>
       <Grid container justify="space-between">
@@ -154,7 +147,7 @@ const About = () => {
           name="Christian Berck"
           title="Software Engineer"
           company="Microsoft"
-          location="Redmond, WA"
+          location="Lincoln, NE"
           email="christian@berck.org"
           phone="402-270-0986"
           image={christian}
@@ -184,9 +177,6 @@ const About = () => {
 };
 
 const useStyles = makeStyles(() => ({
-  whitespace: {
-    margin: 60,
-  },
   image: {
     width: "50%",
     height: "auto",

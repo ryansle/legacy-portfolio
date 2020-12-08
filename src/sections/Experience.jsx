@@ -30,20 +30,22 @@ const Experience = () => {
           company="Nelnet"
           title="IT Software Engineer Intern"
           dateRange="June 2020 - Now"
-          stack={["Swift", "UIKit", "Amazon Web Services", "Figma",]}
+          stack={["React.js", "Material-UI", "Swift", "Amazon Web Services",]}
           link="nelnet"
           image={nelnet}
           alt="Nelnet"
+          website="https://campuscommerce.com/campuskey/"
         >
           <Typography variant="body1" component={"span"}>
-            Currently participating in a fully remote internship focusing on developing iOS applications for Nelnet's <a href="https://campuscommerce.com/campuskey/">Campus Key</a> team.
-            In this role, I get to utilize some of the latest mobile development standards 
-            including the Swift progamming language, UIKit, and the Serverless Framework. 
-            Some of the things I've had the chance to do in this position:
+            Currently participating in a fully remote internship where I have rotated between two teams and three projects since starting work
+            in June. In my current role, I am working as a Software Engineer Intern on Nelnet's <a href="https://campuscommerce.com/campuskey/">Campus Key</a> team,
+            redeveloping the front-end for the Cardholder Portal web application, an internal administrative portal for our Campus Key mobile application.
+            Some of my duties within the company have and currently include:
             <ul>
-              <li>Develop dynamically scalable iOS applications with Swift, UIKit, and the Serverless Framework</li>
+              <li>Redevelop the front-end for the Cardholder Portal application using the React.js framework</li>
+              <li>Leverage Material-UI for faster and easier web development</li>
+              <li>Develop dynamically scalable iOS applications with Swift, UIKit, and the serverless framework</li>
               <li>Design and develop rich, interactive user experiences utilizing the power of UIKit</li>
-              <li>Perform XML data transformations using the XSLT functional language</li>
             </ul>
           </Typography>
         </Position>
@@ -56,6 +58,7 @@ const Experience = () => {
           link="hoffman-strategy-group"
           image={hsg}
           alt="Hoffman Strategy Group"
+          website="https://hoffmanstrategygroup.com/"
         >
           <Typography variant="body1" component={"span"}>
             My partner and I, <a href="https://msich.dev/">Matt Sichterman,</a> inherited a pre-existing
@@ -79,6 +82,7 @@ const Experience = () => {
           link="raven-industries"
           image={raven}
           alt="Raven Industries"
+          website="https://ravenind.com/"
         >
           <Typography variant="body1" component={"span"}> 
             Developed and maintained an internal report generation tool that streamlined the process of creating
@@ -100,6 +104,7 @@ const Experience = () => {
           link="unl"
           image={unl}
           alt="University of Nebraska-Lincoln - Department of Computer Science &amp; Engineering"
+          website="https://cse.unl.edu/home"
         >
           <Typography variant="body1" component={"span"}>
             Aided Dr. Bohn in the planning and execution of his CSCE 361 (Software Engineering) course while also grading student assignments
@@ -120,6 +125,7 @@ const Experience = () => {
           link="relogic-games"
           image={relogic}
           alt="Re-Logic Games"
+          website="https://re-logic.com/"
         >
           <Typography variant="body1" component={"span"}>
             Evaluated beta versions of the hit indie game Terraria for bugs and gameplay issues prior to shipping out major community updates. Fun facts:

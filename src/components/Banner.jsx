@@ -1,14 +1,11 @@
 import React from "react";
 
-import { Grid, useMediaQuery } from "@material-ui/core";
-
 // Utilities
 import { makeStyles } from "@material-ui/core/styles";
 
 // Credit to Peyton Tanzillo (PeytonTanzillo.com) for the banner component
-const Banner = ({ image, alt, screenHeight, pre="", name="", post="" }) => {
+const Banner = ({ image, alt, screenHeight }) => {
   const classes = useStyles();
-  const isSmallScreen = useMediaQuery("(max-width: 1100px)");
 
   return (
     <div
@@ -21,19 +18,6 @@ const Banner = ({ image, alt, screenHeight, pre="", name="", post="" }) => {
       }}
       alt={alt}
     >
-      {!isSmallScreen &&
-        <Grid container alignItems="center">
-          <p className={classes.text}>
-            {pre}
-            <br/>
-            <span className={classes.name}>
-              {name}
-            </span>
-            <br/>
-            {post}
-          </p>
-        </Grid>
-      }
     </div>
   );
 };

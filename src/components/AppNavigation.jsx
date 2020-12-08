@@ -32,9 +32,9 @@ import { makeStyles, useTheme } from "@material-ui/core/styles";
 import nav from "../utils/enums";
 import { MenuItems } from "../utils/menu-items";
 
-const sidebarWidth = 225;
+const sidebarWidth = 250;
 
-const AppNavigation = (props) => {
+const AppNavigation = () => {
   const classes = useStyles();
   const theme = useTheme();
   

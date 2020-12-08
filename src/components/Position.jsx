@@ -23,7 +23,8 @@ const Position = ({
   link, 
   image,
   alt,
-  children 
+  children,
+  website
 }) => {
   const classes = useStyles();
   const isSmallScreen = useMediaQuery("(max-width: 1440px)");
@@ -42,7 +43,7 @@ const Position = ({
         {dateRange}
       </Typography>
       <Grid container wrap="wrap-reverse">
-        <Grid item xs={isSmallScreen ? 12 : 6}>  
+        <Grid item xs={isSmallScreen ? 12 : 7}>  
           {children}
           {
             stack.map((tech, index) =>
@@ -65,13 +66,15 @@ const Position = ({
             Learn More
           </Button>
         </Grid>
-        <Grid item xs={isSmallScreen ? 12 : 6}>
+        <Grid item xs={isSmallScreen ? 12 : 5}>
           <p align="middle">
-            <img 
-              className={isSmallScreen ? classes.responsiveMedia : classes.media}
-              src={image}
-              alt={alt}
-            />
+            <a href={website}>
+              <img 
+                className={isSmallScreen ? classes.responsiveMedia : classes.media}
+                src={image}
+                alt={alt}
+              />
+            </a>
           </p>
         </Grid>
       </Grid>

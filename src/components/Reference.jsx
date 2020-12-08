@@ -34,18 +34,18 @@ const Reference = ({ name, title, company, location, email, phone="", image, alt
         </Typography>
         <br/>
         <a href={mailto}>
-          <Grid container>
+          <Grid container alignItems="center">
+            <Mail className={isSmallScreen ? classes.smallIcon : classes.referenceIcon}/>
             <Typography variant={isSmallScreen ? "caption" : "subtitle1"}>
-              <Mail className={isSmallScreen ? classes.smallIcon : classes.referenceIcon}/>
               {email}
             </Typography>
           </Grid>
         </a>
         {phone !== "" &&
           <a href={tel}>
-            <Grid container>
-              <Typography variant={isSmallScreen ? "caption" : "subtitle1"}>
+            <Grid container alignItems="center">
               <Phone className={isSmallScreen ? classes.smallIcon : classes.referenceIcon}/>
+              <Typography variant={isSmallScreen ? "caption" : "subtitle1"}>
                 {formattedTel}
               </Typography>
             </Grid>
@@ -79,6 +79,7 @@ const useStyles = makeStyles(() => ({
     margin: 7,
     border: "1px solid #9fa2b4",
     minWidth: 463,
+    minHeight: 220,
     "&:hover": {
       boxShadow: "0 4px 8px 1px rgba(0, 0, 0, 0.2), 0 6px 20px 1px rgba(0, 0, 0, 0.19)",
     },

@@ -28,25 +28,21 @@ const Home = () => {
         image={isSmallScreen ? cropped : mountains}
         alt="Ryan Le - Dynamic Banner"
         screenHeight={50}
-        // pre="You should hire"
-        // name="Ryan Le"
-        // post="as your new front-end developer."
       />
       <section className={isSmallScreen ? "responsiveContainer" : "container"}>
         <Typography variant="h3"><b>Ryan Le</b></Typography>
-        <Typography variant={isSmallScreen ? "h6" : "h5"} color="textSecondary"><i>Software Engineer &amp; Product Manager</i></Typography>
-        <br/>
-        <Typography variant="body1">
-          I created this online portfolio from the ground up in order to showcase my skills and help you
-          understand why you should consider hiring <b>me</b> on as your new front-end web developer. Check
-          out the links below to learn more about what makes me a great applicant.
+        <Typography variant={isSmallScreen ? "h6" : "h5"} color="textSecondary">
+          <i>Software Engineer &amp; Product Manager</i>
         </Typography>
-        <Typography variant="body1">
+        <br/>
 
+        <Typography variant="body1">
+          I built this online portfolio using the Material-UI component library on top of React.js to gain some initial hands-on experience 
+          with the latest web development standards. 
+          Check out the links below to learn more about what makes me a great addition to your development team.
         </Typography>
         <br/>
-        <Typography variant="h5">Quick Links</Typography>
-        <br/>
+        
         <Grid container justify="space-between">
           <NavCard
             image={about}

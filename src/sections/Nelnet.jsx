@@ -25,7 +25,7 @@ const Nelnet = () => {
         alt="Nelnet"
         title="IT Software Engineer Intern"
         dateRange="June 2020 - Now"
-        stack={["Swift", "UIKit", "Figma", "AWS DynamoDB", "AWS Cognito", "XSLT"]}
+        stack={["React.js", "Material-UI", "AWS DynamoDB", "AWS Cognito", "Swift", "UIKit", "Figma", "XSLT"]}
       />
       <br/>
   
@@ -34,12 +34,15 @@ const Nelnet = () => {
         the administration and repayment of student loans and education financial services.
       </Typography>
       <br/>
+
       <Typography variant="h5" className="title">Responsibilities</Typography>
       <Typography variant="body1" component={"span"}>
         <ul>
-          <li>Develop dynamically scalable iOS applications with wift, UIKit, and the Serverless Framework.</li>
-          <li>Design and develop rich, interactive uer experiences utilizing the power of UIKit.</li>
-          <li>Participate in an intern pod team that delivered a business proposal to senior members of the Nelnet organization, winning third place in the company-wide competition</li>
+          <li>Redevelop the front-end for the Cardholder Portal application using the React.js framework.</li>
+          <li>Leverage Material-UI for faster and easier web development.</li>
+          <li>Develop dynamically scalable iOS applications with Swift, UIKit, and the serverless framework.</li>
+          <li>Design and develop rich, interactive user experiences utilizing the power of UIKit.</li>
+          <li>Participate in an intern pod team that delivered a business proposal to senior members of the Nelnet organization, winning third place in the company-wide competition.</li>
           <li>Create XSLT transformations for the Workday team.</li>
         </ul>
       </Typography>
@@ -53,6 +56,7 @@ const Nelnet = () => {
         this process after managing to get in contact with their recruiting team on LinkedIn.
       </Typography>
       <br/>
+
       <Typography variant="body1">
         I spent my summer working on Nelnet's Workday Integrations and AGM teams, lending a hand wherever I could.
         My time was divided between writing XSLT transformations, furthering the developments of an existing
@@ -60,13 +64,20 @@ const Nelnet = () => {
         executive team.
       </Typography>
       <br/>
+
       <Typography variant="body1">
         With the start of the fall semester, I've switched gears and joined Nelnet's Campus Key team to work once again as a mobile developer, primarily
         with up-and-coming technologies like Swift, UIKit, and Amazon Web Services like AWS Cognito and AWS DynamoDB. In this new position, I get to showcase my skills in making interactive
-        user interfaces while also gaining hands-on experience with the new Serverless Framework, something I've been excited to work with ever since my position with
+        user interfaces while also gaining hands-on experience with the new serverless framework, something I've been excited to work with ever since my position with
         Hoffman Strategy Group.
       </Typography>
       <br/>
+
+      <Typography variant="body1">
+        Now, I get to switch gears again and work again with my favorite toolsets - React.js and Material-UI - to redevelop the front-end for the pre-existing Cardholder Portal project,
+        an administrative portal that partners with the mobile Campus Key applicaiton that I worked on previously. I'm ecstatic to be given the opportunity to once again leverage
+        my web development skillsets on a project as interesting as this one, and also to work with some top-tier talent at Nelnet!
+      </Typography>
     </div>
   );
 };

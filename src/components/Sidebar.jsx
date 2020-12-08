@@ -48,8 +48,8 @@ const Sidebar = ({
       </Grid>
       <div style={{ textAlign: "center" }}>
         <Typography variant="h5" className={classes.whiteText}>Ryan Le</Typography>
-        <Typography variant="body2" className={classes.whiteText}>Software Engineer</Typography>
-        <Typography variant="body2" className={classes.whiteText}>University of Nebraska-Lincoln</Typography>
+        <Typography variant="body1" className={classes.whiteText}>Software Engineer</Typography>
+        <Typography variant="body1" className={classes.whiteText}>University of Nebraska-Lincoln</Typography>
       </div>
       <p/>
 
