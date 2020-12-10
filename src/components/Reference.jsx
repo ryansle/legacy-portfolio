@@ -1,15 +1,34 @@
 import React from "react";
 
 // Components
-import { Card, Typography, Grid, CardMedia, useMediaQuery } from "@material-ui/core";
+import { 
+  Card, 
+  CardContent,
+  Typography, 
+  Grid, 
+  Link,
+  CardMedia, 
+  useMediaQuery 
+} from "@material-ui/core";
 import { Mail, Phone } from "@material-ui/icons";
 
 // Utilities
 import { makeStyles } from "@material-ui/core/styles";
 
-const Reference = ({ name, title, company, location, email, phone="", image, alt }) => {
+const Reference = ({ 
+  name, 
+  title, 
+  company, 
+  location, 
+  email, 
+  phone="", 
+  image, 
+  alt 
+}) => {
   const classes = useStyles();
-  const isSmallScreen = useMediaQuery("(max-width: 1550px)");
+  const tabletScreen = useMediaQuery("(max-width: 1500px)");
+  const phoneScreen = useMediaQuery("(max-width: 800px)");
+
   const mailto = `mailto:${email}`;
   const tel = `tel:1-${phone}`;
   const areaCode = phone.substring(0, 3);
@@ -18,90 +37,85 @@ const Reference = ({ name, title, company, location, email, phone="", image, alt
   const formattedTel = `(${areaCode}) ${middle}-${end}`;
 
   return (
-    <Card className={isSmallScreen ? classes.responsiveReference : classes.reference}>
-      <div className={classes.details}>
-        <Typography variant={isSmallScreen ? "body1" : "h6"}>
+    <Card className={phoneScreen ? classes.phoneReference : classes.fullReference}>
+      <CardContent className={classes.content}>
+        <Typography variant={tabletScreen ? "body1" : "h6"}>
           {name}
         </Typography>
-        <Typography variant={isSmallScreen ? "caption" : "subtitle1"} color="textSecondary">
+        <Typography 
+          variant={tabletScreen ? "caption" : "body1"}
+          color="textSecondary"
+        >
           {title}
-        </Typography>
-        <Typography variant={isSmallScreen ? "caption" : "subtitle1"} color="textSecondary">
+          <br />
+
           {company}
-        </Typography>
-        <Typography variant={isSmallScreen ? "caption" : "subtitle1"} color="textSecondary">
+          <br />
+
           {location}
         </Typography>
-        <br/>
-        <a href={mailto}>
-          <Grid container alignItems="center">
-            <Mail className={isSmallScreen ? classes.smallIcon : classes.referenceIcon}/>
-            <Typography variant={isSmallScreen ? "caption" : "subtitle1"}>
-              {email}
-            </Typography>
-          </Grid>
-        </a>
-        {phone !== "" &&
-          <a href={tel}>
+
+        <Grid className={classes.contact} container alignItems="center">
+          <Mail className={classes.icon} />
+          <Link 
+            href={mailto} 
+            variant={tabletScreen ? "caption" : "body1"}
+          >
+            {email}
+          </Link>
+        </Grid>
+
+        {
+          phone !== "" && 
             <Grid container alignItems="center">
-              <Phone className={isSmallScreen ? classes.smallIcon : classes.referenceIcon}/>
-              <Typography variant={isSmallScreen ? "caption" : "subtitle1"}>
+              <Phone className={classes.icon} />
+              <Link 
+                href={tel} 
+                variant={tabletScreen ? "caption" : "body1"}
+              >
                 {formattedTel}
-              </Typography>
+              </Link>
             </Grid>
-          </a>
-        }
-      </div>
+        } 
+      </CardContent>
+
       <CardMedia
-        className={classes.cover}
+        className={classes.headshot}
         image={image}
-        title={alt}
+        alt={alt}
+        title="name"
       />
     </Card> 
   );
 };
 
 const useStyles = makeStyles(() => ({
-  responsiveReference: {
+  fullReference: {
     display: "flex",
-    width: "100%",
-    height: 200,
-    marginTop: 10,
-    marginBottom: 10,
-    border: "1px solid #9fa2b4",
-    "&:hover": {
-      boxShadow: "0 4px 8px 1px rgba(0, 0, 0, 0.2), 0 6px 20px 1px rgba(0, 0, 0, 0.19)",
-    },
+    margin: "0px 3px 20px 3px",
+    width: "48%"
   },
-  reference: {
+  phoneReference: {
     display: "flex",
-    width: "45%",
-    margin: 7,
-    border: "1px solid #9fa2b4",
-    minWidth: 463,
-    minHeight: 220,
-    "&:hover": {
-      boxShadow: "0 4px 8px 1px rgba(0, 0, 0, 0.2), 0 6px 20px 1px rgba(0, 0, 0, 0.19)",
-    },
+    margin: "0px 5px 20px 5px",
+    width: "95%"
   },
-  details: {
-    display: "flex",
-    flexDirection: "column",
-    width: "60%",
-    padding: 15,
-    midWidth: 215,
+  content: {
+    width: "80%",
   },
-  referenceIcon: {
-    marginRight: 10,
+  contact: {
+    margin: "20px 0px 0px 0px",
   },
-  smallIcon: {
-    width: 15,
+  icon: {
+    color: "#3F51B5",
+    margin: "0px 15px 0px 0px",
+    width: 20,
     height: "auto",
-    marginRight: 4,
   },
-  cover: {
-    width: "40%",
-  },
+  headshot: {
+    width: "46%",
+    height: "100%",
+  }
 }));
 
 export default Reference;
