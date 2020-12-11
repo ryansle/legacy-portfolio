@@ -20,7 +20,7 @@ import contact from "../resources/stock/contact.jpg";
 import resume from "../resources/stock/resume.jpg";
 
 const Home = () => {
-  const isSmallScreen = useMediaQuery("(max-width: 1100px)");
+  const isSmallScreen = useMediaQuery("(max-width: 1170px)");
 
   return (
     <div>
@@ -29,7 +29,7 @@ const Home = () => {
         alt="Ryan Le - Dynamic Banner"
         screenHeight={50}
       />
-      <section className={isSmallScreen ? "responsiveContainer" : "container"}>
+      <div className={isSmallScreen ? "responsiveContainer" : "container"}>
         <Typography variant="h3"><b>Ryan Le</b></Typography>
         <Typography variant={isSmallScreen ? "h6" : "h5"} color="textSecondary">
           <i>Software Engineer &amp; Product Manager</i>
@@ -93,7 +93,7 @@ const Home = () => {
             linkText="See the condensed version"
           />
         </Grid>
-      </section>
+      </div>
     </div>
   );
 };

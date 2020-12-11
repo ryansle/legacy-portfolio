@@ -54,7 +54,7 @@ const Contact = () => {
   );
 };
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(() => ({
   container: {
     paddingTop: 40,
     paddingLeft: "20vw",
@@ -63,8 +63,8 @@ const useStyles = makeStyles((theme) => ({
   },
   responsiveContainer: {
     paddingTop: 40,
-    paddingLeft: '5vw',
-    paddingRight: '5vw',
+    paddingLeft: "12vw",
+    paddingRight: "15vw",
     minHeight: "calc(90vh + 10px)",
   },
   responsiveImage: {

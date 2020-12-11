@@ -7,6 +7,7 @@ import {
   Typography, 
   Chip, 
   Button, 
+  Grid,
   Avatar,
   useMediaQuery 
 } from "@material-ui/core";
@@ -28,7 +29,8 @@ const ProjectPreview = React.forwardRef(
     ref
   ) => {
     const classes = useStyles();
-    const isSmallScreen = useMediaQuery("(max-width: 1100px)");
+    const isSmallScreen = useMediaQuery("(max-width: 1300px)");
+    const compressButton = useMediaQuery("(max-width: 1700px)");
 
     return (
       <Card className={isSmallScreen ? classes.responsiveProject : classes.project} ref={ref}>
@@ -44,25 +46,30 @@ const ProjectPreview = React.forwardRef(
             </Typography>
             {children}
           </CardContent>
-          {
-            stack.map((tech, index) =>
-              <Chip
-                key={index}
-                className={classes.tech}
-                label={tech}
-                avatar={<Avatar src={renderIcon(tech)} />}
-              />
-            )
-          }
-          <Button 
-            className={classes.learnMore}
-            size="small"
-            variant="contained"
-            color="primary"
-            onClick={toggleModal}
-          >
-            Learn More
-          </Button>
+
+          <Grid container>
+            {
+              stack.map((tech, index) =>
+                <Chip
+                  key={index}
+                  className={classes.tech}
+                  label={tech}
+                  avatar={<Avatar src={renderIcon(tech)} />}
+                />
+              )
+            }
+            <div className={isSmallScreen ? "" : "grow"} />
+
+            <Button 
+              className={compressButton ? classes.fullWidth: classes.learnMore}
+              size="small"
+              variant="contained"
+              color="primary"
+              onClick={toggleModal}
+            >
+              Learn More
+            </Button>
+          </Grid>
         </div>
       </Card>
     );
@@ -99,6 +106,10 @@ const useStyles = makeStyles(() => ({
   learnMore: {
     float: "right",
     margin: 6,
+  },
+  fullWidth: {
+    width: "100%",
+    margin: "20px 6px 6px 6px",
   },
 }));
 
