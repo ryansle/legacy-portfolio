@@ -30,7 +30,7 @@ const Experience = () => {
           company="Nelnet"
           title="IT Software Engineer Intern"
           dateRange="June 2020 - Now"
-          stack={["React.js", "Material-UI", "Swift", "Amazon Web Services",]}
+          stack={["React.js", "Material-UI", "Redux", "Amazon Web Services", "Figma", "Swift", "UIKit"]}
           link="nelnet"
           image={nelnet}
           alt="Nelnet"
@@ -54,7 +54,7 @@ const Experience = () => {
           company="Hoffman Strategy Group"
           title="Software Engineer &amp; Product Manager"
           dateRange="November 2019 - September 2020"
-          stack={["React.js", "Material-UI", "Amazon Web Services", "GraphQL"]}
+          stack={["React.js", "Material-UI", "Redux", "Amazon Web Services", "GraphQL"]}
           link="hoffman-strategy-group"
           image={hsg}
           alt="Hoffman Strategy Group"
