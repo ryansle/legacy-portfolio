@@ -42,9 +42,13 @@ const Position = ({
       <Typography variant="subtitle1" className={classes.dateRange} color="textSecondary">
         {dateRange}
       </Typography>
+
       <Grid container wrap="wrap-reverse">
         <Grid item xs={isSmallScreen ? 12 : 7}>  
-          {children}
+          
+          {/* Preview writeup */}
+          {children} 
+
           {
             stack.map((tech, index) =>
               <Chip

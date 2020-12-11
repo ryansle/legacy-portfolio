@@ -190,14 +190,14 @@ const useStyles = makeStyles(() => ({
     height: "auto",
   },
   responsiveImage: {
-    width: "80%",
+    width: "65%",
     height: "auto",
   },
   bold: {
     fontWeight: "bold",
   },
   referenceContainer: {
-    padding: "0px 4vw 0px 4vw",
+    padding: "0px 5vw 0px 5vw",
   },
 }));
   

@@ -37,7 +37,7 @@ const Reference = ({
   const formattedTel = `(${areaCode}) ${middle}-${end}`;
 
   return (
-    <Card className={phoneScreen ? classes.phoneReference : classes.fullReference}>
+    <Card className={phoneScreen ? classes.phoneReference : classes.fullReference} variant="outlined">
       <CardContent className={classes.content}>
         <Typography variant={tabletScreen ? "body1" : "h6"}>
           {name}
@@ -93,12 +93,18 @@ const useStyles = makeStyles(() => ({
   fullReference: {
     display: "flex",
     margin: "0px 3px 20px 3px",
-    width: "48%"
+    width: "48%",
+    "&:hover": {
+      boxShadow: "0 4px 8px 1px rgba(0, 0, 0, 0.2), 0 6px 20px 1px rgba(0, 0, 0, 0.19)",
+    },
   },
   phoneReference: {
     display: "flex",
     margin: "0px 5px 20px 5px",
-    width: "95%"
+    width: "95%",
+    "&:hover": {
+      boxShadow: "0 4px 8px 1px rgba(0, 0, 0, 0.2), 0 6px 20px 1px rgba(0, 0, 0, 0.19)",
+    },
   },
   content: {
     width: "80%",
