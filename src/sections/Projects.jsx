@@ -47,6 +47,7 @@ const Projects = () => {
       bannerAlt="Pokémon Team Builder"
       // github="https://github.com/ryansle/pokemon-team-checker"
     >
+      <br />
       <Typography variant="h5" className="subtitle">Why am I making this?</Typography>
       <Typography variant="body1">
         This platform was intended to solve my age-old problem of trying to plan out my Pokémon teams when starting a new game. I'm an
@@ -58,8 +59,10 @@ const Projects = () => {
         On top of that, I had little prior experience using Amazon Web Services, aside from the Hoffman project, so this served as a good
         opportunity to teach myself some new skills while building something that I (and I'm sure many others) would be able to use.
       </Typography>
+      <br /> <br />
+
       <Typography variant="h5" className="subtitle">Planned Features</Typography>
-      <Typography variant="body1">
+      <Typography component="span" variant="body1">
         <ul>
           <li>Plan out countless numbers of Pokémon teams utilizing the Team Building Interface</li>
           <li>Create an account in order to save your created teams for future consumption</li>
@@ -80,6 +83,7 @@ const Projects = () => {
       bannerAlt="Ryan Le Banner"
       github="https://github.com/ryansle/portfolio"
     >
+      <br />
       <Typography variant="body1">
         So, like I said: this is my first true web development experience. That means there might be a few problems here and there while you
         poke around on my website, and certainly if you poke around in the code. Which, by the way, I have provided public access to on GitHub by clicking the icon at the top right.
@@ -90,6 +94,8 @@ const Projects = () => {
         I received lots of inspiration and help for this page from my 
         friends <a href="https://msich.dev">Matt Sichterman</a> and <a href="https://peytontanzillo.com/default/home">Peyton Tanzillo</a>.
       </Typography>
+      <br /> <br />
+
       <Typography variant="h5" className="subtitle">Why did I make this?</Typography>
       <Typography variant="body1">
         There were a couple key motivators that encouraged me to build my own personal site. <b>One</b>, I was getting ready for a 
@@ -100,11 +106,15 @@ const Projects = () => {
         wanted to make sure I was more than ready for the upcoming recruiting season. What better way to stand out as a candidate and showcase my skills than to catch your attention
         with a beautifully crafted personal webpage?
       </Typography>
+      <br /> <br />
+
       <Typography variant="h5" className="subtitle">What did I learn?</Typography>
       <Typography variant="body1">
         I learned how to leverage React.js and Material-UI to create static web pages, primarily, as well as the basics of web development. On top of this, I learned how to create
         sensible user interfaces in order to showcase my abilities and display information in a meaningful way.
       </Typography>
+      <br /> <br />
+
       <Typography variant="h5" className="subtitle">What would I change next time?</Typography>
       <Typography variant="body1">
         In the future, whenever I decide that this current webpage has been rendered obsolete, I would probably look into using a static site generator like <a href="https://www.gatsbyjs.org/">Gatsby.js</a> so
@@ -123,6 +133,7 @@ const Projects = () => {
       banner={buckleSVG}
       bannerAlt="The Buckle"
     >
+      <br />
       <Typography variant="body1">
         The Social Media Marketing app, also known as Buckle Advocacy, was a year-long project through my university's Senior Design program which pairs computer science and software
         engineering students to industry sponsors. Once paired, the course works similarly to an internship where students will work on the project throughout the year and deliver weekly
@@ -135,6 +146,8 @@ const Projects = () => {
         <a href="https://www.linkedin.com/in/olivia-rine"> Olivia Rine</a>, <a href="https://www.linkedin.com/in/zhaozhong-qi-64403b118">Dennis Qi</a>, 
         and <a href="https://www.linkedin.com/in/jake-ediger-373933129">Jake Ediger</a>. Our project could not have been nearly as successful as it was without the help of our amazing team.
       </Typography>
+      <br /> <br />
+
       <Typography variant="h5" className="subtitle">What problem did the app solve?</Typography>
       <Typography variant="body1">
         Buckle needed a way to provide a unified and appropriate social brand that protected the brand's image. Because they have so many stores across the US (449 to be exact),
@@ -151,6 +164,8 @@ const Projects = () => {
         showcase uniform content across the board and remediate individual store managers' worries about what content they were going to have to come up with on their own. It also created a 
         universal system for running discounts, promotions, and special events.
       </Typography>
+      <br /> <br />
+
       <Typography variant="h5" className="subtitle">What did I learn?</Typography>
       <Typography variant="body1">
         Working on this project was an absolutely amazing experience due to the wealth of knowledge I was able to take away from it. For instance, in my position in charge of the project,
@@ -162,6 +177,8 @@ const Projects = () => {
         On the development aspect of things, I learned how to develop iOS applications and the steps it takes to deploy on a live device - it's more complicated than you think! I learned
         how to leverage a brand new technology, SwiftUI, and took on learning the Swift programming language, Apple's new flagship development language.
       </Typography>
+      <br /> <br />
+
       <Typography variant="h5" className="subtitle">What would I change next time?</Typography>
       <Typography variant="body1">
         Reflecting back on this experience, there is plenty of room for me to improve in my abilities as both a software engineer and a product manager. If I started this project over
@@ -180,6 +197,7 @@ const Projects = () => {
       bannerAlt="Virtual Reality Space Explorer Minigames"
       github="https://github.com/ethan309/mmi-vr-minigames"
     >
+      <br />
       <Typography variant="body1">
         The University of Nebraska-Lincoln offers a technical elective every spring entitled "Exploring Virtual Reality" that pairs computer science and software engineering students
         with emerging arts students to create virtual reality games. The course follows a sandbox format where they basically give you a quick introduction to developing games with
@@ -195,12 +213,16 @@ const Projects = () => {
         I worked on this project with <a href="https://www.linkedin.com/in/ethan-d-butt">Ethan Bütt</a>, <a href="https://www.linkedin.com/in/conner-hallett-8737a11a2">Conner Hallett</a>, 
         and <a href="https://www.linkedin.com/in/megan-whisenhunt-8b9156175">Megan Whisenhunt</a>.
       </Typography>
+      <br /> <br />
+
       <Typography variant="h5" className="subtitle">What did I learn?</Typography>
       <Typography variant="body1">
         Through this course I learned the basics of modern game development, specifically with regards to virtual reality. It turns out that developing virtual reality games is not nearly as 
         complicated as it seems out to be, thanks to existing technologies and frameworks such as Unity and SteamVR. I also got to work side-by-side with emerging arts students to 
         understand the underlying effort that goes into rendering digital assets, and again sharpen my skills working in a collaborative environment.
       </Typography>
+      <br /> <br />
+
       <Typography variant="h5" className="subtitle">Features</Typography>
       <Typography variant="body1">
         <ul>
@@ -220,12 +242,15 @@ const Projects = () => {
       banner={software}
       bannerAlt="University of Nebraska-Lincoln Student Resource Center"
     >
+      <br />
       <Typography variant="body1">
         My Care Tracking Application was a class project for SOFT 161 (Software Engineering II) at the end of my freshman year at the University of Nebraska-Lincoln. Over a five week period, I worked on 
         an application that allowed a user to input patient data through a graphical user interface, parse that data into a MySQL database, and then read it back out. The
         care tracking application was a basic CRUD (create, read, update, destroy) application at its core, and proved to be my first substantial software development project
         that I had ever taken on.
       </Typography>
+      <br /> <br />
+
       <Typography variant="h5" className="subtitle">What did I learn?</Typography>
       <Typography variant="body1">
         I picked up the Python programming language specifically for this course and was also learning the basics of database development in parallel. Our coursework taught us 
@@ -233,6 +258,8 @@ const Projects = () => {
         create user interfaces in code for the first time using a cross-platform Python framework called Kivy. The class, as well as the project, served as an important stepping stone
         in my software engineering career as I learned the foundations of front-end development and backend development with a basic, student-friendly set of tools.
       </Typography>
+      <br /> <br />
+      
       <Typography variant="h5" className="subtitle">Features</Typography>
       <Typography variant="body1">
         <ul>
