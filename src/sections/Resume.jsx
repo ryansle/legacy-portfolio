@@ -1,10 +1,7 @@
 import React from "react";
 
 // Components
-import {
-  Typography,
-  useMediaQuery
-} from "@material-ui/core";
+import { Typography, useMediaQuery } from "@material-ui/core";
 
 // Utilities
 import { makeStyles } from "@material-ui/core/styles";
@@ -17,11 +14,11 @@ const Resume = () => {
   const isSmallScreen = useMediaQuery("(max-width: 1100px)");
 
   return (
-    <div className={isSmallScreen ? "responsiveContainer" : "container"}>
+    <div className={isSmallScreen ? "responsive-container" : "container"}>
       <Typography className="title" variant="h4">Condensed Portfolio</Typography>
-      <Typography variant="body1">Resume last updated on September 9th, 2020. Created with LaTeX.</Typography>
-
+      <Typography variant="body1">Resume last updated on December 16th, 2020. Created with LaTeX.</Typography>
       <br/>
+
       <iframe 
         src={resume} 
         className={classes.pdf}

@@ -70,7 +70,7 @@ const Skills = () => {
   const isSmallScreen = useMediaQuery("(max-width: 1100px)");
 
   return (
-    <div className={isSmallScreen ? "responsiveContainer" : "container"}>
+    <div className={isSmallScreen ? "responsive-container" : "container"}>
       <Grid container>
         <Devices className={classes.icon}/>
         <Typography variant="h4" className="title">Software Engineering</Typography>

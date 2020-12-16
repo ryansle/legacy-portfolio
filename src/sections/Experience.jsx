@@ -24,7 +24,7 @@ const Experience = () => {
   const isSmallScreen = useMediaQuery("(max-width: 1100px)");
 
   return (
-    <div className={isSmallScreen ? "responsiveContainer" : "container"}>
+    <div className={isSmallScreen ? "responsive-container" : "container"}>
       <Grid container direction="column">
         <Position
           company="Nelnet"

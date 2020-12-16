@@ -31,7 +31,7 @@ const About = () => {
 
   return (
     <>
-      <div className={isSmallScreen ? "responsiveContainer" : "container"}>
+      <div className={isSmallScreen ? "responsive-container" : "container"}>
         <Typography variant="h4" className="title">Who Am I?</Typography>
         <Typography variant="body1">
           Hello! My name is Ryan Le and I am a senior at the University of Nebraska-Lincoln studying Software Engineering.

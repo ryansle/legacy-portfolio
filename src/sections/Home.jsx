@@ -29,7 +29,7 @@ const Home = () => {
         alt="Ryan Le - Dynamic Banner"
         screenHeight={50}
       />
-      <div className={isSmallScreen ? "responsiveContainer" : "container"}>
+      <div className={isSmallScreen ? "responsive-container" : "container"}>
         <Typography variant="h3"><b>Ryan Le</b></Typography>
         <Typography variant={isSmallScreen ? "h6" : "h5"} color="textSecondary">
           <i>Software Engineer &amp; Product Manager</i>

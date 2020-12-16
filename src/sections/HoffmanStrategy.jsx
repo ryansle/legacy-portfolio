@@ -90,7 +90,7 @@ const HoffmanStrategy = () => {
   );
 
   return (
-    <div className={isSmallScreen ? "responsiveContainer" : "container"}>
+    <div className={isSmallScreen ? "responsive-container" : "container"}>
       <PositionHeader
         website="https://hoffmanstrategygroup.com/"
         image={hsg}

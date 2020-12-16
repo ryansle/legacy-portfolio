@@ -14,7 +14,7 @@ const Raven = () => {
   const isSmallScreen = useMediaQuery("(max-width: 1100px)");
 
   return (
-    <div section className={isSmallScreen ? "responsiveContainer" : "container"}>
+    <div section className={isSmallScreen ? "responsive-container" : "container"}>
       <PositionHeader
         website="https://ravenind.com/"
         image={raven}

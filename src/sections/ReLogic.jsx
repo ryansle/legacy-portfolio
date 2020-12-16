@@ -22,7 +22,7 @@ const ReLogic = () => {
   const isSmallScreen = useMediaQuery("(max-width: 1100px)");
 
   return (
-    <div className={isSmallScreen ? "responsiveContainer" : "container"}>
+    <div className={isSmallScreen ? "responsive-container" : "container"}>
       <PositionHeader
         website="https://re-logic.com/"
         image={relogic}

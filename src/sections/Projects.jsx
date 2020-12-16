@@ -247,7 +247,7 @@ const Projects = () => {
   );
 
   return (
-    <div className={isSmallScreen ? "responsiveContainer" : "container"}>
+    <div className={isSmallScreen ? "responsive-container" : "container"}>
       <Grid container justify="space-between">
         <ProjectPreview
           title="Pokémon Team Builder"

@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  background-color: #FAFAFA;
 }
 
 a[aria-current="page"] {
@@ -14,7 +15,7 @@ a[aria-current="page"] {
   padding-right: 12vw;
 }
 
-.responsiveContainer {
+.responsive-container {
   padding-top: 40px;
   padding-left: 4vw !important;
   padding-right: 4vw !important;
