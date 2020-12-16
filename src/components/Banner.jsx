@@ -1,15 +1,18 @@
 import React from "react";
 
+import { useMediaQuery } from "@material-ui/core";
+
 // Utilities
 import { makeStyles } from "@material-ui/core/styles";
 
 // Credit to Peyton Tanzillo (PeytonTanzillo.com) for the banner component
 const Banner = ({ image, alt, screenHeight }) => {
   const classes = useStyles();
+  const tabletScreen = useMediaQuery("(max-width: 700px)");
 
   return (
     <div
-      className={classes.banner}
+      className={tabletScreen ? classes.tabletBanner : classes.banner}
       style={{
         backgroundImage: `url(${image})`,
         height: `${screenHeight}vh`,
@@ -23,9 +26,14 @@ const Banner = ({ image, alt, screenHeight }) => {
 };
 
 const useStyles = makeStyles(() => ({
+  tabletBanner: {
+    display: "flex",
+    backgroundPosition: "center",
+    backgroundSize: "cover",
+  },
   banner: {
     display: "flex",
-    backgroundPosition: "left",
+    backgroundPosition: "right",
     backgroundSize: "cover",
   },
   text: {

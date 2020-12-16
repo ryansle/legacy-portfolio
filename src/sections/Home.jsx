@@ -21,11 +21,12 @@ import resume from "../resources/stock/resume.jpg";
 
 const Home = () => {
   const isSmallScreen = useMediaQuery("(max-width: 1170px)");
+  const tabletScreen = useMediaQuery("(max-width: 700px)");
 
   return (
     <div>
       <Banner
-        image={isSmallScreen ? cropped : mountains}
+        image={tabletScreen ? cropped : mountains}
         alt="Ryan Le - Dynamic Banner"
         screenHeight={50}
       />
