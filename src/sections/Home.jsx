@@ -48,7 +48,7 @@ const Home = () => {
             image={about}
             icon="about"
             title="About"
-            description="Learn more about who I am as a person, what I am looking for in a full-time position, and who some of my professional references are."
+            description="Learn more about who I am as a person, my involvements in college, and who some of my professional references are."
             link="/about"
             linkText="Learn more about me"
           />
@@ -64,7 +64,7 @@ const Home = () => {
             image={skills}
             icon="skills"
             title="Skills"
-            description="Find out what my expertise is in, and learn how I can leverage those skills in a position at your company."
+            description="Find out what my expertise is in, and learn how I can leverage those skills in a position with your company or organization."
             link="/skills"
             linkText="Learn about my expertise"
           />

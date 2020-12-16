@@ -36,6 +36,12 @@ a[aria-current="page"] {
   width: auto !important;
 }
 
+.deselected-menu-icon {
+  color: rgba(255, 255, 255, 0.7);
+  height: 34px !important;
+  width: auto !important;
+}
+
 .grow {
   flex-grow: 1;
 }

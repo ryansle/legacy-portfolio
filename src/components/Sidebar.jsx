@@ -11,7 +11,17 @@ import {
   ListItemText,
   IconButton
 } from "@material-ui/core";
-import { GitHub, LinkedIn, Description } from "@material-ui/icons";
+import { 
+  GitHub,
+  LinkedIn,
+  Description, 
+  Home,
+  Person,
+  Work,
+  Code,
+  Computer, 
+  Email,
+} from "@material-ui/icons";
 import { Link } from "react-router-dom";
 
 // Utilities
@@ -29,6 +39,25 @@ const Sidebar = ({
   setSelected
 }) => {
   const classes = useStyles();
+
+  const renderIcon = (title) => {
+    switch(title) {
+      case "Home":
+        return <Home className={title === selected ? "menu-icon" : "deselected-menu-icon"} />;
+      case "About":
+        return <Person className={title === selected ? "menu-icon" : "deselected-menu-icon"} />;
+      case "Experience":
+        return <Work className={title === selected ? "menu-icon" : "deselected-menu-icon"} />;
+      case "Skills":
+        return <Code className={title === selected ? "menu-icon" : "deselected-menu-icon"} />;
+      case "Projects":
+        return <Computer className={title === selected ? "menu-icon" : "deselected-menu-icon"} />;
+      case "Contact":
+        return <Email className={title === selected ? "menu-icon" : "deselected-menu-icon"} />;
+      default:
+        return
+    }
+  };
 
   const sidebar = (
     <>
@@ -57,7 +86,7 @@ const Sidebar = ({
 
       {/* Navigation */}
       <List component="nav">
-        {MenuItems.map(({ path, title, icon}, index) => (
+        {MenuItems.map(({ path, title, }, index) => (
           <div key={index}>
             <ListItem
               button
@@ -69,8 +98,14 @@ const Sidebar = ({
                 if (mobileOpen) handleDrawerToggle();
               }}
             >
-              <ListItemIcon>{icon}</ListItemIcon>
-              <ListItemText primary={title} />
+              <ListItemIcon>
+                {renderIcon(title)}
+              </ListItemIcon>
+              <ListItemText disableTypography>
+                <Typography className={title === selected ? classes.activeText : ""} variant="body1">
+                  {title}
+                </Typography>
+              </ListItemText>
             </ListItem>
           </div>
         ))}
@@ -224,6 +259,9 @@ const useStyles = makeStyles(() => ({
     width: "auto",
     padding: "0px 5px 0px 5px",
   },
+  activeText: {
+    fontWeight: "bold",
+  }
 }));
 
 export default Sidebar;
