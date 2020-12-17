@@ -80,7 +80,7 @@ const Projects = () => {
           toggleModal={toggleSiteModal}
           banner={banner}
           bannerAlt="My Banner"
-          stack={["React.js", "Material-UI", "CSS"]}
+          stack={["React.js", "Material-UI", "React-Router", "CSS"]}
         >
           <Typography variant="body2">
             Since I never had the chance to learn React.js prior 
@@ -97,7 +97,7 @@ const Projects = () => {
           toggleModal={toggleBuckleModal}
           banner={buckle}
           bannerAlt="The Buckle"
-          stack={["Swift", "SwiftUI", "Drupal"]}
+          stack={["Swift", "SwiftUI", "Alamofire", "Kingfisher", "Drupal",]}
         >
           <Typography variant="body2">
             I worked as the Squad Lead & Product Manager on 
@@ -114,7 +114,7 @@ const Projects = () => {
           toggleModal={toggleVRModal}
           banner={spaceExplorer}
           bannerAlt="Virtual Reality Space Explorer"
-          stack={["C#", "Unity", "SteamVR"]}
+          stack={["C#", "Unity", "SteamVR", "Visual Studio"]}
         >
           <Typography variant="body2">
             The university offered an amazing special topics, technical elective course last spring entitled 
@@ -130,7 +130,7 @@ const Projects = () => {
           toggleModal={toggleCareModal}
           banner={care}
           bannerAlt="Care Tracking Application - Freshman Year Capstone Project"
-          stack={["Python", "MySQL", "Kivy"]}
+          stack={["Python", "MySQL", "SQLAlchemy", "Kivy"]}
         >
           <Typography variant="body2">
             This was the first CRUD application I ever developed, through one 

@@ -71,6 +71,7 @@ const ReLogic = () => {
         <Grid item xs={isSmallScreen ? 12 : 6}>
           <p align="middle">
             <img
+              className={classes.rounded}
               src={terraria}
               alt="Terraria Gameplay Screenshot"
               width={isSmallScreen ? "100%" : "70%"}
@@ -189,9 +190,13 @@ const ReLogic = () => {
 };
 
 const useStyles = makeStyles(() => ({
+  rounded: {
+    borderRadius: 5,
+  },
   media: {
     maxWidth: "90%",
     height: "auto",
+    borderRadius: 5,
   },
 }));
 

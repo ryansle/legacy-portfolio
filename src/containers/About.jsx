@@ -27,8 +27,6 @@ const About = () => {
   const classes = useStyles();
   const isSmallScreen = useMediaQuery("(max-width: 1500px)");
 
-  console.log(isSmallScreen);
-
   return (
     <>
       <div className={isSmallScreen ? "responsive-container" : "container"}>
@@ -54,7 +52,7 @@ const About = () => {
           Bachelor of Science in <b> Software Engineering</b>, Minor in <b>Mathematics</b>
         </Typography>
         <Typography variant="body1">
-          <b>Cumulative GPA:</b> 3.597/4.000
+          <b>Cumulative GPA:</b> 3.64/4.00
         </Typography>
         <br />
 

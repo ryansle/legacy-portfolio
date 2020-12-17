@@ -42,7 +42,7 @@ const Home = () => {
           with the latest web development standards. 
           Check out the links below to learn more about what makes me a great addition to your development team.
         </Typography>
-        <br/>
+        <br /> <br />
         
         <Grid container justify="space-between">
           <NavCard
