@@ -45,6 +45,7 @@ const CareTracking = ({ toggle }) => {
           <li>Remove existing patient data from the database</li>
         </ul>
       </Typography>
+      <br />
     </ProjectModal>
   );
 };

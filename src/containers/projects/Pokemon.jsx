@@ -26,6 +26,8 @@ const Website = ({ toggle }) => {
         before so I can try to prioritize new Pokémon for new gameplay experiences. There was never any system like this that allowed me to organize
         my thoughts, see statistics, and keep records of my gameplay - so I decided to start trying to build my own.
       </Typography>
+      <br />
+      
       <Typography variant="body1">
         On top of that, I had little prior experience using Amazon Web Services, aside from the Hoffman project, so this served as a good
         opportunity to teach myself some new skills while building something that I (and I'm sure many others) would be able to use.
@@ -42,6 +44,7 @@ const Website = ({ toggle }) => {
           <li>Keep records of your previously used Pokémon</li>
         </ul>
       </Typography>
+      <br />
     </ProjectModal>
   );
 };

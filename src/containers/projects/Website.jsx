@@ -26,6 +26,8 @@ const Website = ({ toggle, isSmallScreen }) => {
         From building this website, I learned <b>a lot.</b> That's exactly what my intention was with building this website - learn something new while 
         also showcasing my skills in order to begin searching for new opportunities.
       </Typography>
+      <br />
+      
       <Typography variant="body1">
         I received lots of inspiration and help for this site from my 
         friends <a href="https://msich.dev">Matt Sichterman</a> and <a href="https://peytontanzillo.com/default/home">Peyton Tanzillo</a>.
@@ -58,6 +60,7 @@ const Website = ({ toggle, isSmallScreen }) => {
         has proven to be an excellent foundation to build upon in the future. I'd definitely also build my pages with responsitivity in mind at the beginning so that I don't
         have to deal with the nightmare that has been refactoring my website thus far.
       </Typography>
+      <br />
     </ProjectModal>
   );
 };

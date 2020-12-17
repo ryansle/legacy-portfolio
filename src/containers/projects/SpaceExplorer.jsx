@@ -30,6 +30,8 @@ const SpaceExplorer = ({ toggle }) => {
         to remote learning, our team was unable to effectively test our code and develop the product we originally envisioned, despite our increased efforts to collaborate productively 
         due to remote circumstances. As no one on our team owned their own VR headset, development was hindered substantially as testing became increasingly harder.
       </Typography>
+      <br />
+      
       <Typography variant="body1">
         I worked on this project with <a href="https://www.linkedin.com/in/ethan-d-butt">Ethan Bütt</a>, <a href="https://www.linkedin.com/in/conner-hallett-8737a11a2">Conner Hallett</a>, 
         and <a href="https://www.linkedin.com/in/megan-whisenhunt-8b9156175">Megan Whisenhunt</a>.
@@ -52,6 +54,7 @@ const SpaceExplorer = ({ toggle }) => {
           <li>Explore a vast planet where the sun doesn't shine and search for stardust remnants to fuel your lightbeam</li>
         </ul>
       </Typography>
+      <br />
     </ProjectModal>
   );
 };

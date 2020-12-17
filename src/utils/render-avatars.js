@@ -44,6 +44,9 @@ import kingfisher from "../resources/skills/kingfisher.png";
 import testflight from "../resources/skills/testflight.png";
 import pycharm from "../resources/skills/pycharm.png";
 import redux from "../resources/skills/redux.svg";
+import d3 from "../resources/skills/d3.svg";
+import colab from "../resources/skills/colab.png";
+import pandas from "../resources/skills/pandas.png";
 
 // If you are reading through this codebase, I apologize.
 //  Because I render the skill chips with Array.map, I could
@@ -147,6 +150,12 @@ export const renderIcon = (tech) => {
       return github;
     case "Redux":
       return redux;
+    case "D3.js":
+      return d3;
+    case "Google Colab":
+      return colab;
+    case "pandas":
+      return pandas;
     default:
       return;
   }

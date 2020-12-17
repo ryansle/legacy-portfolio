@@ -13,8 +13,10 @@ import SpaceExplorer from "./projects/SpaceExplorer";
 import Buckle from "./projects/Buckle";
 import Website from "./projects/Website";
 import Pokemon from "./projects/Pokemon";
+import DataModeling from "./projects/DataModeling";
 
 // Assets
+import data from "../resources/projects/data-modeling.png";
 import pokemonBanner from "../resources/projects/pokemon.jpg";
 import banner from "../resources/projects/banner-resized.png";
 import buckle from "../resources/projects/buckle.jpg";
@@ -24,12 +26,14 @@ import care from "../resources/projects/care-tracking.png";
 const Projects = () => {
   const isSmallScreen = useMediaQuery("(max-width: 1200px)");
 
+  const [openData, setOpenData] = useState(false);
   const [openPokemon, setOpenPokemon] = useState(false);
   const [openSite, setOpenSite] = useState(false);
   const [openBuckle, setOpenBuckle] = useState(false);
   const [openVR, setOpenVR] = useState(false);
   const [openCare, setOpenCare] = useState(false);
 
+  const toggleDataModal = () => { setOpenData(!openData); };
   const togglePokemonModal = () => { setOpenPokemon(!openPokemon); };
   const toggleSiteModal = () => { setOpenSite(!openSite); };
   const toggleBuckleModal = () => { setOpenBuckle(!openBuckle); };
@@ -39,6 +43,22 @@ const Projects = () => {
   return (
     <div className={isSmallScreen ? "responsive-container" : "container"}>
       <Grid container justify="space-between">
+        <ProjectPreview
+          title="Web-based Interactive Data Visualization"
+          toggleModal={toggleDataModal}
+          banner={data}
+          bannerAlt="CSCE 411 - Data Modeling"
+          stack={["React.js", "D3.js", "Google Colab", "Python", "pandas"]}
+        >
+          <Typography variant="body2">
+            Our final assignment for my Data Modeling course tasked us with visually representing
+            states' population and GDP data within a web-based application using the D3.js library,
+            which, "helps you bring data to life using HTML, SVG, and CSS." Using this library, we were
+            to create interactive bar charts and scatter plots to better represent the data out of
+            the provided spreadsheets.
+          </Typography>
+        </ProjectPreview>
+
         <ProjectPreview
           title="Pokémon Team Builder"
           toggleModal={togglePokemonModal}
@@ -123,6 +143,13 @@ const Projects = () => {
       </Grid>
 
       {/* Invisible modal displays */}
+      <Modal
+        open={openData}
+        onClose={toggleDataModal}
+      >
+        <DataModeling toggle={toggleDataModal} />
+      </Modal>
+
       <Modal
         open={openPokemon}
         onClose={togglePokemonModal}

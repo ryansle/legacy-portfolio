@@ -25,6 +25,8 @@ const Buckle = ({ toggle }) => {
         for my team and was the Squad Lead and Product Manager for our senior design team, which had me focusing on defining our product vision, leading our weekly meetings, creating our
         presentation materials, and effectively capitalizing on my teammates' skillsets in order to run a successful project.
       </Typography>
+      <br />
+
       <Typography variant="body1">
         I worked on this project alongside <a href="https://www.linkedin.com/in/kaileimao">Kailei Mao</a>, <a href="https://www.linkedin.com/in/arreyaahrom">Arreya Ahrom</a>,
         <a href="https://www.linkedin.com/in/olivia-rine"> Olivia Rine</a>, <a href="https://www.linkedin.com/in/zhaozhong-qi-64403b118">Dennis Qi</a>, 
@@ -43,6 +45,8 @@ const Buckle = ({ toggle }) => {
         start and end dates for the content to run through, and valid posts were pulled down to our iOS application and shown to a user in a feed visually similar to Instagram. Users could then
         share these approved social media posts to a variety of different social media channels, including Facebook, Instagram, Twitter, and LinkedIn with ease.
       </Typography>
+      <br /> 
+
       <Typography variant="body1">
         This allowed their marketing department to create approved content complete with images, preloaded captions, and hashtags for their employees to share. It allowed each store to
         showcase uniform content across the board and remediate individual store managers' worries about what content they were going to have to come up with on their own. It also created a 
@@ -69,6 +73,7 @@ const Buckle = ({ toggle }) => {
         from scratch, I definitely would not have utilized Drupal as our content management system due to how outdated the technology felt while in use. On the flip side of that, I 
         also would have allowed SwiftUI to mature more as a framework before committing to working on a project as large-scale as this in such an up-and-coming technology.
       </Typography>
+      <br />
     </ProjectModal>
   );
 };
