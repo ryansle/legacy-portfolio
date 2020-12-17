@@ -30,7 +30,6 @@ const ProjectPreview = React.forwardRef(
   ) => {
     const classes = useStyles();
     const isSmallScreen = useMediaQuery("(max-width: 1300px)");
-    const compressButton = useMediaQuery("(max-width: 1700px)");
 
     return (
       <Card className={isSmallScreen ? classes.responsiveProject : classes.project} ref={ref}>
@@ -58,10 +57,9 @@ const ProjectPreview = React.forwardRef(
                 />
               )
             }
-            <div className={isSmallScreen ? "" : "grow"} />
 
             <Button 
-              className={compressButton ? classes.fullWidth: classes.learnMore}
+              className={classes.learnMore}
               size="small"
               variant="contained"
               color="primary"
@@ -104,10 +102,6 @@ const useStyles = makeStyles(() => ({
     margin: 4,
   },
   learnMore: {
-    float: "right",
-    margin: 6,
-  },
-  fullWidth: {
     width: "100%",
     margin: "20px 6px 6px 6px",
   },

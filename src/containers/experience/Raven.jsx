@@ -5,10 +5,10 @@ import {
   Typography,
   useMediaQuery
 } from "@material-ui/core";
-import PositionHeader from "../components/PositionHeader";
+import PositionHeader from "../../components/PositionHeader";
 
 // Assets
-import raven from "../resources/experience/raven.png";
+import raven from "../../resources/experience/raven.png";
 
 const Raven = () => {
   const isSmallScreen = useMediaQuery("(max-width: 1100px)");

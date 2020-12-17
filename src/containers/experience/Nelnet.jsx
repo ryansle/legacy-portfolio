@@ -5,13 +5,13 @@ import {
   Typography,
   useMediaQuery,
 } from "@material-ui/core";
-import PositionHeader from "../components/PositionHeader";
+import PositionHeader from "../../components/PositionHeader";
 
 // Utilities
 import { makeStyles } from "@material-ui/core/styles";
 
 // Assets
-import nelnet from "../resources/experience/nelnet.svg";
+import nelnet from "../../resources/experience/nelnet.svg";
 
 const Nelnet = () => {
   const classes = useStyles();

@@ -5,13 +5,13 @@ import {
   Typography,
   useMediaQuery
 } from "@material-ui/core";
-import PositionHeader from "../components/PositionHeader";
+import PositionHeader from "../../components/PositionHeader";
 
 // Utilities
 import { makeStyles } from "@material-ui/core/styles";
 
 // Assets
-import unl from "../resources/experience/unl.png";
+import unl from "../../resources/experience/unl.png";
 
 const UNL = () => {
   const classes = useStyles();

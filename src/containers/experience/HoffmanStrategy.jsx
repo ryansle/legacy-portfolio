@@ -9,16 +9,16 @@ import {
   useMediaQuery,
 } from "@material-ui/core";
 import { Clear } from "@material-ui/icons";
-import PositionHeader from "../components/PositionHeader";
+import PositionHeader from "../../components/PositionHeader";
 
 // Utilities
 import { makeStyles } from "@material-ui/core/styles";
 
 // Assets
-import hsg from "../resources/experience/hsg.png";
-import dashboardImg from "../resources/experience/dashboard.png";
-import projectHubImg from "../resources/experience/project-hub.png";
-import fileManagerImg from "../resources/experience/file-manager.png";
+import hsg from "../../resources/experience/hsg.png";
+import dashboardImg from "../../resources/experience/dashboard.png";
+import projectHubImg from "../../resources/experience/project-hub.png";
+import fileManagerImg from "../../resources/experience/file-manager.png";
 
 const HoffmanStrategy = () => {
   const classes = useStyles();

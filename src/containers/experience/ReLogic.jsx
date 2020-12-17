@@ -7,15 +7,15 @@ import {
   useMediaQuery
 } from "@material-ui/core";
 import { Link } from "react-router-dom";
-import PositionHeader from "../components/PositionHeader";
+import PositionHeader from "../../components/PositionHeader";
 
 // Utilities
 import { makeStyles } from "@material-ui/core/styles";
 
 // Assets
-import relogic from "../resources/experience/re-logic.png";
-import credits from "../resources/experience/credits.png";
-import terraria from "../resources/experience/terraria.jpeg";
+import relogic from "../../resources/experience/re-logic.png";
+import credits from "../../resources/experience/credits.png";
+import terraria from "../../resources/experience/terraria.jpeg";
 
 const ReLogic = () => {
   const classes = useStyles();

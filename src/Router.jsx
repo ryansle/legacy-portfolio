@@ -1,20 +1,20 @@
 import React from "react";
 import { Switch, Route } from "react-router-dom";
-// Sections
-import Home from "./sections/Home";
-import About from "./sections/About";
-import Experience from "./sections/Experience";
-import Skills from "./sections/Skills";
-import Projects from "./sections/Projects";
-import Contact from "./sections/Contact";
-import Resume from "./sections/Resume";
-import NotFound from "./sections/NotFound";
-// Subsections
-import HoffmanStrategy from './sections/HoffmanStrategy';
-import Nelnet from './sections/Nelnet';
-import Raven from './sections/Raven';
-import UNL from './sections/UNL';
-import ReLogic from './sections/ReLogic';
+// containers
+import Home from "./containers/Home";
+import About from "./containers/About";
+import Experience from "./containers/Experience";
+import Skills from "./containers/Skills";
+import Projects from "./containers/Projects";
+import Contact from "./containers/Contact";
+import Resume from "./containers/Resume";
+import NotFound from "./containers/NotFound";
+// Subcontainers
+import HoffmanStrategy from "./containers/experience/HoffmanStrategy";
+import Nelnet from "./containers/experience/Nelnet";
+import Raven from "./containers/experience/Raven";
+import UNL from "./containers/experience/UNL";
+import ReLogic from "./containers/experience/ReLogic";
 
 const Router = () => {
   return (
@@ -54,7 +54,7 @@ const Router = () => {
         exact
         component={Resume}
       />
-      {/* Subsections */}
+      {/* Subcontainers */}
       <Route
         path="/experience/hoffman-strategy-group"
         exact
