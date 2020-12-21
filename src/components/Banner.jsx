@@ -30,11 +30,13 @@ const useStyles = makeStyles(() => ({
     display: "flex",
     backgroundPosition: "center",
     backgroundSize: "cover",
+    borderRadius: "10px 10px 0px 0px",
   },
   banner: {
     display: "flex",
     backgroundPosition: "right",
     backgroundSize: "cover",
+    borderRadius: "10px 10px 0px 0px",
   },
   text: {
     paddingLeft: "4vw",

@@ -60,7 +60,16 @@ const Website = ({ toggle, isSmallScreen }) => {
         has proven to be an excellent foundation to build upon in the future. I'd definitely also build my pages with responsitivity in mind at the beginning so that I don't
         have to deal with the nightmare that has been refactoring my website thus far.
       </Typography>
-      <br />
+      <br /> <br />
+
+      <Typography variant="h5" className="subtitle">December 21, 2020 Update</Typography>
+      <Typography variant="body1">
+        As of today, I am still actively maintaining the contents of this online portfolio, statically creating new content as I see fit.
+        I've learned a lot since I first started developing this page so many months ago! I plan on redeveloping the page from scratch in the distant future using
+        Gatsby.js, like I said previously, and (probably) also the Chakra UI component library instead.
+      </Typography>
+      <br/>
+
     </ProjectModal>
   );
 };

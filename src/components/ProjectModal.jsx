@@ -122,6 +122,7 @@ const useStyles = makeStyles(() => ({
     transform: "translate(-50%, -50%) !important",
     background: "white",
     width: "70%",
+    borderRadius: 10,
   },
   responsiveOverlay: {
     position: "fixed",
@@ -130,6 +131,7 @@ const useStyles = makeStyles(() => ({
     transform: "translate(-50%, -50%)",
     background: "white",
     width: "90%",
+    borderRadius: 10,
   },
   raised: {
     zIndex: 5,

@@ -82,6 +82,7 @@ const useStyles = makeStyles(() => ({
     "&:hover": {
       boxShadow: "0 4px 8px 1px rgba(0, 0, 0, 0.2), 0 6px 20px 1px rgba(0, 0, 0, 0.19)",
     },
+    borderRadius: 10,
   },
   responsiveProject: {
     width: "100%",
@@ -90,6 +91,7 @@ const useStyles = makeStyles(() => ({
     "&:hover": {
       boxShadow: "0 4px 8px 1px rgba(0, 0, 0, 0.2), 0 6px 20px 1px rgba(0, 0, 0, 0.19)",
     },
+    borderRadius: 10,
   },
   media: {
     height: "auto",
