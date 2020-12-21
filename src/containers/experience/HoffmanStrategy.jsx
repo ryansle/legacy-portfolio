@@ -100,6 +100,7 @@ const HoffmanStrategy = () => {
         stack={["React.js", "Material-UI", "CSS", "AWS Amplify", "AWS DynamoDB", "AWS AppSync", "GraphQL", "Redux", "React-Router", "Python", "Selenium"]}
       />
       <br/>
+      
       <Typography variant="body1">
         Hoffman Strategy Group is a boutique, national real estate 
         advisory firm. Over their collective firm experience of 85 
@@ -110,6 +111,7 @@ const HoffmanStrategy = () => {
         to successful real estate projects. 
       </Typography>
       <br/>
+
       <Typography variant="h5" className="title">Responsibilities</Typography>
       <Typography variant="body1" component={"span"}>
         <ul>
@@ -131,6 +133,7 @@ const HoffmanStrategy = () => {
         Software Engineer Intern, managing my time between the two accordingly.
       </Typography>
       <br/>
+
       <Typography variant="body1">
         Through a summer of cooperation, Matt and I rebuilt the entire platform
         from the ground up using new technologies such as Material-UI, AWS DynamoDB, and AWS AppSync while leaning primarily on one another when we
@@ -142,6 +145,7 @@ const HoffmanStrategy = () => {
         Hoffman Strategy Group for the opportunity.
       </Typography>
       <br/>
+
       <Typography variant="h5" className="title">What did I learn?</Typography>
       <Typography variant="body1" component={"span"}>
         Working with Hoffman Strategy Group was an excellent way to break into the web development domain of software engineering. It also helped that my partner Matt has
@@ -156,6 +160,7 @@ const HoffmanStrategy = () => {
         </ul>
       </Typography>
       <br/>
+
       <Typography variant="h5" className="title">Gallery</Typography>
       <Grid container justify="space-between">
         <img

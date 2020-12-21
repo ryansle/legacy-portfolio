@@ -1,10 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 
 // Components
 import {
   Typography,
+  Grid,
+  Modal,
+  Button,
   useMediaQuery,
 } from "@material-ui/core";
+import { Clear } from "@material-ui/icons";
 import PositionHeader from "../../components/PositionHeader";
 
 // Utilities
@@ -12,10 +16,145 @@ import { makeStyles } from "@material-ui/core/styles";
 
 // Assets
 import nelnet from "../../resources/experience/nelnet.svg";
+import dashboard from "../../resources/experience/chp-dashboard.png";
+import funds from "../../resources/experience/chp-add-funds.png";
+import payment from "../../resources/experience/chp-add-payment.png";
+import merchant from "../../resources/experience/chp-merchant-details.png";
+import rewards from "../../resources/experience/chp-rewards.png";
+import sponsor from "../../resources/experience/chp-sponsor-details.png";
 
 const Nelnet = () => {
   const classes = useStyles();
   const isSmallScreen = useMediaQuery("(max-width: 1100px)");
+
+  const [openDashboard, setOpenDashboard] = useState(false);
+  const [openFunds, setOpenFunds] = useState(false);
+  const [openPayment, setOpenPayment] = useState(false);
+  const [openMerchant, setOpenMerchant] = useState(false);
+  const [openRewards, setOpenRewards] = useState(false);
+  const [openSponsor, setOpenSponsor] = useState(false);
+
+  const toggleDashboardModal = () => { setOpenDashboard(!openDashboard); };
+  const toggleFundsModal = () => { setOpenFunds(!openFunds); };
+  const togglePaymentModal = () => { setOpenPayment(!openPayment); };
+  const toggleMerchantModal = () => { setOpenMerchant(!openMerchant); };
+  const toggleRewardsModal = () => { setOpenRewards(!openRewards); };
+  const toggleSponsorModal = () => { setOpenSponsor(!openSponsor); };
+
+  const dash = (
+    <div className={classes.overlay}>
+      <Button
+        className={classes.exitButton}
+        size="small"
+        variant="contained"
+        color="secondary"
+        onClick={toggleDashboardModal}
+      >
+        <Clear/>
+      </Button>
+      <img 
+        className={classes.modalImage}
+        src={dashboard} 
+        alt="Cardholder Portal - Dashboard"
+      />
+    </div>
+  );
+
+  const funding = (
+    <div className={classes.overlay}>
+      <Button
+        className={classes.exitButton}
+        size="small"
+        variant="contained"
+        color="secondary"
+        onClick={toggleFundsModal}
+      >
+        <Clear/>
+      </Button>
+      <img 
+        className={classes.modalImage}
+        src={funds} 
+        alt="Cardholder Portal - Add Funds"
+      />
+    </div>
+  );
+
+  const paymentProfiles = (
+    <div className={classes.overlay}>
+      <Button
+        className={classes.exitButton}
+        size="small"
+        variant="contained"
+        color="secondary"
+        onClick={togglePaymentModal}
+      >
+        <Clear/>
+      </Button>
+      <img 
+        className={classes.modalImage}
+        src={payment} 
+        alt="Cardholder Portal - Add Payment Profile"
+      />
+    </div>
+  );
+
+  const merchantDetails = (
+    <div className={classes.overlay}>
+      <Button
+        className={classes.exitButton}
+        size="small"
+        variant="contained"
+        color="secondary"
+        onClick={toggleMerchantModal}
+      >
+        <Clear/>
+      </Button>
+      <img 
+        className={classes.modalImage}
+        src={merchant} 
+        alt="Cardholder Portal - Merchant Details"
+      />
+    </div>
+  );
+
+  const rewardsPanel = (
+    <div className={classes.overlay}>
+      <Button
+        className={classes.exitButton}
+        size="small"
+        variant="contained"
+        color="secondary"
+        onClick={toggleRewardsModal}
+      >
+        <Clear/>
+      </Button>
+      <img 
+        className={classes.modalImage}
+        src={rewards} 
+        alt="Cardholder Portal - Rewards Panel"
+      />
+    </div>
+  );
+
+  const sponsorDetails = (
+    <div className={classes.overlay}>
+      <Button
+        className={classes.exitButton}
+        size="small"
+        variant="contained"
+        color="secondary"
+        onClick={toggleSponsorModal}
+      >
+        <Clear/>
+      </Button>
+      <img 
+        className={classes.modalImage}
+        src={sponsor} 
+        alt="Cardholder Portal - Sponsor Details"
+      />
+    </div>
+  );
+
 
   return (
     <div className={isSmallScreen ? classes.responsiveContainer : classes.container}>
@@ -48,12 +187,8 @@ const Nelnet = () => {
       </Typography>
       <Typography variant="h5" className="title">About This Position</Typography>
       <Typography variant="body1">
-        When COVID-19 took hold of the United States and forced companies across the nation to cancel 
-        their internship programs, Nelnet decided to use this opportunity to open their intern programs back up.
-        Having originally finished out their recruiting season earlier in the year, Nelnet saw an opportunity
-        to provide aid to the community and quickly took the chance to help students who had lost their original
-        internships to the pandemic. I was lucky enough to be one of ~30 additional interns hired on during 
-        this process after managing to get in contact with their recruiting team on LinkedIn.
+        I took on a position with Nelnet after losing my previously scheduled internship thanks to the COVID-19 pandemic. I'm thankful to Nelnet's leadership
+        for making the decision to reopen their intern programs to accomodate students like me whose original plans were rescinded due to the ongoing world crisis.
       </Typography>
       <br/>
 
@@ -78,6 +213,98 @@ const Nelnet = () => {
         an administrative portal that partners with the mobile Campus Key applicaiton that I worked on previously. I'm ecstatic to be given the opportunity to once again leverage
         my web development skillsets on a project as interesting as this one, and also to work with some top-tier talent at Nelnet!
       </Typography>
+      <br />
+
+      <Typography variant="body1" color="textSecondary">
+        <i>
+          * The application showcased below had its wireframe designed by the talented <a href="https://www.linkedin.com/in/ericschladweiler">Eric Schladweiler</a>, our
+          fellow User Experience Expert on our Campus Key team. I simply translated the contents of our Figma mockups to code.
+        </i>
+      </Typography>
+      <br />
+
+      <Typography variant="h5" className="title">Gallery</Typography>
+      <Grid container justify="space-between">
+        <img
+          src={dashboard}
+          alt="Cardholder Portal - Dashboard"
+          className={isSmallScreen ? classes.responsiveGalleryItem : classes.galleryItem}
+          onClick={toggleDashboardModal}
+        />
+        <img
+          src={funds}
+          alt="Cardholder Portal - Add Funds"
+          className={isSmallScreen ? classes.responsiveGalleryItem : classes.galleryItem}
+          onClick={toggleFundsModal}
+        />
+        <img
+          src={payment}
+          alt="Cardholder Portal - Add Payment Profile"
+          className={isSmallScreen ? classes.responsiveGalleryItem : classes.galleryItem}
+          onClick={togglePaymentModal}
+        />
+        <img
+          src={merchant}
+          alt="Cardholder Portal - Merchant Details"
+          className={isSmallScreen ? classes.responsiveGalleryItem : classes.galleryItem}
+          onClick={toggleMerchantModal}
+        />
+        <img
+          src={rewards}
+          alt="Cardholder Portal - Rewards"
+          className={isSmallScreen ? classes.responsiveGalleryItem : classes.galleryItem}
+          onClick={toggleRewardsModal}
+        />
+        <img
+          src={sponsor}
+          alt="Cardholder Portal - Sponsor Details"
+          className={isSmallScreen ? classes.responsiveGalleryItem : classes.galleryItem}
+          onClick={toggleSponsorModal}
+        />
+      </Grid>
+      <br />
+
+      <Modal
+        open={openDashboard}
+        onClose={toggleDashboardModal}
+      >
+        {dash}
+      </Modal>
+
+      <Modal
+        open={openFunds}
+        onClose={toggleFundsModal}
+      >
+        {funding}
+      </Modal>
+
+      <Modal
+        open={openPayment}
+        onClose={togglePaymentModal}
+      >
+        {paymentProfiles}
+      </Modal>
+
+      <Modal
+        open={openMerchant}
+        onClose={toggleMerchantModal}
+      >
+        {merchantDetails}
+      </Modal>
+
+      <Modal
+        open={openRewards}
+        onClose={toggleRewardsModal}
+      >
+        {rewardsPanel}
+      </Modal>
+
+      <Modal
+        open={openSponsor}
+        onClose={toggleSponsorModal}
+      >
+        {sponsorDetails}
+      </Modal>
     </div>
   );
 };
@@ -95,6 +322,34 @@ const useStyles = makeStyles(() => ({
     paddingRight: '4vw',
     minHeight: "calc(90vh - 90px)",
   },
+  galleryItem: {
+    margin: "0px 5px 35px 5px",
+    width: "30%",
+    lineHeight: "auto", 
+  },
+  responsiveGalleryItem: {
+    margin: 5,
+    width: "80vw",
+    height: "auto",
+  },
+  overlay: {
+    position: "fixed",
+    top: "50%",
+    left: "50%",
+    transform: "translate(-50%, -50%) !important",
+    background: "white",
+    width: "90%",
+  },
+  exitButton: {
+    margin: 5,
+    position: "absolute",
+    zIndex: 1,
+    right: 0,
+  },
+  modalImage: {
+    width: "100%",
+    height: "auto",
+  }
 }));
 
 export default Nelnet;
